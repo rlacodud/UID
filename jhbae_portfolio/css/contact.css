@@ -1,0 +1,88 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@font-face {
+    src : url("/fonts/Zapfino.ttf"); font-family: "Zapfino";
+    src : url("/fonts/Pretendard-Bold.ttf"); font-family: "Pretendard_B";
+    src : url("/fonts/Pretendard-ExtraBold.ttf"); font-family: "Pretendard_EB";
+    src : url("/fonts/Pretendard-ExtraLight.ttf"); font-family: "Pretendard_EL";
+    src : url("/fonts/Pretendard-Light.ttf"); font-family: "Pretendard_L";
+    src : url("/fonts/Pretendard-Medium.ttf"); font-family: "Pretendard_M";
+    src : url("/fonts/Pretendard-Regular.ttf"); font-family: "Pretendard_R";
+    src : url("/fonts/Pretendard-SemiBold.ttf"); font-family: "Pretendard_SB";
+    src : url("/fonts/Pretendard-Thin.ttf"); font-family: "Pretendard_T";
+}
+* {margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family: 'Pretendard',"Pretendard","Zapfino";
+    background-color: #B1CBBD;
+    background-size: 100%;
+}
+header
+{
+    padding: 10px;
+}
+
+header>ul
+{
+    margin: 15px;
+    float: right;
+    list-style: none;
+}
+header>ul>li
+{
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+p{
+    position:relative;
+    left:50%;
+    width:500px;
+    transform:translate(-50%, 30%);
+
+    font-family: "Zapfino";
+    text-align: center;
+    list-style: none;
+    transition : all 0.25s;
+    color: #FDF6EE;
+    font-size: 45px;
+    font-style: italic;
+    text-decoration: none;
+}
+.contact {
+    position:relative;
+    left:50%;
+    width:1000px;
+    transform:translate(-50%, 300%);
+}
+.contact ul {
+    color: #FDF6EE;
+    display: flex;
+}
+.contact li {
+    width: 350px;
+    text-align: center;
+    list-style: none;
+    font-size: 17px;
+    transition : all 0.25s;
+}
+.contact li b{
+    font-family: "Zapfino";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 23px;
+    line-height: 60px;
+}
+.contact li a {
+    color: #FDF6EE;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.contact  li a:hover {
+    color: #FDF6EE;
+    font-style: normal;
+    text-decoration: underline;
+}
+
