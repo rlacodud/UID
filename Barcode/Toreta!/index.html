@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 토레타의 메인 사이트라는 걸 인식할 수 있도록 사이트명을 Toreta!로 설정합니다. -->
+    <title> Toreta! </title>
+
+    <!-- CSS를 연결해주기 위해 LINK 태그를 이용합니다. 
+    reset 태그를 통해 기본 CSS 설정을 해준 뒤, 아코디언 오버 기능이 담긴 accordion CSS를 연결해줍니다. -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/accordion.css" type="text/css">
+
+</head>
+
+<body>
+    <section id="section1">
+        <!-- 상단과 하단에 위치할 텍스트 애니메이션을 삽입해줍니다. -->
+        <p class="marquee horizontal"> It was released in Japan in June 2015, and then in Korea in April 2016,
+            'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015, and then in Korea
+            in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015,
+            and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in
+            Japan in June 2015, and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius.
+        </p>
+
+        <!-- 메인 화면의 기능인 아코디언 메뉴의 css를 클래스를 이용해 불러와줍니다. -->
+        <div id="accordion" class="accordion">
+            <!-- 아코디언 메뉴 속에서 보여지는 콘텐츠를 묶고 있는 부분입니다. -->
+            <div class="view">
+                <!-- 아코디언 메뉴 속에서 각 콘텐츠들을 담고 있는 부분입니다. -->
+                <div class="view-item">
+                    <div class="menu-collapse what"><span> WHAT'S THE <br>
+                            TORETA? </span></div>
+                    <!-- 마우스 오버 시 보여질 menu-view 영역입니다. -->
+                    <div class="menu-view">
+                        <span class="desc color"><a href="./SEE_TORETA.html"> CLICK AND <br>
+                                SEE THE TORETA! </a></span>
+                    </div>
+                    <div class="image-wrap">
+                        <img src="./img/main2.png">
+                    </div>
+                </div>
+                <div class="view-item">
+                    <div class="menu-collapse"><span>FEEL THE <br>
+                            TORETA! </span></div>
+                    <div class="menu-view">
+                        <span class="desc color2"> <a href="./FEEL_TORETA.html"> CLICK AND <br>
+                                FEEL THE TORETA! </a> </span>
+                    </div>
+                    <div class="image-wrap">
+                        <img src="./img/main.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="marquee horizontal2"> It was released in Japan in June 2015, and then in Korea in April 2016,
+            'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015, and then in Korea
+            in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015,
+            and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in
+            Japan in June 2015, and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius.
+        </p>
+    </section>
+
+    <script src="./js/jquery.js" type="text/javascript"></script>
+    <script src="./js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>

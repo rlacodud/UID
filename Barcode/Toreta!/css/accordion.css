@@ -1,0 +1,336 @@
+/* HTML 태그 안에 해당 사이트의 기본적인 설정을 해줍니다. */
+html {
+    /* 설정한 X값과 Y값을 넘어가는 부분은 안 보이게 처리하고 */
+    overflow:hidden;
+    /* 텍스트의 색깔은 흰색으로 설정합니다. */
+    color:white;
+    /* 폰트는 가져온 Helvetica를 이용하고 */
+    font-family: "Helvetica", Helvetica;
+    /* 기본 텍스트 크기를 50PX로 설정해줍니다. */
+    font-size:50px;
+    /* 텍스트의 굵기는 bold로 설정합니다. */
+    font-weight: bold;
+    /* 행간은 1.5로 설정합니다. */
+    line-height:1.5rem;
+}
+
+/* 사이트의 내용이 들어갈 body 태그의 기본 설정을 해줍니다. */
+body {
+    /* 가로는 100%로 사이트의 가로폭을 꽉 채우고 */
+    width:100%;
+    /* 높이는 vh단위를 사용하여 브라우저 내에서 보이는 창의 높이만큼 보이도록 합니다. */
+    height:100vh;
+}
+
+/* 링크 태그가 담긴 모든 요소에 대한 css를 정의해줍니다. */
+a {
+    font-size: 50px;
+    margin: auto;
+    text-decoration: none;
+    width:1200px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    z-index: 1;
+}
+
+/* 첫번째 섹션에 대한 css를 설정해줍니다. */
+#section1 {
+    /* relative로 position을 설정해 하위 요소들의 기준이 되도록 합니다. */
+    position: relative;
+    /* 가로는 100%로 사이트의 가로폭을 꽉 채우고 */
+    width: 100%;
+    /* 높이는 vh단위를 사용하여 브라우저 내에서 보이는 창의 높이만큼 보이도록 합니다. */
+    height: 100vh;
+}
+
+/* 가로로 이동하는 텍스트 애니메이션에 대한 css를 설정해줍니다. */
+.marquee.horizontal {
+    /* position은 absolute로 설정하여 section1을 기준으로 원하는 위치에 지정할 수 있도록 합니다. */
+	position: absolute;
+    /* 위를 기준으로 맨 위에 위치하도록 해주며 */
+	top: 0px;
+    /* 텍스트 크기를 21px로 설정해줍니다. */
+	font-size: 21px;
+    /* 텍스트 영역을 넘어가는 부분은 안 보이게 설정합니다. */
+	white-space: nowrap;
+    /* 텍스트가 이동하는 애니메이션인 marquee_h과 연결해줍니다. */
+    /* 15초동안 설정한 애니메이션이 실행되게 하며 무한 반복하게 설정합니다. */
+	animation: marquee_h 15s linear infinite;
+    /* 애니메이션이 실행되는 시점을 10초 전으로 하여
+    사이트에 접속하자마자 봤을 때에도 어색하지 않도록 합니다. */
+	animation-delay: -10s;
+    /* 텍스트 애니메이션이 최상위 레이어에 위치해야 하기 때문에
+    z-index 값을 많이 줍니다. */
+    z-index: 100;
+    /* 총 가로 길이를 section1을 기준으로 100%으로 설정해줍니다. */
+    width: 100%;
+    /* 공백을 상하에는 0, 좌우에는 자동값을 주어 가운데에 위치하도록 해줍니다. */
+	margin: 0 auto;
+    /* 설정한 크기값을 넘어가는 부분은 안 보이게 처리해줍니다. */
+    overflow: hidden;
+}  
+/* 애니메이션이 어떤 식으로 실행될 지에 대해 keyframes 기능을 이용해 설정합니다. */
+@keyframes marquee_h {
+    /* 처음에는 텍스트의 들여쓰기를 0으로 설정하고 */
+	0% {
+		text-indent: 0em
+	}
+    /* 애니메이션의 최종 시점에 들여쓰기를 -값으로 주어 화면 밖으로 이동하게끔 합니다. */
+	100% {
+		text-indent: -127.5em
+	}
+}
+
+/* 메인에 들어가 있는 아코디언 메뉴에 대한 css를 설정해줍니다. */
+.accordion {
+    /* section1을 기준으로 영역의 크기를 지정하여
+    사이트에서 보이는 창을 꽉 채우는 크기로 설정해줍니다. */
+    width:100%;
+    height:100vh;
+}  
+/* 아코디언 메뉴 속에서 보여지는 콘텐츠들에 대한 설정을 해줍니다. */
+.view{
+    /* 지정한 영역보다 넘어가는 부분은 안 보이게 처리해줍니다. */
+    overflow:hidden;
+    /* 총 영역 대비 동일한 비율로 메뉴의 영역을 나누기 위해
+    display를 flex로 설정해줍니다. */
+    display:flex;
+    /* view 내부의 콘텐츠들이 view를 기준으로 설정되도록
+    position을 relative로 설정해줍니다. */
+    position:relative;
+    /* accordion을 기준으로 영역의 크기를 지정해주어
+    모든 메뉴가 다 보여지는 영역이 사이트를 꽉 채우는 크기가 되도록 합니다. */
+    width:100%;
+    height:100%;
+}
+/* view 에 속한 콘텐츠들에 대한 설정을 해줍니다. */
+.view .view-item{
+    /* 지정한 영역보다 넘어가는 부분은 안 보이게 처리해줍니다. */
+    overflow:hidden;
+    /* 각 메뉴 속 콘텐츠들이 view-item을 기준으로 설정되도록
+    position을 relative로 설정해줍니다. */
+    position:relative;
+    /* 높이값을 100%에 */
+    height:100%;
+    /* 각 메뉴별 비율을 1대1로 설정하여 가로의 너비에서 영역이 나뉘어지도록 합니다. */
+    flex:1;
+    /* 변형되는 모든 부분에서의 transition값을 설정해주어
+    자연스럽게 변형되는 애니메이션 효과를 줍니다. */
+    transition:all 360ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+/* view-item에 마우스 오버했을 때에 효과를 설정합니다. */
+.view .view-item:hover{
+    /* flex의 비율 내에서 메뉴거 할당 가능한 영역을 0으로 설정해줍니다. */
+    flex-grow:0;
+    /* 영역을 넘어가는 내용의 영역에 대해 0으로 설정해줍니다. */
+    flex-shrink:0;
+    /* 오버 시 해당 매뉴가 90%의 영역을 차지하게끔 늘어나도록 합니다. */
+    flex-basis:90%;
+}
+
+/* 메뉴 호버를 안했을 시에 보여지는 메뉴에 대한 설명 영역입니다. */
+.view-item .menu-collapse{
+    /* view-item을 기준으로 자유롭게 위치를 지정할 수 있도록 하고 */
+    position:absolute;
+    /* 상위 레이어에 위치하도록 z-index값을 설정해줍니다. */
+    z-index:10;
+    /* 위로부터 50% */
+    top:50%;
+    /* 왼쪽으로부터 50%로 설정하여 가운데에 위치하도록 합니다. */
+    left:50%;
+    /* 택스트를 가운데 정렬시켜주고 */
+    text-align: center;
+    /* 불투명도를 1로 하여 보이게 합니다. */
+    opacity:1;
+    pointer-events:auto;
+    transform-origin:center center;
+    /* 위치를 정확히 지정할 수 있도록 발이 상대적인 위치도 고려해주었습니다. */
+    transform:translateX(-50%) translateY(-50%);
+    /* 마우스 아웃 시 실행되는 애니메이션 */
+    transition:opacity 160ms 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+/* view-item에 마우스 오버 시 menu-collapse에 대한 설정입니다. */
+.view .view-item:hover .menu-collapse{
+    /* 불투명도를 0으로 하여 마우스 오버 전에는 안 보이게 합니다. */
+    opacity:0;
+    pointer-events:none;
+    /* 마우스 오버 시 실행되는 애니메이션입니다. */
+    transition:opacity 160ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+/* 메뉴 문장별로 글씨색을 다르게 주기 위해 클래스값을 줍니다. */
+.what {
+    color: #00a6ff;
+}
+
+/* menu-collapse 내부에 있는 텍스트를 담은 span에 대한 css를 설정해줍니다. */
+.view-item .menu-collapse span{
+    /* display를 block으로 설정해주고 */
+    display:block;
+    /* 텍스트 크기를 70px로 설정해줍니다. */
+    font-size:70px;
+    /* 행간은 1.833으로 설정해줍니다. */
+    line-height:1.833rem;
+    white-space:nowrap;
+}
+/* 마우스 오버 시 보여지는 menu-view 영역입니다. */
+.view-item .menu-view{
+    /* 지정한 영역 내에서 동일한 비율을 갖게 하기 위해 display를 flex로 설정해줍니다. */
+    display:flex;
+    /* menu-view 내에 있는 하위 요소들이 menu-view를 기준으로
+    위치를 잡도록 position을 relative로 설정해줍니다. */
+    position:relative;
+    /* 화면에 보이도록 상위 레이어에 위치하도록 지정해줍니다. */
+    z-index:10;
+    /* 너비와 높이를 각 100%로 지정해주고 */
+    width:100%;
+    height:100%;
+    /* 초기값은 불투명도를 0으로 설정하여 안 보이게 합니다. */
+    opacity:0;
+    pointer-events:none;
+    /* 메뉴 영역 내에서 정가운데에 위치하도록 설정해줍니다. */
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    /* menu-view에서 변형되는 불투명도에 대해 자연스럽게 변화하도록
+    transition값을 부여해줍니다. */
+    transition:opacity 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+/* view-item에 마우스오버했을 시에 menu-view에서 변형되는 영역입니다. */
+.view .view-item:hover .menu-view{
+    /* 불투명도를 1로 변경하여 메뉴 설명이 보이도록 합니다. */
+    opacity:1;
+    pointer-events:auto;
+    /* menu-view에서 변형되는 불투명도에 대해 자연스럽게 변화하도록
+    transition값을 부여해줍니다. */
+    transition:opacity 200ms 160ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+/* 메뉴 속에서 각 메뉴를 설명하는 내용을 담은 영역입니다. */
+.view-item .menu-view span.desc{
+    font-size:1.167rem;
+    line-height:1.667rem;
+    /* y값을 변형해주고 */
+    transform:translateY(30px);
+    /* 변형된 y값이 자연스럽게 변형되도록 transition값을 부여해줍니다. */
+    transition:transform 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    /* 텍스트를 가운데 정렬로 설정해줍니다. */
+    text-align: center;
+}
+/* view-item에 마우스 오버 시, 변형되는 desc 부분입니다. */
+.view .view-item:hover .menu-view span.desc{
+    /* y값이 변형되며 */
+    transform:translateY(0);
+    /* 변형된 y값이 자연스럽게 변형되도록 transition값을 부여해줍니다. */
+    transition:transform 200ms 160ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+/* view-item 속에서 이미지를 감싸고 있는 영역입니다. */
+.view-item .image-wrap{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.view-item .image-wrap img{
+    display:block;
+    width:100%;
+    height:100vh;
+    /* object-fit:cover를 주어 이미지의 영역이 넓어져도 적절한 비율로 맞춰지게 합니다. */
+    object-fit:cover;
+}
+
+/* 가로로 이동하는 텍스트 애니메이션에 대한 css를 설정해줍니다. */
+.marquee.horizontal2 {
+    /* position은 absolute로 설정하여 section1을 기준으로 원하는 위치에 지정할 수 있도록 합니다. */
+	position: absolute;
+    /* 위를 기준으로 맨 위에 위치하도록 해주며 */
+	top: 900px;
+    /* 텍스트 크기를 21px로 설정해줍니다. */
+	font-size: 21px;
+    /* 텍스트 영역을 넘어가는 부분은 안 보이게 설정합니다. */
+	white-space: nowrap;
+    /* 텍스트가 이동하는 애니메이션인 marquee_h과 연결해줍니다. */
+    /* 15초동안 설정한 애니메이션이 실행되게 하며 무한 반복하게 설정합니다. */
+	animation: marquee_h 15s linear infinite;
+    /* 애니메이션이 실행되는 시점을 10초 전으로 하여
+    사이트에 접속하자마자 봤을 때에도 어색하지 않도록 합니다. */
+	animation-delay: -10s;
+    /* 텍스트 애니메이션이 최상위 레이어에 위치해야 하기 때문에
+    z-index 값을 많이 줍니다. */
+    z-index: 100;
+    /* 총 가로 길이를 section1을 기준으로 100%으로 설정해줍니다. */
+    width: 100%;
+    /* 공백을 상하에는 0, 좌우에는 자동값을 주어 가운데에 위치하도록 해줍니다. */
+	margin: 0 auto;
+    /* 설정한 크기값을 넘어가는 부분은 안 보이게 처리해줍니다. */
+    overflow: hidden;
+}  
+
+/* menu-view 내의 텍스트에 마우스 오버 효과를 주기 위해
+기본값 설정을 해줍니다. */
+.color a:after,
+.color a:before {
+    display: block;
+    /* 배경색을 채워주고 */
+    background: #00a6ff;
+    /* 기본값은 너비는 0으로 설정합니다. */
+    width: 0;
+    height: 100px;
+    content: "";
+    position: absolute;
+    /* 자연스럽게 변형하고자 transition값을 넣어줍니다. */
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    z-index: -1;
+}
+/* 메뉴2에 있는 텍스트에도 똑같이 적용해줍니다. */
+.color2 a:after,
+.color2 a:before {
+    display: block;
+    background: #ddf734;
+    width: 0;
+    height: 100px;
+    content: "";
+    position: absolute;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    z-index: -1;
+}
+
+a:after {
+    bottom: 0px;
+    left: 0px;
+}
+
+a:before {
+    top: 0px;
+    right: 0px;
+}
+/* 마우스 오버 시 너비값을 100으로 함으로써 네모가 채워지는 효과를 줍니다. */
+a:hover:after,
+a:hover:before{
+  width: 100%;
+}
+
+
+/* 각 메뉴에 마우스 오버 시, 변경되는 텍스트 색상을 다르게 설정합니다. */
+.color a:hover {
+    color: #ddf734;
+}
+
+.color2 a:hover {
+    color: #6fec84;
+}
+

@@ -1,0 +1,412 @@
+/* 첫번째 섹션에 대한 css를 설정해줍니다. */
+#section1 {
+    /* relative로 position을 설정해 하위 요소들의 기준이 되도록 합니다. */
+    position: relative;
+    /* 가로는 100%로 사이트의 가로폭을 꽉 채우고 */
+    width: 100%;
+    /* 높이는 vh단위를 사용하여 브라우저 내에서 보이는 창의 높이만큼 보이도록 합니다. */
+    height: 100vh;
+}
+
+/* section1에 배치된 메인 이미지의 크기를 사이트의 크기에 맞게 조절해줍니다. */
+#section1 img {
+	width: 100%;
+	height: 100%;
+}
+/* 데코 요소인 날짜가 들어갈 원에 대해 설정해줍니다. */
+.date {
+	position: absolute;
+	top: 45px;
+	left: 65px;
+	width: 84px;
+	height: 84px;
+	border: 4px solid white;
+	border-radius: 50%;
+}
+/* 원 안에 들어갈 날짜의 위치와 크기도 설정해줍니다. */
+.date p {
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 25px;
+	margin-left: 23px;
+}
+/* 데코 요소인 좌측의 원에 대해서도 설정해줍니다. */
+.circle {
+	position: absolute;
+	top: 486px;
+	left: 68px;
+}
+
+.circle li {
+	width: 6px;
+	height: 6px;
+	background-color: white;
+	border-radius: 50%;
+	margin-bottom: 27px;
+}
+/* 링크 태그가 적용된 메뉴애 마우스 오버 시 하이라이팅 효과가 나오도록 합니다. */
+a .menu :hover .menu {
+	background-color: var(--color-y);
+}
+a p:hover {
+	color: var(--color-b);
+}
+
+a .menuBtn:hover {
+	background-color: var(--color-b);
+}
+
+a .menuBtn::before:hover {
+	background-color: var(--color-b);
+}
+
+.menuBtn {
+	position: absolute;
+	top: 64px;
+	right: 140px;
+	width: 19px;
+	height: 5px;
+	background-color: white;
+}
+
+.menuBtn::before {
+	content: "";
+	position: absolute;
+	margin-top: 10px;
+	width: 19px;
+	height: 5px;
+	background-color: white;
+}
+
+.menu p {
+	position: absolute;
+	top: 58px;
+	right: 70px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.triangle {
+	position: absolute;
+	top: 299px;
+	left: 1837px;
+}
+
+.slogan {
+	position: absolute;
+	top: 380px;
+	left: 0;
+    right: 0;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 155px;
+	line-height: 0.8em;
+}
+/* 텍스트 중 일부만 색을 변경하기 위해 클래스를 생성하여 적용시킵니다. */
+.colorB {
+	color: var(--color-y);
+}
+/* 메인 슬로건을 꾸밀 스티커 요소를 배치합니다. */
+.goodStk {
+	position: absolute;
+	top: 267px;
+	left: 1390px;
+	z-index: 10;
+}
+
+.smileStk {
+	position: absolute;
+	top: 550px;
+	left: 500px;
+}
+
+/* 가로로 이동하는 텍스트 애니메이션에 대한 css를 설정해줍니다. */
+.marquee.horizontal {
+    /* position은 absolute로 설정하여 section1을 기준으로 원하는 위치에 지정할 수 있도록 합니다. */
+	position: absolute;
+    /* 위를 기준으로 맨 위에 위치하도록 해주며 */
+	top: 900px;
+    /* 텍스트 크기를 21px로 설정해줍니다. */
+	font-size: 21px;
+    /* 텍스트 영역을 넘어가는 부분은 안 보이게 설정합니다. */
+	white-space: nowrap;
+    /* 텍스트가 이동하는 애니메이션인 marquee_h과 연결해줍니다. */
+    /* 15초동안 설정한 애니메이션이 실행되게 하며 무한 반복하게 설정합니다. */
+	animation: marquee_h 15s linear infinite;
+    /* 애니메이션이 실행되는 시점을 10초 전으로 하여
+    사이트에 접속하자마자 봤을 때에도 어색하지 않도록 합니다. */
+	animation-delay: -10s;
+    /* 텍스트 애니메이션이 최상위 레이어에 위치해야 하기 때문에
+    z-index 값을 많이 줍니다. */
+    z-index: 100;
+    /* 총 가로 길이를 section1을 기준으로 100%으로 설정해줍니다. */
+    width: 100%;
+    /* 공백을 상하에는 0, 좌우에는 자동값을 주어 가운데에 위치하도록 해줍니다. */
+	margin: 0 auto;
+    /* 설정한 크기값을 넘어가는 부분은 안 보이게 처리해줍니다. */
+    overflow: hidden;
+	color: white;
+}  
+/* 애니메이션이 어떤 식으로 실행될 지에 대해 keyframes 기능을 이용해 설정합니다. */
+@keyframes marquee_h {
+    /* 처음에는 텍스트의 들여쓰기를 0으로 설정하고 */
+	0% {
+		text-indent: 0em
+	}
+    /* 애니메이션의 최종 시점에 들여쓰기를 -값으로 주어 화면 밖으로 이동하게끔 합니다. */
+	100% {
+		text-indent: -127.5em
+	}
+}
+
+/* section2 영역입니다. */
+#section2 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	/* 뒷배경 이미지를 넣어주고 */
+	background-image: url("../img/background.png");
+	/* 남은 공간에 이미지가 반복되지 않도록 합니다. */
+	background-repeat: no-repeat;
+	z-index: -20;
+	overflow: hidden;
+}
+
+/* 사진 영역입니다. */
+.torera {
+	position: absolute;
+	top: 215px;
+	left: 193px;
+	width: 732px;
+	height: 409px;
+}
+
+/* 사진 뒤에 배치된 사각형입니다. */
+.back {
+	background-color: #6fec84;
+	width: 735px;
+	height: 411px;
+	position: absolute;
+	top: 268px;
+	left: 157px;
+	z-index: -1;
+}
+
+/* 데코 요소입니다. */
+.nice {
+	position: absolute;
+	top: 165px;
+	left: 827px;
+	transform: rotate(30deg);
+}
+
+.str {
+	position: absolute;
+	top: 546px;
+	left: 110px;
+}
+
+.good {
+	position: absolute;
+	bottom: 220px;
+	right: 250px;
+}
+
+/* 설명 키워드 부분입니다. */
+.text {
+	position: absolute;
+	top: 230PX;
+	right: 350px;
+	font-size: 50px;
+	color: var(--color-b);
+	line-height: 1.8em;
+}
+/* 설명 키워드를 스티커처럼 보이게 하기 위해 배경을 채워줍니다. */
+.text li {
+	background-color: var(--color-y);
+	padding: 0 20px;
+	margin: 20px;
+	text-align: center;
+}
+
+/* 스티커를 기울이기 위해 각 스티커별로 각도를 지정해줍니다. */
+.text li:nth-child(1) {
+	transform: rotate(10deg);
+}
+.text li:nth-child(2) {
+	transform: rotate(-10deg);
+}
+.text li:nth-child(3) {
+	transform: rotate(5deg);
+}
+.text li:nth-child(4) {
+	transform: rotate(-5deg);
+}
+
+/* section3 영역입니다. */
+#section3 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+/* 뒷배경 이미지에 대해 설정해줍니다. */
+.background2 {
+	position: absolute;
+	top: -50px;
+	left: 0;
+	z-index: -10;
+}
+
+/* tab-menu 영역입니다. */
+.tab-menu {
+	/* 가로 영역은 꽉 차게 해주며 */
+	width:100%;
+	margin: 0 auto;
+	/* 위쪽으로 50px만큼 공백을 줍니다. */
+	margin-top:50px;
+}
+
+.tab-menu ul {
+	overflow:hidden;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	/* 각 메뉴가 동일한 비율로 나뉘어지기 위해 flex를 이용합니다. */
+	display:flex;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.tab-menu li {
+	flex:1;
+	height:50px;
+}
+
+.tab-menu li a {
+	position:relative;
+	display:block;
+	width:100%;
+	height:100%;
+	padding-top:13px;
+	padding-bottom:13px;
+	background-color:var(--color-y);
+	border-radius: 20px;
+	text-align:center;
+	text-decoration:none;
+	color:var(--color-b);
+	font-weight:700;
+	line-height:2rem;
+	/* 색상이 변경될 때 자연스럽게 변형하기 위해 transition값을 설정해줍니다. */
+	-webkit-transition:background-color 120ms cubic-bezier(0.455,0.030,0.515,0.955),color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	-moz-transition:background-color 120ms cubic-bezier(0.455,0.030,0.515,0.955),color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	-o-transition:background-color 120ms cubic-bezier(0.455,0.030,0.515,0.955),color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	-ms-transition:background-color 120ms cubic-bezier(0.455,0.030,0.515,0.955),color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	transition:background-color 120ms cubic-bezier(0.455,0.030,0.515,0.955),color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+}
+
+.tab-menu li a span {
+	display:inline-block;
+	position:relative;
+	vertical-align:top;
+}
+
+.tab-menu li a span::before {
+	content:"";
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:50%;
+	width:0;
+	height:0;
+	/* 선택된 메뉴에 보더가 생기도록 합니다. */
+	border-bottom:2px solid var(--color-y);
+	-webkit-transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	-o-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	transform:translateX(-50%);
+	-webkit-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	-moz-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	-o-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	-ms-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+	transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 120ms cubic-bezier(0.455,0.030,0.515,0.955);
+}
+
+/* 선택된 메뉴에 대한 css를 설정해줍니다. */
+.tab-menu li a.selected {
+	/* 배경색을 파랑색으로 해주어 선택되지 않은 메뉴와 구분해주고 */
+	background-color:var(--color-b);
+	border-radius:20px;
+	/* 텍스트 색깔 또한 변경해줍니다. */
+	color:var(--color-y);
+	cursor:default;
+	font-size: 20px;
+}
+
+.tab-menu li a:hover span::before,.tab-menu li a.selected span::before {
+	width:100%
+}
+
+.tab-menu li a.selected span::before {
+	border-bottom-color:var(--color-y);
+}
+
+.tab-menu + .tab-container {
+	margin-top:20px;
+}
+
+/* tab-container의 위치와 영역에 대해 설정해줍니다. */
+.tab-container {
+	position:relative;
+	width:1280px;
+	margin-right:auto;
+	margin-left:auto;
+	padding-top:24px;
+}
+
+.tab-container .tab-content {
+	display:none;
+	position:relative;
+	padding:30px;
+	height:500px;
+	font-weight:700;
+	border-radius:20px;
+	box-shadow:0 1px 4px rgba(0,0,0,0.1);
+}
+
+.tab-container .tab-content.selected {
+	display:block;
+}
+
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #2ebdff;
+}
+
+.wrap {
+	position: relative;
+	/* 그리드에 맞춰 설계되도록 max-width값을 주어 감싸는 영역을 만들어줍니다. */
+	max-width: 1660px;
+	margin: 0 auto;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1em;
+}
+
+.wrap  p {
+	margin-top: 80px;
+	display: inline-block;
+}
+
+.right {
+	position: absolute;
+    right: 0;
+}

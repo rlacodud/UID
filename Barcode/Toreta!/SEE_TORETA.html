@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 토레타의 서브 사이트의 제목에 맞게 사이트명을 See The Toreta!로 설정해줍니다. -->
+    <title> See The Toreta! </title>
+
+    <!-- CSS를 연결해주기 위해 LINK 태그를 이용합니다. 
+    reset 태그를 통해 기본 CSS 설정을 해준 뒤, 탭 기능이 담긴 see CSS를 연결해줍니다. -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/see.css" type="text/css">
+</head>
+
+<body>
+
+    <section id="section1">
+        <!-- 뒷배경으로 들어간 메인 이미지입니다. -->
+        <img src="./img/main2.png">
+        <!-- 데코 요소 중 일부인 날짜에 대한 도장과 -->
+        <div class="date">
+            <p>APRIL <br>
+                04 </p>
+        </div>
+        <!-- 원 요소입니다. -->
+        <div class="circleGroup">
+            <ul class="circle">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- 메뉴 버튼을 누를 시 서브 사이트를 선택할 수 있는 메인 페이지로 이동할 수 있도록 하였습니다. -->
+        <a href="./index.html">
+            <div class="menu">
+                <span class="menuBtn"></span>
+                <p> MENU </p>
+            </div>
+            </a>
+
+        <!-- 데코 요소 중 일부인 재생 버튼입니다. -->
+        <div class="triangle"> <img src="./img/triangle.png"> </div>
+
+        <div class="mainText">
+
+            <span class="goodStk"> <img src="./img/good.png"> </span>
+            <span class="smileStk"> <img src="./img/smile.png"> </span>
+
+            <p class="slogan">
+                <span class="colorB"> WHAT'</span>S THE <br>
+                TORETA?
+            </p>
+
+        </div>
+
+        <p class="marquee horizontal"> It was released in Japan in June 2015, and then in Korea in April 2016,
+            'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015, and then in Korea
+            in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015,
+            and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in
+            Japan in June 2015, and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius.
+        </p>
+
+    </section>
+
+    <section id="section2">
+        <img class="torera" src="./img/토레타.jpg">
+        <span class="back"></span>
+
+        <img class="nice" src="./img/nice.png">
+        <img class="str" src="./img/toretaStr.png">
+
+        <ul class="text">
+            <li>SINCE 2015</li>
+            <li>DAILY</li>
+            <li>FRUIT</li>
+            <li>VEGERABLE</li>
+        </ul>
+
+        <img class="good" src="./img/good.png">
+
+        <p class="marquee horizontal"> It was released in Japan in June 2015, and then in Korea in April 2016,
+            'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015, and then in Korea
+            in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in Japan in June 2015,
+            and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius. It was released in
+            Japan in June 2015, and then in Korea in April 2016, 'Toretta!' was released as a sub-brand of Aquarius.
+        </p>
+
+    </section>
+
+    <section id="section3">
+
+        <img class="background2" src="./img/background2.png">
+
+        <div id="tab-menu" class="tab-menu">
+            <ul>
+                <li><a href="#" class="selected"><span>2019 PROMOTION</span></a></li>
+                <li><a href="#"><span>2019 PROMOTION</span></a></li>
+                <li><a href="#"><span>2021 PROMOTION</span></a></li>
+            </ul>
+        </div>
+
+        <div class="tab-container">
+            <div class="tab-content selected"><iframe width="1280" height="720"
+                    src="https://www.youtube.com/embed/YBptolbsKYY" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <div class="tab-content"><iframe width="1280" height="720" src="https://www.youtube.com/embed/oJKp8h2ct0k"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <div class="tab-content"><iframe width="1280" height="720" src="https://www.youtube.com/embed/r9RAmbl2Ia8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <p> © 2021.<br>
+                kim chae young.<br>
+                all rights reserved.</p>
+
+            <p class="right">
+                contact
+                @ch_3young <br>
+                @010-6778-8984
+            </p>
+        </div>
+
+        <script type="text/javascript" src="./js/tab.js"></script>
+
+</body>
+
+</html>
