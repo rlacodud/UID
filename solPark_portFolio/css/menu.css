@@ -1,0 +1,82 @@
+.menuIcon {
+    z-index: 150;
+    color: white;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    -webkit-transition:.4s;
+    -moz-transition:.4s;
+    -ms-transition:.4s;
+    -o-transition:.4s;
+    transition:.4s;
+}
+.menuIcon img {
+    width: 50px;
+}
+
+.menuPage {
+    display: none;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.menuPage ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+}
+
+.menuLi {
+    position: relative;
+    display: inline-block;
+    border-right: 1px solid white;
+    width: calc(100vw*366/1920);
+    height: 100vh;
+    -webkit-transition:.4s;
+    -moz-transition:.4s;
+    -ms-transition:.4s;
+    -o-transition:.4s;
+    transition:.4s;
+    cursor: pointer;
+    font-family:"Noto Sans KR",sans-serif;
+    font-weight: 700;
+}
+.menuPage li:hover{
+    background-color: #8cfa20;
+}
+.menuNum {
+    position: absolute;
+    right: calc(100vw*15/1920);
+    font-size: calc(100vw*97.45/1920);
+    -webkit-transition:.4s;
+    -moz-transition:.4s;
+    -ms-transition:.4s;
+    -o-transition:.4s;
+    transition:.4s;
+    top: calc(100vw*10/1920);
+}
+
+.menuName {
+    /* border: solid 1px red; */
+    width: auto;
+    height: calc(100vw*159/1920);
+    font-size: calc(100vw*150/1920);
+    position: absolute;
+    bottom: calc(100vw*20/1920);
+    left: calc(100vw*159/1920);
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    -webkit-transition:.4s;
+    -moz-transition:.4s;
+    -ms-transition:.4s;
+    -o-transition:.4s;
+    transition:.4s;
+}

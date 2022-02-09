@@ -1,0 +1,172 @@
+$(document).mousemove(function(e){
+    $('.projectThumb').css("top", e.pageY);
+    $('.projectThumb').css("left", e.pageX);
+});
+
+$('.title1').mouseover(function(){
+    console.log("마우스오버");
+    $('.boooao').css({
+        'display':'none'
+    })
+    $('.boooaoLong').css({
+        'display':'inline-block'
+    })
+    $('.thumb1').css({
+        'display':'inline-block'
+    })
+})
+$('.title1').mouseleave(function(){
+    console.log("마우스리브");
+    $('.boooao').css({
+        'display':'inline-block'
+    })
+    $('.boooaoLong').css({
+        'display':'none'
+    })
+    $('.thumb1').css({
+        'display':'none'
+    })
+})
+// 2
+$('.title2').mouseover(function(){
+    console.log("마우스오버");
+    $('.ustage').css({
+        'display':'none'
+    })
+    $('.ustageLong').css({
+        'display':'inline-block'
+    })
+    $('.thumb2').css({
+        'display':'inline-block'
+    })
+})
+$('.title2').mouseleave(function(){
+    console.log("마우스리브");
+    $('.ustage').css({
+        'display':'inline-block'
+    })
+    $('.ustageLong').css({
+        'display':'none'
+    })
+    $('.thumb2').css({
+        'display':'none'
+    })
+})
+// 3
+$('.title3').mouseover(function(){
+    console.log("마우스오버");
+    $('.paraNoise').css({
+        'display':'none'
+    })
+    $('.paraNoiseLong').css({
+        'display':'inline-block'
+    })
+    $('.thumb3').css({
+        'display':'inline-block'
+    })
+})
+$('.title3').mouseleave(function(){
+    console.log("마우스리브");
+    $('.paraNoise').css({
+        'display':'inline-block'
+    })
+    $('.paraNoiseLong').css({
+        'display':'none'
+    })
+    $('.thumb3').css({
+        'display':'none'
+    })
+})
+// 4
+$('.title4').mouseover(function(){
+    console.log("마우스오버");
+    $('.coco').css({
+        'display':'none'
+    })
+    $('.cocoLong').css({
+        'display':'inline-block'
+    })
+    $('.thumb4').css({
+        'display':'inline-block'
+    })
+})
+$('.title4').mouseleave(function(){
+    console.log("마우스리브");
+    $('.coco').css({
+        'display':'inline-block'
+    })
+    $('.cocoLong').css({
+        'display':'none'
+    })
+    $('.thumb4').css({
+        'display':'none'
+    })
+})
+// 5
+$('.title5').mouseover(function(){
+    console.log("마우스오버");
+    $('.samsung').css({
+        'display':'none'
+    })
+    $('.samsungLong').css({
+        'display':'inline-block'
+    })
+    $('.thumb5').css({
+        'display':'inline-block'
+    })
+})
+$('.title5').mouseleave(function(){
+    console.log("마우스리브");
+    $('.samsung').css({
+        'display':'inline-block'
+    })
+    $('.samsungLong').css({
+        'display':'none'
+    })
+    $('.thumb5').css({
+        'display':'none'
+    })
+})
+
+// 클릭 후 상세 페이지로 이동
+$('.title1').click(function(){
+    console.log("클릭");
+    $('.project1').css({
+        'display':'block',
+    })
+    // $('.aboutProject').css({
+    //     'opacity':'1',
+    // })
+})
+$('.title2').click(function(){
+    console.log("클릭");
+    $('.project2').css({
+        'display':'block',
+    })
+})
+$('.title3').click(function(){
+    console.log("클릭");
+    $('.project3').css({
+        'display':'block',
+    })
+})
+$('.title4').click(function(){
+    console.log("클릭");
+    $('.project4').css({
+        'display':'block',
+    })
+})
+$('.title5').click(function(){
+    console.log("클릭");
+    $('.project5').css({
+        'display':'block',
+    })
+})
+
+// 딜리트
+$('.deleteBtn').click(function(){
+    console.log("클릭");
+    $('.projectPage').css({
+        'display':'none'
+    })
+})
