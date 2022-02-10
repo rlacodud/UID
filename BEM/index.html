@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./css/common.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <div class="header__inner">
+      <div class="tabzilla">
+        <a href="#" class="tabzilla__link">
+          <span>mozilla</span>
+        </a>
+      </div>
+
+      <!--
+        아래의 경우, footer에도 logo가 사용된다면
+        logo class에는 logo background-image에 관한 설정
+        header__logo, footer__logo에는 해당 logo의 위치와 크기 등을 설정하여
+        logo class 재활용 용이.
+       -->
+      <div class="header__logo">
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <h1>MDN</h1>
+          </a>
+        </div>
+      </div>
+
+      <!-- 
+        아래의 경우,
+        같은 list, item이더라도 auth-means / auth-picker를 앞에 붙여 더욱 명시해줌으로써
+        ID 사용 필요 저하
+       -->
+      <div class="header__auth header__auth--opened">
+        <div class="auth">
+          <div class="auth-means">
+            <p class="auth-means__text">Sign in with</p>
+            <ul class="auth-means__list">
+              <li class="auth-means__item auth-menas__item--persona">
+                <a href="#">
+                  <i class="fas fa-user"></i>
+                  <span class="blind">Persona</span>
+                </a>
+              </li>
+              <li class="auth-means__item auth-menas__item--github">
+                <a href="#">
+                  <i class="fab fa-github"></i>
+                  <span class="blind">Github</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="auth-picker">
+            <ul class="auth-picker__list">
+              <li class="auth-picker__item">
+                <a href="#">
+                  <i class="fas fa-user"></i>
+                  <span>Persona</span>
+                </a>
+              </li>
+              <li class="auth-picker__item">
+                <a href="#">
+                  <i class="fab fa-github"></i>
+                  <span>Github</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>Nav Menu 01</span>
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="nav__submenu nav__submenu--col2">
+                <div class="nav-submenu">
+                  <div class="nav-submenu__column">
+                    <strong class="nav-submenu__title">Column 01</strong>
+                    <ul class="nav-submenu__list">
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">HTML</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">CSS</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">Javascript</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">HTML</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">CSS</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">Javascript</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="nav-submenu__column">
+                    <strong class="nav-submenu__title">Column 02</strong>
+                    <ul class="nav-submenu__list">
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">Anne</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">NYKIM</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">Nana</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a href="#" class="nav-submenu__link">...more</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="nav-submenu__close">
+                    <span class="blind">Close submenu</span>
+                    <i class="fa fa-times-circle"></i>
+                  </button>
+                </div>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>Nav Menu 02</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>Nav Menu 03</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>Nav Menu 04</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__search">
+        <!--  
+          search는 다른 영역에서 검색의 기능으로 사용 가능하기에 Block 단위로 표기.
+        -->
+        <div class="search">
+          <form>
+            <div class="search__inner">
+              <div class="search__title">
+                <label for="main-search">
+                  <i class="fa fa-search"></i>
+                  <span class="blind">Search</span>
+                </label>
+              </div>
+              <input type="text" id="main-search" class="search__input search__input--extend">
+              <input type="submit" class="search__button blind" value="Search">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="search">
+    <form>
+      <div class="search__inner">
+        <div class="search__title">
+          <label for="main-search">
+            <i class="fa fa-search"></i>
+            <span class="blind">Search</span>
+          </label>
+        </div>
+        <input type="text" id="main-search" class="search__input ">
+        <input type="submit" class="search__button blind" value="Search">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
