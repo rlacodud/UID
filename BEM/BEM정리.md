@@ -44,6 +44,7 @@ ex) <strong class="title title--color-gray">VIP 로그인 (준비중)</strong>
 ### 장점
  1. class name만으로 마크업 구조 파악 용이 -> 협업 시 설명 단축.
  2. SASS의 부모참조자(&)로 효율적인 코딩 가능.
+ 3. 쉬운 유지보수 작업.
 
 ### 단점
  1. class name이 길어짐.
