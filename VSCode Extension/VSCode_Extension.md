@@ -46,7 +46,21 @@
 - 들여쓰기나 줄바꿈 등으로 지저분해진 코드를  <br/>
   코드 형식에 맞게 자동으로 일정하게 정렬해준다.
 - 여러 사람이 한 프로젝트를 같이 코딩 해야 할때에 유용하다.
-<!-- ### 예시 -->
+### 예시
+ #### 사용 전
+    function play1() { 
+      if (audio1.paused) { audio1.play(); 
+      } else{audio1.pause(); audio1.currentTime = 0 } }
+
+  #### 사용 후
+    function play1() { 
+      if (audio1.paused) { 
+          audio1.play(); 
+      }else{ 
+          audio1.pause(); 
+          audio1.currentTime = 0 
+      } 
+    }
 
 ## 7.Indent-rainbow
 ![image](https://user-images.githubusercontent.com/54615250/153359055-fbce044f-04f6-45d3-8deb-902f76cb9d89.png)
