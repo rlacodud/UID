@@ -350,6 +350,24 @@ flex-grow, flex-shrink, flex-basis를 한 번에 쓸 수 있는 축약형 속성
 flex-basis: 0; 으로, 기본 점유 크기를 0으로 만들어버려 결국 전체 크기를 1:2:1로 나누어 가져서, 영역 자체의 크기가 정확히 1:2:1의 비율로 설정되었다.
 여백의 비가 아닌, 영역 자체를 원하는 비율로 분할하기를 원한다면 flex-basis을 0으로 함으로써 손쉽게 처리할 수 있다.
 
+flex-wrap과 flex-basis를 이용해서 2단 컬럼의 사각형 목록을 만들어 보자.
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item {
+        flex: 1 1 40%;
+    }
+
+flex-basis가 40%면, 100%에는 2개까지만 들어가므로 하나의 row에는 2개까지만 남고 다음줄로 넘어가게 되어서 2단 컬럼이 유지가 된다.
+
+![Alt text](./img/flex2Column.PNG)
+
+1 1 30%로 3단 칼럼을 만들어보았다.
+
+![Alt text](./img/flex3Column.PNG)
+
 - - -
 
 ## **수직축으로 아이템 정렬 align-self**
@@ -403,3 +421,5 @@ z-index로 Z축 정렬을 할 수 있고, 숫자가 클 수록 위로 올라온�
     /* z-index를 설정 안하면 0이므로, 1만 설정해도 나머지 아이템을 보다 위로 올라온다 */
 
 ![Alt text](./img/zIndex.PNG)
+
+- - -
