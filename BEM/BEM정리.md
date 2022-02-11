@@ -29,7 +29,7 @@ __BEM 방식__
 
 [element]: https://t1.daumcdn.net/cfile/tistory/993FCF4A5C7BF68F27 "element"
 #### &nbsp; Block과 달리 의존적인 형태로, 자신이 속한 Block 내에서만 의미를 가짐.
-#### &nbsp;&nbsp; __'~의' 로 생각하면 파악 용이.__  
+#### &nbsp;&nbsp; __'~의' 로 생각하면 파악 용이.__  / ex) tabzilla__link는 tabzilla의 link.
 <br/>
 
  ```html
@@ -46,13 +46,15 @@ __BEM 방식__
   ```
 
 ##### &nbsp; + 위 코드에서 search는 header에서도 footer에서도 사용될 수 있는 기능을 가진 독립적인 형태이기에 Block 단위로 표현.
-##### &nbsp; + 그러나 search__inner, search__title의 경우에는 search에 의존해서 존재하는 영역이고 독립적이지 않기에 언더바(__)로 Block에 귀속돼있음을 명시.  
+##### &nbsp; + 그러나 search__inner, search__title의 경우에는 search에 의존해서 존재하는 영역이고 독립적이지 않기에 언더바(__)로 search에 귀속돼있음을 명시.  
 
 <br/>
 <br/>
 
 ### 3. Modifier는 Block이나 Element의 속성 담당.
- #### &nbsp; [Element의 속성을 명시하는 두가지 방식]
+<br/>
+
+ #### &nbsp; __[Element의 속성을 명시하는 두가지 방식]__
 ##### &nbsp;&nbsp; __(1) 불리언(boolean) 타입(그 값이 true라고 가정하고 사용)__  
  ```html
   <li class="tab__item tab__item--focused">탭 01</li>
@@ -64,8 +66,15 @@ __BEM 방식__
  ```html
   <strong class="title title--color-gray">VIP 로그인 (준비중)</strong>
  ```
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color속성이 gray로 설정되었다는 걸 명시.
+##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color 속성이 gray로 설정되었다는 걸 명시.
 
+<br/>
+
+--------------  
+<br/>
+
+[예제](./index.html)  
+##### 예제에서 f12로 개발자도구를 켜고 요소와 class name을 확인하면 이해에 도움이 됩니다.
 <br/>
 
 --------------  
