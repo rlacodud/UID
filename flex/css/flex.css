@@ -2,9 +2,9 @@
     /* 기본 설정 */
     background-color: rgb(179, 179, 179);
     /* width 줄 바꿈 필요 시 250px */
-    width: 400px;
+    width: 600px;
     /* width: 250px; */
-    height: 100px;
+    /* height: 100px; */
 
     margin-top: 100px;
     margin-left: 200px;
@@ -20,7 +20,7 @@
 
     /* flex-wrap (줄넘김 처리 설정) */
     /* flex-wrap: nowrap; */
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* flex-wrap: wrap-reverse; */
 
     /* flex-flow (단축 속성) */
@@ -62,7 +62,8 @@
     font-size: 30px;
     color: white;
 
-    opacity: 80%;
+    /* z-index 예시용 */
+    /* opacity: 80%; */
 
     /* flex-basis (유연한 박스의 기본 영역) */
     /* width, height에 사용하는 각종 단위의 수가 들어갈 수 있음. */
@@ -113,7 +114,7 @@
 .container .item:nth-child(3){order: 2;} */
 
 /* z-index */
-.container .item:nth-child(2){z-index: 1;transform: scale(2);}
+/* .container .item:nth-child(2){z-index: 1;transform: scale(2);} */
 
 /* 폰트 사이즈 설정 */
 /* .container .item:nth-child(1){font-size: 40px;}
