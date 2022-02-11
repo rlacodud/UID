@@ -1,0 +1,129 @@
+.container {
+    /* 기본 설정 */
+    background-color: rgb(179, 179, 179);
+    /* width 줄 바꿈 필요 시 250px */
+    width: 400px;
+    /* width: 250px; */
+    height: 100px;
+
+    margin-top: 100px;
+    margin-left: 200px;
+
+    /* flex 선언 */
+    display: flex;
+
+    /* flex-direction (배치 방향 설정) */
+    /* flex-direction: row; */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+    /* flex-wrap (줄넘김 처리 설정) */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    /* flex-flow (단축 속성) */
+    /* flex-flow: row wrap; */
+	/* 아래의 두 줄을 줄여 쓴 것 */
+	/* flex-direction: row; */
+	/* flex-wrap: wrap; */
+
+    /* justify-content (메인축 방향 정렬) */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align-items (수직축 방향 정렬) */
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-items: baseline; */
+
+    /* align-content: stretch; */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    /* align-content: space-evenly; */
+
+}
+
+.container .item {
+    /* 기본 설정 */
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+
+    opacity: 80%;
+
+    /* flex-basis (유연한 박스의 기본 영역) */
+    /* width, height에 사용하는 각종 단위의 수가 들어갈 수 있음. */
+    /* flex-basis: auto; */
+
+    /* flex-grow (유연하게 늘리기) */
+    /* flex-grow: 0; */
+    /* flex-grow: 1; */
+    /* flex-grow에 대해 더 알고싶다면 아래 항목 참조. */
+
+    /* flex-shrink (유연하게 줄이기) */
+    /* flex-shrink: 1; */
+    /* flex-shrink에 대해 더 알고싶다면 아래 항목 참조. */
+
+    /* 2단 칼럼 만들기 */
+    /* flex: 1 1 40%; */
+
+    /* 3단 칼럼 만들기 */
+    /* flex: 1 1 30%; */
+
+    /* align-self: auto; */
+    /* align-self: stretch; */
+    /* align-self: flex-start; */
+    /* align-self: flex-end; */
+    /* align-self: center; */
+    /* align-self: baseline; */
+}
+
+/* flex-grow */
+/* .container .item:nth-child(1){flex-grow: 1;}
+.container .item:nth-child(2){flex-grow: 2;}
+.container .item:nth-child(3){flex-grow: 1;} */
+
+/* flex-shrink */
+/* .container .item:nth-child(1){flex-shrink: 0;width: 80px;}
+.container .item:nth-child(2){flex-shrink: 0;width: 80px;}
+.container .item:nth-child(3){flex-grow: 1;} */
+
+/* flex */
+/* 1:2:1 비율 만들기 */
+/* .container .item:nth-child(1){flex: 1 1 0;}
+.container .item:nth-child(2){flex: 2 1 0;}
+.container .item:nth-child(3){flex: 1 1 0;} */
+
+/* order */
+/* .container .item:nth-child(1){order: 3;}
+.container .item:nth-child(2){order: 1;}
+.container .item:nth-child(3){order: 2;} */
+
+/* z-index */
+.container .item:nth-child(2){z-index: 1;transform: scale(2);}
+
+/* 폰트 사이즈 설정 */
+/* .container .item:nth-child(1){font-size: 40px;}
+.container .item:nth-child(2){font-size: 20px;}
+.container .item:nth-child(3){font-size: 60px;} */
+
+/* align-self */
+/* .container .item:nth-child(1){align-self: auto;}
+.container .item:nth-child(2){align-self: stretch;}
+.container .item:nth-child(3){align-self: flex-start;}
+.container .item:nth-child(4){align-self: flex-end;}
+.container .item:nth-child(5){align-self: center;}
+.container .item:nth-child(6){align-self: baseline;} */
