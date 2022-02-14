@@ -132,7 +132,7 @@
 ## 14.Error Lens
 ![image](https://user-images.githubusercontent.com/54615250/153783667-7a65d7c0-d592-4b8f-8698-1089350a39aa.png)
 ### 기능
-- 코드의 에러를 해당 줄에 오버레이 형식으로 띄우준다.  <br/>
+- 코드의 에러를 해당 줄에 오버레이 형식으로 띄워준다.  <br/>
 오타, 괄호 실수 등 웬만한 오류들을 실행해 보기 전 잡아낼 수 있다.
 ### 예시
 ![image](https://user-images.githubusercontent.com/54615250/153783805-a12048fa-c96b-478a-8c0f-d6327d9c2338.png)
