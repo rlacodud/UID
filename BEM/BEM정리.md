@@ -9,14 +9,14 @@ __BEM 방식__
 ## __Block__Element--Modifier__  
 <br/>
 
-### 1. Block은 재사용 가능한 기능적으로 독립적인 페이지 컴포넌트.  
-##### &nbsp; ex) Logo는 header, footer 등 다양한 곳에서 사용 가능.  
+### __1. Block - 재사용 가능한 기능적으로 독립적인 페이지 컴포넌트.__  
+##### &nbsp; ex) Logo는 header, footer 등 다양한 곳에서 사용 가능하다.  
 ![Block][block]
 
 [block]: https://t1.daumcdn.net/cfile/tistory/235E3133568B047227 "Block"  
 <br/>
 
-##### __Block은 항상 맨 앞에 위치하도록 함.__
+##### __Block은 항상 맨 앞에 위치하도록 한다.__
  ```html
   <div class="header">
   ```  
@@ -24,12 +24,12 @@ __BEM 방식__
 <br/>
 <br/>
 
-### 2. Element는 Block을 구성하는 단위(조각).  
+### __2. Element - Block을 구성하는 단위(조각).__
 ![Element][element]
 
 [element]: https://t1.daumcdn.net/cfile/tistory/993FCF4A5C7BF68F27 "element"
-#### &nbsp; Block과 달리 의존적인 형태로, 자신이 속한 Block 내에서만 의미를 가짐.
-#### &nbsp;&nbsp; __'~의' 로 생각하면 파악 용이.__  / ex) tabzilla__link는 tabzilla의 link.
+#### &nbsp; Block과 달리 의존적인 형태로, 자신이 속한 Block 내에서만 의미를 가진다.
+#### &nbsp;&nbsp; __'~의' 로 생각하면 파악이 용이하다.__  / ex) tabzilla__link는 tabzilla의 link.
 <br/>
 
  ```html
@@ -45,13 +45,13 @@ __BEM 방식__
       </div>
   ```
 
-##### &nbsp; + 위 코드에서 search는 header에서도 footer에서도 사용될 수 있는 기능을 가진 독립적인 형태이기에 Block 단위로 표현.
-##### &nbsp; + 그러나 search__inner, search__title의 경우에는 search에 의존해서 존재하는 영역이고 독립적이지 않기에 언더바(__)로 search에 귀속돼있음을 명시.  
+##### &nbsp; + 위 코드에서 search는 header에서도 footer에서도 사용될 수 있는 기능을 가진 독립적인 형태이기에 Block 단위로 표현한다.
+##### &nbsp; + 그러나 search__inner, search__title의 경우에는 search에 의존해서 존재하는 영역이고 독립적이지 않기에 언더바(__)로 search에 귀속돼있음을 명시한다.  
 
 <br/>
 <br/>
 
-### 3. Modifier는 Block이나 Element의 속성 담당.
+### __3. Modifier - Block이나 Element의 속성 담당.__
 <br/>
 
  #### &nbsp; __[Element의 속성을 명시하는 두가지 방식]__
@@ -59,14 +59,14 @@ __BEM 방식__
  ```html
   <li class="tab__item tab__item--focused">탭 01</li>
   ```
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tab__item의 속성(상태)이 focused라는 걸 명시.  
+##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tab__item의 속성(상태)이 focused라는 걸 명시해준다.  
 <br/>
   
 ##### &nbsp;&nbsp; __(2) 키-밸류(key-value) 타입(성질-내용)__
  ```html
   <strong class="title title--color-gray">VIP 로그인 (준비중)</strong>
  ```
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color 속성이 gray로 설정되었다는 걸 명시.
+##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color 속성이 gray로 설정되었다는 걸 명시해준다.
 
 <br/>
 
