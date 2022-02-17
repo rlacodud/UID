@@ -1,8 +1,14 @@
 console.log('연결 확인');
 
+// 새로고침 시 최상단으로 이동
+window.onload = function() {
+  setTimeout (function() {
+    scrollTo(0, 0);
+  }, 100);
+};
+
 // 메인 바코드 애니메이션
 let barcodeSpans = $("#barcode").children();
-
 function barcodeAnimation()
 {
   barcodeSpans.each(function(i)
@@ -10,9 +16,8 @@ function barcodeAnimation()
     let span = $(this);
     setTimeout(function()
     {
-      // highlight each individual span with 200ms between each
+      // 각 span에 highlighted 클래스가 텀을 두고 추가시킴
       span.toggleClass('highlighted');
-      // span.fadeToggle("slow");
     }, 200*i);});
   
   barcodeSpans.each(function(i)
@@ -20,12 +25,11 @@ function barcodeAnimation()
     let span = $(this);
     setTimeout(function()
     {
-      // remove the highlighting from each span with 20ms between each
+      // 각 span에 highlighted 클래스가 텀을 두고 제거함
       span.toggleClass('highlighted');
       
     }, 20*i);});
 }
-
 $(document).ready(function()
 {
   setInterval(barcodeAnimation, 2000);
@@ -50,8 +54,11 @@ $(function () {
   });
 });
 
-// 섹션 스크롤 이벤트
+// 제어용 변수 생성
+
+// Text scroll x값으로 대입할 변수
 var transitionX = 0;
+// 스크롤 이벤트의 기준이 될 변수
 var sectionTwo = document.querySelector('#sectionTwo');
 var sectionTwoTop = sectionTwo.offsetTop;
 var sectionThree = document.querySelector('#sectionThree');
@@ -60,6 +67,10 @@ var sectionFour = document.querySelector('#sectionFour');
 var sectionFourTop = sectionFour.offsetTop;
 var projectContents = document.querySelector('.projectContents');
 var projectContentsTop = projectContents.offsetTop;
+// work nav 클릭 이벤트 변수
+var workNav = document.querySelector('#work');
+// contact nav 클릭 이벤트 변수
+var contactNav = document.querySelector('#contact');
 
 var sectionFive = document.querySelector('#sectionFive');
 var sectionFiveTop = sectionFive.offsetTop;
@@ -77,8 +88,10 @@ var sectionThirteen = document.querySelector('#sectionThirteen');
 var sectionThirteenTop = sectionThirteen.offsetTop;
 // console.log(sectionSixTop, '섹션4');
 
+// sectionTwo의 Text scroll 애니메이션 이벤트
 function scrollTextMove(e) {
-  console.log($(window).scrollTop());
+  // 확인용 console
+  // console.log($(window).scrollTop());
   if ($(window).scrollTop() > sectionTwoTop - 200) {
     if (e.wheelDelta < 0) {
       // 마우스 아래 = 이동
@@ -110,534 +123,267 @@ function scrollTextMove(e) {
   }
 };
 
+// sectionThree 도달 시 전개되는 typing 애니메이션 이벤트
 function typingAni() {
   if ($(window).scrollTop() > sectionThreeTop - 200) {
-    $('#cursor-bg').addClass('on');
-  window.addEventListener("mousewheel", scrollCursor);
     $('#sectionThree .textBox .title h2').addClass('on');
-  } else {
-    $('#cursor-bg').removeClass('on');
-  }
-  if($(window).scrollTop() >= projectContentsTop) {
-    $('#cursor-bg').removeClass('on');
-    window.addEventListener("mousewheel", cursor);
   }
 }
-console.log(projectContentsTop);
 
-var menu = document.querySelector('#work');
-
-$('.projectIndexSection .projectIndex .contents ul li').on('click', function () {
-  $('.projectIndexSection').removeClass('on');
-  $('#contactSection').removeClass('on'); 
-})
+// nav 클릭 이벤트
+// logo 클릭 시 projectIndexSection과 contactSection display none 처리
 $('.logo').on('click', function () {
   $('.projectIndexSection').removeClass('on');
   $('#contactSection').removeClass('on'); 
 })
-
+// about 클릭 시 projectIndexSection과 contactSection display none 처리
 $('#about').on('click', function () {
   $('.projectIndexSection').removeClass('on');
   $('#contactSection').removeClass('on'); 
 })
+// projectIndex li 클릭 시 projectIndexSection과 contactSection display none 처리
+$('.projectIndexSection .projectIndex .contents ul li').on('click', function () {
+  $('.projectIndexSection').removeClass('on');
+  $('#contactSection').removeClass('on'); 
+})
 
-function menuActive(e) {
+// work nav 클릭 이벤트
+function workActive(e) {
   e.preventDefault();
+  // 매 클릭 시 projectIndexSection에 on class를 추가/제거하도록 함
   $('.projectIndexSection').toggleClass('on');
+  // contactSection이 보일 경우를 고려하여 on class를 제거해 안 보이도록 함
   $('#contactSection').removeClass('on'); 
 }
-menu.addEventListener('click', menuActive);
+workNav.addEventListener('click', workActive);
 
-var contact = document.querySelector('#contact');
-
+// contact nav 클릭 이벤트
 function contactActive(e) {
   e.preventDefault();
+  // 매 클릭 시 contactSection에 on class를 추가/제거하도록 함
   $('#contactSection').toggleClass('on');
+  // projectIndexSection이 보일 경우를 고려하여 on class를 제거해 안 보이도록 함
+  $('.projectIndexSection').removeClass('on'); 
 }
-contact.addEventListener('click', contactActive);
+contactNav.addEventListener('click', contactActive);
 
-var textTransitionX = 0;
-var sectionTransitionY = 0;
-var transitionAvailable = 0;
+// work section scroll 애니메이션 이벤트
+$(function() {
+  // typeA의 경우 scroll 애니메이션 이벤트
+  $(".typeA").on('mousewheel', function(e) {
+    var wheelDelta = e.originalEvent.wheelDelta;
+      // 마우스를 아래로 내리면
+      if (wheelDelta > 0) {
+        $(this).addClass('on');
+        $(this).find('.imageBox').addClass('on');
+        $(this).find('.informationContainer .useTool li').addClass('on');
+        $(this).find('.textBox').addClass('on');
+        $(this).find('.textBox h3').addClass('on');
+        $(this).find('.code').addClass('on');
+        $(this).find('.informationContainer').addClass('on');
+      }
+      // 마우스를 위로 올리면
+      else {     
+        $(this).removeClass('on');
+        $(this).find('.imageBox').removeClass('on');
+        $(this).find('.informationContainer .useTool li').removeClass('on');
+        $(this).find('.textBox').removeClass('on');
+        $(this).find('.textBox h3').removeClass('on');
+        $(this).find('.code').removeClass('on');
+        $(this).find('.informationContainer').removeClass('on');
+      }
+    });
 
-function sectionFix(e) {
-  // 마우스를 아래로 내리면
-  if (e.wheelDelta < 0) {
-    // transition 애니메이션 추가
-    if ($(window).scrollTop() >= sectionFiveTop) {
-      $('#sectionFive').addClass('on');
-      $('#sectionFive .imageBox').addClass('on');
-      $('#sectionFive .informationContainer .useTool li').addClass('on');
-      $('#sectionFive .textBox').addClass('on');
-      $('#sectionFive .textBox h3').addClass('on');
-      $('#sectionFive .code').addClass('on');
-      $('#sectionFive .informationContainer').addClass('on');
-    }
-    if ($(window).scrollTop() >= sectionEightTop) {
-      $('#sectionEight').addClass('on');
-      $('#sectionEight .imageBox').addClass('on');
-      $('#sectionEight .informationContainer .useTool li').addClass('on');
-      $('#sectionEight .textBox').addClass('on');
-      $('#sectionEight .textBox h3').addClass('on');
-      $('#sectionEight .code').addClass('on');
-      $('#sectionEight .informationContainer').addClass('on');
-    }
-    if ($(window).scrollTop() >= sectionNineTop) {
-      $('#sectionNine .imageBox').addClass('on');
-      $('#sectionNine .textBox h3').addClass('on');
-      $('#sectionNine .informationContainer').addClass('on');
-    }
-    if ($(window).scrollTop() >= sectionElevenTop) {
-      $('#sectionEleven').addClass('on');
-      $('#sectionEleven .imageBox').addClass('on');
-      $('#sectionEleven .informationContainer .useTool li').addClass('on');
-      $('#sectionEleven .textBox').addClass('on');
-      $('#sectionEleven .textBox h3').addClass('on');
-      $('#sectionEleven .code').addClass('on');
-      $('#sectionEleven .informationContainer').addClass('on');
-    }
-    if ($(window).scrollTop() >= sectionTwelveTop) {
-      $('#sectionTwelve .imageBox').addClass('on');
-      $('#sectionTwelve .textBox h3').addClass('on');
-      $('#sectionTwelve .informationContainer').addClass('on');
-    }
-    if ($(window).scrollTop() >= sectionThirteenTop) {
-      $('#sectionThirteen').addClass('on');
-      $('#sectionThirteen .imageBox').addClass('on');
-      $('#sectionThirteen .informationContainer .useTool li').addClass('on');
-      $('#sectionThirteen .textBox').addClass('on');
-      $('#sectionThirteen .textBox h3').addClass('on');
-      $('#sectionThirteen .code').addClass('on');
-      $('#sectionThirteen .informationContainer').addClass('on');
-    }
-    // 다음 섹션으로 넘어갈 수 있도록
-    // transitionAvailable를 true로 변경
-    transitionAvailable = 1;
-  }
-  // 마우스를 위로 올리면
-  if (e.wheelDelta > 0) {
-    // transition 애니메이션 제거
-    if ($(window).scrollTop() >= sectionFiveTop) {
-      $('#sectionFive').removeClass('on');
-      $('#sectionFive .imageBox').removeClass('on');
-      $('#sectionFive .informationContainer .useTool li').removeClass('on');
-      $('#sectionFive .textBox').removeClass('on');
-      $('#sectionFive .textBox h3').removeClass('on');
-      $('#sectionFive .code').removeClass('on');
-      $('#sectionFive .informationContainer').removeClass('on');
-    }
-    if ($(window).scrollTop() >= sectionEightTop) {
-      $('#sectionEight').removeClass('on');
-      $('#sectionEight .imageBox').removeClass('on');
-      $('#sectionEight .informationContainer .useTool li').removeClass('on');
-      $('#sectionEight .textBox').removeClass('on');
-      $('#sectionEight .textBox h3').removeClass('on');
-      $('#sectionEight .code').removeClass('on');
-      $('#sectionEight .informationContainer').removeClass('on');
-    }
-    if ($(window).scrollTop() >= sectionNineTop) {
-      $('#sectionNine .imageBox').removeClass('on');
-      $('#sectionNine .textBox h3').removeClass('on');
-      $('#sectionNine .informationContainer').removeClass('on');
-    }
-    if ($(window).scrollTop() >= sectionElevenTop) {
-      $('#sectionEleven').removeClass('on');
-      $('#sectionEleven .imageBox').removeClass('on');
-      $('#sectionEleven .informationContainer .useTool li').removeClass('on');
-      $('#sectionEleven .textBox').removeClass('on');
-      $('#sectionEleven .textBox h3').removeClass('on');
-      $('#sectionEleven .code').removeClass('on');
-      $('#sectionEleven .informationContainer').removeClass('on');
-    }
-    if ($(window).scrollTop() >= sectionTwelveTop) {
-      $('#sectionTwelve .imageBox').removeClass('on');
-      $('#sectionTwelve .textBox h3').removeClass('on');
-      $('#sectionTwelve .informationContainer').removeClass('on');
-    }
-    if ($(window).scrollTop() >= sectionThirteenTop) {
-      $('#sectionThirteen').removeClass('on');
-      $('#sectionThirteen .imageBox').removeClass('on');
-      $('#sectionThirteen .informationContainer .useTool li').removeClass('on');
-      $('#sectionThirteen .textBox').removeClass('on');
-      $('#sectionThirteen .textBox h3').removeClass('on');
-      $('#sectionThirteen .code').removeClass('on');
-      $('#sectionThirteen .informationContainer').removeClass('on');
-    }
-    // 다음 섹션으로 못 넘어가도록
-    // transitionAvailable를 false로 변경
-    transitionAvailable = 0;
-  }
-  //////////////////////////
-  if ($(window).scrollTop() >= sectionSixTop) {
-    if (e.wheelDelta < 0) { // 마우스 아래
-      $('#sectionSix .imageBox').addClass('on');
-      $('#sectionSix .textBox h3').addClass('on');
-      $('#sectionSix .informationContainer').addClass('on');
-    }
-    if (e.wheelDelta > 0) { // 마우스 위
-      $('#sectionSix .imageBox').removeClass('on');
-      $('#sectionSix .textBox h3').removeClass('on');
-      $('#sectionSix .informationContainer').removeClass('on');
-    }
-  }
-}
+    // typeB의 경우 scroll 애니메이션 이벤트
+    $(".typeB").on('mousewheel', function(e) {
+      var wheelDelta = e.originalEvent.wheelDelta;
+      // 마우스를 아래로 내리면
+      if (wheelDelta > 0) {
+        $(this).find('.imageBox').addClass('on');
+        $(this).find('.textBox h3').addClass('on');
+        $(this).find('.informationContainer').addClass('on');
+      }
+      // 마우스를 위로 올리면
+      else {     
+        $(this).find('.imageBox').removeClass('on');
+        $(this).find('.textBox h3').removeClass('on');
+        $(this).find('.informationContainer').removeClass('on');
+      }
+    });
+})
 
 // 바코드 애니메이션
-function mouseOver5() {
-  $('#sectionFive .barcode').removeClass('off');
-  $('#sectionFive .barcode .barcodeContainer .number').removeClass('off');
-  $('#sectionFive .barcode .barcodeContainer .projectNumer').removeClass('off');
-  $('#sectionFive .barcode .barcodeContainer .index').removeClass('off');
-}
-
-function mouseLeave5() {
-  $('#sectionFive .barcode').addClass('off');
-  $('#sectionFive .barcode .barcodeContainer .number').addClass('off');
-  $('#sectionFive .barcode .barcodeContainer .projectNumer').addClass('off');
-  $('#sectionFive .barcode .barcodeContainer .index').addClass('off');
-}
-var barcode5 = document.querySelector('#sectionFive .barcode');
-
-barcode5.addEventListener('mouseover', mouseOver5);
-barcode5.addEventListener('mouseleave', mouseLeave5);
-
-function mouseOver6() {
-  $('#sectionSix .barcode').removeClass('off');
-  $('#sectionSix .barcode .barcodeContainer .number').removeClass('off');
-  $('#sectionSix .barcode .barcodeContainer .projectNumer').removeClass('off');
-  $('#sectionSix .barcode .barcodeContainer .index').removeClass('off');
-}
-
-function mouseLeave6() {
-  $('#sectionSix .barcode').addClass('off');
-  $('#sectionSix .barcode .barcodeContainer .number').addClass('off');
-  $('#sectionSix .barcode .barcodeContainer .projectNumer').addClass('off');
-  $('#sectionSix .barcode .barcodeContainer .index').addClass('off');
-}
-var barcode = document.querySelector('#sectionSix .barcode');
-
-barcode.addEventListener('mouseover', mouseOver6);
-barcode.addEventListener('mouseleave', mouseLeave6);
-
-function mouseOver8() {
-  $('#sectionEight .barcode').removeClass('off');
-  $('#sectionEight .barcode .barcodeContainer .number').removeClass('off');
-  $('#sectionEight .barcode .barcodeContainer .projectNumer').removeClass('off');
-  $('#sectionEight .barcode .barcodeContainer .index').removeClass('off');
-}
-
-function mouseLeave8() {
-  $('#sectionEight .barcode').addClass('off');
-  $('#sectionEight .barcode .barcodeContainer .number').addClass('off');
-  $('#sectionEight .barcode .barcodeContainer .projectNumer').addClass('off');
-  $('#sectionEight .barcode .barcodeContainer .index').addClass('off');
-}
-var barcode = document.querySelector('#sectionEight .barcode');
-
-barcode.addEventListener('mouseover', mouseOver8);
-barcode.addEventListener('mouseleave', mouseLeave8);
-
-function mouseOver9() {
-  $('#sectionNine .barcode').removeClass('off');
-  $('#sectionNine .barcode .barcodeContainer .number').removeClass('off');
-  $('#sectionNine .barcode .barcodeContainer .projectNumer').removeClass('off');
-  $('#sectionNine .barcode .barcodeContainer .index').removeClass('off');
-}
-
-function mouseLeave9() {
-  $('#sectionNine .barcode').addClass('off');
-  $('#sectionNine .barcode .barcodeContainer .number').addClass('off');
-  $('#sectionNine .barcode .barcodeContainer .projectNumer').addClass('off');
-  $('#sectionNine .barcode .barcodeContainer .index').addClass('off');
-}
-var barcode = document.querySelector('#sectionNine .barcode');
-
-barcode.addEventListener('mouseover', mouseOver9);
-barcode.addEventListener('mouseleave', mouseLeave9);
-
-function mouseOver11() {
-  $('#sectionEleven .barcode').removeClass('off');
-  $('#sectionEleven .barcode .barcodeContainer .number').removeClass('off');
-  $('#sectionEleven .barcode .barcodeContainer .projectNumer').removeClass('off');
-  $('#sectionEleven .barcode .barcodeContainer .index').removeClass('off');
-}
-
-function mouseLeave11() {
-  $('#sectionEleven .barcode').addClass('off');
-  $('#sectionEleven .barcode .barcodeContainer .number').addClass('off');
-  $('#sectionEleven .barcode .barcodeContainer .projectNumer').addClass('off');
-  $('#sectionEleven .barcode .barcodeContainer .index').addClass('off');
-}
-var barcode = document.querySelector('#sectionEleven .barcode');
-
-barcode.addEventListener('mouseover', mouseOver11);
-barcode.addEventListener('mouseleave', mouseLeave11);
-
-function mouseOver12() {
-  $('#sectionTwelve .barcode').removeClass('off');
-  $('#sectionTwelve .barcode .barcodeContainer .number').removeClass('off');
-  $('#sectionTwelve .barcode .barcodeContainer .projectNumer').removeClass('off');
-  $('#sectionTwelve .barcode .barcodeContainer .index').removeClass('off');
-}
-
-function mouseLeave12() {
-  $('#sectionTwelve .barcode').addClass('off');
-  $('#sectionTwelve .barcode .barcodeContainer .number').addClass('off');
-  $('#sectionTwelve .barcode .barcodeContainer .projectNumer').addClass('off');
-  $('#sectionTwelve .barcode .barcodeContainer .index').addClass('off');
-}
-var barcode = document.querySelector('#sectionTwelve .barcode');
-
-barcode.addEventListener('mouseover', mouseOver12);
-barcode.addEventListener('mouseleave', mouseLeave12);
-
-function mouseOver13() {
-  $('#sectionThirteen .barcode').removeClass('off');
-  $('#sectionThirteen .barcode .barcodeContainer .number').removeClass('off');
-  $('#sectionThirteen .barcode .barcodeContainer .projectNumer').removeClass('off');
-  $('#sectionThirteen .barcode .barcodeContainer .index').removeClass('off');
-}
-
-function mouseLeave13() {
-  $('#sectionThirteen .barcode').addClass('off');
-  $('#sectionThirteen .barcode .barcodeContainer .number').addClass('off');
-  $('#sectionThirteen .barcode .barcodeContainer .projectNumer').addClass('off');
-  $('#sectionThirteen .barcode .barcodeContainer .index').addClass('off');
-}
-var barcode = document.querySelector('#sectionThirteen .barcode');
-
-barcode.addEventListener('mouseover', mouseOver13);
-barcode.addEventListener('mouseleave', mouseLeave13);
+// 바코드에 마우스 오버 시 해당 섹션의 바코드에 class가 add/remove됨
+$(".barcode").on('mouseover', function() {
+  $(this).removeClass('off');
+  $(this).find('.barcodeContainer .number').removeClass('off');
+  $(this).find('.barcodeContainer .projectNumber').removeClass('off');
+  $(this).find('.barcodeContainer .index').removeClass('off');
+});
+$(".barcode").on('mouseleave', function() {
+  $(this).addClass('off');
+  $(this).find('.barcodeContainer .number').addClass('off');
+  $(this).find('.barcodeContainer .projectNumber').addClass('off');
+  $(this).find('.barcodeContainer .index').addClass('off');
+});
 
 window.addEventListener("mousewheel", scrollTextMove);
 window.addEventListener("mousewheel", typingAni);
-window.addEventListener("mousewheel", sectionFix);
-
 
 // 마우스 오버
 // 폰트 코드 -> 글리치 -> 해당 폰트
-$('#sectionThree .ability .html h3').on('mouseover', function () {
-  $('#sectionThree .ability .html h3').addClass('glitch');
-  $('#sectionThree .ability .html h6').addClass('on');
-  $('#sectionThree .ability .html h3').css({
-    'font-family': "NewYork"
+// 애니메이션별로 분류(fontType | codeType)
+$("#sectionThree .ability .fontType h3").on('mouseover', function() {
+  $(this).addClass('glitch');
+  $(this).css({'font-family': "NewYork"});
+  $(this).next('h6').addClass('on');
+});
+$("#sectionThree .ability .codeType h3").on('mouseover', function() {
+  $(this).addClass('glitch');
+  $(this).removeClass('code');
+  $(this).next('h6').addClass('on');
+});
+
+
+// 현재 index에 맞춰 TimelineLite 생성(abilityAni1)
+// 안에 있는 설정값은 외부에서 지정한 각 score 변수를 대입하여 적용
+
+// ability h3을 배열로 변환 후
+var abilityH3 = document.querySelectorAll("#sectionThree .ability h3");
+abilityH3 = Array.prototype.slice.call(abilityH3);
+
+  $("#sectionThree .ability h3").on('mouseover', function(e) {
+    var target = e.currentTarget;
+    // 현재 마우스오버된 h3의 index값을 반환하여 변수에 대입
+    // index는 0부터 카운팅되므로 1을 더함
+    abilityH3In = abilityH3.indexOf(target) + 1;
+    // console.log(abilityH3In);
+
+    // score를 0으로 재설정
+    var game = {
+      score: 0
+    },
+    // score가 적용될 element의 id를 찾아 변수에 저장 
+    scoreDisplay = document.getElementById("score-" + abilityH3In);
+    // console.log(scoreDisplay);
+
+    // 해당 element에 변경된 score값 적용
+    function updateHandler() {
+      scoreDisplay.innerHTML = game.score;
+    }
+    
+    // gsap 전개를 위해 TimelineLite 생성
+    var scoreAni = new TimelineLite();
+
+    // switch문을 이용해 각 능력별 적용될 score값을 변수로 저장
+    switch (abilityH3In) {
+      case 1:
+        Score = "97%";
+      break;
+      case 2:
+        Score = "60%";
+      break;
+      case 3:
+        Score = "90%";
+      break;
+      case 4:
+        Score = "60%";
+      break;
+      case 5:
+        Score = "90%";
+      break;
+      case 6:
+        Score = "50%";
+      break;
+    };
+    scoreAni
+      .to(game, 1, {
+        score: Score,
+        roundProps: "score",
+        onUpdate: updateHandler,
+        ease: Expo.easeNone
+      }, 0);
   });
-  var game = {
-      score: 0
-    },
-    scoreDisplay = document.getElementById("score-1");
 
-  function updateHandler() {
-    scoreDisplay.innerHTML = game.score;
-  }
-
-  var c1Section3 = new TimelineLite();
-
-  c1Section3
-    .to(game, 2, {
-      score: "+97",
-      roundProps: "score",
-      onUpdate: updateHandler,
-      ease: Expo.easeNone
-    }, 0);
-});
-$('#sectionThree .ability .Photoshop h3').on('mouseover', function () {
-  $('#sectionThree .ability .Photoshop h3').addClass('glitch');
-  $('#sectionThree .ability .Photoshop h6').addClass('on');
-  $('#sectionThree .ability .Photoshop h3').removeClass('code');
-  var game = {
-      score: 0
-    },
-    scoreDisplay = document.getElementById("score-2");
-
-  function updateHandler() {
-    scoreDisplay.innerHTML = game.score;
-  }
-
-  var c1Section3 = new TimelineLite();
-
-  c1Section3
-    .to(game, 2, {
-      score: "+60",
-      roundProps: "score",
-      onUpdate: updateHandler,
-      ease: Expo.easeNone
-    }, 0);
-});
-$('#sectionThree .ability .css h3').on('mouseover', function () {
-  $('#sectionThree .ability .css h3').addClass('glitch');
-  $('#sectionThree .ability .css h6').addClass('on');
-  $('#sectionThree .ability .css h3').css({
-    'font-family': "NewYork"
-  });
-  var game = {
-      score: 0
-    },
-    scoreDisplay = document.getElementById("score-3");
-
-  function updateHandler() {
-    scoreDisplay.innerHTML = game.score;
-  }
-
-  var c1Section3 = new TimelineLite();
-
-  c1Section3
-    .to(game, 2, {
-      score: "+90",
-      roundProps: "score",
-      onUpdate: updateHandler,
-      ease: Expo.easeNone
-    }, 0);
-});
-$('#sectionThree .ability .Javascript h3').on('mouseover', function () {
-  $('#sectionThree .ability .Javascript h3').addClass('glitch');
-  $('#sectionThree .ability .Javascript h6').addClass('on');
-  $('#sectionThree .ability .Javascript h3').css({
-    'font-family': "NewYork"
-  });
-  var game = {
-      score: 0
-    },
-    scoreDisplay = document.getElementById("score-4");
-
-  function updateHandler() {
-    scoreDisplay.innerHTML = game.score;
-  }
-
-  var c1Section3 = new TimelineLite();
-
-  c1Section3
-    .to(game, 2, {
-      score: "+60",
-      roundProps: "score",
-      onUpdate: updateHandler,
-      ease: Expo.easeNone
-    }, 0);
-});
-$('#sectionThree .ability .Illustrator h3').on('mouseover', function () {
-  $('#sectionThree .ability .Illustrator h3').addClass('glitch');
-  $('#sectionThree .ability .Illustrator h6').addClass('on');
-  $('#sectionThree .ability .Illustrator h3').removeClass('code');
-  var game = {
-      score: 0
-    },
-    scoreDisplay = document.getElementById("score-5");
-
-  function updateHandler() {
-    scoreDisplay.innerHTML = game.score;
-  }
-
-  var c1Section3 = new TimelineLite();
-
-  c1Section3
-    .to(game, 2, {
-      score: "+90",
-      roundProps: "score",
-      onUpdate: updateHandler,
-      ease: Expo.easeNone
-    }, 0);
-});
-$('#sectionThree .ability .jQuery h3').on('mouseover', function () {
-  $('#sectionThree .ability .jQuery h3').addClass('glitch');
-  $('#sectionThree .ability .jQuery h6').addClass('on');
-  $('#sectionThree .ability .jQuery h3').css({
-    'font-family': "NewYork"
-  });
-  var game = {
-      score: 0
-    },
-    scoreDisplay = document.getElementById("score-6");
-
-  function updateHandler() {
-    scoreDisplay.innerHTML = game.score;
-  }
-
-  var c1Section3 = new TimelineLite();
-
-  c1Section3
-    .to(game, 2, {
-      score: "+50",
-      roundProps: "score",
-      onUpdate: updateHandler,
-      ease: Expo.easeNone
-    }, 0);
-});
-
-console.log(sectionThreeTop);
+// cursor 이벤트
 function scrollCursor(e) {
-    var cursorBGEl = document.querySelector('#cursor-bg');
+  // cursor를 찾아서 cursorBGEl 변수에 저장
+  var cursorBGEl = document.querySelector('#cursor-bg');
 
-    function onMoveWindow(e) {
-      var posX = e.clientX;
-      var posY = e.clientY;
+  // 마우스를 따라 cursor이 움직이도록 posX와 posY 변수에 대입
+  function onMoveWindow(e) {
+    var posX = e.clientX;
+    var posY = e.clientY;
 
-      gsap.killTweensOf(cursorBGEl);
-      gsap.to(cursorBGEl, {
-        top: posY,
-        left: posX,
-        duration: 0.2
+    gsap.killTweensOf(cursorBGEl);
+    gsap.to(cursorBGEl, {
+      top: posY,
+      left: posX,
+      duration: 0.2
       });
-    }
+  };
 
-    function addEvent() {
-      // window mouse event
-      window.addEventListener('mousemove', onMoveWindow);
-    }
-
-    function init() {
-      addEvent();
-    }
-    init();
+  function addEvent() {
+    // 마우스를 움직일 때마다 onMoveWindow 이벤트를 실행시킴
+    window.addEventListener('mousemove', onMoveWindow);
   }
+
+  addEvent();
+};
 
 function cursor (e) {
+    var cursorBgEl = document.querySelector('#cursor-bg');
     var cursorDotEl = document.querySelector('#cursor-dot');
-    var progressEl = document.querySelector('#progress');
-
     var btnListItemEl = document.querySelectorAll('.imageBox');
 
     function onMoveWindow(e){
     var posX = e.clientX;
     var posY = e.clientY;
   
+    gsap.killTweensOf(cursorBgEl);
+    gsap.to(cursorBgEl, {top: posY, left: posX, duration: 0.2});
     gsap.killTweensOf(cursorDotEl);
     gsap.to(cursorDotEl, {top: posY, left: posX, duration: 0.2});
-    gsap.killTweensOf(progressEl);
-    gsap.to(progressEl, {top: posY, left: posX, duration: 0.25});
 }
 
-  function onEnterBtnListItenEl(){
-      console.log('enter');
-      if(!cursorDotEl.classList.contains('active')){
-        cursorDotEl.classList.add('active');
-      }
-      if(!cursorDotEl.classList.contains('active')){
+  function onEnterBtnListItemEl(){
+      // console.log('enter');
+      if(!cursorDotEl.classList.contains('active')) {
         cursorDotEl.classList.add('active');
       }
   }
 
-  function onLeaveBtnListItenEl(){
-      console.log('leave');
-      if(cursorDotEl.classList.contains('active')){
-        cursorDotEl.classList.remove('active');
-      }
+  function onLeaveBtnListItemEl(){
+      // console.log('leave');
       if(cursorDotEl.classList.contains('active')){
         cursorDotEl.classList.remove('active');
       }
   }
 
-  function addEvent2(){
-      // window mouse event
+  // imageBox 영역에 cursor가 들어올 경우, 실행시키는 이벤트
+  function mouseCursorEvent(){
       window.addEventListener('mousemove', onMoveWindow);
-      // mouse event
       for(var i = 0; i < btnListItemEl.length; i++){
-          btnListItemEl[i].addEventListener('mouseenter', onEnterBtnListItenEl);
-          btnListItemEl[i].addEventListener('mouseleave', onLeaveBtnListItenEl);
+          btnListItemEl[i].addEventListener('mouseenter', onEnterBtnListItemEl);
+          btnListItemEl[i].addEventListener('mouseleave', onLeaveBtnListItemEl);
       }
   }
 
-  function init(){
-      addEvent2();
-  }
-  init();
+  mouseCursorEvent();
 }
+// sectionThree 영역에서 cursor-bg 활성화
+function cursorChange() {
+  if ($(window).scrollTop() > sectionThreeTop - 1000) {
+    $('#cursor-bg').addClass('active');
+    $('#cursor-dot').addClass('off');
+    window.addEventListener("mousewheel", cursor);
+  } if($(window).scrollTop() >= projectContentsTop - 1000) {
+    $('#cursor-dot').removeClass('off');
+  }
+  if($(window).scrollTop() >= projectContentsTop - 1000) {
+    $('#cursor-bg').removeClass('active');
+  }
+};
+
+window.addEventListener("mousewheel", cursor);
+window.addEventListener("mousewheel", cursorChange);

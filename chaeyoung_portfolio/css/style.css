@@ -1,26 +1,27 @@
 body, html {width: 100vw; height: 100vh;}
-body {overflow: hidden; overflow: hidden; overflow-y: scroll;}
+body {overflow-y: scroll; overflow-x: hidden; --Black: #000; --White: #fff;}
 body::-webkit-scrollbar {display: none;}
 section {width: 100%; height: 100vh; overflow: hidden;}
 
+/* font */
 .code {font-family: "code128";}
 .newyork {font-family: "NewYork"; font-weight: 400;}
 .Pretendard {font-family: "Pretendard";}
 
-header {position: fixed; z-index: 100000000000; top: 0; width: 100%; padding: calc(100vw * 49 / 1920) calc(100vw * 64 / 1920); font-size: 0; background: black; background: -webkit-linear-gradient(bottom, rgb(0, 0, 0), rgba(0,255,0,0)); background: -moz-linear-gradient(bottom, #000000, rgba(0,255,0,0)); background: -o-linear-gradient(bottom, rgb(0, 0, 0), rgba(0,255,0,0)); background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0,255,0,0));}
+header {position: fixed; z-index: 100000000000; top: 0; width: 100%; padding: calc(100vw * 49 / 1920) calc(100vw * 64 / 1920); font-size: 0; background: var(--Black); background: -webkit-linear-gradient(bottom, rgb(0, 0, 0), rgba(0,255,0,0)); background: -moz-linear-gradient(bottom, var(--Black), rgba(0,255,0,0)); background: -o-linear-gradient(bottom, rgb(0, 0, 0), rgba(0,255,0,0)); background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0,255,0,0));}
 header .left,
 header .right {display: inline-block; width: 50%;}
 header .left .logo {width: calc(100vw * 72 / 1920); height: calc(100vw * 44 / 1920); background-image: url('../img/logo.png'); background-repeat: no-repeat;}
 header .right ul {text-align: right;}
-header .right ul li {display: inline-block; text-align: center; font-size: calc(100vw * 14 / 1920); color: #fff;}
+header .right ul li {display: inline-block; text-align: center; font-size: calc(100vw * 14 / 1920); color: var(--White);}
 header .right ul li:nth-child(2) {margin: 0 calc(100vw * 59 / 1920);}
-header .right ul li a {color: #fff; display: inline-block;}
-header .right ul li a::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 2px; background: #fff; margin-top: 10px; transition: all ease-in-out 0.3s;}
+header .right ul li a {color: var(--White); display: inline-block;}
+header .right ul li a::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 2px; background: var(--White); margin-top: 10px; transition: all ease-in-out 0.3s;}
 header .right ul li a:hover:after {width: 100%;}
 
-#sectionOne {position: relative; background-color: #000; color: #fff; text-align: center;}
+#sectionOne {position: relative; background-color: var(--Black); color: var(--White); text-align: center;}
 #sectionOne .title {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 300; font-size: calc(100vw * 150 / 1920);}
-*, *:before, *:after {box-sizing: inherit;}
+#sectionOne:before, #sectionOne:after {box-sizing: inherit;}
 #sectionOne .title .glowing-animation {animation: glowing 17000ms infinite;}
 @keyframes glowing {
   0% {
@@ -36,25 +37,25 @@ header .right ul li a:hover:after {width: 100%;}
     box-shadow: 0 0 -10px 0 rgba(61, 72, 70, .2);
  }
 }
-#sectionOne .title #barcdeContainer {display: flex; justify-content: center; align-items: center; cursor: crosshair;}
-#sectionOne .title #barcode {position: relative; color: #fff; white-space: no-wrap;}
+#sectionOne .title #barcodeContainer {display: flex; justify-content: center; align-items: center;}
+#sectionOne .title #barcode {position: relative; color: var(--White); white-space: no-wrap;}
 #sectionOne .title .animatedSpan {-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
 #sectionOne .title .animatedSpan:hover {color: darkturquoise;}
 #sectionOne .title .barcodeSelected {color: darkturquoise;}
 #sectionOne .title .highlighted {color: aliceblue; border-bottom: 1px solid darkred; padding-bottom: 10px; text-shadow: 1px 1px 35px aqua;}
-#sectionOne .resume-button {position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); display: inline-block; color: #fff; font-size: calc(100vw * 20 / 1920); text-align: center;}
-#sectionOne .resume-button::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 1px; background: #fff; margin-top: 10px; transition: all ease-in-out 0.3s;}
+#sectionOne .resume-button {position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); display: inline-block; color: var(--White); font-size: calc(100vw * 20 / 1920); text-align: center;}
+#sectionOne .resume-button::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 1px; background: var(--White); margin-top: 10px; transition: all ease-in-out 0.3s;}
 #sectionOne .resume-button:hover:after {width: 100%;}
 #sectionOne .overview {position: absolute; top: 85%; left: 50%; transform: translate(-50%, -50%); font-weight: 300; font-size: calc(100vw * 60 / 1920);}
 
 #sectionTwo {width: max-content;}
 #sectionTwo .textContainer {height: 100%;}
 #sectionTwo .textContainer .textBox {width: auto; height: 33.3333%;}
-#sectionTwo .textContainer .textBox:nth-child(2) {background-color: #000; color: #fff;}
-#sectionTwo .textContainer .textBox:nth-child(2) h2 {transform: translateX(-41%);}
+#sectionTwo .textContainer .textBox:nth-child(2) {background-color: var(--Black); color: var(--White);}
 #sectionTwo .textContainer .textBox h2 {display: inline-block; width: auto; height: 100%; font-size: calc(100vw * 300 / 1920); font-weight: 400;}
+#sectionTwo .textContainer .textBox:nth-child(2) h2 {transform: translateX(-41%);}
 
-#sectionThree {background-color: #000; color: #fff; height: auto; cursor: none;}
+#sectionThree {background-color: var(--Black); color: var(--White); height: auto; cursor: none;}
 #sectionThree .textBox {padding-top: calc(100vw * 92 / 1920); padding-left: calc(100vw * 58 / 1920); margin-bottom: calc(100vw * 50 / 1920);}
 #sectionThree .textBox .title {margin-bottom: calc(100vw * 86 / 1920);}
 #sectionThree .textBox .title h2 {font-size: calc(100vw * 134 / 1920); width: 0; font-weight: 500; white-space: nowrap; overflow: hidden;}
@@ -92,89 +93,12 @@ header .right ul li a:hover:after {width: 100%;}
   left: 2px;
   text-shadow: -1px 0 red;
   top: 0;
-  color: white;
-  background: black;
+  color: var(--White);
+  background: var(--Black);
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 2s linear alternate-reverse;
   animation-fill-mode: backwards;
-}
-@keyframes noise-anim-2 {
-  0% {
-    clip: rect(76px, 9999px, 68px, 0);
- }
-  5% {
-    clip: rect(12px, 9999px, 22px, 0);
- }
-  10% {
-    clip: rect(79px, 9999px, 71px, 0);
- }
-  15% {
-    clip: rect(90px, 9999px, 32px, 0);
- }
-  20% {
-    clip: rect(81px, 9999px, 53px, 0);
- }
-  25% {
-    clip: rect(62px, 9999px, 26px, 0);
- }
-  30% {
-    clip: rect(42px, 9999px, 100px, 0);
- }
-  35% {
-    clip: rect(48px, 9999px, 7px, 0);
- }
-  40% {
-    clip: rect(2px, 9999px, 74px, 0);
- }
-  45% {
-    clip: rect(93px, 9999px, 62px, 0);
- }
-  50% {
-    clip: rect(18px, 9999px, 65px, 0);
- }
-  55% {
-    clip: rect(44px, 9999px, 33px, 0);
- }
-  60% {
-    clip: rect(81px, 9999px, 98px, 0);
- }
-  65% {
-    clip: rect(20px, 9999px, 52px, 0);
- }
-  70% {
-    clip: rect(99px, 9999px, 24px, 0);
- }
-  75% {
-    clip: rect(20px, 9999px, 66px, 0);
- }
-  80% {
-    clip: rect(6px, 9999px, 19px, 0);
- }
-  85% {
-    clip: rect(56px, 9999px, 73px, 0);
- }
-  90% {
-    clip: rect(63px, 9999px, 21px, 0);
- }
-  95% {
-    clip: rect(58px, 9999px, 15px, 0);
- }
-  100% {
-    clip: rect(43px, 9999px, 77px, 0);
- }
-}
-.glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  left: -2px;
-  text-shadow: 1px 0 blue;
-  top: 0;
-  color: white;
-  background: black;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 
 @keyframes noise-anim {
@@ -242,22 +166,93 @@ header .right ul li a:hover:after {width: 100%;}
     clip: rect(7px, 9999px, 47px, 0);
  }
 }
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(76px, 9999px, 68px, 0);
+ }
+  5% {
+    clip: rect(12px, 9999px, 22px, 0);
+ }
+  10% {
+    clip: rect(79px, 9999px, 71px, 0);
+ }
+  15% {
+    clip: rect(90px, 9999px, 32px, 0);
+ }
+  20% {
+    clip: rect(81px, 9999px, 53px, 0);
+ }
+  25% {
+    clip: rect(62px, 9999px, 26px, 0);
+ }
+  30% {
+    clip: rect(42px, 9999px, 100px, 0);
+ }
+  35% {
+    clip: rect(48px, 9999px, 7px, 0);
+ }
+  40% {
+    clip: rect(2px, 9999px, 74px, 0);
+ }
+  45% {
+    clip: rect(93px, 9999px, 62px, 0);
+ }
+  50% {
+    clip: rect(18px, 9999px, 65px, 0);
+ }
+  55% {
+    clip: rect(44px, 9999px, 33px, 0);
+ }
+  60% {
+    clip: rect(81px, 9999px, 98px, 0);
+ }
+  65% {
+    clip: rect(20px, 9999px, 52px, 0);
+ }
+  70% {
+    clip: rect(99px, 9999px, 24px, 0);
+ }
+  75% {
+    clip: rect(20px, 9999px, 66px, 0);
+ }
+  80% {
+    clip: rect(6px, 9999px, 19px, 0);
+ }
+  85% {
+    clip: rect(56px, 9999px, 73px, 0);
+ }
+  90% {
+    clip: rect(63px, 9999px, 21px, 0);
+ }
+  95% {
+    clip: rect(58px, 9999px, 15px, 0);
+ }
+  100% {
+    clip: rect(43px, 9999px, 77px, 0);
+ }
+}
 
 .projectContents {width: 100%; position: relative;}
-.sticky {position: sticky !important; top: 0 !important; left: 0 !important; right: 0 !important;}
-#sectionFour {position: relative; top: 0; width: 100vw; height: 100vh; background-image: url('../img/background.png'); background-repeat: no-repeat; background-size: cover;}
-#sectionFour.fixed {position: fixed;}
-#sectionFour .indexText {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
-#sectionFour .indexText h2 {text-align: center; font-size: calc(100vw * 150 / 1920); color: #fff; font-weight: 400;}
-#sectionFour .projectBar {width: 100%; position: absolute; bottom: 10%; margin: 0 auto; text-align: center;}
-#sectionFour .projectBar ul li {display: inline-block; font-size: calc(100vw * 30 / 1920); color: #fff; vertical-align: middle;}
-#sectionFour .projectBar ul li.border {width: calc(100vw * 970 / 1920); height: calc(100vw * 1 /1920); background-color: #fff; margin: 0 calc(100vw * 35 /1920);}
-
-.projectIndexSection {display: none; position: fixed; top: 0; left: 0; z-index: 100000; width: 100%; height: 100vh; background-image: url('../img/background.png'); background-repeat: no-repeat; overflow: hidden;}
+.projectIndexSection {display: none; position: fixed; top: 0; left: 0; z-index: 100000; width: 100vw; height: 100vh; background-image: url('../img/background.png'); background-repeat: no-repeat; background-size: cover; overflow: hidden;}
 .projectIndexSection.on {display: block;}
-.projectIndexSection .projectIndex {position: absolute; bottom: -7%; left: 50%; transform: translateX(-50%); width: calc(100vw * 728 / 1920); height: calc(100vw * 969 / 1920); background-image: url('../img/receipt.png'); background-repeat: no-repeat; padding: calc(100vw * 102 / 1920) calc(100vw * 55 / 1920) calc(100vw * 49 / 1920); transition: all ease-in-out 0.3s; transition-delay: 3s;}
+.projectIndexSection .projectIndex {position: absolute; bottom: -7%; left: 50%; transform: translateX(-50%); width: calc(100vw * 728 / 1920); height: calc(100vw * 969 / 1920); background-image: url('../img/receipt.png'); background-repeat: no-repeat; background-size: cover; padding: calc(100vw * 102 / 1920) calc(100vw * 55 / 1920) calc(100vw * 49 / 1920); transition: all ease-in-out 0.3s;}
+@media (max-width: 1920px) {
+  .projectIndexSection .projectIndex {bottom: 0;}
+}
 .projectIndexSection .projectIndex .title {width: 100%;}
-.projectIndexSection .projectIndex .title .dashBorder {display: block; width: 100%; border-bottom: 2px dashed #000;}
+.projectIndexSection .projectIndex .title .dashBorder {display: block; width: 100%; border-bottom: 2px dashed var(--Black);}
 .projectIndexSection .projectIndex .title .dashBorder:nth-child(2),
 .projectIndexSection .projectIndex .title .dashBorder:nth-child(5) {margin-top: calc(100vw * 15 / 1920);}
 .projectIndexSection .projectIndex .title h2 {font-size: calc(100vw * 40 / 1920); text-align: center; margin: calc(100vw * 17 / 1920) 0; font-weight: bold;}
@@ -265,7 +260,7 @@ header .right ul li a:hover:after {width: 100%;}
 .projectIndexSection .projectIndex .contents ul {width: 50%; display: inline-block;}
 .projectIndexSection .projectIndex .contents ul li {font-size: calc(100vw * 19 / 1920); margin-bottom: calc(100vw * 40 / 1920);}
 .projectIndexSection .projectIndex .contents ul li a {display: inline-block;}
-.projectIndexSection .projectIndex .contents ul li a::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 1px; background: #000; margin-top: 10px; transition: all ease-in-out 0.3s;}
+.projectIndexSection .projectIndex .contents ul li a::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 1px; background: var(--Black); margin-top: 10px; transition: all ease-in-out 0.3s;}
 .projectIndexSection .projectIndex .contents ul li a:hover:after {width: 100%;}
 .projectIndexSection .projectIndex .contents .contentsIndex li {text-align: left;}
 .projectIndexSection .projectIndex .contents .contentsName li {text-align: right;}
@@ -273,219 +268,83 @@ header .right ul li a:hover:after {width: 100%;}
 .projectIndexSection .projectIndex .barcodeContents {text-align: center; margin-top: calc(100vw * 66 / 1920);}
 .projectIndexSection .projectIndex .barcodeContents h3 {font-size: calc(100vw * 47 / 1920); font-weight: 300;}
 
-#sectionFive {position: relative; top: 0; left: 0; z-index: 10; background-color: #000; color: #fff; box-sizing: border-box; transition: all ease-in-out 0.3s;}
-#sectionFive.fixed {position: fixed;}
-#sectionFive.relative {position: relative;}
-#sectionFive.on {background-color: #fff;}
-#sectionFive .barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: #000; width: auto; height: 100vh; border: 1px solid #fff; padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
-#sectionFive .barcode.off {background-color: transparent; border: none;}
-#sectionFive .barcode .barcodeContainer {width: 100%; height: 100%;}
-#sectionFive .barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
-#sectionFive .barcode .barcodeContainer .number.off,
-#sectionFive .barcode .barcodeContainer .projectNumer.off {opacity: 0;}
-#sectionFive .barcode .barcodeContainer .number,
-#sectionFive .barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
-#sectionFive .barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
-#sectionFive .barcode .barcodeContainer .projectNumer {font-size: calc(100vw * 60 / 1920); margin: calc(100vw * 140 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
-#sectionFive .imageBox {position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: calc(100vw * 1812 / 1920); height: calc(100vw * 408 / 1920); background-image: url('../img/samsung.png'); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
-#sectionFive .imageBox.on {top: 70%; width: calc(100vw * 1813 / 1920); height: calc(100vw * 204 / 1920); filter: grayscale(0);}
-#sectionFive .informationContainer {position: absolute; top: 10%; left: 63%; opacity: 0;}
-#sectionFive .informationContainer.on {opacity: 1; left: 57%; color: #000;}
-#sectionFive .code {font-size: calc(100vw * 157 / 1920); font-weight: 100; position: absolute; top: 8%; left: 0; color: #000; opacity: 0; transition: all ease-in-out 0.3s;}
-#sectionFive .code.on {opacity: 1;}
-#sectionFive .informationContainer .useTool {display: inline-block; margin-bottom: calc(100vw * 46 / 1920); margin-right: calc(100vw * 125 / 1920);}
-#sectionFive .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: #fff;}
-#sectionFive .informationContainer .useTool li.on {color: #000;}
-#sectionFive .informationContainer .useTool li:last-child {margin: 0;}
-#sectionFive .informationContainer h6 {display: inline-block; font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
-#sectionFive .textBox {position: absolute; top: 10%; width: 100%; transition: all ease-in-out 0.4s;}
-#sectionFive .textBox.on {transform: translate(5%, 72%); color: #000;}
-#sectionFive .textBox h3 {font-size: calc(100vw * 150 / 1920); text-align: center; font-weight: 400; transition: all ease-in-out 0.7s;}
-#sectionFive .textBox h3.on {text-align: left; color: #000;}
+.sticky {position: sticky !important; top: 0 !important; left: 0 !important; right: 0 !important;}
+.ProjectTopic {position: relative; top: 0; width: 100vw; height: 100vh; background-image: url('../img/background.png'); background-repeat: no-repeat; background-size: cover;}
+.ProjectTopic .indexText {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+.ProjectTopic .indexText h2 {text-align: left; font-size: calc(100vw * 150 / 1920); color: var(--White); font-weight: 400;}
+.ProjectTopic .projectBar {width: 100%; position: absolute; bottom: 10%; margin: 0 auto; text-align: center;}
+.ProjectTopic .projectBar ul li {display: inline-block; font-size: calc(100vw * 30 / 1920); color: var(--White); vertical-align: middle;}
+.ProjectTopic .projectBar ul li.border {width: calc(100vw * 970 / 1920); height: calc(100vw * 1 /1920); background-color: var(--White); margin: 0 calc(100vw * 35 /1920);}
 
-#sectionSix {position: relative; top: 0; background-color: #000; color: #fff; box-sizing: border-box;}
-#sectionSix .barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: #000; width: auto; height: 100vh; border: 1px solid #fff; padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
-#sectionSix .barcode.off {background-color: transparent; border: none;}
-#sectionSix .barcode .barcodeContainer {width: 100%; height: 100%;}
-#sectionSix .barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
-#sectionSix .barcode .barcodeContainer .number.off,
-#sectionSix .barcode .barcodeContainer .projectNumer.off {opacity: 0;}
-#sectionSix .barcode .barcodeContainer .number,
-#sectionSix .barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
-#sectionSix .barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
-#sectionSix .barcode .barcodeContainer .projectNumer {font-size: calc(100vw * 60 / 1920); margin: calc(100vw * 210 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
-#sectionSix .imageBox {position: absolute; top: 17%; left: 0; width: calc(100vw * 967 / 1920); height: calc(100vw * 514 / 1920); background-image: url('../img/3A.png'); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
-#sectionSix .imageBox.on {top: 15%; left: 59%; width: calc(100vw * 850 / 1920); height: calc(100vw * 717 / 1920); filter: grayscale(0);}
-#sectionSix .informationContainer {position: absolute; top: 17%; left: 10%; z-index: 1; opacity: 0; transition: all ease-in-out 0.5s;}
-#sectionSix .informationContainer.on {opacity: 1; left: 6%;}
-#sectionSix .informationContainer .useTool {margin-bottom: calc(100vw * 46 / 1920);}
-#sectionSix .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: #fff;}
-#sectionSix .informationContainer .useTool li:last-child {margin: 0;}
-#sectionSix .informationContainer h6 {font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
-#sectionSix .textBox {position: absolute; top: 60%; right: 3%;}
-#sectionSix .textBox h3 {font-size: calc(100vw * 150 / 1920); font-weight: 400; transition: all ease-in-out 0.7s;}
-#sectionSix .textBox h3.on {transform: translateX(-36%);}
+#sectionFour .ProjectTopic .indexText h2 {text-align: center;}
+#sectionTen .indexText {width: 62%;}
+#sectionTen .border {width: calc(100vw * 438 / 1920); margin: 0 calc((100vw * 27 / 1920));}
 
-#sectionSeven {position: relative; top: 0; width: 100%; height: 100vh; background-image: url('../img/background.png'); background-repeat: no-repeat; box-shadow: 2px 14px 20px 2px black; background-size: cover;}
-#sectionSeven.fixed {position: fixed;}
-#sectionSeven .indexText {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
-#sectionSeven .indexText h2 {text-align: left; font-size: calc(100vw * 150 / 1920); color: #fff; font-weight: 400;}
-#sectionSeven .projectBar {width: 100%; position: absolute; bottom: 10%; margin: 0 auto; text-align: center;}
-#sectionSeven .projectBar ul li {display: inline-block; font-size: calc(100vw * 30 / 1920); color: #fff; vertical-align: middle;}
-#sectionSeven .projectBar ul li.border {width: calc(100vw * 970 / 1920); height: calc(100vw * 1 /1920); background-color: #fff; margin: 0 calc(100vw * 35 /1920);}
+.barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: var(--Black); width: auto; height: 100vh; border: 1px solid var(--White); padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
+.barcode.off {background-color: transparent; border: none;}
+.barcode .barcodeContainer {width: 100%; height: 100%;}
+.barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
+.barcode .barcodeContainer .number.off,
+.barcode .barcodeContainer .projectNumber.off {opacity: 0;}
+.barcode .barcodeContainer .number,
+.barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
+.barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
+.barcode .barcodeContainer .projectNumber {font-size: calc(100vw * 60 / 1920); color: var(--White); margin: calc(100vw * 140 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
 
-#sectionEight {position: relative; top: 0; left: 0; z-index: 10; background-color: #000; color: #fff; box-sizing: border-box; transition: all ease-in-out 0.3s;}
-#sectionEight.fixed {position: fixed;}
-#sectionEight.relative {position: relative;}
-#sectionEight.on {background-color: #fff;}
-#sectionEight .barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: #000; width: auto; height: 100vh; border: 1px solid #fff; padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
-#sectionEight .barcode.off {background-color: transparent; border: none;}
-#sectionEight .barcode .barcodeContainer {width: 100%; height: 100%;}
-#sectionEight .barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
-#sectionEight .barcode .barcodeContainer .number.off,
-#sectionEight .barcode .barcodeContainer .projectNumer.off {opacity: 0;}
-#sectionEight .barcode .barcodeContainer .number,
-#sectionEight .barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
-#sectionEight .barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
-#sectionEight .barcode .barcodeContainer .projectNumer {font-size: calc(100vw * 60 / 1920); margin: calc(100vw * 110 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
-#sectionEight .imageBox {position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: calc(100vw * 1812 / 1920); height: calc(100vw * 408 / 1920); background-image: url('../img/toreta.png'); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
-#sectionEight .imageBox.on {top: 70%; width: calc(100vw * 1813 / 1920); height: calc(100vw * 204 / 1920); filter: grayscale(0);}
-#sectionEight .informationContainer {position: absolute; top: 10%; left: 63%; opacity: 0;}
-#sectionEight .informationContainer.on {opacity: 1; left: 57%; color: #000;}
-#sectionEight .code {font-size: calc(100vw * 157 / 1920); font-weight: 100; position: absolute; top: 8%; left: 0; color: #000; opacity: 0; transition: all ease-in-out 0.3s;}
-#sectionEight .code.on {opacity: 1;}
-#sectionEight .informationContainer .useTool {display: inline-block; margin-bottom: calc(100vw * 46 / 1920); margin-right: calc(100vw * 125 / 1920);}
-#sectionEight .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: #fff;}
-#sectionEight .informationContainer .useTool li.on {color: #000;}
-#sectionEight .informationContainer .useTool li:last-child {margin: 0;}
-#sectionEight .informationContainer h6 {display: inline-block; font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
-#sectionEight .textBox {position: absolute; top: 10%; width: 100%; transition: all ease-in-out 0.4s;}
-#sectionEight .textBox.on {transform: translate(5%, 72%); color: #000;}
-#sectionEight .textBox h3 {font-size: calc(100vw * 150 / 1920); text-align: center; font-weight: 400; transition: all ease-in-out 0.7s;}
-#sectionEight .textBox h3.on {text-align: left; color: #000;}
+.typeA {position: relative; top: 0; left: 0; z-index: 10; background-color: var(--Black); color: var(--White); box-sizing: border-box; transition: all ease-in-out 0.3s;}
+.typeA.on {background-color: var(--White);}
+.typeA .imageBox {position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: calc(100vw * 1812 / 1920); height: calc(100vw * 408 / 1920); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
+.typeA .imageBox.on {top: 70%; width: calc(100vw * 1813 / 1920); height: calc(100vw * 204 / 1920); filter: grayscale(0);}
+.typeA .informationContainer {position: absolute; top: 10%; left: 63%; opacity: 0;}
+.typeA .informationContainer.on {opacity: 1; left: 57%; color: var(--Black);}
+.typeA .code {font-size: calc(100vw * 157 / 1920); font-weight: 100; position: absolute; top: 8%; left: 0; color: var(--Black); opacity: 0; transition: all ease-in-out 0.3s;}
+.typeA .code.on {opacity: 1;}
+.typeA .informationContainer .useTool {display: inline-block; margin-bottom: calc(100vw * 46 / 1920); margin-right: calc(100vw * 125 / 1920);}
+.typeA .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: var(--White);}
+.typeA .informationContainer .useTool li.on {color: var(--Black);}
+.typeA .informationContainer .useTool li:last-child {margin: 0;}
+.typeA .informationContainer h6 {display: inline-block; font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
+.typeA .textBox {position: absolute; top: 10%; width: 100%; transition: all ease-in-out 0.4s;}
+.typeA .textBox.on {transform: translate(5%, 72%); color: var(--Black);}
+.typeA .textBox h3 {font-size: calc(100vw * 150 / 1920); text-align: center; font-weight: 400; transition: all ease-in-out 0.7s;}
+.typeA .textBox h3.on {text-align: left; color: var(--Black);}
 
-#sectionNine {position: relative; top: 0; background-color: #000; color: #fff; box-sizing: border-box;}
-#sectionNine .barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: #000; width: auto; height: 100vh; border: 1px solid #fff; padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
-#sectionNine .barcode.off {background-color: transparent; border: none;}
-#sectionNine .barcode .barcodeContainer {width: 100%; height: 100%;}
-#sectionNine .barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
-#sectionNine .barcode .barcodeContainer .number.off,
-#sectionNine .barcode .barcodeContainer .projectNumer.off {opacity: 0;}
-#sectionNine .barcode .barcodeContainer .number,
-#sectionNine .barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
-#sectionNine .barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
-#sectionNine .barcode .barcodeContainer .projectNumer {font-size: calc(100vw * 60 / 1920); margin: calc(100vw * 170 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
-#sectionNine .imageBox {position: absolute; top: 17%; left: 0; width: calc(100vw * 967 / 1920); height: calc(100vw * 514 / 1920); background-image: url('../img/zelda.png'); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
-#sectionNine .imageBox.on {top: 15%; left: 59%; width: calc(100vw * 850 / 1920); height: calc(100vw * 717 / 1920); filter: grayscale(0);}
-#sectionNine .informationContainer {position: absolute; top: 17%; left: 10%; z-index: 1; opacity: 0; transition: all ease-in-out 0.5s;}
-#sectionNine .informationContainer.on {opacity: 1; left: 6%;}
-#sectionNine .informationContainer .useTool {margin-bottom: calc(100vw * 46 / 1920);}
-#sectionNine .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: #fff;}
-#sectionNine .informationContainer .useTool li:last-child {margin: 0;}
-#sectionNine .informationContainer h6 {font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
-#sectionNine .textBox {position: absolute; top: 60%; right: 3%;}
-#sectionNine .textBox h3 {font-size: calc(100vw * 150 / 1920); font-weight: 400; transition: all ease-in-out 0.7s;}
-#sectionNine .textBox h3.on {transform: translateX(-36%);}
+.typeB {position: relative; top: 0; background-color: var(--Black); color: var(--White); box-sizing: border-box;}
+.typeB .imageBox {position: absolute; top: 17%; left: 0; width: calc(100vw * 967 / 1920); height: calc(100vw * 514 / 1920); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
+.typeB .imageBox.on {top: 15%; left: 59%; width: calc(100vw * 850 / 1920); height: calc(100vw * 717 / 1920); filter: grayscale(0);}
+.typeB .informationContainer {position: absolute; top: 17%; left: 10%; z-index: 1; opacity: 0; transition: all ease-in-out 0.5s;}
+.typeB .informationContainer.on {opacity: 1; left: 6%;}
+.typeB .informationContainer .useTool {margin-bottom: calc(100vw * 46 / 1920);}
+.typeB .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: var(--White);}
+.typeB .informationContainer .useTool li:last-child {margin: 0;}
+.typeB .informationContainer h6 {font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
+.typeB .textBox {position: absolute; top: 60%; right: 3%;}
+.typeB .textBox h3 {font-size: calc(100vw * 150 / 1920); font-weight: 400; transition: all ease-in-out 0.7s;}
+.typeB .textBox h3.on {transform: translateX(-36%);}
 
-#sectionTen {position: relative; top: 0; width: 100%; height: 100vh; background-image: url('../img/background.png'); background-repeat: no-repeat; box-shadow: 2px 14px 20px 2px black; background-size: cover;}
-#sectionTen.fixed {position: fixed;}
-#sectionTen .indexText {width: 62%; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
-#sectionTen .indexText h2 {text-align: left; font-size: calc(100vw * 150 / 1920); color: #fff; font-weight: 400;}
-#sectionTen .projectBar {width: 100%; position: absolute; bottom: 10%; margin: 0 auto; text-align: center;}
-#sectionTen .projectBar ul li {display: inline-block; font-size: calc(100vw * 30 / 1920); color: #fff; vertical-align: middle;}
-#sectionTen .projectBar ul li.border {width: calc(100vw * 438 / 1920); height: calc(100vw * 1 /1920); background-color: #fff; margin: 0 calc(100vw * 27 /1920);}
+#sectionFive .imageBox {background-image: url('../img/samsung.png');}
+#sectionSix .imageBox {background-image: url('../img/3A.png');}
+#sectionSix .barcode .barcodeContainer .projectNumber {margin: calc(100vw * 230 / 1920) 0;}
+#sectionEight .imageBox {background-image: url('../img/toreta.png');}
+#sectionNine .imageBox {background-image: url('../img/zelda.png');}
+#sectionEleven .imageBox {background-image: url('../img/soyo.png');}
+#sectionTwelve .imageBox {background-image: url('../img/zipkid.png');}
+#sectionThirteen .imageBox {background-image: url('../img/boooao.png');}
 
-#sectionEleven {position: relative; top: 0; left: 0; z-index: 10; background-color: #000; color: #fff; box-sizing: border-box; transition: all ease-in-out 0.3s;}
-#sectionEleven.fixed {position: fixed;}
-#sectionEleven.relative {position: relative;}
-#sectionEleven.on {background-color: #fff;}
-#sectionEleven .barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: #000; width: auto; height: 100vh; border: 1px solid #fff; padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
-#sectionEleven .barcode.off {background-color: transparent; border: none;}
-#sectionEleven .barcode .barcodeContainer {width: 100%; height: 100%;}
-#sectionEleven .barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
-#sectionEleven .barcode .barcodeContainer .number.off,
-#sectionEleven .barcode .barcodeContainer .projectNumer.off {opacity: 0;}
-#sectionEleven .barcode .barcodeContainer .number,
-#sectionEleven .barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
-#sectionEleven .barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
-#sectionEleven .barcode .barcodeContainer .projectNumer {font-size: calc(100vw * 60 / 1920); margin: calc(100vw * 148 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
-#sectionEleven .imageBox {position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: calc(100vw * 1812 / 1920); height: calc(100vw * 408 / 1920); background-image: url('../img/soyo.png'); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
-#sectionEleven .imageBox.on {top: 70%; width: calc(100vw * 1813 / 1920); height: calc(100vw * 204 / 1920); filter: grayscale(0);}
-#sectionEleven .informationContainer {position: absolute; top: 10%; left: 63%; opacity: 0;}
-#sectionEleven .informationContainer.on {opacity: 1; left: 57%; color: #000;}
-#sectionEleven .code {font-size: calc(100vw * 157 / 1920); font-weight: 100; position: absolute; top: 8%; left: 0; color: #000; opacity: 0; transition: all ease-in-out 0.3s;}
-#sectionEleven .code.on {opacity: 1;}
-#sectionEleven .informationContainer .useTool {display: inline-block; margin-bottom: calc(100vw * 46 / 1920); margin-right: calc(100vw * 125 / 1920);}
-#sectionEleven .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: #fff;}
-#sectionEleven .informationContainer .useTool li.on {color: #000;}
-#sectionEleven .informationContainer .useTool li:last-child {margin: 0;}
-#sectionEleven .informationContainer h6 {display: inline-block; font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
-#sectionEleven .textBox {position: absolute; top: 10%; width: 100%; transition: all ease-in-out 0.4s;}
-#sectionEleven .textBox.on {transform: translate(5%, 72%); color: #000;}
-#sectionEleven .textBox h3 {font-size: calc(100vw * 150 / 1920); text-align: center; font-weight: 400; transition: all ease-in-out 0.7s;}
-#sectionEleven .textBox h3.on {text-align: left; color: #000;}
-
-#sectionTwelve {position: relative; top: 0; background-color: #000; color: #fff; box-sizing: border-box;}
-#sectionTwelve .barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: #000; width: auto; height: 100vh; border: 1px solid #fff; padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
-#sectionTwelve .barcode.off {background-color: transparent; border: none;}
-#sectionTwelve .barcode .barcodeContainer {width: 100%; height: 100%;}
-#sectionTwelve .barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
-#sectionTwelve .barcode .barcodeContainer .number.off,
-#sectionTwelve .barcode .barcodeContainer .projectNumer.off {opacity: 0;}
-#sectionTwelve .barcode .barcodeContainer .number,
-#sectionTwelve .barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
-#sectionTwelve .barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
-#sectionTwelve .barcode .barcodeContainer .projectNumer {font-size: calc(100vw * 60 / 1920); margin: calc(100vw * 110 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
-#sectionTwelve .imageBox {position: absolute; top: 17%; left: 0; width: calc(100vw * 967 / 1920); height: calc(100vw * 514 / 1920); background-image: url('../img/zipkid.png'); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
-#sectionTwelve .imageBox.on {top: 15%; left: 59%; width: calc(100vw * 850 / 1920); height: calc(100vw * 717 / 1920); filter: grayscale(0);}
-#sectionTwelve .informationContainer {position: absolute; top: 17%; left: 10%; z-index: 1; opacity: 0; transition: all ease-in-out 0.5s;}
-#sectionTwelve .informationContainer.on {opacity: 1; left: 6%;}
-#sectionTwelve .informationContainer .useTool {margin-bottom: calc(100vw * 46 / 1920);}
-#sectionTwelve .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: #fff;}
-#sectionTwelve .informationContainer .useTool li:last-child {margin: 0;}
-#sectionTwelve .informationContainer h6 {font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
-#sectionTwelve .textBox {position: absolute; top: 60%; right: 3%;}
-#sectionTwelve .textBox h3 {font-size: calc(100vw * 150 / 1920); font-weight: 400; transition: all ease-in-out 0.7s;}
-#sectionTwelve .textBox h3.on {transform: translateX(-36%);}
-
-#sectionThirteen {position: relative; top: 0; left: 0; z-index: 10; background-color: #000; color: #fff; box-sizing: border-box; transition: all ease-in-out 0.3s;}
-#sectionThirteen.fixed {position: fixed;}
-#sectionThirteen.relative {position: relative;}
-#sectionThirteen.on {background-color: #fff;}
-#sectionThirteen .barcode {position: absolute; top: 0; left: 0; z-index: 100; background-color: #000; width: auto; height: 100vh; border: 1px solid #fff; padding: calc(100vw * 170 / 1920) calc(100vw * 14 / 1920) calc(100vw * 50 / 1920); transition: all ease-in-out 0.3s;}
-#sectionThirteen .barcode.off {background-color: transparent; border: none;}
-#sectionThirteen .barcode .barcodeContainer {width: 100%; height: 100%;}
-#sectionThirteen .barcode .barcodeContainer h5 {width: 100%; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; vertical-align: middle;}
-#sectionThirteen .barcode .barcodeContainer .number.off,
-#sectionThirteen .barcode .barcodeContainer .projectNumer.off {opacity: 0;}
-#sectionThirteen .barcode .barcodeContainer .number,
-#sectionThirteen .barcode .barcodeContainer .index {font-size: calc(100vw * 30 / 1920); padding: 0 calc(100vw * 14 / 1920); transition: all ease-in-out 0.3s;}
-#sectionThirteen .barcode .barcodeContainer .index.off {font-family: "code128"; position: absolute; bottom: 6%;}
-#sectionThirteen .barcode .barcodeContainer .projectNumer {font-size: calc(100vw * 60 / 1920); margin: calc(100vw * 60 / 1920) 0; font-weight: 400; transition: all ease-in-out 0.3s;}
-#sectionThirteen .imageBox {position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: calc(100vw * 1812 / 1920); height: calc(100vw * 408 / 1920); background-image: url('../img/boooao.png'); background-repeat: no-repeat; background-size:unset; background-position: right; filter: grayscale(100%); transition: all ease-in-out 0.7s;}
-#sectionThirteen .imageBox.on {top: 70%; width: calc(100vw * 1813 / 1920); height: calc(100vw * 204 / 1920); filter: grayscale(0);}
-#sectionThirteen .informationContainer {position: absolute; top: 10%; left: 63%; opacity: 0;}
-#sectionThirteen .informationContainer.on {opacity: 1; left: 57%; color: #000;}
-#sectionThirteen .code {font-size: calc(100vw * 157 / 1920); font-weight: 100; position: absolute; top: 8%; left: 0; color: #000; opacity: 0; transition: all ease-in-out 0.3s;}
-#sectionThirteen .code.on {opacity: 1;}
-#sectionThirteen .informationContainer .useTool {display: inline-block; margin-bottom: calc(100vw * 46 / 1920); margin-right: calc(100vw * 125 / 1920);}
-#sectionThirteen .informationContainer .useTool li {display: inline-block; font-size: calc(100vw * 20 / 1920); margin-right: calc(100vw * 26 / 1920); color: #fff;}
-#sectionThirteen .informationContainer .useTool li.on {color: #000;}
-#sectionThirteen .informationContainer .useTool li:last-child {margin: 0;}
-#sectionThirteen .informationContainer h6 {display: inline-block; font-size: calc(100vw * 20 / 1920); font-weight: 300; line-height: 1.5em;}
-#sectionThirteen .textBox {position: absolute; top: 10%; width: 100%; transition: all ease-in-out 0.4s;}
-#sectionThirteen .textBox.on {transform: translate(5%, 72%); color: #000;}
-#sectionThirteen .textBox h3 {font-size: calc(100vw * 150 / 1920); text-align: center; font-weight: 400; transition: all ease-in-out 0.7s;}
-#sectionThirteen .textBox h3.on {text-align: left; color: #000;}
-
-#contactSection {display: none; position: fixed; top: 0; left: 0; z-index: 1000; background-color: #000; color: #fff; overflow: hidden;}
+#contactSection {display: none; position: fixed; top: 0; left: 0; background-color: var(--Black); color: var(--White); overflow: hidden;}
 #contactSection.on {display: block; z-index: 10000000;}
 #contactSection .wrap {width: 100%; padding: 0 calc(100vw * 56 / 1920);}
 #contactSection .wrap .barcode2 {width: 100%; transform: rotate(90deg);}
 #contactSection .wrap .textBox {display: inline-block; padding-top: calc(100vw * 409 / 1920); margin-bottom: calc(100vw * 116 / 1920);}
 #contactSection .wrap .textBox .title h2 {font-size: calc(100vw * 60 / 1920); margin-bottom: calc(100vw * 20 / 1920);}
-#contactSection .wrap .textBox .title h6 {font-size: calc(100vw * 30 / 1920); font-weight: bold;}
+#contactSection .wrap
+
+
+
+.textBox .title h6 {font-size: calc(100vw * 30 / 1920); font-weight: bold;}
 #contactSection .wrap .information {display: inline-block;  margin-right: calc(100vw * 380 / 1920);}
+#contactSection .wrap .contactBarcode {display: inline-block; margin-top: -15%;}
+#contactSection .wrap .contactBarcode h6 {font-family: "code128"; font-weight: 300; font-size: calc(100vw * 85/ 1920); writing-mode: vertical-rl; transform: rotate(180deg);}
 #contactSection .wrap .information .title {margin-right: calc(100vw * 927 / 1920);}
 #contactSection .wrap .information .title,
 #contactSection .wrap .information .contents {display: inline-block;}
@@ -494,19 +353,12 @@ header .right ul li a:hover:after {width: 100%;}
 #contactSection .wrap .information .contents li {text-align: right;}
 #contactSection .wrap .information .contents li p {display: inline-block;}
 #contactSection .wrap .information .contents li p:first-child {margin-right: calc(100vw * 58 /1920);}
-#contactSection .wrap .information .contents li a {color: #fff; display: inline-block;}
-#contactSection .wrap .information .contents li a::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 2px; background: #fff; margin-top: 10px; transition: all ease-in-out 0.3s;}
+#contactSection .wrap .information .contents li a {color: var(--White); display: inline-block;}
+#contactSection .wrap .information .contents li a::after {content: ''; display: block; left: 0; bottom: 0; width: 0; height: 2px; background: var(--White); margin-top: 10px; transition: all ease-in-out 0.3s;}
 #contactSection .wrap .information .contents li a:hover:after {width: 100%;}
 
-#cursor-bg{opacity: 0; overflow:hidden;position:fixed;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-moz-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);pointer-events:none}
-#cursor-bg{z-index:400;width:calc(100vw * 285 / 1920);height:calc(100vw * 80 / 1920);background-image: url('../img/cursor.png'); background-repeat: no-repeat; background-size: cover; -webkit-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-moz-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-o-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-ms-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955)}
-#cursor-bg.active{width:calc(100vw * 60 / 1920);height:calc(100vw * 60 / 1920);background-color:#fff;border-color:#fff;mix-blend-mode:exclusion}
-#cursor-bg.on {opacity: 1;}
-#cursor-dot,#progress{overflow:hidden;position:fixed;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-moz-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);pointer-events:none}
-#cursor-dot{mix-blend-mode:difference; z-index:400;width:30px;height:30px;border:1px solid #fff;border-radius:50%;-webkit-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-moz-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-o-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-ms-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955)}
-#progress{z-index:500;color:#000;font-weight: bold;width:calc(100vw * 30 / 1920);height:3calc(100vw * 30 / 1920)0px;border-radius:50%;-webkit-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955);-moz-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955);-o-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955);-ms-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955);transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955)}
+#cursor-bg{opacity: 0;z-index:500;width:calc(100vw * 285 / 1920);height:calc(100vw * 80 / 1920);background-image: url('../img/cursor.png'); background-repeat: no-repeat; background-size: cover;-webkit-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);-moz-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);-o-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);-ms-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);overflow:hidden;position:fixed;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-moz-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);pointer-events:none}
+#cursor-bg.active{opacity: 1;}
+#cursor-dot.off {opacity: 0;}
+#cursor-dot{opacity: 1; mix-blend-mode:difference; z-index:400;width:30px;height:30px;border:1px solid #fff;border-radius:50%;-webkit-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-moz-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-o-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);-ms-transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);transition:width 200ms cubic-bezier(0.455,0.030,0.515,0.955),height 200ms cubic-bezier(0.455,0.030,0.515,0.955),background-color 200ms cubic-bezier(0.455,0.030,0.515,0.955),border-color 200ms cubic-bezier(0.455,0.030,0.515,0.955);overflow:hidden;position:fixed;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-moz-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);pointer-events:none}
 #cursor-dot.active{width:calc(100vw * 60 / 1920);height:calc(100vw * 60 / 1920);background-color:#fff;border-color:#fff;mix-blend-mode:exclusion}
-#progress.active{width:calc(100vw * 60 / 1920);height:calc(100vw * 60 / 1920)}
-#progress span{display:block;position:absolute;top:50%;left:50%;text-align:center;-webkit-transform:translateX(-50%) translateY(-50%);-moz-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
-#progress.active span::after{content:"Go!";text-transform:uppercase;font-size:0.833rem;line-height:1.333rem;opacity:0;-webkit-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);-moz-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);-o-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);-ms-transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955);transition:opacity 200ms cubic-bezier(0.455,0.030,0.515,0.955)}
-#progress.active span::after{opacity:1.0}
