@@ -8,6 +8,7 @@ var typingTxt = $(".textOrigin>ul>li").eq(liIndex).text();
 typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
 if(typingBool==false){ // 타이핑이 진행되지 않았다면 
     typingBool=true; 
+     
     var tyInt = setInterval(typing,70); // 반복동작 
     console.log("가보자고");
 } 
