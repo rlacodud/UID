@@ -6,6 +6,9 @@ $('.thumb').click(function(){
     $('.grayBack').css({
         'display' : 'block'
     })
+    $('body').css({
+        'overflow': 'hidden'
+    })
 })
 $('.deleteBtn').click(function(){
     console.log("썸네일 클릭");
@@ -14,5 +17,8 @@ $('.deleteBtn').click(function(){
     })
     $('.grayBack').css({
         'display' : 'none'
+    })
+    $('body').css({
+        'overflow': 'auto'
     })
 })
