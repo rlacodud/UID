@@ -1,16 +1,5 @@
 $('.profileDiv').mouseover(function(){
-    console.log('뫄우스오붤')
     $('.profileDiv').addClass('open');
-    // $('.profileText').css({
-    //     'left':'332px',
-    //     'display':'inline-block',
-    //     'width':'300px',
-    //     '-webkit-transition':'.5s',
-    //     '-moz-transition':'.5s',
-    //     '-ms-transition':'.5s',
-    //     '-o-transition':'.5s',
-    //     'transition':'.5s'
-    // })
 
     $('.profileText').addClass('open');
     $('html').css({

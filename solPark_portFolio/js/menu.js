@@ -32,95 +32,29 @@ $('.menuIcon').click(function(){
     }
 })
 
-$('.li1').mouseenter(function(){
-    console.log("마우스오벌");
-    $('.name1').css({
-        'color':'black',
-        'bottom':'calc(100vw*180/1920)'
+// 메뉴 마우스 호버 및 리브 시
+for (let i = 0; i < 4; i++){
+    var $menuLi = $(".menuLi");
+    // mouseenter
+    $menuLi.eq(i).mouseenter(function(){
+        $('.menuLi').eq(i).children(".menuName").css({
+            'color':'black',
+            'bottom':'calc(100vw*180/1920)'
+        })
+        $('.menuLi').eq(i).children(".menuNum").css({
+            'color':'black',
+            'top':'calc(100vw*170/1920)',
+        })
     })
-    $('.num1').css({
-        'color':'black',
-        'top':'calc(100vw*170/1920)',
-        // 'bottom':'10px'
+    // mouseleave
+    $menuLi.eq(i).mouseleave(function(){
+        $('.menuLi').eq(i).children(".menuName").css({
+            'color':'white',
+            'bottom':'calc(100vw*20/1920)'
+        })
+        $('.menuLi').eq(i).children(".menuNum").css({
+            'color':'white',
+            'top':'calc(100vw*10/1920)',
+        })
     })
-})
-$('.li1').mouseleave(function(){
-    console.log("마우스리브");
-    $('.name1').css({
-        'color':'white',
-        'bottom':'calc(100vw*20/1920)'
-    })
-    $('.num1').css({
-        'color':'white',
-        'top':'calc(100vw*10/1920)',
-    })
-})
-$('.li2').mouseenter(function(){
-    console.log("마우스오벌");
-    $('.name2').css({
-        'color':'black',
-        'bottom':'calc(100vw*180/1920)'
-    })
-    $('.num2').css({
-        'color':'black',
-        'top':'calc(100vw*170/1920)',
-        // 'bottom':'10px'
-    })
-})
-$('.li2').mouseleave(function(){
-    console.log("마우스리브");
-    $('.name2').css({
-        'color':'white',
-        'bottom':'calc(100vw*20/1920)'
-    })
-    $('.num2').css({
-        'color':'white',
-        'top':'calc(100vw*10/1920)',
-    })
-})
-$('.li3').mouseenter(function(){
-    console.log("마우스오벌");
-    $('.name3').css({
-        'color':'black',
-        'bottom':'calc(100vw*180/1920)'
-    })
-    $('.num3').css({
-        'color':'black',
-        'top':'calc(100vw*170/1920)',
-        // 'bottom':'10px'
-    })
-})
-$('.li3').mouseleave(function(){
-    console.log("마우스리브");
-    $('.name3').css({
-        'color':'white',
-        'bottom':'calc(100vw*20/1920)'
-    })
-    $('.num3').css({
-        'color':'white',
-        'top':'calc(100vw*10/1920)',
-    })
-})
-$('.li4').mouseenter(function(){
-    console.log("마우스오벌");
-    $('.name4').css({
-        'color':'black',
-        'bottom':'calc(100vw*180/1920)'
-    })
-    $('.num4').css({
-        'color':'black',
-        'top':'calc(100vw*170/1920)',
-    })
-})
-$('.li4').mouseleave(function(){
-    console.log("마우스리브");
-    $('.name4').css({
-        'color':'white',
-        'bottom':'calc(100vw*20/1920)'
-    })
-    $('.num4').css({
-        'color':'white',
-        'top':'calc(100vw*10/1920)',
-    })
-})
-
+}

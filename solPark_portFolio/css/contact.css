@@ -9,17 +9,13 @@ html {
     width: 100%;
     position: relative;
     height: 50vh;
-    /* border: 1px solid yellow; */
 }
 
 .contactTitle {
     text-align: center;
     width: 100%;
-    /* border: 1px solid red; */
     position: absolute;
     top: 50%;
-    /* left: 50%;
-    transform: translateX(-50%); */
     transform: translateY(-50%);
 }
 
@@ -62,13 +58,11 @@ html {
     0% {
         opacity: 0.1;
         font-weight: 100;
-      /* width: 500% */
     }
   
     100% {
         opacity: 1;
         font-weight: 900;
-      /* width: 500%; */
     }
   }
 
@@ -81,12 +75,10 @@ html {
 
 .contactUl {
     height: 50vh;
-    /* top: calc(100vw*600/1920); */
     top: 50%;
     width: 100%;
     font-family:"Noto Sans KR",sans-serif;
     position: absolute;
-    /* border: 1px solid red; */
     text-align: center;
     color: white;
     left: 50%;
@@ -97,14 +89,12 @@ html {
 .contactUl li {
     position: relative;
     width: 33%;
-    /* border: 1px solid blue; */
     display: inline-block;
     vertical-align: middle;
     height: 100%;
 }
 
 .contactDiv {
-    /* border: solid 1px green; */
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -114,7 +104,6 @@ html {
 
 .contactCategory {
     display: inline-block;
-    /* border: 1px solid green; */
     font-family:"Noto Sans KR",sans-serif;
     font-size: calc(100vw*34/1920);
     font-weight: 900;

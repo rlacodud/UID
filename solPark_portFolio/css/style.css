@@ -10,7 +10,6 @@ html {
     width: 100%;
     height: 100vh;
     background-color: #8cfa20;
-    /* opacity: 80%; */
 }
 
 .loader {
@@ -63,20 +62,14 @@ section {
     text-align: center;
     display: inline-block;
     transform: translate(-50%, -50%);
-    /* border: 1px solid red; */
     font-size: calc(100vw*100/1920);
     font-family:"Noto Sans KR",sans-serif;
     font-weight: 900;
     line-height: calc(100vw*120/1920);
-    /* animation-name: cursor; 
-    animation-duration: 0.3s; 
-    animation-iteration-count: infinite;  */
 }
 .startText ul li {
-    /* border: ; */
     display: block;
     font-size: calc(100vw*90/1920);
-    /* padding-right: 30px; */
     -webkit-transition:.5s;
     -moz-transition:.5s;
     -ms-transition:.5s;
@@ -91,8 +84,6 @@ section {
     color: black !important;
     padding-left: calc(100vw*10/1920);
     padding-right: calc(100vw*10/1920);
-    /* padding-bottom: 10px; */
-    /* padding: 10px; */
 }
 .startText ul li:nth-child(2):hover {
     transform: rotate(10deg);
@@ -110,8 +101,6 @@ section {
     animation-iteration-count: infinite; 
 }
 .startText:hover {
-    /* color: #8cfa20; */
-    /* transform: rotate(10deg); */
 }
 @keyframes cursor{ 
     0%{border-right: 1px solid #000} 
@@ -127,7 +116,6 @@ section {
     text-align: center;
     display: inline-block;
     transform: translateX(-50%);
-    /* border: 1px solid red; */
     font-size: calc(100vw*20/1920);
     font-family:"Noto Sans KR",sans-serif;
     font-weight: 700;
@@ -143,9 +131,7 @@ section {
     100%{opacity: 1;}
 }
 .businessCard {
-    /* border: solid 1px red; */
     width: calc(100vw*550/1920);
-    /* height: calc(100vw*306.25/1920); */
     position: absolute;
     left: 50%;
     top: calc(100vw*550/1920);
@@ -173,7 +159,6 @@ section {
     font-size: calc(100vw*20/1920);
     font-family:"Noto Sans KR",sans-serif;
     position: absolute;
-    /* color: white; */
     top: 70%;
     left: calc(100vw*20/1920);
     line-height: 120%;
@@ -246,7 +231,6 @@ section {
 
 .projectPage {
     position: absolute;
-    /* width: 1000px; */
     top: calc(100vw*120/1920);
     right: calc(100vw*180/1920);
     width: calc(100vw*900/1920);
@@ -254,7 +238,6 @@ section {
 
 .projectPageBack {
     position: absolute;
-    /* width: 1000px; */
     top: calc(100vw*120/1920);
     right: calc(100vw*180/1920);
     width: calc(100vw*900/1920);

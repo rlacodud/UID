@@ -65,7 +65,6 @@
 }
 
 .menuName {
-    /* border: solid 1px red; */
     width: auto;
     height: calc(100vw*159/1920);
     font-size: calc(100vw*150/1920);
