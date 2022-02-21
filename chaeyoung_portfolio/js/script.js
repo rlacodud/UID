@@ -244,10 +244,7 @@ $("#sectionThree .ability .codeType h3").on('mouseover', function() {
   $(this).next('h6').addClass('on');
 });
 
-
-// 현재 index에 맞춰 TimelineLite 생성(abilityAni1)
 // 안에 있는 설정값은 외부에서 지정한 각 score 변수를 대입하여 적용
-
 // ability h3을 배열로 변환 후
 var abilityH3 = document.querySelectorAll("#sectionThree .ability h3");
 abilityH3 = Array.prototype.slice.call(abilityH3);
