@@ -281,21 +281,33 @@ var scene = new ScrollMagic.Scene({
 .setTween(sec42)
 .addTo(controller);
 
-$('.interviewLi2').click(){
+// $('.interviewLi2').click(){
 
-}
+// }
+$('.interviewLi1').click(function(){
+  console.log("썸네일 클릭");
+  $('.people1').css({
+    'opacity':'0%',
+    'animation-name': 'test'
+  })
+  $('.people1 .textBox').css({
+    'opacity':'0%',
+    'animation-name': 'test'
+  })
+})
 $('.interviewLi2').click(function(){
   console.log("썸네일 클릭");
-  $('.modalLgTube').css({
-      'display' : 'block'
+  $('.people2').css({
+    'animation-name': 'test'
   })
-  $('body').css({
-      'overflow': 'hidden'
+  $('.people2 .textBox').css({
+    'opacity':'0%',
+    'animation-name': 'test'
   })
 })
 
 var sec43 = new TimelineMax();
-sec43.to($('.section4 .textBox'), 1, {opacity: 1, delay: 1, top: 0})
+sec43.to($('.section4 .people1 .textBox'), 1, {opacity: 1, delay: 1, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section4',
   triggerHook: 0.9
