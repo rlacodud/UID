@@ -1,0 +1,41 @@
+* {box-sizing: content-box;}
+section {position: relative;}
+
+.section1 {background-color: blue; width: 100vw; height: 100vh;}
+
+.section2 {width: 100vw; font-size: 0; background-color: #fff; z-index: 1;}
+.imgWrap {display: block; width: 50%; height: 100vh; position: absolute; top: 0; left: 0;}
+.fixedArea.active {position: fixed; top: 0;}
+.fixedArea.active.finish {position: absolute; top: auto; bottom: 0;}
+.section2 .fixedArea,
+.section2 .scrollArea {display: inline-block; width: 50%;}
+.section2 .fixedArea {height: 100%; width: calc(100vw * 791 / 1920); padding-top: calc(100vw * 140 / 1920); padding-left: calc(100vw * 130 / 1920);}
+.section2 .fixedArea .leftContentContainer {position: relative; width: 100%; height: calc(100vw * 720 / 1920); padding: calc(100vw * 60 / 1920) calc(100vw * 56 / 1920); box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 50 / 1920);}
+.section2 .fixedArea .leftContentContainer .textBox {margin-bottom: calc(100vw * 65 / 1920); font-weight: bold;}
+.section2 .fixedArea .leftContentContainer .textBox .subTitle {font-size: calc(100vw * 28 / 1920); color: #a1a1a1; margin-bottom: calc(100vw * 30 / 1920);}
+.section2 .fixedArea .leftContentContainer .textBox .title {font-size: calc(100vw * 48 / 1920);}
+.section2 .fixedArea .leftContentContainer .more {width: calc(100vw * 180 / 1920); height: calc(100vw * 60 / 1920); background-color: #000; border-radius: calc(100vw * 60 / 1920); color: #fff; text-align: center; border: none;}
+.section2 .fixedArea .leftContentContainer .more a {color: #fff; font-size: calc(100vw * 18 / 1920);}
+.section2 .fixedArea .leftContentContainer .image {position: absolute; bottom: 7%; right: 7%; width: calc(100vw * 375 / 1920); height: calc(100vw * 436 / 1920); text-align: right;}
+.section2 .fixedArea .leftContentContainer .image img {width: 100%; height: 100%;}
+
+.section2 .scrollArea {font-size: 0; padding: calc(100vw * 140 / 1920) calc(100vw * 130 / 1920) 0 calc(100vw * 30 / 1920); margin-left: 50%;}
+.section2 .scrollArea .scrollAreaContainer {position: relative; width: 100%; font-size: 0;}
+.section2 .scrollArea .scrollAreaContainer .left,
+.section2 .scrollArea .scrollAreaContainer .right {width: 50%; display: inline-block;}
+.section2 .scrollArea .scrollAreaContainer .left {padding-right: calc(100vw * 10 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .right {padding-left: calc(100vw * 10 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .contentsBox {box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 50 / 1920); margin-bottom: calc(100vw * 40 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .contentsBox .contentsImage {width: 100%;}
+.section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText {padding: calc(100vw * 30 / 1920) 0; text-align: center;}
+.section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText .subTitle {color: #d80546; font-size: calc(100vw * 18 / 1920); font-weight: bold;}
+.section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText .title {margin: calc(100vw * 32 / 1920) 0; color: #333333; font-size: calc(100vw * 28 / 1920); font-weight: bold; line-height: calc(100vw * 46 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText .date {color: #a3a3a3; font-size: calc(100vw * 18 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .small .contentsImage {position: relative; height: calc(100vw * 280 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .small .contentsImage .emoji {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-size: cover; background-repeat: no-repeat;}
+.section2 .scrollArea .scrollAreaContainer .right .small .contentsImage {background-color: #ff5b5b; border-radius: calc(100vw * 20 / 1920); box-shadow: 1px 0 9px 5px #e1e1e1;}
+.section2 .scrollArea .scrollAreaContainer .right .small .contentsImage .emoji {width: calc(100vw * 175 / 1920); height: calc(100vw * 175 / 1920); background-image: url('../img/emoji.png');}
+.section2 .scrollArea .scrollAreaContainer .left .small .contentsImage .emoji {width: calc(100vw * 342 / 1920); height: calc(100vw * 172 / 1920); background-image: url('../img/loveHand.png');}
+.section2 .scrollArea .scrollAreaContainer .left .small .contentsImage {background-color: #3a7bf3; border-radius: calc(100vw * 20 / 1920);}
+
+.section3 {background-color: yellow; width: 100vw; height: 100vh;}
