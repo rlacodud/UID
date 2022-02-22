@@ -120,7 +120,7 @@ header .right ul li a:hover:after {width: 100%;}
 .section4 .interviewPeople .people2 {display: none;}
 .section4 .interviewPeople .people div .bigPeople1 {position: absolute;  left: 50%; transform: translateX(-50%); width: calc(100vw * 983.12 / 1920); height: calc(100vw * 798.08 / 1920);}
 .section4 .interviewPeople .people div .bigPeople2 {position: absolute;  left: 50%; transform: translateX(-50%); width: calc(100vw * 983.12 / 1920); height: calc(100vw * 860 / 1920); top: calc(100vw * -63 / 1920);}
-.section4 .interviewPeople .people div .textBox {position: absolute;  top:calc(100vw * 154 / 1920); left: calc(100vw * 562 / 1920); width: calc(100vw * 239 / 1920);}
+.section4 .interviewPeople .people div .textBox {position: absolute;  margin-top:calc(100vw * 154 / 1920); left: calc(100vw * 562 / 1920); width: calc(100vw * 239 / 1920);}
 .section4 .interviewPeople .people div .peopleBigBox {position: absolute;  top:calc(100vw * 566 / 1920); left: 50%; width: calc(100vw * 236 / 1920); transform: translateX(-50%);}
 .section4 .interviewPeople .people div .peopleBigName {position: absolute;  top:calc(100vw * 638 / 1920); left: 50%; transform: translateX(-50%); color: white; font-size: calc(100vw * 40 / 1920); font-family: 'pretendardBold';}
 .section4 .interviewPeople .people div .peopleMiddle {position: absolute; width: calc(100vw * 354 / 1920); top:calc(100vw * 243 / 1920); left: calc(100vw * 1274 / 1920);}

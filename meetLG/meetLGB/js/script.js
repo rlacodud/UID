@@ -199,18 +199,28 @@ var scene = new ScrollMagic.Scene({
   .setTween(sec21)
   .addTo(controller);
   
-var sec22 = new TimelineMax();
-sec22.to($('.section2 .contentsArea .videoArea'), 1, {opacity: 1, delay: 1.5, top: 0})
+var sec221 = new TimelineMax();
+sec221.to($('.section2 .contentsArea .videoArea .lgLife'), 1, {opacity: 1, delay: 0.8, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section2',
   triggerHook: 0.9
 })
   .reverse(false)
-  .setTween(sec22)
+  .setTween(sec221)
+  .addTo(controller);
+  
+var sec222 = new TimelineMax();
+sec222.to($('.section2 .contentsArea .videoArea .lgTube'), 1, {opacity: 1, delay: 1, top: 0})
+var scene = new ScrollMagic.Scene({
+  triggerElement: '.section2',
+  triggerHook: 0.9
+})
+  .reverse(false)
+  .setTween(sec222)
   .addTo(controller);
 
 var sec23 = new TimelineMax();
-sec23.to($('.section2 .contentsArea .gifArea'), 1, {opacity: 1, delay: 3, top: 0})
+sec23.to($('.section2 .contentsArea .gifArea'), 1, {opacity: 1, delay: 1.5, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section2',
   triggerHook: 0.9
@@ -231,7 +241,7 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 var sec32 = new TimelineMax();
-sec32.to($('.section3 .apply'), 1, {opacity: 1, delay: 0.6, top: 0})
+sec32.to($('.section3 .apply'), 1, {opacity: 1, delay: 0.8, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section3',
   triggerHook: 0.9
@@ -241,7 +251,7 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 var sec33 = new TimelineMax();
-sec33.to($('.section3 .blockArea'), 1, {opacity: 1, delay: 1.5, top: 0})
+sec33.to($('.section3 .blockArea'), 1, {opacity: 1, delay: 1, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section3',
   triggerHook: 0.9
@@ -262,7 +272,7 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 var sec42 = new TimelineMax();
-sec42.to($('.section4 .interviewPeople'), 1, {opacity: 1, delay: 1, top: 0})
+sec42.to($('.section4 .interviewPeople'), 1, {opacity: 1, delay: 0.8, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section4',
   triggerHook: 0.9
@@ -271,9 +281,32 @@ var scene = new ScrollMagic.Scene({
 .setTween(sec42)
 .addTo(controller);
 
+$('.interviewLi2').click(){
+
+}
+$('.interviewLi2').click(function(){
+  console.log("썸네일 클릭");
+  $('.modalLgTube').css({
+      'display' : 'block'
+  })
+  $('body').css({
+      'overflow': 'hidden'
+  })
+})
+
+var sec43 = new TimelineMax();
+sec43.to($('.section4 .textBox'), 1, {opacity: 1, delay: 1, top: 0})
+var scene = new ScrollMagic.Scene({
+  triggerElement: '.section4',
+  triggerHook: 0.9
+})
+.reverse(false)
+.setTween(sec43)
+.addTo(controller);
+
 // section5 animation
 var sec51 = new TimelineMax();
-sec51.to($('.section5 .section5Text'), 1, {opacity: 1, delay: 1, top: 0})
+sec51.to($('.section5 .section5Text'), 1, {opacity: 1, delay: 0.6, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section5',
   triggerHook: 0.9
@@ -283,7 +316,7 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 var sec61 = new TimelineMax();
-sec61.to($('.section6 .newsArea'), 1, {opacity: 1, delay: 0.6, top: 0})
+sec61.to($('.section6 .newsArea'), 1, {opacity: 1, delay: 0.4, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section6',
   triggerHook: 0.9
