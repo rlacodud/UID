@@ -183,7 +183,7 @@ header .right ul li a:hover:after {width: 100%;}
 .section5 .section5Text p:nth-child(1){font-size: calc(100vw * 20 / 1920); margin-bottom: calc(100vw * 44 / 1920); font-family: 'pretendardBold';}
 .section5 .section5Text p:nth-child(2){font-size: calc(100vw * 28 / 1920); margin-bottom: calc(100vw * 13 / 1920); line-height: calc(100vw * 37 / 1920);  font-family: 'pretendardBold';}
 .section5 .section5Text p:nth-child(3){font-size: calc(100vw * 24 / 1920); line-height: calc(100vw * 32 / 1920); margin-bottom: calc(100vw * 52 / 1920);font-family: 'pretendardMedium'}
-.section5 .section5Text .csrBtn{position: relative; width: calc(100vw * 240 / 1920); height: calc(100vw * 72 / 1920); background-color: black; border-radius: calc(100vw * 100 / 1920); color: white;font-family: 'pretendardBold';}
+.section5 .section5Text .csrBtn{position: relative; width: calc(100vw * 240 / 1920); height: calc(100vw * 72 / 1920); background-color: black; border-radius: calc(100vw * 100 / 1920); color: white;font-family: 'pretendardBold'; cursor: pointer;}
 .section5 .section5Text .csrBtn p{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);font-size: calc(100vw * 24 / 1920); width: 100%;text-align: center;}
 
 /* section6 */

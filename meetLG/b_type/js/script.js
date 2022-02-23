@@ -311,7 +311,7 @@ $('.interviewLi2').click(function(){
 })
 
 var sec43 = new TimelineMax();
-sec43.to($('.section4 .people1 .textBox'), 0.5, {opacity: 1, delay: 0.2, top: 0})
+sec43.to($('.section4 .people1 .textBox'), 0.2, {opacity: 1, delay: 1, top: 0})
 var scene = new ScrollMagic.Scene({
   triggerElement: '.section4',
   triggerHook: 0.9
