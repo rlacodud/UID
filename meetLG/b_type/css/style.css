@@ -59,7 +59,7 @@ header .right ul li a:hover:after {width: 100%;}
 /* sections */
 .section1 { position: relative; width: 100vw; margin-top: calc(100vw * 110 / 1920); padding: calc(100vw * 48 / 1920) calc(100vw * 60 / 1920) calc(100vw * 99 / 1920);}
 .section1 .mainVideo {width: 100%;}
-.section1 .mainVideo video {width: 100%; border-radius: 100px;}
+.section1 .mainVideo video {width: 100%; border-radius: 50px;}
 
 /* section2 */
 .section2 { position: relative; width: 100vw; height: calc(100vw * 1686 / 1920); background-color: #FFDA27; text-align: center; padding-top: calc(100vw * 143 / 1920); overflow-x: hidden;}
