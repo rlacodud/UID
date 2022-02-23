@@ -1,6 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="172" height="47" viewBox="0 0 172 47">
-  <g id="그룹_123" data-name="그룹 123" transform="translate(-874 -34)">
-    <text id="MEET_LG" data-name="MEET LG" transform="translate(960 72)" font-size="40" font-family="Pretendard-Black, Pretendard" font-weight="800"><tspan x="-85.303" y="0">MEET LG</tspan></text>
-    <rect id="사각형_77" data-name="사각형 77" width="87" height="8" transform="translate(909 54)" fill="#ed1b94"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 172 48" style="enable-background:new 0 0 172 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{enable-background:new    ;}
+	.st1{fill:#ED1B94;}
+</style>
+<g class="st0">
+	<path d="M11.3,10.5l7.3,17.8h0.3l7.3-17.8h8.2v28.3h-6.5V21.2h-0.2l-6.9,17.4h-4.2L9.7,21.1H9.5v17.7H3V10.5H11.3z"/>
+	<path d="M38.7,10.5h19.6v5.4H45.4v6h11.9v5.4H45.4v6h13v5.4H38.7V10.5z"/>
+	<path d="M62.5,10.5h19.6v5.4H69.2v6h11.9v5.4H69.2v6h13v5.4H62.5V10.5z"/>
+	<path d="M85.4,10.5h23.8v5.4h-8.6v22.9H94V15.9h-8.6V10.5z"/>
+	<path d="M121.5,10.5h6.6v22.9H140v5.4h-18.5V10.5z"/>
+	<path d="M155.6,15.9c-4.2,0-6.8,3.1-6.8,8.6c0,5.5,2.5,8.7,6.8,8.7c3.8,0,5.9-2,6-5h-5.7v-4.9H168v3.7c0,7.5-5.2,12.1-12.4,12.1
+		c-8.1,0-13.6-5.5-13.6-14.5c0-9.2,5.9-14.6,13.4-14.6c6.5,0,11.5,4,12.3,9.6h-6.8C160.3,17.3,158.4,15.9,155.6,15.9z"/>
+</g>
+<rect id="사각형_77_00000124132595914897765540000014052898925489608090_" x="35.2" y="20.7" class="st1" width="87" height="8"/>
 </svg>
