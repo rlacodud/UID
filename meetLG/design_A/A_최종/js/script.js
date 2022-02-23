@@ -466,7 +466,7 @@ var scene = new ScrollMagic.Scene({
 
 var ani7_banner = new TimelineMax();
 // $() 안의 요소를 0.8초동안 {} 안의 값으로 변하도록 애니메이션을 준다.
-ani7_banner.to($('.banner'), 0.6, {opacity: 1, delay: 7, top: 0})
+ani7_banner.to($('.banner'), 0.6, {opacity: 1, delay: 4, top: 0})
 var scene = new ScrollMagic.Scene({
   // 이 애니메이션이 발동되는 트리거 요소는 #sectionTwo이며
   triggerElement: '.banner',
