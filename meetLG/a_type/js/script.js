@@ -85,16 +85,16 @@ var tube_sliderWrapper = document.querySelector('.tube_slider_wrapper'),
     tube_slides = tube_sliderUl.querySelectorAll('.tube_li'),
     tube_currentIdx = 0,
     tube_slideCount = tube_slides.length,
-    tube_slideWidth = 810,
+    // tube_slideWidth = tube_width,
     tube_slideMargin = 30,
     tube_prevBtn = document.querySelector('#tube_prev'),
     tube_nextBtn = document.querySelector('#tube_next');
 
-tube_sliderUl.style.width = (tube_slideWidth*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
+tube_sliderUl.style.width = (tube_width*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
 
 //슬라이드 이동함수
 function tube_moveSlide(idx){
-    tube_sliderUl.style.left = -idx * (tube_slideWidth + tube_slideMargin)+'px';
+    tube_sliderUl.style.left = -idx * (tube_width + tube_slideMargin)+'px';
     tube_currentIdx = idx;
 }
 //버튼으로 이동하기
@@ -169,7 +169,9 @@ news_sliderUl.style.width = (news_slideWidth*news_slideCount) + news_slideMargin
 
 var _duration = 300;
 var _addDuration = 100;
-
+var tube_width= $(".tube_box").innerWidth();
+console.log($(".tube_box").innerWidth());
+console.log('연결 확인');
 function onClickBtnListItem(idx, e) {
     e.preventDefault();
     var el = e.currentTarget;
@@ -280,6 +282,7 @@ function mainScrollEvent() {
 
 
   $(document).ready(function() {
+
 
     $(".dropbtn1").on('mouseover', function() {
         $(this).next('.dropup-content1').addClass('ScaleUp');
