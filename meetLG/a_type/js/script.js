@@ -80,8 +80,6 @@ $('.deleteBtn').click(function(){
 })
 
 /* LGTube Carousel Slider */
-
-
 window.addEventListener('resize', start);
 function start(){
     var tube_sliderWrapper = document.querySelector('.tube_slider_wrapper'),
@@ -91,8 +89,10 @@ function start(){
     tube_slideCount = tube_slides.length,
     tube_slideMargin = 0,
     tube_prevBtn = document.querySelector('#tube_prev'),
-    tube_nextBtn = document.querySelector('#tube_next');
+    tube_nextBtn = document.querySelector('#tube_next'),
+    count = 1;
     // console.log(tube_slideWidth);
+
     let tube_slideWidth = document.querySelector(".tube_li").scrollWidth;
     console.log(tube_slideWidth);
     tube_sliderUl.style.width = (tube_slideWidth*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
@@ -102,12 +102,23 @@ function tube_moveSlide(idx){
     tube_sliderUl.style.left = -idx * (tube_slideWidth + tube_slideMargin)+'px';
     tube_currentIdx = idx;
 }
+function btnChange () {
+    if (count === 1){
+        $('.tube_controls #tube_next .next').addClass('off');
+        $('.tube_controls #tube_prev .pre').addClass('on');
+    } if (count === 0){
+        $('.tube_controls #tube_next .next').removeClass('off');
+        $('.tube_controls #tube_prev .pre').removeClass('on');
+    }
+}
 //버튼으로 이동하기
 tube_nextBtn.addEventListener('click',function(){
     if(tube_currentIdx == tube_slideCount -1){
         tube_moveSlide(0);
     }else{
         tube_moveSlide(tube_currentIdx + 1);
+        count = 1;
+        btnChange();
     }
 });
 tube_prevBtn.addEventListener('click',function(){
@@ -115,29 +126,45 @@ tube_prevBtn.addEventListener('click',function(){
         tube_moveSlide(tube_slideCount -1);
     }else{
         tube_moveSlide(tube_currentIdx - 1);
+        count = 0;
+        btnChange();
     }
 });
 }
 start();
 
 
+
 /* LGLife Carousel Slider */
-var life_sliderWrapper = document.querySelector('.life_slider_wrapper'),
+window.addEventListener('resize', start2);
+function start2(){
+    var life_sliderWrapper = document.querySelector('.life_slider_wrapper'),
     life_sliderUl = life_sliderWrapper.querySelector('.life_slides'),
     life_slides = life_sliderUl.querySelectorAll('.life_li'),
     life_currentIdx = 0,
     life_slideCount = life_slides.length,
-    life_slideWidth = 810,
-    life_slideMargin = 30,
+    life_slideMargin = 0,
     life_prevBtn = document.querySelector('#life_prev'),
-    life_nextBtn = document.querySelector('#life_next');
+    life_nextBtn = document.querySelector('#life_next'),
+    count = 1;
 
-life_sliderUl.style.width = (life_slideWidth*life_slideCount) + life_slideMargin*(life_slideCount-1) + 'px';
+    let life_slideWidth = document.querySelector(".life_li").scrollWidth;
+    console.log(life_slideWidth);
+    life_sliderUl.style.width = (life_slideWidth*life_slideCount) + life_slideMargin*(life_slideCount-1) + 'px';
 
 //슬라이드 이동함수
 function life_moveSlide(idx){
     life_sliderUl.style.left = -idx * (life_slideWidth + life_slideMargin)+'px';
     life_currentIdx = idx;
+}
+function btnChange () {
+    if (count === 1){
+        $('.life_controls #life_next .next').addClass('off');
+        $('.life_controls #life_prev .pre').addClass('on');
+    } if (count === 0){
+        $('.life_controls #life_next .next').removeClass('off');
+        $('.life_controls #life_prev .pre').removeClass('on');
+    }
 }
 //버튼으로 이동하기
 life_nextBtn.addEventListener('click',function(){
@@ -145,6 +172,8 @@ life_nextBtn.addEventListener('click',function(){
         life_moveSlide(0);
     }else{
         life_moveSlide(life_currentIdx + 1);
+        count = 1;
+        btnChange();
     }
 });
 life_prevBtn.addEventListener('click',function(){
@@ -152,58 +181,71 @@ life_prevBtn.addEventListener('click',function(){
         life_moveSlide(life_slideCount - 1);
     }else{
         life_moveSlide(life_currentIdx - 1);
+        count = 0;
+        btnChange();
     }
 });
+}
+start2();
 
 /* LGNews Carousel Slider */
-var news_sliderWrapper = document.querySelector('.news_slider_wrapper'),
-    news_sliderUl = news_sliderWrapper.querySelector('.news_slides'),
-    news_slides = news_sliderUl.querySelectorAll('.news_li'),
-    news_currentIdx = 0,
-    news_slideCount = news_slides.length,
-    news_slideWidth = 410,
-    news_slideMargin = 30,
-    news_prevBtn = document.querySelector('#news_prev'),
-    news_nextBtn = document.querySelector('#news_next'),
-    listEl = document.querySelector('.number_controls'),
-    listItemEls = listEl.querySelectorAll('li'),
-    listItemElsArray = Array.prototype.slice.call(listItemEls),
-    btnListItemEls = listEl.querySelectorAll('li > a'),
-    btnListItemEls = Array.prototype.slice.call(btnListItemEls),
-    cuId = 0,
-    exId = cuId;
-
-news_sliderUl.style.width = (news_slideWidth*news_slideCount) + news_slideMargin*(news_slideCount-1) + 'px';
-
-var _duration = 300;
-var _addDuration = 100;
-
-function onClickBtnListItem(idx, e) {
-    e.preventDefault();
-    var el = e.currentTarget;
-    var itemEl = el.parentElement;
-    if (exId !== idx) {
-        cuId = idx;
-        news_currentIdx = idx;
-        listItemEls[exId].classList.remove('selected');
-        itemEl.classList.add('selected');
-        slideGallery();
-    }
-}
-
-function slideGallery(static) {
-    var bool = static ? static : false;
-    var x = (news_slideWidth + news_slideMargin) * cuId * -1;
-    news_sliderUl.style.transform = 'translate3d(' + x + 'px, 0, 0)';
-    if (!bool) {
-        var duration = _duration + _addDuration * Math.abs(exId - cuId);
-        var easing = 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
-        news_sliderUl.style.transition = 'transform ' + duration + 'ms ' + easing;    
+window.addEventListener('resize', start3);
+function start3(){
+    var news_sliderWrapper = document.querySelector('.news_slider_wrapper'),
+        news_sliderUl = news_sliderWrapper.querySelector('.news_slides'),
+        news_slides = news_sliderUl.querySelectorAll('.news_li'),
+        news_currentIdx = 0,
+        news_slideCount = news_slides.length,
+        // news_slideWidth = 410,
+        news_slideMargin = 40,
+        news_prevBtn = document.querySelector('#news_prev'),
+        news_nextBtn = document.querySelector('#news_next'),
+        listEl = document.querySelector('.number_controls'),
+        listItemEls = listEl.querySelectorAll('li'),
+        listItemElsArray = Array.prototype.slice.call(listItemEls),
+        btnListItemEls = listEl.querySelectorAll('li > a'),
+        btnListItemEls = Array.prototype.slice.call(btnListItemEls),
+        cuId = 0,
         exId = cuId;
+        let news_slideWidth = document.querySelector(".news_box").offsetWidth;
+        console.log(news_slideWidth);
+    
+    news_sliderUl.style.width = (news_slideWidth*news_slideCount) + news_slideMargin*(news_slideCount-1) + 'px';
+    
+    var _duration = 300;
+    var _addDuration = 100;
+    
+    function onClickBtnListItem(idx, e) {
+        e.preventDefault();
+        var el = e.currentTarget;
+        var itemEl = el.parentElement;
+        if (exId !== idx) {
+            cuId = idx;
+            news_currentIdx = idx;
+            if (cuId >= 1) {
+                $('.news_controls #news_prev .pre').addClass('on');
+            }
+            if (cuId === 8) {
+                $('.news_controls #news_next .next').addClass('off');
+            }
+            listItemEls[exId].classList.remove('selected');
+            itemEl.classList.add('selected');
+            slideGallery();
+        }
     }
-}
-
-//슬라이드 이동함수
+    
+    function slideGallery(static) {
+        var bool = static ? static : false;
+        var x = (news_slideWidth + news_slideMargin) * cuId * -1;
+        news_sliderUl.style.transform = 'translate3d(' + x + 'px, 0, 0)';
+        if (!bool) {
+            var duration = _duration + _addDuration * Math.abs(exId - cuId);
+            var easing = 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
+            news_sliderUl.style.transition = 'transform ' + duration + 'ms ' + easing;    
+            exId = cuId;
+        }
+    }
+    //슬라이드 이동함수
 function news_moveSlide(static){
     var bool = static ? static : false;
     var x = (news_slideWidth + news_slideMargin) * cuId * -1;
@@ -219,6 +261,12 @@ function news_moveSlide(static){
 news_nextBtn.addEventListener('click',function(){
     if(cuId <= news_slideCount - 3){
         cuId++;
+        if (cuId >= 1) {
+            $('.news_controls #news_prev .pre').addClass('on');
+        }
+        if (cuId === 8) {
+            $('.news_controls #news_next .next').addClass('off');
+        }
     }
     news_moveSlide();
     console.log(exId);
@@ -230,6 +278,13 @@ news_nextBtn.addEventListener('click',function(){
 news_prevBtn.addEventListener('click',function(){
     if(cuId > 0){
         cuId--;
+        console.log(cuId);
+        if (cuId <= 0) {
+            $('.news_controls #news_prev .pre').removeClass('on');
+        }
+        if (cuId <= 7) {
+            $('.news_controls #news_next .next').removeClass('off');
+        }
     }
     news_moveSlide();
     console.log(exId);
@@ -248,6 +303,9 @@ function init() {
     addEvent();
 }
 init();
+
+}
+start3()
 
 
 // CSR 좌:픽스 우:스크롤
@@ -288,6 +346,7 @@ function mainScrollEvent() {
 
 
   $(document).ready(function() {
+
 
     $(".dropbtn1").on('mouseover', function() {
         $(this).next('.dropup-content1').addClass('ScaleUp');
