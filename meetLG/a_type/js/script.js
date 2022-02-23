@@ -403,7 +403,7 @@ var scene = new ScrollMagic.Scene({
 
 var ani4_slideControl = new TimelineMax();
 // $() 안의 요소를 0.8초동안 {} 안의 값으로 변하도록 애니메이션을 준다.
-ani4_slideControl.to($('.lgnews .news_controls'), 0.1, {opacity: 1, delay: 4.2, top: '89%', left: '11%'})
+ani4_slideControl.to($('.lgnews .news_controls'), 0.1, {opacity: 1, delay: 4.2, top: '80%', left: '11%'})
 var scene = new ScrollMagic.Scene({
   // 이 애니메이션이 발동되는 트리거 요소는 #sectionTwo이며
   triggerElement: '#sectionThree',
