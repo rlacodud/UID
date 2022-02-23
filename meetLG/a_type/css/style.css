@@ -189,7 +189,7 @@ section {position: relative;}
 footer {margin-top: calc(100vw * 105 / 1920); width: 100vw; height: calc(100vw * 230 / 1920); display: flex;}
 .border {position: absolute; width: 100%; height: 2px; background-color: #f4f4f4;}
 footer img {width: calc(100vw * 165 / 1920); height: calc(100vw * 60 / 1920); float: left; margin-left: calc(100vw * 250 / 1920); margin-top: calc(100vw * 70 / 1920);}
-.footer2 {margin-top: calc(100vw * 60 / 1920); margin-left: calc(100vw * 208 / 1920);}
+.footer2 {margin-top: calc(100vw * 60 / 1920); margin-left: calc(100vw * 300 / 1920);}
 .footer2-2 {margin-left: calc(100vw * 170 / 1920);}
 .footer2-3 {margin-left: calc(100vw * 125 / 1920);}
 footer span {color: #706f6f; font-weight: 400; font-size: calc(100vw * 18 / 1920); line-height: calc(100vw * 30 / 1920);}
