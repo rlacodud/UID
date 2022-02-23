@@ -58,6 +58,8 @@ header .right ul li a:hover:after {width: 100%;}
 
 /* sections */
 .section1 { position: relative; width: 100vw; margin-top: calc(100vw * 110 / 1920); padding: calc(100vw * 48 / 1920) calc(100vw * 60 / 1920) calc(100vw * 99 / 1920);}
+.section1 .mainVideo {width: 100%;}
+.section1 .mainVideo video {width: 100%; border-radius: 100px;}
 
 /* section2 */
 .section2 { position: relative; width: 100vw; height: calc(100vw * 1686 / 1920); background-color: #FFDA27; text-align: center; padding-top: calc(100vw * 143 / 1920);}
@@ -82,9 +84,9 @@ header .right ul li a:hover:after {width: 100%;}
 .section2 .gifArea .gifThumb.gif3 {background-image: url(../img/gif3.png); background-size: cover; width: calc(100vw * 379 / 1920); height: calc(100vw * 379 / 1920); position: absolute; top: calc(100vw * 314 / 1920); left: calc(100vw * 566 / 1920); z-index: 2; cursor: pointer;}
 .section2 .gifArea .gifThumb.gif4 {background-image: url(../img/gif4.png); background-size: cover; width: calc(100vw * 416 / 1920); height: calc(100vw * 501 / 1920); position: absolute; top: calc(100vw * 61 / 1920); right: 0;}
 .section2 .gifArea .gifThumb img {width: calc(100vw * 379 / 1920); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;}
-.modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 6; width: calc(100vw * 1200 / 1920);}
+.modal { text-align: center; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 6; width: calc(100vw * 1200 / 1920);}
 .grayBack { width: 100%; height: 100%; background-color: black; position: fixed; top: 0; bottom: 0; opacity: 70%; z-index: 5; display: none;}
-.deleteBtn {width: calc(100vw * 34 / 1920); height: calc(100vw * 34 / 1920); cursor: pointer; position: fixed; top: calc(100vw * 40 / 1920); right: calc(100vw * 53 / 1920); z-index: 6; display: none; background-image: url(../img/deleteBtn.png);}
+.deleteBtn {width: calc(100vw * 34 / 1920); height: calc(100vw * 34 / 1920); cursor: pointer; position: fixed; top: calc(100vw * 40 / 1920); right: calc(100vw * 53 / 1920); z-index: 6; display: none; background-image: url(../img/deleteBtn.png); background-size: cover;}
 
 /* section3 */
 .section3 {position: relative;width: 100vw;height: calc(100vw * 816 / 1920);background-color: white;padding-top: calc(100vw * 143 / 1920);}
@@ -100,7 +102,9 @@ header .right ul li a:hover:after {width: 100%;}
 .apply:hover p {display: inline-block; white-space: nowrap; will-change: transform; animation: marquee 12s linear infinite;}
 @keyframes marquee { 0% {transform: translateX(0);} 100% {transform: translateX(-90%);} }
 .section3 .blockArea{display: flex; justify-content: space-between;}
-.section3 .blockArea .block{width: calc(100vw * 394 / 1920); height: calc(100vw * 394 / 1920);}
+.section3 .blockArea .blocks{width: calc(100vw * 1295 / 1920); height: calc(100vw * 394 / 1920);}
+.section3 .blockArea .blocks video{width: 100%;}
+/* .section3 .blockArea .block{width: calc(100vw * 394 / 1920); height: calc(100vw * 394 / 1920);} */
 .section3 .blockArea .block.block1{background-image: url(../img/block1.gif); background-size: cover; border-radius: calc(100vw * 20 / 1920);}
 .section3 .blockArea .block.block2{background-image: url(../img/block2.png); background-size: cover;}
 .section3 .blockArea .block.block3{background-image: url(../img/block3.png); background-size: cover;}
@@ -116,15 +120,48 @@ header .right ul li a:hover:after {width: 100%;}
 .section4 .section4Text .interviewList .interviewLi.active{color: white;}
 .section4 .section4Text .interviewList .interviewLi:nth-child(1){margin-bottom: calc(100vw * 31 / 1920);}
 .section4 .interviewPeople {position: absolute; margin-top: 0; left: 0; width: 100%; height: 100%;}
-.section4 .interviewPeople .people {position: relative;}
-.section4 .interviewPeople .people2 {display: none;}
+.section4 .interviewPeople .people {position: relative; animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+    transition:.5s;
+    /* opacity: 0; */
+}
+.section4 .interviewPeople .people2 {opacity: 0;
+    
+}
 .section4 .interviewPeople .people div .bigPeople1 {position: absolute;  left: 50%; transform: translateX(-50%); width: calc(100vw * 983.12 / 1920); height: calc(100vw * 798.08 / 1920);}
-.section4 .interviewPeople .people div .bigPeople2 {position: absolute;  left: 50%; transform: translateX(-50%); width: calc(100vw * 983.12 / 1920); height: calc(100vw * 860 / 1920); top: calc(100vw * -63 / 1920);}
-.section4 .interviewPeople .people div .textBox {position: absolute;  top:calc(100vw * 154 / 1920); left: calc(100vw * 562 / 1920); width: calc(100vw * 239 / 1920);}
+.section4 .interviewPeople .people div .bigPeople2 {position: absolute;  left: 50%; transform: translateX(-50%); width: calc(100vw * 983.12 / 1920); height: calc(100vw * 798.08 / 1920);}
+.section4 .interviewPeople .people div .textBox {position: absolute;  margin-top:calc(100vw * 154 / 1920); left: calc(100vw * 562 / 1920); width: calc(100vw * 239 / 1920); opacity: 0;}
+/* 실험중 */
+.section4 .interviewPeople .people div .textBox {
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+    transition:.5s;
+}
+    @keyframes test {
+        0% {opacity: 0%; top: calc(100vw * 40 / 1920)}
+        100% {opacity: 100%; top: 0}
+      }
+    @keyframes test2 {
+        0% {opacity: 0%; top: calc(100vw * 40 / 1920)}
+        100% {opacity: 100%; top: -50px}
+      }
+/* 실험중 */
 .section4 .interviewPeople .people div .peopleBigBox {position: absolute;  top:calc(100vw * 566 / 1920); left: 50%; width: calc(100vw * 236 / 1920); transform: translateX(-50%);}
 .section4 .interviewPeople .people div .peopleBigName {position: absolute;  top:calc(100vw * 638 / 1920); left: 50%; transform: translateX(-50%); color: white; font-size: calc(100vw * 40 / 1920); font-family: 'pretendardBold';}
 .section4 .interviewPeople .people div .peopleMiddle {position: absolute; width: calc(100vw * 354 / 1920); top:calc(100vw * 243 / 1920); left: calc(100vw * 1274 / 1920);}
 .section4 .interviewPeople .people div .peopleSmall {position: absolute; width: calc(100vw * 178 / 1920); top:calc(100vw * 507 / 1920); left: calc(100vw * 1641 / 1920);}
+
+
 
 
 .section5 {position: relative; width: 100vw; height: calc(100vw * 969 / 1920); top: -100px;}
