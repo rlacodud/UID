@@ -79,22 +79,25 @@ $('.deleteBtn').click(function(){
     $('.video').removeClass('on');
 })
 
-/* LGTube Carousel Slider */
-var tube_sliderWrapper = document.querySelector('.tube_slider_wrapper'),
+// test
+window.addEventListener('resize', start);
+function start(){
+    var tube_sliderWrapper = document.querySelector('.tube_slider_wrapper'),
     tube_sliderUl = tube_sliderWrapper.querySelector('.tube_slides'),
     tube_slides = tube_sliderUl.querySelectorAll('.tube_li'),
     tube_currentIdx = 0,
     tube_slideCount = tube_slides.length,
-    // tube_slideWidth = tube_width,
     tube_slideMargin = 30,
     tube_prevBtn = document.querySelector('#tube_prev'),
     tube_nextBtn = document.querySelector('#tube_next');
-
-tube_sliderUl.style.width = (tube_width*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
+    // console.log(tube_slideWidth);
+    let tube_slideWidth = document.querySelector(".tube_li").offsetWidth;
+    console.log(tube_slideWidth);
+    tube_sliderUl.style.width = (tube_slideWidth*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
 
 //슬라이드 이동함수
 function tube_moveSlide(idx){
-    tube_sliderUl.style.left = -idx * (tube_width + tube_slideMargin)+'px';
+    tube_sliderUl.style.left = -idx * (tube_slideWidth + tube_slideMargin)+'px';
     tube_currentIdx = idx;
 }
 //버튼으로 이동하기
@@ -112,6 +115,42 @@ tube_prevBtn.addEventListener('click',function(){
         tube_moveSlide(tube_currentIdx - 1);
     }
 });
+}
+start();
+
+/* LGTube Carousel Slider */
+// var tube_sliderWrapper = document.querySelector('.tube_slider_wrapper'),
+//     tube_sliderUl = tube_sliderWrapper.querySelector('.tube_slides'),
+//     tube_slides = tube_sliderUl.querySelectorAll('.tube_li'),
+//     tube_currentIdx = 0,
+//     tube_slideCount = tube_slides.length,
+//     // tube_slideWidth = tube_width,
+//     tube_slideMargin = 30,
+//     tube_prevBtn = document.querySelector('#tube_prev'),
+//     tube_nextBtn = document.querySelector('#tube_next');
+
+// tube_sliderUl.style.width = (tube_width*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
+
+// //슬라이드 이동함수
+// function tube_moveSlide(idx){
+//     tube_sliderUl.style.left = -idx * (tube_width + tube_slideMargin)+'px';
+//     tube_currentIdx = idx;
+// }
+// //버튼으로 이동하기
+// tube_nextBtn.addEventListener('click',function(){
+//     if(tube_currentIdx == tube_slideCount -1){
+//         tube_moveSlide(0);
+//     }else{
+//         tube_moveSlide(tube_currentIdx + 1);
+//     }
+// });
+// tube_prevBtn.addEventListener('click',function(){
+//     if(tube_currentIdx == 0){
+//         tube_moveSlide(tube_slideCount -1);
+//     }else{
+//         tube_moveSlide(tube_currentIdx - 1);
+//     }
+// });
 
 /* LGLife Carousel Slider */
 var life_sliderWrapper = document.querySelector('.life_slider_wrapper'),

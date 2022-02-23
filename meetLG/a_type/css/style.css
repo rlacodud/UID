@@ -200,20 +200,21 @@ section {position: relative;}
 
 footer {margin-top: calc(100vw * 105 / 1920); width: 100vw; height: calc(100vw * 230 / 1920); display: flex;}
 .border {position: absolute; width: 100%; height: 2px; background-color: #f4f4f4;}
-footer img {width: calc(100vw * 165 / 1920); height: calc(100vw * 60 / 1920); float: left; margin-left: calc(100vw * 250 / 1920); margin-top: calc(100vw * 70 / 1920);}
-.footer2 {margin-top: calc(100vw * 60 / 1920); margin-left: calc(100vw * 300 / 1920);}
-.footer2-2 {margin-left: calc(100vw * 170 / 1920);}
-.footer2-3 {margin-left: calc(100vw * 125 / 1920);}
+.footerlogo {width: calc(100vw * 165 / 1920); height: calc(100vw * 60 / 1920); float: left; margin-left: calc(100vw * 250 / 1920); margin-top: calc(100vw * 70 / 1920);}
+.footer2 {margin-top: calc(100vw * 60 / 1920); margin-left: calc(100vw * 200 / 1920);}
+.footer2-2 {margin-left: calc(100vw * 167 / 1920);}
+.footer2-3 {margin-left: calc(100vw * 120 / 1920);}
 footer span {color: #706f6f; font-weight: 400; font-size: calc(100vw * 18 / 1920); line-height: calc(100vw * 30 / 1920);}
 
 .dropup {margin-top: calc(100vw * 100 / 1920);}
 
-.dropbtn1 {z-index: 100; position: relative; margin-left: calc(100vw * 60 / 1920); margin-top: calc(100vw * -30 / 1920); width: calc(100vw * 245 / 1920); height: calc(100vw * 60 / 1920); border: 0px; background: #f4f4f4; border-radius: calc(100vw * 100 / 1920); text-align: center; color: #706f6f; font-weight: 500; font-size: calc(100vw * 18 / 1920); line-height: calc(100vw * 58 / 1920); display: flex; justify-content: center;}
-.dropup-content1 {z-index: 30; position: relative; margin-left: calc(100vw * 60 / 1920); margin-top: calc(100vw * -420 / 1920); width: calc(100vw * 256 / 1920); height: calc(100vw * 400 / 1920); border: 0px; background: #f4f4f4; text-align: center; opacity: 0;}
-.dropbtn2 {z-index: 100; position: relative; margin-left: calc(100vw * 330 / 1920); margin-top: calc(100vw * -43 / 1920); width: calc(100vw * 245 / 1920); height: calc(100vw * 60 / 1920); border: 0px; background: #f4f4f4; border-radius: calc(100vw * 100 / 1920); text-align: center; color: #706f6f; font-weight: 500; font-size: calc(100vw * 18 / 1920); line-height: calc(100vw * 58 / 1920); display: flex; justify-content: center;}
-.dropup-content2 {z-index: 30; position: relative; margin-left: calc(100vw * 330 / 1920); margin-top: calc(100vw * -300 / 1920); width: calc(100vw * 256 / 1920); height: calc(100vw * 260 / 1920); border: 0px; background: #f4f4f4; text-align: center; opacity: 0;}
+.dropbtn1 {z-index: 100; position: relative; margin-left: calc(100vw * 60 / 1920); margin-top: calc(100vw * -30 / 1920); width: calc(100vw * 245 / 1920); height: calc(100vw * 60 / 1920); border: 0px; background: #f4f4f4; border-radius: calc(100vw * 100 / 1920);  color: #706f6f; font-weight: 500; font-size: calc(100vw * 18 / 1920); line-height: calc(100vw * 30 / 1920); display: inline-block; vertical-align: middle;}
+.dropup-content1 {z-index: 30; position: relative; margin-left: calc(100vw * 60 / 1920); margin-top: calc(100vw * -425 / 1920); width: calc(100vw * 256 / 1920); height: calc(100vw * 400 / 1920); border: 0px; background: #f4f4f4; border-radius: calc(100vw * 20 / 1920); text-align: center; opacity: 0;}
+.dropbtn2 {z-index: 100; position: relative; margin-left: calc(100vw * 340 / 1920); margin-top: calc(100vw * -38 / 1920); width: calc(100vw * 306 / 1920); height: calc(100vw * 60 / 1920); border: 0px; background: #f4f4f4; border-radius: calc(100vw * 100 / 1920); color: #706f6f; font-weight: 500; font-size: calc(100vw * 18 / 1920); line-height: calc(100vw * 30 / 1920); display: inline-block; vertical-align: middle;}
+.dropup-content2 {z-index: 30; position: relative; margin-left: calc(100vw * 340 / 1920); margin-top: calc(100vw * -300 / 1920); width: calc(100vw * 316.5 / 1920); height: calc(100vw * 278 / 1920); border: 0px; background: #f4f4f4; border-radius: calc(100vw * 20 / 1920); text-align: center; opacity: 0;}
 .dropup-content1 a {color: #706f6f; font-weight: 400; font-size: calc(100vw * 16 / 1920); line-height: calc(100vw * 30 / 1920);}
 .dropup-content2 a {color: #706f6f; font-weight: 400; font-size: calc(100vw * 16 / 1920); line-height: calc(100vw * 30 / 1920);}
+.plusBtn {margin-top: calc(100vw * 5 / 1920); margin-left: calc(100vw * 37 / 1920); width: calc(100vw * 18 / 1920); height: calc(100vw * 18 / 1920);}
 
 .ScaleUp {
     animation: ScaleUp 1s forwards;
