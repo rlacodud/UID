@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'pretendardExtraBold';
-    src: url('../font/Pretendard-1.2.1/web/static/woff2/Pretendard-ExtraBold.woff2') format('woff2');
+    src: url('../font/Pretendard-1.2.1/public/static/Pretendard-ExtraBold.otf') format('opentype');
 }
 @font-face {
     font-family: 'pretendardBold';
-    src: url('../font/Pretendard-1.2.1/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+    src: url('../font/Pretendard-1.2.1/public/static/Pretendard-Bold.otf') format('opentype');
 }
 @font-face {
     font-family: 'pretendardMedium';
-    src: url('../font/Pretendard-1.2.1/web/static/woff2/Pretendard-Medium.woff2') format('woff2');
+    src: url('../font/Pretendard-1.2.1/public/static/Pretendard-Medium.otf') format('opentype');
 }
 
 body {
