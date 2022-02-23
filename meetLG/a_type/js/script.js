@@ -80,17 +80,22 @@ $('.deleteBtn').click(function(){
 })
 
 /* LGTube Carousel Slider */
-var tube_sliderWrapper = document.querySelector('.tube_slider_wrapper'),
+
+
+window.addEventListener('resize', start);
+function start(){
+    var tube_sliderWrapper = document.querySelector('.tube_slider_wrapper'),
     tube_sliderUl = tube_sliderWrapper.querySelector('.tube_slides'),
     tube_slides = tube_sliderUl.querySelectorAll('.tube_li'),
     tube_currentIdx = 0,
     tube_slideCount = tube_slides.length,
-    tube_slideWidth = 810,
-    tube_slideMargin = 30,
+    tube_slideMargin = 0,
     tube_prevBtn = document.querySelector('#tube_prev'),
     tube_nextBtn = document.querySelector('#tube_next');
-
-tube_sliderUl.style.width = (tube_slideWidth*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
+    // console.log(tube_slideWidth);
+    let tube_slideWidth = document.querySelector(".tube_li").scrollWidth;
+    console.log(tube_slideWidth);
+    tube_sliderUl.style.width = (tube_slideWidth*tube_slideCount) + tube_slideMargin*(tube_slideCount-1) + 'px';
 
 //슬라이드 이동함수
 function tube_moveSlide(idx){
@@ -112,6 +117,9 @@ tube_prevBtn.addEventListener('click',function(){
         tube_moveSlide(tube_currentIdx - 1);
     }
 });
+}
+start();
+
 
 /* LGLife Carousel Slider */
 var life_sliderWrapper = document.querySelector('.life_slider_wrapper'),

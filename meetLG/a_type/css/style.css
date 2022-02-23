@@ -70,12 +70,12 @@ header nav .right .login button a {color: #fefefe;}
 
 /* Carousel Slider */
 .tube_slider_wrapper {width:calc(100vw * 815 / 1920); height: calc(100vw * 595 / 1920); overflow: hidden; position: relative; margin-left: calc(100vw * -15 / 1920); padding-top: calc(100vw * 30 / 1920);}
-.tube_slides {position:absolute; height: calc(100vw * 540 / 1920); width:100%; transition:left 0.5s ease-in-out; left:0;}
-.tube_slides li {float:left; margin: calc(100vw * 15 / 1920); text-align: center; text-transform: uppercase; font-weight: bold;}
+.tube_slides {position:absolute; height: calc(100vw * 540 / 1920); width:100%; transition:left 0.5s ease-in-out; left:0; display: flex; flex-wrap: nowrap;}
+.tube_slides li {float:left; text-align: center; text-transform: uppercase; font-weight: bold;}
 .tube_slides li:last-child {margin-right: 0;}
-.tube_box {width: calc(100vw * 790 / 1920); box-shadow: 1px 0 9px 0.2px #e1e1e1; border-radius: calc(100vw * 20 / 1920); overflow: hidden;}
+.tube_box {box-sizing: border-box; width: calc(100vw * 815 / 1920); box-shadow: 1px 0 9px 0.2px #e1e1e1; border-radius: calc(100vw * 20 / 1920); overflow: hidden;}
 .tube_slide-img {height: calc(100vw * 400 / 1920); position: relative;}
-.tube_slide-img img {width: calc(100vw* 790 / 1920); height: calc(100vw * 420 / 1920); box-sizing: border-box;}
+.tube_slide-img img {width: calc(100vw* 815 / 1920); height: calc(100vw * 420 / 1920); box-sizing: border-box;}
 .tube_detail-box {width: calc(100vw * 810 / 1920); height: calc(100vw * 140 / 1920); display: flex; justify-content: center; align-items: center; padding: calc(100vw * 10 / 1920) calc(100vw * 20 / 1920); box-sizing: border-box;}
 .tube_type {display: flex; flex-direction: column;}
 .tube_type p {margin-top: calc(100vw * 33 / 1920); color: #333333; font-weight: 700; font-size: calc(100vw * 32 / 1920); line-height: calc(100vw * 30 / 1920);}
