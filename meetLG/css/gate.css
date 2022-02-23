@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'pretendardExtraBold';
+    src: url('../font/Pretendard-1.2.1/web/static/woff2/Pretendard-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'pretendardBold';
+    src: url('../font/Pretendard-1.2.1/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'pretendardMedium';
+    src: url('../font/Pretendard-1.2.1/web/static/woff2/Pretendard-Medium.woff2') format('woff2');
+}
+
+body {position: relative; height: 100vh; overflow: hidden;}
+.back1 {position: absolute; top: 0; left: 0; width: calc(100vw* 99.45 / 1920);}
+.back2 {position: absolute; bottom: 0; right: 0; width: calc(100vw* 206.5 / 1920);}
+
+.gateBox {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);}
+.gateBox h1 {width: calc(100vw*170/1920); margin: 0 auto calc(100vw*64/1920);}
+.gateBox .gateList {display: flex; justify-content: center;}
+.gateBox .gateList div {width: calc(100vw*250/1920); text-align: center;}
+.gateBox .gateList div p {font-size: calc(100vw*20/1920); font-family: 'pretendardExtraBold';}
