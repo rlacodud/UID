@@ -132,6 +132,7 @@ header nav .right .login button a {color: #fefefe;}
 .news_slides {position:absolute; height: calc(100vw * 640 / 1920); width:100%; transition:left 0.5s ease-in-out; left:0;}
 .news_slides li {float:left; text-align: center; text-transform: uppercase; font-weight: bold;}
 .news_slides li:last-child {margin-top: 500px;}
+.news_slides li:nth-child(1) {margin-left: calc(100vw * 105 / 1920);}
 .news_box {width: calc(100vw * 410 / 1920); margin-right: 40px; box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 20 / 1920); overflow: hidden; position: relative;}
 .news_slide-img {height: calc(100vw * 640 / 1920); position: relative;}
 .news_slide-img img {position:relative; width: calc(100vw * 410 / 1920); height: calc(100vw * 640 / 1920); box-sizing: border-box; transition: all ease-in-out 0.3s;}
@@ -183,7 +184,7 @@ section {position: relative;}
 .section2 .fixedArea,
 .section2 .scrollArea {display: inline-block; width: 50%;}
 .section2 .fixedArea {width: calc(100vw * 895 / 1920); margin-bottom: calc(100vw * 50 / 1920); padding-top: calc(100vw * 140 / 1920); padding-left: calc(100vw * 130 / 1920); transition: all ease-in-out 0.8s;}
-.section2 .fixedArea .leftContentContainer {position: relative; width: 100%; height: calc(100vw * 720 / 1920); padding: calc(100vw * 60 / 1920) calc(100vw * 56 / 1920); box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 20 / 1920);}
+.section2 .fixedArea .leftContentContainer {box-sizing: border-box; position: relative; width: 100%; height: calc(100vw * 720 / 1920); padding: calc(100vw * 60 / 1920) calc(100vw * 56 / 1920); box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 20 / 1920);}
 .section2 .fixedArea .leftContentContainer .textBox {margin-bottom: calc(100vw * 65 / 1920); font-weight: bold;}
 .section2 .fixedArea .leftContentContainer .textBox .subTitle {font-size: calc(100vw * 28 / 1920); color: #a1a1a1; margin-bottom: calc(100vw * 30 / 1920);}
 .section2 .fixedArea .leftContentContainer .textBox .title {font-size: calc(100vw * 48 / 1920);}
@@ -196,14 +197,14 @@ section {position: relative;}
 .section2 .scrollArea .scrollAreaContainer .left,
 .section2 .scrollArea .scrollAreaContainer .right {width: 50%; display: inline-block;}
 .section2 .scrollArea .scrollAreaContainer .left {padding-right: calc(100vw * 10 / 1920);}
-.section2 .scrollArea .scrollAreaContainer .right {padding-left: calc(100vw * 40 / 1920);}
-.section2 .scrollArea .scrollAreaContainer .contentsBox {min-width: calc(100vw * 400 / 1920); height: calc(100vw * 510 / 1920); box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 20 / 1920); margin-bottom: calc(100vw * 50 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .right {padding-left: calc(100vw * 55 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .contentsBox {box-sizing: border-box; min-width: calc(100vw * 400 / 1920); height: calc(100vw * 510 / 1920); box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 20 / 1920); margin-bottom: calc(100vw * 50 / 1920);}
 .section2 .scrollArea .scrollAreaContainer .contentsBox .contentsImage {width: 100%;}
 .section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText {padding: calc(100vw * 35 / 1920) 0; text-align: center;}
 .section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText .subTitle {color: #d80546; font-size: calc(100vw * 18 / 1920); font-weight: bold;}
 .section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText .title {margin: calc(100vw * 20 / 1920) 0; color: #333333; font-size: calc(100vw * 28 / 1920); font-weight: bold; line-height: calc(100vw * 46 / 1920);}
 .section2 .scrollArea .scrollAreaContainer .contentsBox .contentsText .date {color: #a3a3a3; font-size: calc(100vw * 18 / 1920);}
-.section2 .scrollArea .scrollAreaContainer .small {height: calc(100vw * 280 / 1920); min-width: calc(100vw * 400 / 1920);}
+.section2 .scrollArea .scrollAreaContainer .small {box-sizing: border-box; height: calc(100vw * 280 / 1920); min-width: calc(100vw * 400 / 1920);}
 .section2 .scrollArea .scrollAreaContainer .small .contentsImage { position: relative; height: calc(100vw * 280 / 1920);}
 .section2 .scrollArea .scrollAreaContainer .small .contentsImage .emoji {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-size: cover; background-repeat: no-repeat;}
 .section2 .scrollArea .scrollAreaContainer .right .small .contentsImage {background-color: #ff5b5b; border-radius: calc(100vw * 20 / 1920); box-shadow: 1px 0 9px 5px #e1e1e1;}
@@ -214,7 +215,7 @@ section {position: relative;}
 .section3 {width: 100vw; height: 10vh;}
 
 .banner {z-index: 20; display: flex; justify-content: center;}
-.banner_box {margin-top: calc(100vw * 65 / 1920); width: calc(100vw * 1660 / 1920); height: calc(100vw * 280 / 1920); background-color: #ff5b5b; box-shadow: 0px 0px 10px rgba(36, 36, 36, 0.1); border-radius: calc(100vw * 20 / 1920);}
+.banner_box {    box-sizing: border-box; margin-left: 20px; margin-top: calc(100vw * 65 / 1920); width: calc(100vw * 1690 / 1920); height: calc(100vw * 280 / 1920); background-color: #ff5b5b;     box-shadow: 1px 0 9px 5px #e1e1e1; border-radius: calc(100vw * 20 / 1920);}
 .banner_box h1 {padding-top: calc(100vw * 85 / 1920); padding-left: calc(100vw * 110 / 1920); color: #ffffff; font-weight: 700; font-size: calc(100vw * 48 / 1920); line-height: calc(100vw * 36 / 1920);}
 .banner_box p {padding-top: calc(100vw * 20 / 1920); padding-left: calc(100vw * 110 / 1920);}
 .banner_box p a {color: #ffffff; font-weight: 700; font-size: calc(100vw * 18 / 1920); line-height: calc(100vw * 36 / 1920);}
