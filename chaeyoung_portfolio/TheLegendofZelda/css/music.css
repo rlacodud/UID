@@ -24,10 +24,9 @@ header .right li:last-child {margin: 0;}
 .rotating-slider ul.direction-controls li button:hover {background: rgba(0, 0, 0, 0.6);}
 .rotating-slider ul.slides {height: 100%; margin: 0; overflow: hidden; padding: 0; position: relative; top: 0; left: 50%; transform: translateX(-50%) rotate(0); transform-origin: center center; width: 100%;}
 .rotating-slider ul.slides li {background-color: #ecf0f1; background-position: center; background-size: cover; display: block; list-style: none; position: absolute; top: 0; left: 50%; text-align: center; transform-origin: bottom center; width: 28%; height: 28%; opacity: 0.7;}
-.rotating-slider ul.slides li.off {opacity: 0;}
+.rotating-slider ul.slides li.off {display: none;}
 /* Demo Styles */
-.rotating-slider ul.slides li.active {z-index: 10000; opacity: 1;}
-/* .rotating-slider ul.slides li:nth-of-type(1) {background: url('../img/cd_ocarina.png'); background-repeat: no-repeat; background-size: contain;} */
+.rotating-slider ul.slides li.active {z-index: 10000; display: block;}
 .rotating-slider ul.slides li img {width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -20000;}
 .rotating-slider ul.slides li:nth-of-type(2) {background: url('../img/cd_Zora.png'); background-repeat: no-repeat; background-size: contain;}
 .rotating-slider ul.slides li:nth-of-type(3) {background: url('../img/cd_Hateno.png'); background-repeat: no-repeat; background-size: contain;}
@@ -38,7 +37,8 @@ header .right li:last-child {margin: 0;}
 .rotating-slider ul.slides li:nth-of-type(8) {background: url('../img/cd_Fi.png'); background-repeat: no-repeat; background-size: contain;}
 .rotating-slider ul.slides li .inner {box-sizing: border-box; height: 100%; width: 100%;}
 .rotating-slider ul.slides li .cdContents {position: absolute; top: 0; left: 0; opacity: 0;}
-.rotating-slider ul.slides li .cdContents.on {opacity: 1; z-index: 300;}
+.rotating-slider ul.slides li .cdContents.on,
+.active-slide {opacity: 1 !important; z-index: 300 !important;}
 .play {position: absolute; top: 48%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw * 46 / 1920); height: calc(100vw * 51 / 1920); display: none; background-image: url('../img/play.png'); background-repeat: no-repeat; background-size: cover; z-index: 10000;}
 .play.on {display: block;}
 .name {font-family: "HyliaSerifBeta-Regular"; position: absolute; color: #EAD270; bottom: -10%; left: 0; text-align: center; width: 100%; font-size: calc(100vw * 20 / 1920); font-weight: lighter; display: none;}

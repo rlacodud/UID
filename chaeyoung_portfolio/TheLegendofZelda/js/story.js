@@ -3,15 +3,14 @@ var victoryAgoBtn = document.querySelector('#victoryAgo');
 var defeatingBtn = document.querySelector('#defeating');
 var victoryLaterBtn = document.querySelector('#victoryLater');
 var reconstructionBtn = document.querySelector('#reconstruction');
-// console.log(GenesisBtn, victoryAgoBtn, defeatingBtn, victoryLaterBtn, reconstructionBtn);
 
 // Hyrule Genesis 클릭 시 텍스트 변경 이벤트
 function GenesisTextEvent (e) {
   e.preventDefault();
-  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("../img/1_skywardsword.png")');
-  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("../img/2_minishcap.png")');
-  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("../img/3_foursword.png")');
-  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("../img/4_ocarina.png")');
+  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("./img/1_skywardsword.png")');
+  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("./img/2_minishcap.png")');
+  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("./img/3_foursword.png")');
+  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("./img/4_ocarina.png")');
   $('#victoryAgo a').removeClass('active');
   $('#defeating a').removeClass('active');
   $('#victoryLater a').removeClass('active');
@@ -23,10 +22,10 @@ function GenesisTextEvent (e) {
 // Hyrule Genesis 클릭 시 텍스트 변경 이벤트
 function victoryAgoTextEvent (e) {
   e.preventDefault();
-  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("../img/3_foursword.png")');
-  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("../img/4_ocarina.png")');
-  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("../img/8_muzura.png")');
-  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("../img/9_twilight.png")');
+  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("./img/3_foursword.png")');
+  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("./img/4_ocarina.png")');
+  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("./img/8_muzura.png")');
+  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("./img/9_twilight.png")');
   $('#Genesis a').removeClass('active');
   $('#defeating a').removeClass('active');
   $('#victoryLater a').removeClass('active');
@@ -38,10 +37,10 @@ function victoryAgoTextEvent (e) {
 // Hyrule Genesis 클릭 시 텍스트 변경 이벤트
 function defeatingBtnTextEvent (e) {
   e.preventDefault();
-  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("../img/9_twilight.png")');
-  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("../img/5_tryforce.png")');
-  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("../img/6_awakening.png")');
-  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("../img/7_heroes.png")');
+  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("./img/9_twilight.png")');
+  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("./img/5_tryforce.png")');
+  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("./img/6_awakening.png")');
+  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("./img/7_heroes.png")');
   $('#Genesis a').removeClass('active');
   $('#victoryAgo a').removeClass('active');
   $('#victoryLater a').removeClass('active');
@@ -53,10 +52,10 @@ function defeatingBtnTextEvent (e) {
 // Hyrule Genesis 클릭 시 텍스트 변경 이벤트
 function victoryLaterBtnTextEvent (e) {
   e.preventDefault();
-  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("../img/6_awakening.png")');
-  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("../img/7_heroes.png")');
-  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("../img/10_wind.png")');
-  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("../img/11_phantom.png")');
+  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("./img/6_awakening.png")');
+  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("./img/7_heroes.png")');
+  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("./img/10_wind.png")');
+  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("./img/11_phantom.png")');
   $('#Genesis a').removeClass('active');
   $('#victoryAgo a').removeClass('active');
   $('#defeating a').removeClass('active');
@@ -67,11 +66,11 @@ function victoryLaterBtnTextEvent (e) {
 }
 // Hyrule Genesis 클릭 시 텍스트 변경 이벤트
 function reconstructionBtnTextEvent (e) {
-  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("../img/10_wind.png")');
-  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("../img/11_phantom.png")');
-  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("../img/12_sprits.png")');
-  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("../img/13_breath.png")');
   e.preventDefault();
+  $('.slideContainer .slideList li:first-child .slideImg').css('background-image', 'url("./img/10_wind.png")');
+  $('.slideContainer .slideList li:nth-child(2) .slideImg').css('background-image', 'url("./img/11_phantom.png")');
+  $('.slideContainer .slideList li:nth-child(3) .slideImg').css('background-image', 'url("./img/12_sprits.png")');
+  $('.slideContainer .slideList li:nth-child(4) .slideImg').css('background-image', 'url("./img/13_breath.png")');
   $('#Genesis a').removeClass('active');
   $('#victoryAgo a').removeClass('active');
   $('#defeating a').removeClass('active');
