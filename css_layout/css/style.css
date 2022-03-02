@@ -1,0 +1,32 @@
+span{
+    position:relative;
+    /* top:25px; */
+    
+    font-size: 100px;
+}
+div{
+    /* position:relative;
+    left:100px; */
+
+    background-color: grey;
+    width: 200px;
+    height: 200px; 
+    /* height: 2000px;  */
+    font-size: 100px;
+}
+
+.first{
+    position:absolute;
+    left: 500px;
+    background-color: thistle;
+}
+.second{
+    background-color: cadetblue;
+}
+.third{
+    background-color: darkolivegreen;
+}
+
+.img {
+    float: left;
+}
