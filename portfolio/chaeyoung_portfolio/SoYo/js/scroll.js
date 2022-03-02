@@ -1,16 +1,21 @@
-console.log('load');
+window.onload = function() {
+  setTimeout (function() {
+    scrollTo(0, 0);
+  }, 100);
+};
 
 var transformEl = document.querySelector('.transform-wrap'); // 세로스크롤 전체영역
-
 var navS = document.querySelectorAll(".naS");
-
 var horizontalSectionWrap = document.querySelector('.horizontal-section-wrap'); // 가로스크롤 부모요소
 var horizontalArticle = document.querySelectorAll('.horizontal-section-wrap .box'); // 가로스크롤 자식요소들
-
 var contents = document.querySelectorAll('.box'); // 콘텐츠라는 클래스를 가진 친구들
-
 var navLi = document.querySelectorAll('nav a');
 navLi = Array.prototype.slice.call(navLi);
+var progressCircle = document.querySelector('#section9 .progressCircle');
+var progressCircleWidth = 0;
+var progressCircleLeft = 0;
+var progressCircleLi = document.querySelectorAll('#section9 .progressCircle li');
+progressCircleLi = Array.prototype.slice.call(progressCircleLi);
 
 /* 제어용 변수 선언 */
 var indexS = 0; // 스클로할때마다 ++ -- 됨.
@@ -28,78 +33,87 @@ var start = 0; // 가로스크롤이 사적 될 contents가 어디있을지 확�
 var end = 0; // 가로스크롤이 끝 날 contents가 어디있을지 확인할 변수
 var conLength = contents.length - 1; // contents의 총 갯수 확인 (limmit을 걸어주기 위함)
 
-window.onload = function(){
-
-  window.onresize = function(){
+window.onload = function () {
+  window.onresize = function () {
     horizontalWidthSetting(); // 윈도우가 리사이즈 될때 가로스크롤의 부모요소도 크기가 변화되어야 한다.
   }
 
-  function startEndCheck(){
+  function startEndCheck() {
     conLength = contents.length - 1;
-    for(var i = 0; i < contents.length; i++){
-      if(contents[i].classList.contains('start')){
+    for (var i = 0; i < contents.length; i++) {
+      if (contents[i].classList.contains('start')) {
         start = i;
-      }else if(contents[i].classList.contains('end')){
+      } else if (contents[i].classList.contains('end')) {
         end = i;
       }
     }
-    console.log(start, end);
   }
 
-  function onScrollW(e){
-    if(!transEnd)return;
+  function onScrollW(e) {
+    if (!transEnd) return;
     transitionCheck();
     pIndexS = indexS;
-    if(e.wheelDelta < 0 && indexS < conLength){ // 아래로 스크롤 감지
+    if (e.wheelDelta < 0 && indexS < conLength) { // 아래로 스크롤 감지
       indexS++; // 아래로 스크롤할때마다 indexS변수 1씩 증가
       movingDown(indexS);
-    }else if(e.wheelDelta > 0 && indexS > 0){ // 위로 스크롤 감지
+    } else if (e.wheelDelta > 0 && indexS > 0) { // 위로 스크롤 감지
       indexS--; // 위로 스크롤할때마다 indexS변수 1씩 감소
       movingUp(indexS);
     }
-    
-    // pageNavigation();
     moving();
     navSto();
-    addAnimation();
-    console.log(indexS, indexSX , indexSY);
     transEnd = false;
   }
-  function navSto(){
-      switch(indexS) {
-        case 0:
-          nar();
-          navLi[0].classList.add('active');
-          break;
-        case 2:
-          nar();
-          navLi[1].classList.add('active');
-          break;
-        case 5:
-          nar();
-          navLi[2].classList.add('active');
-          break;
-        case 8:
-          nar();
-          navLi[3].classList.add('active');
-          break;
-        case 12:
-          nar();
-          navLi[4].classList.add('active');
-          break;
-      } 
-  }
-  function nar(){
-    for(var i = 0; i < navLi.length; i++){
-      navLi[i].classList.remove('active');
+  function navSto() {
+    switch (indexS) {
+      case 0:
+        nar();
+        navLi[0].classList.add('activeB');
+        break;
+      case 1:
+        nar();
+        navLi[0].classList.add('activeB');
+        break;
+      case 2:
+        nar();
+        navLi[1].classList.add('activeB');
+        break;
+      case 4:
+        nar();
+        navLi[1].classList.add('activeB');
+        break;
+      case 5:
+        nar();
+        navLi[2].classList.add('activeB');
+        break;
+      case 7:
+        nar();
+        navLi[2].classList.add('activeB');
+        break;
+      case 8:
+        nar();
+        navLi[3].classList.add('activeB');
+        break;
+      case 11:
+        nar();
+        navLi[3].classList.add('activeB');
+        break;
+      case 12:
+        nar();
+        navLi[4].classList.add('activeB');
+        break;
     }
   }
-  function onClickPageNavigation(e){
+  function nar() {
+    for (var i = 0; i < navLi.length; i++) {
+      navLi[i].classList.remove('activeB');
+    }
+  }
+  function onClickPageNavigation(e) {
     e.preventDefault();
     var target = e.currentTarget;
     var navIn = navLi.indexOf(target);
-    // console.log(navIn);
-    switch(navIn) {
+    switch (navIn) {
       case 0:
         indexS = 0;
         indexSY = 0;
@@ -121,144 +135,122 @@ window.onload = function(){
         indexSY = 9;
         break;
     }
-    
     indexSX = 0;
-    console.log(indexSY);
-    // if(indexS < pIndexS){ // 아래 클릭 감지
-    //   movingDown(pIndexS);
-    // }else if(indexS > pIndexS){ // 위로 클릭 감지
-    //   movingUp(pIndexS);
-    // }
-    // indexS = pIndexS;
-    // console.log(pIndexS, indexSY, indexSX);
-    // pageNavigation();
     navActive(navIn);
     moving();
   }
-  function navActive(navIn){
-    for(var i = 0; i < navLi.length; i++){
-      navLi[i].classList.remove('active');
+  function navActive(navIn) {
+    for (var i = 0; i < navLi.length; i++) {
+      navLi[i].classList.remove('activeB');
     }
-    navLi[navIn].classList.add('active');
+    navLi[navIn].classList.add('activeB');
   }
 
-  function movingDown(dex){
-      if(dex < start){
-        indexSY = dex;
-      }else if(dex >= start && dex <= end){
-        indexSY = start;
-        indexSX = dex - start;
-      }else if(dex > end){
-        indexSY = dex - (end - start);
-      }
-    }
-  function movingUp(dex){
-    if(dex < start){
+  function movingDown(dex) {
+    if (dex < start) {
       indexSY = dex;
-    }else if(dex >= start && dex <= end){
+      progressCircle.style.opacity = "1";
+    } else if (dex >= start && dex <= end) {
       indexSY = start;
       indexSX = dex - start;
-    }else if(dex > end){
+    } else if (dex > end) {
+      indexSY = dex - (end - start);
+    }
+  }
+  function movingUp(dex) {
+    if (dex < start) {
+      indexSY = dex;
+    } else if (dex >= start && dex <= end) {
+      indexSY = start;
+      indexSX = dex - start;
+    } else if (dex > end) {
       indexSY = dex - (end - start);
     }
   }
 
-  function moving(){
+  function moving() {
     transY = indexSY * -100;
     transformEl.style.transform = "translateY(" + transY + "vh)";
     transformEl.style.transition = "all " + tranDuration + "ms ease";
 
     transX = indexSX * -100;
+    progressCircleWidth = 100 * (indexSX + 1);
+    progressCircleLeft = 12.5 * indexSX;
+    progressCircle.style.width = progressCircleWidth + "vw";
+    progressCircle.style.left = progressCircleLeft + "%";
+    circleReset();
+    progressCircleLi[indexSX].classList.add('active');
     horizontalSectionWrap.style.transform = "translateX(" + transX + "vw)";
     horizontalSectionWrap.style.transition = "all " + tranDuration + "ms ease";
+    // console.log(indexSY);
   }
-  
-  function horizontalWidthSetting(){
+  function circleReset () {
+    for (var i = 0; i < progressCircleLi.length; i++) {
+      progressCircleLi[i].classList.remove('active');
+    }
+  }
+  function horizontalWidthSetting() {
     horizontalSectionWrap.style.width = (100 * horizontalArticle.length) + "vw";
     // horizontalSection의 가로 크기를 내부에 있는 section의 갯수에 따라 크기 조정
   }
-
-  function addAnimation() {
-    if (indexS == 2)
-    {
-      console.log("in2");
-      $(".mean").addClass("animationDefault");
-      $(".iphoneL").addClass("animationDelay1");
-      $(".iphoneR").addClass("animationDelay2");
-    }
-
-    if (indexS == 4)
-    {
-      $(".first").addClass("animationDefault");
-      $(".sec").addClass("animationDelay1");
-      $(".blue").addClass("animationDelay2");
-    }
-
-    if (indexS == 6)
-    {
-      $(".chatProfile").addClass("text1Ani");
-      $(".SoYoText1-1").addClass("text1Ani");
-      $(".SoYoText1-2").addClass("text2Ani");
-      $(".SoYoText2-1").addClass("text3Ani");
-      $(".SoYoText2-2").addClass("text3Ani");
-      $(".choice1").addClass("choice1Ani");
-
-      // 대화형 메시지
-      $(function() {
-          $(".choice1").on("click", function() {
-              $(".SoYoText3-1").addClass("text4Ani");
-              $(".chatProfile2").addClass("text6Ani");
-              $(".SoYoText4-2").addClass("text4Ani");
-              $(".choice1").removeClass("choice1Ani");
-              $(".SoYoText5-2").addClass("text6Ani");
-              $(".SoYoText5-1").addClass("text6Ani");
-              $(".SoYoText2-1").removeClass("text3Ani");
-              $(".SoYoText6-2").addClass("text7Ani");
-              $(".SoYoText6-1").addClass("text7Ani");
-              $(".default").addClass("defaultAni");
-              $(function() {
-                  $(".default").on("click", function() {
-                      $(".default").removeClass("defaultAni");
-                      $(".default").css("display", "none")
-                      $(".defaultChange").addClass("defaultChangeAni");
-                      $(".SoYoText7-1").addClass("text8Ani");
-                      $(".SoYoText7-2").addClass("text8Ani");
-                  });
-              });
-          });
-        });
-
-      }
-      if (indexS == 13)
-      {
-        $(".view1").addClass("animationDefault");
-        $(".view2").addClass("animationDelay1");
-        $(".view3").addClass("animationDelay2");
-      }
-    }
-
-  function transitionCheck(){ // 트렌지션이 끝나면 다시 스크롤을 할수 있도록 제어하는 함수.
-      setTimeout(function(){
-        transEnd = true;
-      },tranDuration);
+  function transitionCheck() { // 트렌지션이 끝나면 다시 스크롤을 할수 있도록 제어하는 함수.
+    setTimeout(function () {
+      transEnd = true;
+    }, tranDuration);
   }
 
-  function addEvent(){ // 이벤트 추가 -> init()함수에서 실행.
-
-    for(var i = 0; i < navLi.length; i++){
+  function addEvent() { // 이벤트 추가 -> init()함수에서 실행.
+    for (var i = 0; i < navLi.length; i++) {
       navLi[i].addEventListener('click', onClickPageNavigation);
     }
 
     window.addEventListener('mousewheel', onScrollW);
   }
-  
-  function init(){ // 처음 실행시킬 함수들 제어.
+
+  function init() { // 처음 실행시킬 함수들 제어.
     horizontalWidthSetting(); // 가로스크롤 부모 크기 부여.
     startEndCheck(); // 가로스크롤이 시작하고 끝나는게 어디인지 start end 변수에 값 부여.
     addEvent(); // 이벤트 추가
-    addAnimation();
   }
   init(); // 처음 실행시킬 함수들 실행 -> 재사용성, 코드의 간결화, 확인, 수정을 용이하게 하기위함.
 }
 
-
+function prototype () {
+  // indexS가 5인 섹션에 도달할 경우
+  if (indexS === 5) {
+    // #section7 .SoYoTextLeft li:nth-child(1)와
+    // #section7 .SoYoTextCenter .SoYo .chatting:nth-child(1)에 textAni 클래스 추가
+    $('#section7 .SoYoTextLeft li:nth-child(1)').addClass('textAni');
+    $('#section7 .SoYoTextLeft li:nth-child(2)').addClass('textAni2');
+    $('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(1)').addClass('textAni');
+    $('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(1) .chattingText:first-child').addClass('textAni');
+    $('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(1) .chattingText:last-child').addClass('textAni2');
+      if ($('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(1) .chattingText:last-child').hasClass('textAni2')) {
+        $('#section7 .choice p:first-child').addClass('choice1Ani');
+        // #section7 .choice p:first-child 클릭 시 실행시키는 
+        $('#section7 .choice p:first-child').on('click', function () {
+          $('#section7 .choice p:first-child').removeClass('choice1Ani');
+          $('#section7 .SoYoTextCenter .player .chattingText:nth-child(1)').addClass('textAni');
+          $('#section7 .playerTextRight .chatting:nth-child(1)').addClass('textAni');
+          $('#section7 .SoYoTextLeft li:nth-child(1)').addClass('textRemoveAni');
+          $('#section7 .SoYoTextLeft li:nth-child(2)').addClass('textRemoveAni');
+          $('#section7 .SoYoTextLeft li:nth-child(3)').addClass('textAni2');
+          $('#section7 .SoYoTextLeft li:nth-child(4)').addClass('textAni3');
+          $('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(2)').addClass('textAni2');
+          $('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(2) .chattingText:first-child').addClass('textAni2');
+          $('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(2) .chattingText:last-child').addClass('textAni3');
+            if ($('#section7 .SoYoTextCenter .SoYo .chatting:nth-child(2) .chattingText:last-child').hasClass('textAni3')) {
+              $('#section7 .default').addClass('defaultAni');
+              $('#section7 .default').on('click', function () {
+                $('#section7 .default').removeClass('defaultAni');
+                $('#section7 .default').html('길을 따라 걷다보니까 기분이 좋아!');
+                $('#section7 .default').addClass('typing');
+                $('#section7 .SoYoTextCenter .player .chattingText:nth-child(2)').addClass('textAni3');
+                $('#section7 .playerTextRight .chatting:nth-child(2)').addClass('textAni3');
+              })
+            }
+        })
+      }
+  }
+}
+window.addEventListener('mousewheel', prototype);
