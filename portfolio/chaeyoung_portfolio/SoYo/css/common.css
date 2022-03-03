@@ -272,7 +272,6 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
 #section6 .textList li:nth-child(8) {top: 80%; left: 58%;}
 
 /* SECTION7 */
-/* #section7 {overflow-y: visible;} */
 #section7 .textContainer {position: absolute; top: 10%; left: 10%;}
 #section7 .textContainer .talkBack {display: inline-block; text-align: left; font-weight: bold; font-size: calc(100vw * 30 / 1920); line-height: var(--line-height);}
 #section7 .textContainer .talkBack-des {display: inline-block; margin-left: calc(100vw * 100 / 1920); text-align: left; font-weight: normal; font-size: calc(100vw * 20 / 1920); line-height: var(--line-height);}
@@ -296,7 +295,7 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
     top: 75%;
   }
 }
-#section7 .chat {position: absolute; bottom: 0%; left: 35%;}
+#section7 .chat {position: absolute; bottom: 0%; left: 35%; width: calc(100vw * 520 / 1920); height: calc(100vw * 731 / 1920);}
 #section7 .pass {position: absolute; bottom: 4.2%; left: 57%;}
 #section7 .default {position: absolute; bottom: 5%; left: 39%; width: 16%; padding: calc(100vw * 10 / 1920); text-align: left; font-size: calc(100vw * 14 / 1920); color: gray;}
 #section7 .default.defaultAni {transition: all 0.5s linear; border-radius: calc(100vw * 30 / 1920); animation-name: defaultAni; animation-iteration-count: infinite; animation-duration: 1s; animation-delay: 2.5s; cursor: pointer;}
@@ -381,7 +380,6 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
 #section7 .choice p:last-child {margin-top: calc(100vw * 10 / 1920);}
 
 /* SECTION8 */
-/* #section8 {overflow-y: visible;} */
 #section8 svg {z-index: -10;}
 #section8 .svg8_1 {animation-name: moveP3; animation-duration: 7s; right: -17%;}
 @keyframes moveP3 {
@@ -405,9 +403,10 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
 #section8 .textContainer {position: absolute; top: 10%; left: 10%;}
 #section8 .textContainer .talkBack {display: inline-block; text-align: left; font-weight: bold; font-size: calc(100vw * 30 / 1920); line-height: var(--line-height);}
 #section8 .textContainer .talkBack-des {display: inline-block; margin-left: calc(100vw * 175 / 1920); text-align: left; font-weight: normal; font-size: calc(100vw * 20 / 1920); line-height: var(--line-height);}
-#section8 .emotion {position: absolute; top: 10%; left: 0; z-index: -100; opacity: 0;}
+#section8 .emotion {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -100; opacity: 0;}
 
 /* SECTION9 */
+#section9 {width: 400vw !important;}
 #section9 .progressCircle {position: fixed; display: inline-block; opacity: 0; width: 100vw; bottom: 2.5%; left: 0%; margin: 0; padding: 0; z-index: 10000;}
 #section9 .progressCircle li {display: inline-block; width: calc(100vw * 10 / 1920); height: calc(100vw * 10 / 1920); margin-right: calc(100vw * 20 / 1920); border-radius: 50%; background-color: #ffe3c2; cursor: pointer;}
 #section9 .progressCircle li:last-child {margin: 0;}
@@ -478,7 +477,7 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
 #section9 .var-wrap .serviceDes:nth-child(4) .gooey {background-image: linear-gradient(120deg, #e7f4ff 0%, #e2f1ff 100%);}
 #section9 .var-wrap .serviceDes:nth-child(4) .gooey:before,
 #section9 .var-wrap .serviceDes:nth-child(4) .gooey:after {background-image: linear-gradient(120deg, #e2f1ff 0%, #cbe7ff 100%);}
-#section9 .var-wrap .serviceDes .iphoneMiddle {position: absolute; top: 8%; left: 50%; transform: translateX(-50%); z-index: 200;}
+#section9 .var-wrap .serviceDes .iphoneMiddle {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 200;}
 #section9 .var-wrap .serviceDes .task {position: absolute; top: 50%; right: 11%; transform: translateY(-50%); text-align: left; line-height: 1.5em;}
 #section9 .var-wrap .serviceDes .task li {margin-bottom: calc(100vw * 70 / 1920);}
 #section9 .var-wrap .serviceDes .task li:last-child {margin: 0;}
@@ -533,10 +532,11 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
 /* SECTION10 */
 #section10 .gallery {max-width: 100vw; height: 100%; margin: 0 auto;}
 #section10 .gallery .pic {height: 100vh;}
-#section10 .gallery .pic img {position: relative; display: inline-block; z-index: 100;}
+#section10 .gallery .pic img {position: relative; display: inline-block; width: 100%; height: 100%; z-index: 100;}
 
 /* SECTION11 */
 #section11 {height: auto; overflow-y: scroll;}
+#section11::-webkit-scrollbar {display: none;}
 #section11 .upContents {width: 100vw; height: 100vh;}
 #section11 .upContents svg {z-index: -10;}
 #section11 .upContents .svg11_1 {animation-name: moveP5; animation-duration: 7s; left: -23%;}

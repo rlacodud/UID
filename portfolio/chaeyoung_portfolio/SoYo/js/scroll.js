@@ -8,6 +8,7 @@ var transformEl = document.querySelector('.transform-wrap'); // 세로스크롤 
 var navS = document.querySelectorAll(".naS");
 var horizontalSectionWrap = document.querySelector('.horizontal-section-wrap'); // 가로스크롤 부모요소
 var horizontalArticle = document.querySelectorAll('.horizontal-section-wrap .box'); // 가로스크롤 자식요소들
+console.log(horizontalArticle);
 var contents = document.querySelectorAll('.box'); // 콘텐츠라는 클래스를 가진 친구들
 var navLi = document.querySelectorAll('nav a');
 navLi = Array.prototype.slice.call(navLi);
@@ -33,7 +34,6 @@ var start = 0; // 가로스크롤이 사적 될 contents가 어디있을지 확�
 var end = 0; // 가로스크롤이 끝 날 contents가 어디있을지 확인할 변수
 var conLength = contents.length - 1; // contents의 총 갯수 확인 (limmit을 걸어주기 위함)
 
-window.onload = function () {
   window.onresize = function () {
     horizontalWidthSetting(); // 윈도우가 리사이즈 될때 가로스크롤의 부모요소도 크기가 변화되어야 한다.
   }
@@ -182,7 +182,6 @@ window.onload = function () {
     progressCircleLi[indexSX].classList.add('active');
     horizontalSectionWrap.style.transform = "translateX(" + transX + "vw)";
     horizontalSectionWrap.style.transition = "all " + tranDuration + "ms ease";
-    // console.log(indexSY);
   }
   function circleReset () {
     for (var i = 0; i < progressCircleLi.length; i++) {
@@ -213,7 +212,7 @@ window.onload = function () {
     addEvent(); // 이벤트 추가
   }
   init(); // 처음 실행시킬 함수들 실행 -> 재사용성, 코드의 간결화, 확인, 수정을 용이하게 하기위함.
-}
+
 
 function prototype () {
   // indexS가 5인 섹션에 도달할 경우

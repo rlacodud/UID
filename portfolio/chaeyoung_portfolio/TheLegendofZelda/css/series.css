@@ -16,7 +16,7 @@ header .right li:last-child {margin: 0;}
 
 .button ul li {width: calc(100vw * 20 / 1920); height: calc(100vw * 20 / 1920); display: inline-block; position: absolute; top: 50%; background-color: #fff; border-radius: 50%; color: #EAD270; font-weight: bold;}
 .button ul #prev {left: 2%; cursor: pointer;}
-.button ul #next {left: 48%; cursor: pointer;}
+.button ul #next {left: 47%; cursor: pointer;}
 .button ul #prev.disNone {display: none;}
 .button ul #next.disNone {display: none;}
 .button ul li span {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
