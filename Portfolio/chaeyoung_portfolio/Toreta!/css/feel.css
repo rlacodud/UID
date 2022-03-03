@@ -15,7 +15,7 @@
 #section1 .menuBtnContainer .menuBtn .menuBlock .menuBlockSpan.on {background-color: var(--color-y);}
 #section1 .triangle {position: absolute; top: 50%; left: calc(100vw * 1837 / 1920); transform: translateY(-50%);}
 #section1 .mainText .slogan {position: absolute; z-index: 9; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff;	text-align: center;	font-weight: bold; line-height: 0.8em; font-size: calc(100vw * 155 / 1920);}
-#section1 .mainText .slogan .colorY {color: var(--color-y);}
+.colorY {color: var(--color-y);}
 #section1 .mainText .slogan .colorY::after {content: ''; position: absolute; top: -25%; left: -14%; display: inline-block; width: calc(100vw * 179 / 1920); height: calc(100vw * 118 / 1920); background-image: url('../img/nice.png'); background-repeat: no-repeat; background-size: cover; z-index: -10;}
 #section1 .mainText .slogan .colorY::before {content: ''; position: absolute; top: -36%; left: 88%; display: inline-block; width: calc(100vw * 154 / 1920); height: calc(100vw * 154 / 1920); background-image: url('../img/good.png'); background-repeat: no-repeat; background-size: cover; z-index: 10;}
 #section1 .mainText .slogan::after {content: ''; position: absolute; top: 60%; left: -18%; display: inline-block; width: calc(100vw * 143 / 1920); height: calc(100vw * 143 / 1920); background-image: url('../img/smile.png'); background-repeat: no-repeat; background-size: cover; z-index: 10;}
