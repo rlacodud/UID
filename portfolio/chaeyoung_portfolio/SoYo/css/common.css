@@ -374,7 +374,7 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
 #section7 .SoYoTextCenter .player .chattingText:nth-child(2) {top: 110%; right: 2%;}
 #section7 .playerTextRight .chatting {text-align: right;}
 #section7 .playerTextRight .chatting:nth-child(1) {top: 58%; right: 26%;}
-#section7 .playerTextRight .chatting:nth-child(2) {top: 70%; right: 20%;}
+#section7 .playerTextRight .chatting:nth-child(2) {top: 70%; right: 22%;}
 #section7 .choice {position: absolute; top: 81%; left: 38.2%; text-align: left;}
 #section7 .choice p {padding: calc(100vw * 10 / 1920); width: 172%;}
 #section7 .choice p:last-child {margin-top: calc(100vw * 10 / 1920);}
