@@ -25,7 +25,7 @@
 ## __2. 기본 원리__
 ### &nbsp; __(1) `<canvas>` 요소__
 #### &nbsp; `<canvas>` 요소는 __width와 height__ 의 두 속성을 지닌다. width와 height 속성을 지정하지 않으면 __canvas의 처음 너비는 300px이고 높이는 150px__ 이다.
-#### &nbsp; CSS로 `<canvas>`의 크기를 임의로 정할 수 있지만 렌더링하는동안 이미지는 레이아웃의 크기에 맞게 조정된다. 그러므로 초기 canvas의 비율을 고려하지 않고 CSS로 크기를 지정하면 왜곡되어 나타날 수 있기에 __`<canvas>` 속성에서 width와 height 속성을 명시하는 편이 좋다.__
+#### &nbsp; CSS로 `<canvas>`의 크기를 임의로 정할 수 있지만 렌더링하는동안 이미지는 레이아웃의 크기에 맞게 조정된다. 그러므로 초기 canvas의 비율을 고려하지 않고 CSS로 크기를 지정하면 왜곡되어 나타날 수 있기에 __`<canvas>` 속성에서 width와 height 속성을 명시__ 하는 편이 좋다.
 
 <br/>
 
@@ -33,10 +33,12 @@
 #### &nbsp; `<canvas>`요소는 canvas를 지원하지 않는 오래된 브라우저(인터넷 익스플로러9 이하의 버전이나 텍스트기반 브라우저)들을 위한 대체 콘텐츠를 정의하기 쉬운데
 #### &nbsp; 그저 __`<canvas>` 안에 대체 콘텐츠를 기입하면 된다.__
 ```html
+<!-- TEXT -->
 <canvas id="stockGraph" width="150" height="150">
   current stock price: $3.15 +0.15
 </canvas>
 
+<!-- IMAGE -->
 <canvas id="clock" width="150" height="150">
   <img src="images/clock.png" width="150" height="150" alt=""/>
 </canvas>
@@ -152,3 +154,7 @@ if (canvas.getContext){
 > ### &nbsp; __[4. 스타일 및 색상 적용하기](./Style_Color.md)__
 > ### &nbsp; __[5. 텍스트 그리기](./Draw_Text.md)__
 > ### &nbsp; __[6. 이미지 사용하기](./Using_Images.md)__
+> ### &nbsp; __[7. 변형](./transformations.md)__
+> ### &nbsp; __[8. 합성 및 클리핑](./cliping.md)__
+> ### &nbsp; __[9. 기본 애니메이션](./basic_Animation.md)__
+> ### &nbsp; __[10. 고급 애니메이션](./develop_Animation.md)__

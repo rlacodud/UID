@@ -9,17 +9,15 @@
 
 <br/>
 
-#### 이미지를 캔버스로 불러오는 것은 기본적으로 두 단계를 필요로 한다.
-#### &nbsp; __1. `HTMLImageElement` object를 참조하거나 다른 캔버스 요소를 소스로 사용한다. 이는 URL을 가지고 이미지를 사용할 수 있다.__
-#### &nbsp; __2. `drawImage()` function을 사용하여 캔버스에 나타난 이미지 위에 그림을 그린다.__
-
-<br/>
+#### 이미지를 canvas로 불러오는 것은 기본적으로 두 단계를 필요로 한다.
+#### &nbsp; __1. `HTMLImageElement` object를 참조하거나 다른 `<canvas>` 요소를 소스로 사용한다. 이는 URL을 가지고 이미지를 사용할 수 있다.__
+#### &nbsp; __2. `drawImage()` function을 사용하여 canvas에 나타난 이미지 위에 그림을 그린다.__
 
 ---
 
 <br/>
 
-#### &nbsp; __(1) 이미지 불러오기__
+### &nbsp; __(1) 이미지 불러오기__
 #### &nbsp; canvas API는 아래의 데이터 타입을 이미지 소스로 사용할 수 있다.
 > #### &nbsp; __- HTMLImageElement__
 > #### &nbsp; : `<img>` element와 마찬가지로, `Image()` constructor를 통해 만들어진 이미지이다.  
@@ -32,14 +30,14 @@
 
 <br/>
 
-#### &nbsp; __(2) 같은 페이지의 이미지 사용하기__
+### &nbsp; __(2) 같은 페이지의 이미지 사용하기__
 #### &nbsp; __- `document.images` 모음__
 #### &nbsp; __- `document.getElementByTagName()` 메소드__
 #### &nbsp; __- (사용하고자 하는 특정한 이미지의 ID를 알 경우) `document.getElementById()` 를 사용하여 특정한 이미지를 참고할 수 있다.__
 
 <br/>
 
-#### &nbsp; __(3) 처음부터 이미지 만들기__
+### &nbsp; __(3) 처음부터 이미지 만들기__
 #### &nbsp; 스크립트 내에서 처음부터 `HTMLImageElement` object를 생성할 수 있다.
 ```javascript
 var img = new Image();   // Create new img element
@@ -54,3 +52,11 @@ img.addEventListener('load', function() {
   }, false);
 img.src = 'myImage.png'; // Set source path
 ```
+
+<br/>
+
+---
+
+<br/>
+
+[다음 챕터](./transformations.md)

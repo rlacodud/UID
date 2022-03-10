@@ -5,9 +5,23 @@
 ## __4. 스타일과 색 적용하기__
 #### 이번장에서 우리는 그리기를 조금 더 매력적으로 만들 수 있는 __canvas 옵션__ 을 살펴볼 것이다.
 
+---
+
 <br/>
 
 ### &nbsp; __(1) 색상__
+<br/>
+
+#### &nbsp; 아래에서의 color는 CSS의 __`<color>`, 그라디언트 객체, 패턴 객체__ 를 뜻한다.
+#### &nbsp; 윤곽선과 채움 색의 __초기 설정값은 검은 색__ 이다.
+
+<br/>
+
+> strokeStyle 또는 fillStyle 속성을 설정하면, 새로 설정된 값이 __앞으로 그려질 도형의 기본 값__ 이 된다.  
+각 도형에 다른 색을 적용하려면 strokeStyle 또는 fillStyle 속성을 다시 적용해야 한다.
+
+<br/>
+
 #### &nbsp; __(1-1) fillStyle = color__
 #### &nbsp; : 도형을 채우는 색을 설정한다.
 ```javascript
@@ -31,15 +45,6 @@ function draw() {
 #### &nbsp; __(1-2) strokeStyle = color__
 #### &nbsp; : 도형의 윤곽선 색을 설정한다.
 
-<br/>
-
-#### &nbsp; 여기서의 color는 CSS의 __`<color>`, 그라디언트 객체, 패턴 객체__ 를 뜻한다.
-#### &nbsp; 윤곽선과 채움 색의 __초기 설정값은 검은 색__ 이다.
-> strokeStyle 또는 fillStyle 속성을 설정하면, 새로 설정된 값이 __앞으로 그려질 도형의 기본 값__ 이 된다.  
-각 도형에 다른 색을 적용하려면 strokeStyle 또는 fillStyle 속성을 다시 적용해야 한다.
-
-<br/>
-
 ```javascript
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -61,7 +66,7 @@ function draw() {
 <br/>
 
 ### &nbsp; __(2) 투명도__
-#### &nbsp; : canvas에는 불투명한 도형을 그릴 수도 있고 반투명한 도형도 그릴 수 있다.
+#### &nbsp; : canvas에는 불투명한 도형도, 반투명한 도형도 그릴 수 있다.
 
 <br/>
 
@@ -150,16 +155,18 @@ function draw() {
 <br/>
 
 #### &nbsp; __(3-2) lineCap = type__
-#### &nbsp; : 선의 끝모양을 설정한다. 초기 설정값은 `butt`이다.
+#### &nbsp; : __선의 끝모양__ 을 설정한다. 초기 설정값은 `butt`이다.
 
 <br/>
 
-> #### &nbsp; __- butt__
+> #### &nbsp; __- `butt`__
 > #### &nbsp; : 선의 끝이 좌표에 딱맞게 잘린다.
-> #### &nbsp; __- round__
+> #### &nbsp; __- `round`__
 > #### &nbsp; : 선의 끝이 동그랗다.
-> #### &nbsp; __- square__
+> #### &nbsp; __- `square`__
 > #### &nbsp; : 선 끝에, 선 두께 반만큼의 사각형 영역이 더해진다.
+
+<br/>
 
 ```javascript
 function draw() {
@@ -198,11 +205,11 @@ function draw() {
 ![Canvas_linejoin][Canvas_linejoin]
 
 [Canvas_linejoin]: ./img/Canvas_linejoin.png "Canvas_linejoin"
-> #### &nbsp; __- round__
+> #### &nbsp; __- `round`__
 > #### &nbsp; 도형의 모서리를, 연결되는 부분들의 공통 끝점을 중심으로 하는 __원 모양__ 으로 만든다. 이 때 __원의 반지름은 선의 두께와 같다.__
-> #### &nbsp; __- bavel__
+> #### &nbsp; __- `bavel`__
 > #### &nbsp; 도형의 모서리를, 연결되는 부분들의 공통 끝점에서 __세모 모양__ 으로 만든다.
-> #### &nbsp; __- miter__
+> #### &nbsp; __- `miter`__
 > #### &nbsp; 도형의 모서리를, 두 부분의 바깥쪽 테두리 선을 각각 연장하여 __교차된 점으로 생긴 마음모꼴 모양으로 만든다.__ `miterLimit` 속성값에 따라 모양이 달라진다.
 ```javascript
 function draw() {
@@ -380,14 +387,14 @@ function draw() {
 <br/>
 
 #### &nbsp; `image`는 CanvasImageSource(HTMLImageElement, 다른 canvas, `<video>` 요소 등등) 이다.
-#### &nbsp; `type`은 이미지 사용방법을 나타내는 문자열이다. 문자열값은 아래 중 하나여야 한다.
-> #### &nbsp;&nbsp; __- repeat__
+#### &nbsp; `type`은 __이미지 사용방법__ 을 나타내는 문자열이다. 문자열값은 아래 중 하나여야 한다.
+> #### &nbsp;&nbsp; __- `repeat`__
 > #### &nbsp;&nbsp; : __수직 및 수평__ 방향으로 이미지를 이어 붙인다.
-> #### &nbsp;&nbsp; __- repeat-x__
+> #### &nbsp;&nbsp; __- `repeat-x`__
 > #### &nbsp;&nbsp; : __수평__ 방향으로만 이미지를 이어 붙인다.
-> #### &nbsp;&nbsp; __- repeat-y__
+> #### &nbsp;&nbsp; __- `repeat-y`__
 > #### &nbsp;&nbsp; : __수직__ 방향으로만 이미지를 이어 붙인다.
-> #### &nbsp;&nbsp; __- no-repeat__
+> #### &nbsp;&nbsp; __- `no-repeat`__
 > #### &nbsp;&nbsp; : 이미지를 이어 붙이지 않는다. __즉, 이미지는 한번만 사용된다.__
 
 <br/>
@@ -427,8 +434,8 @@ function draw() {
 
 <br/>
 
-#### &nbsp; 위 두 속성은 __음수값__을 사용하면 그림자가 __위로 또는 왼쪽__ 으로 확장되고
-#### &nbsp; __양수값__ 을 사용하면 그림자가 __아래로 또는 오른쪽__ 으로 확장된다. 기본값은 모두 0이다.
+> #### &nbsp; 위 두 속성은 __음수값__ 을 사용하면 그림자가 __위로 또는 왼쪽__ 으로 확장되고
+> #### &nbsp; __양수값__ 을 사용하면 그림자가 __아래로 또는 오른쪽__ 으로 확장된다. 기본값은 모두 0이다.
 
 <br/>
 
@@ -438,7 +445,7 @@ function draw() {
 <br/>
 
 #### &nbsp; __(6-4) shadowColor = color__
-#### &nbsp; : 그림자 효과의 __색상__을 나타내는 표준 CSS 색상 값. 기본적으로 완전 __검은색__ 이다.
+#### &nbsp; : 그림자 효과의 __색상__ 을 나타내는 표준 CSS 색상 값. 기본적으로 완전 __검은색__ 이다.
 ```javascript
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -465,8 +472,11 @@ function draw() {
 <br/>
 
 #### &nbsp; 다음 두가지 값을 사용할 수 있다.
-> #### &nbsp; __- nonzero__
-> #### &nbsp; __- evenodd__
+> #### &nbsp; __- `nonzero`__
+> #### &nbsp; __- `evenodd`__
+
+<br/>
+
 ```javascript
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
