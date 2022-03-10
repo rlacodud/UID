@@ -1,137 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-html {
-    background-color: black;
-    overflow: hidden;
-}
+html {background-color: black;overflow: hidden;}
 
-.contactTop {
-    width: 100%;
-    position: relative;
-    height: 50vh;
-}
+.contactTop {width: 100%;position: relative;height: 50vh;}
+.contactTop .contactTitle {text-align: center;width: 100%;position: absolute;top: 50%;transform: translateY(-50%);}
+.contactTop .contactTitle p {color: #8cfa20;font-size: calc(100vw*250/1920);font-family:"Noto Sans KR",sans-serif;font-weight: 100;animation-duration: 1s;animation-name: title;animation-iteration-count: infinite;animation-direction: alternate;transition: font-weight .4s;display: inline-block;}
+.contactTop .contactTitle p:nth-child(1){animation-delay: 0.6s;}
+.contactTop .contactTitle p:nth-child(2){animation-delay: 0.5s;}
+.contactTop .contactTitle p:nth-child(3){animation-delay: 0.4s;}
+.contactTop .contactTitle p:nth-child(4){animation-delay: 0.3s;}
+.contactTop .contactTitle p:nth-child(5){animation-delay: 0.2s;}
+.contactTop .contactTitle p:nth-child(6){animation-delay: 0.1s;}
+.contactTop .contactTitle p:nth-child(7){animation-delay: 0;}
 
-.contactTitle {
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.contactTitle p {
-    color: #8cfa20;
-    font-size: calc(100vw*250/1920);
-    font-family:"Noto Sans KR",sans-serif;
-    font-weight: 100;
-    animation-duration: 1s;
-    animation-name: title;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transition: font-weight .4s
-}
-.contactTitle p{
-    display: inline-block;
-}
-.contactTitle p:nth-child(1){
-    animation-delay: 0.6s;
-}
-.contactTitle p:nth-child(2){
-    animation-delay: 0.5s;
-}
-.contactTitle p:nth-child(3){
-    animation-delay: 0.4s;
-}
-.contactTitle p:nth-child(4){
-    animation-delay: 0.3s;
-}
-.contactTitle p:nth-child(5){
-    animation-delay: 0.2s;
-}
-.contactTitle p:nth-child(6){
-    animation-delay: 0.1s;
-}
-.contactTitle p:nth-child(7){
-    animation-delay: 0;
-}
 @keyframes title {
     0% {
         opacity: 0.1;
         font-weight: 100;
     }
-  
     100% {
         opacity: 1;
         font-weight: 900;
     }
   }
 
-.contactLine {
-    position: absolute;
-    top: 50%;
-    border: 0.5px white solid;
-    width: 100%;
-}
+.contactLine {position: absolute;top: 50%;border: 0.5px white solid;width: 100%;}
 
-.contactUl {
-    height: 50vh;
-    top: 50%;
-    width: 100%;
-    font-family:"Noto Sans KR",sans-serif;
-    position: absolute;
-    text-align: center;
-    color: white;
-    left: 50%;
-    transform: translateX(-50%);
-
-}
-
-.contactUl li {
-    position: relative;
-    width: 33%;
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-}
-
-.contactDiv {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 100%;
-}
-
-.contactCategory {
-    display: inline-block;
-    font-family:"Noto Sans KR",sans-serif;
-    font-size: calc(100vw*34/1920);
-    font-weight: 900;
-    margin-bottom: calc(100vw*47/1920);
-    -webkit-transition:.5s;
-    -moz-transition:.5s;
-    -ms-transition:.5s;
-    -o-transition:.5s;
-    transition:.5s;
-}
-
-.phone:hover {
-    color: #8cfa20;
-    transform: rotate(10deg);
-}
-.eMail:hover {
-    color: #8cfa20;
-    transform: rotate(-10deg);
-}
-.insta:hover {
-    color: #8cfa20;
-    transform: rotate(10deg);
-}
-
-
-
-.contactContent {
-    font-family:"Noto Sans KR",sans-serif;
-    font-size: calc(100vw*30/1920);
-    font-weight: 300;
-}
+.contactUl {height: 50vh;top: 50%;width: 100%;font-family:"Noto Sans KR",sans-serif;position: absolute;text-align: center;color: white;left: 50%;transform: translateX(-50%);}
+.contactUl li { position: relative; width: 33%; display: inline-block; vertical-align: middle; height: 100%;}
+.contactUl li .contactDiv {top: 50%;left: 50%;transform: translate(-50%,-50%);position: absolute;width: 100%;}
+.contactUl li .contactDiv .contactCategory {display: inline-block;font-family:"Noto Sans KR",sans-serif;font-size: calc(100vw*34/1920);font-weight: 900;margin-bottom: calc(100vw*47/1920);-webkit-transition:.5s;-moz-transition:.5s;-ms-transition:.5s;-o-transition:.5s;transition:.5s;}
+.contactUl li .contactDiv .contactCategory.phone:hover, .contactCategory.insta:hover {color: #8cfa20;transform: rotate(10deg);}
+.contactUl li .contactDiv .contactCategory.eMail:hover {color: #8cfa20;transform: rotate(-10deg);}
+.contactUl li .contactDiv .contactContent {font-family:"Noto Sans KR",sans-serif;font-size: calc(100vw*30/1920);font-weight: 300;}

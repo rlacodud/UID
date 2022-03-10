@@ -1,3 +1,6 @@
+// 메뉴 html
+$('.menuPage').prepend('<ul><a href="./index.html"><li class="menuLi li1"><p class="menuNum num1">01</p><p class="menuName name1">MAIN</p></li></a><a href="./about.html"><li class="menuLi li2"><p class="menuNum num2">02</p><p class="menuName name2">ABOUT</p></li></a><a href="./project.html"><li class="menuLi li3"><p class="menuNum num3">03</p><p class="menuName name3">WORK</p></li></a><a href="./contact.html"><li class="menuLi li4"><p class="menuNum num4">04</p><p class="menuName name4">CONTACT</p></li></a></ul>');
+
 let menuSwitch = 0;
 $('.menuIcon').click(function(){
     if (menuSwitch == 0) {
