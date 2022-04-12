@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+p{font-size: calc(100vw * 18 /1920);}
+.itemRight {font-family: 'Montserrat', sans-serif;}
+
+.tabArea{text-align: center; width: 100%; height: calc(100vw * 190 /1920); position: fixed; top: 0; background-color: white; z-index: 1;}
+.tabArea ul.tabs{margin-top: calc(100vw * 100 /1920);}
+.tabArea li{padding-right: calc(100vw * 32 /1920); background: none; display: inline-block; display: inline-block; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 20 /1920); font-weight: 500; line-height: calc(100vw * 29 /1920); color:#C9C9C9;}
+.tabArea ul.tabs li{padding-right: calc(100vw * 32 /1920); background: none; display: inline-block; display: inline-block; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 20 /1920); font-weight: 500; line-height: calc(100vw * 29 /1920); color:#C9C9C9;}
+.tabArea li.current{font-weight: 700; line-height: calc(100vw * 29 /1920); color:#DD001A; }
+.tabArea ul.tabs li.current{font-weight: 700; line-height: calc(100vw * 29 /1920); color:#DD001A; }
+
+.section {position: absolute; left: 50%; transform: translateX(-50%); margin-top: calc(100vw * 190 /1920); width: calc(100vw * 1280 /1920); padding-bottom: calc(100vw * 266.5 /1920);}
+
+.section .top {text-align: center;font-family: 'Noto Sans KR', sans-serif;}
+.section .top h1 {font-size: calc(100vw * 100 /1920); font-weight: 700; line-height: calc(100vw * 145 /1920); margin-bottom: calc(100vw * 20 /1920);}
+.section .top p {font-size: calc(100vw * 20 /1920); line-height: calc(100vw * 32 /1920); font-weight: 500; margin-bottom: calc(100vw * 50 /1920);}
+.section .top .topBox {box-sizing: border-box; width: 100%; height: calc(100vw * 100 /1920); border: solid 10px #EFEFEF; display: flex; align-items: center !important; justify-content: space-between; padding-left: calc(100vw * 30 /1920); padding-right: calc(100vw * 40 /1920);}
+.section .top .topBox div {display: flex; align-items: center !important;}
+.section .top .topBox div:nth-child(1) { margin-top: calc(100vw * 50 /1920);display: flex; align-items: center !important;}
+.section .top .topBox div:nth-child(1) p {font-size: calc(100vw * 18 /1920);}
+.section .top .topBox div:nth-child(1) p:nth-child(1),.section .top .topBox div p:nth-child(3) {margin-right: calc(100vw * 20 /1920);}
+.section .top .topBox div:nth-child(1) p:nth-child(2),.section .top .topBox div p:nth-child(4) {font-family: 'Montserrat', sans-serif; font-weight: 700;}
+.section .top .topBox div:nth-child(1) p:nth-child(2) {padding-right: calc(100vw * 30 /1920); border-right: 1px solid #DDDDE1;}
+.section .top .topBox div:nth-child(1) p:nth-child(3) {padding-left: calc(100vw * 30 /1920);}
+.section .top .topBox div:nth-child(1) p:nth-child(4) {font-size: calc(100vw * 22 /1920); color: #DD001A;}
+.section .top .topBox div:nth-child(2) {background-color: black; width: calc(100vw * 160 /1920); color: white; height: calc(100vw * 40 /1920); position: relative;}
+.section .top .topBox div:nth-child(2) p{position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%); font-size: calc(100vw * 16 /1920); white-space:nowrap; }
+
+.section .content {display: flex; justify-content: space-between; margin-top: calc(100vw * 40 /1920); align-items: flex-start;}
+.section .content .contentLeft {padding: calc(100vw * 40 /1920); width: calc(100vw * 580 /1920);border: solid #DDDDE1 1px;}
+.section .content .contentRight {width: calc(100vw * 641 /1920);}
+
+.section .content .contentLeft .content1 {background-color: white; display: flex; border-bottom: 1px solid black; padding-bottom: calc(100vw * 40.5 /1920);}
+.section .content .contentLeft .content1 img {width: calc(100vw * 160 /1920); margin-right: calc(100vw * 20 /1920);}
+.section .content .contentLeft .content1 .textArea {font-family: 'Montserrat', sans-serif;}
+.section .content .contentLeft .content1 .textArea .title {font-size: calc(100vw * 36 /1920); font-weight: 700; line-height: calc(100vw * 44 /1920); margin-bottom: calc(100vw * 10 /1920);}
+.section .content .contentLeft .content1 .textArea p{white-space: nowrap; font-size: calc(100vw * 18 /1920); font-weight: 400; line-height:calc(100vw * 22 /1920);}
+.section .content .contentLeft .content1 .textArea p:nth-child(4){font-family: 'Noto Sans KR', sans-serif !important;}
+.section .content .contentLeft .content1 .textArea p:nth-child(2),.section .content .contentLeft .content1 .textArea p:nth-child(3) {margin-bottom: calc(100vw * 10 /1920);}
+
+.section .content .contentLeft .content2 {font-family: 'Noto Sans KR', sans-serif; padding-top: calc(100vw * 25.5 /1920); padding-bottom: calc(100vw * 31.9 /1920); border-bottom: 1px solid black;}
+.section .content .contentLeft .content2 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
+.section .content .contentLeft .content2 .contentArea .item .itemLeft{color: #888888;}
+.section .content .contentLeft .content2 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentLeft .content2 .contentArea .item .itemRight.btnFlex{display: flex;}
+.section .content .contentLeft .content2 .contentArea .result{width: 100%; background-color: #F5F5F5; padding-top: calc(100vw * 20 /1920); padding-bottom: calc(100vw * 20 /1920); padding-left: calc(100vw * 30 /1920); padding-right: calc(100vw * 20 /1920);}
+.section .content .contentLeft .content2 .contentArea .result div{display: flex; justify-content: space-between; align-items: center;}
+.section .content .contentLeft .content2 .contentArea .result div:nth-child(1){margin-bottom: calc(100vw * 15 /1920);}
+.section .content .contentLeft .content2 .contentArea .result div p{font-size: calc(100vw * 18 /1920);}
+.section .content .contentLeft .content2 .contentArea .result div p:nth-child(1){color: #888888;}
+.section .content .contentLeft .content2 .contentArea .result div p:nth-child(2){font-family: 'Montserrat', sans-serif; font-weight: 700;}
+.section .content .contentLeft .content2 .contentArea .item.item2 {margin-top: calc(100vw * 15 /1920);}
+
+.section .content .contentLeft .content3 {font-family: 'Noto Sans KR', sans-serif; padding-top: calc(100vw * 25.5 /1920); padding-bottom: calc(100vw * 31.9 /1920);}
+.section .content .contentLeft .content3 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
+.section .content .contentLeft .content3 .contentArea .item .itemLeft{color: #888888;}
+.section .content .contentLeft .content3 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentLeft .content3 .contentArea .item .itemRight.btnFlex{display: flex;}
+.section .content .contentLeft .content3 .contentArea .item.item2 {margin-top: calc(100vw * 15 /1920);}
+.section .content .contentLeft .content3 .contentArea .item.item1 {color: #DD001A !important; font-weight: 700;}
+.section .content .contentLeft .content3 .contentArea .item.item1 .itemLeft {font-size: calc(100vw * 16 /1920);color: #DD001A;}
+.section .content .contentLeft .content3 .contentArea .item.item1 .itemRight {font-size: calc(100vw * 28 /1920);}
+
+.section .content .contentRight .content1 {font-family: 'Noto Sans KR', sans-serif; padding-bottom: calc(100vw * 30.5 /1920); border-bottom: 1px solid black;}
+.section .content .contentRight .content1 .title {font-size: calc(100vw * 28 /1920); font-weight: 700;  margin-bottom: calc(100vw * 20 /1920);}
+.section .content .contentRight .content1 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
+.section .content .contentRight .content1 .contentArea .item .itemLeft{color: #888888;}
+.section .content .contentRight .content1 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentRight .content1 .contentArea .item .itemRight:nth-child(1),.section .content .contentRight .content1 .contentArea .item .itemRight:nth-child(2){font-family: 'Noto Sans KR', sans-serif;}
+.section .content .contentRight .content1 .contentArea .item .itemRight.btnFlex{display: flex;}
+
+.section .content .contentRight .content2 {font-family: 'Noto Sans KR', sans-serif; padding-top: calc(100vw * 30.5 /1920); border-bottom: 1px solid black;}
+.section .content .contentRight .content2 .title {font-size: calc(100vw * 28 /1920); font-weight: 700;  margin-bottom: calc(100vw * 20 /1920);}
+.section .content .contentRight .content2 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
+.section .content .contentRight .content2 .contentArea .item .itemLeft{color: #888888;}
+.section .content .contentRight .content2 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentRight .content2 .contentArea .item .itemRight:nth-child(5){font-family: 'Noto Sans KR', sans-serif; display: none;}
+.section .content .contentRight .content2 .contentArea .item .itemRight.btnFlex{display: flex;}
+.section .content .contentRight .content2 .contentArea .result{width: 100%; background-color: #F5F5F5; height: calc(100vw * 76 /1920); display: flex; justify-content: space-between; align-items: center; padding: 0 calc(100vw * 30 /1920);}
+.section .content .contentRight .content2 .contentArea .result p:nth-child(1){font-size: calc(100vw * 16 /1920); color: #DD001A; font-weight: 700;}
+.section .content .contentRight .content2 .contentArea .result p:nth-child(2){font-size: calc(100vw * 28 /1920);font-family: 'Montserrat', sans-serif; font-weight: 700;}
+
+.section .btn { margin-top: calc(100vw * 60.5 /1920); position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; color: white; text-align: center; width: calc(100vw * 265 /1920); height: calc(100vw * 70 /1920); background-color: #DD001A;}
+.section .btn p{font-size: calc(100vw * 18 /1920); font-weight: 700;}
