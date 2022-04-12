@@ -44,7 +44,7 @@ body{width:100%;height:100%; background-color: #ffffff; -ms-overflow-style: none
 /* ---- section2 ---- */
 #section2 {width: calc(100vw * 1220 /1920); height: 100%; background-color: #F5F5F5; position: fixed; display: flex; align-items: center;} 
 #section2 img:nth-child(1) { object-fit: cover;}
-#section2 .popUp {position: fixed; bottom: calc(100vw * 40 /1920); left: calc(100vw * 40 /1920); z-index: 5; width: calc(100vw * 460 /1920);}
+#section2 .popUp {position: fixed; bottom: calc(100vw * 40 /1920); left: calc(100vw * 40 /1920); z-index: 5; width: calc(100vw * 460 /1920); cursor: pointer;}
 
 /* ---- section3 ---- */
 #section3 {margin-left: calc(100vw * 1220 /1920); width: calc(100vw * 700 /1920); height: calc(100vw * 1080 /1920); background-color: #ffffff;}

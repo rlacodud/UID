@@ -201,3 +201,9 @@ $('.outColor').on('click',function(){
   $(this).find('.checkImg').addClass('show');
   // $(this).children('.cir1').removeClass('show');
 });
+
+$('.popUp').on('click',function(){
+  $('.popUp').css({
+    'display':'none'
+  })
+});
