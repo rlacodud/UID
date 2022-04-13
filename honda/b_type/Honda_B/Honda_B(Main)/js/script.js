@@ -373,10 +373,12 @@ if (documentHeight >= section6Top){
     $('.bannerContainer .image-area img').css({
       'height':'calc(100vw * 300 /1920)',
       'width' : 'calc(100vw * 1840 /1920)',
-    'margin-left': 'calc(100vw * 40 /1920)'
+      'margin-left': 'calc(100vw * 40 /1920)',
+      'margin-top': 'calc(100vw * -200 /1920'
     })
     $('.bannerContainer .thumbnail p').css({
-        'opacity':'1'
+        'opacity':'1',
+        'margin-top': 'calc(100vw * -200 /1920'
     })
     $('.bannerContainer .text-area').css({
       'opacity':'0'
@@ -386,10 +388,12 @@ if (documentHeight >= section6Top && documentHeight < section6Top+100){
   $('.bannerContainer .image-area img').css({
     'height':'calc(100vw * 400 /1920)',
     'width' : 'calc(100vw * 1890 /1920)',
-    'margin-left': 'calc(100vw * 20 /1920)'
+    'margin-left': 'calc(100vw * 20 /1920)',
+    'margin-top': 'calc(100vw * 0 /1920'
   })
   $('.bannerContainer .thumbnail p').css({
-    'opacity':'1'
+    'opacity':'1',
+    'margin-top': 'calc(100vw * 0 /1920'
   })
   $('.bannerContainer .text-area').css({
     'opacity':'0'
