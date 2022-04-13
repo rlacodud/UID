@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* ---- Body ---- */
+body, html {width: 425; max-width: 425px; text-align: center; margin: 0 auto;	font-family: 'pretendardBold'; font-weight: bolder; overflow-x: hidden;}
+.phone {position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; text-align: center;}
+.phone img {width: 399px; height: 800px;object-fit: cover;}
+.total {width: 100%; text-align: center; margin: 0 auto; background-color: #fff;}
+.total-container {background-color: #fff; position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 375px; height: 772px; overflow-y: scroll; text-align: center; margin: 0 auto; border-radius: 50px;}
+.total-container::-webkit-scrollbar {display: none;}
+
+
 /* ---- Body ---- */
 body{width:100%;height:100%; background-color: #fff; -ms-overflow-style: none;  cursor: url("../img/Accord-02.jpg"), auto;
   font-family: 'Montserrat', sans-serif;
