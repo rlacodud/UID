@@ -10,6 +10,14 @@ $(document).ready(function(){
     $("#"+tab_id).addClass('current');
   })
 
+    $('#tab-2').hover(() => {
+      $('.tabs li:nth-child(2)').css({
+        'font-weight': '700',
+        'line-height': 'calc(100vw * 29 /1920)',
+        'color': '#DD001A'
+      })
+    })
+
   $('.con3Btn1').click(function(){
     $('.con3Btn1').addClass('active');
     $('.con3Btn2').removeClass('active');
@@ -17,7 +25,7 @@ $(document).ready(function(){
   $('.con3Btn2').click(function(){
     $('.con3Btn2').addClass('active');
     $('.con3Btn1').removeClass('active');
-  })
+  });
 
   // let btn1 = 1;
   // $('.Question1').click(function(){
