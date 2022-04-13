@@ -355,6 +355,7 @@ $(document).ready(function() {
   }
 });
 
+
 /* ---- Banner scroll resize ---- */
 
 function BannerScrollEvent() {
@@ -370,112 +371,73 @@ if (documentHeight >= section6Top){
 } else {
     $('.box-banner').removeClass('fixed');
     $('.bannerContainer .image-area img').css({
-      'height':'calc(100vw * 370 / 1920)',
+      'height':'calc(100vw * 300 /1920)',
       'width' : 'calc(100vw * 1840 /1920)',
-      'margin-left': 'calc(100vw * 40 /1920)'
+    'margin-left': 'calc(100vw * 40 /1920)'
     })
-    $('.bannerContainer .image-area img').css({
-      'opacity':'1'
-    })
-    $('.bannerContainer .video-area iframe').css({
-      'opacity':'0'
-    })
-    $('.bannerContainer .thumbnail').css({
+    $('.bannerContainer .thumbnail p').css({
         'opacity':'1'
     })
-    $('.bannerContainer .video-area').css({
+    $('.bannerContainer .text-area').css({
       'opacity':'0'
   })
 }
 if (documentHeight >= section6Top && documentHeight < section6Top+100){
   $('.bannerContainer .image-area img').css({
-    'height':'calc(100vw * 480 /1920)',
+    'height':'calc(100vw * 400 /1920)',
     'width' : 'calc(100vw * 1890 /1920)',
     'margin-left': 'calc(100vw * 20 /1920)'
   })
-  $('.bannerContainer .image-area img').css({
+  $('.bannerContainer .thumbnail p').css({
     'opacity':'1'
   })
-  $('.bannerContainer .video-area iframe').css({
-    'opacity':'0'
-  })
-  $('.bannerContainer .thumbnail').css({
-    'opacity':'1'
-  })
-  $('.bannerContainer .video-area').css({
+  $('.bannerContainer .text-area').css({
     'opacity':'0'
 })
 }
 if (documentHeight >= section6Top+200 && documentHeight < section6Top+300){
   $('.bannerContainer .image-area img').css({
-    'height':'70%',
+    'height':'calc(100vw * 500 /1920)',
     'width' : 'calc(100vw * 1920 /1920)',
     'margin-left': 'calc(100vw * 0 /1920)'
   })
-  $('.bannerContainer .video-area iframe').css({
-    'height':'70%'
+  $('.bannerContainer .thumbnail p').css({
+    'opacity':'0.5'
   })
+  $('.bannerContainer .text-area').css({
+    'opacity':'0'
+  })
+}
+if (documentHeight >= section6Top+300 && documentHeight < section6Top+400){
   $('.bannerContainer .image-area img').css({
-    'opacity':'0.5'
+    'height':'calc(100vw * 600 /1920)'
   })
-  $('.bannerContainer .video-area iframe').css({
+  $('.bannerContainer .thumbnail p').css({
     'opacity':'0'
   })
-  $('.bannerContainer .thumbnail').css({
+  $('.bannerContainer .text-area').css({
     'opacity':'0.5'
-  })
-  $('.bannerContainer .video-area').css({
-    'opacity':'0'
   })
 }
 if (documentHeight >= section6Top+400 && documentHeight < section6Top+500){
-  $('.bannerContainer .video-area iframe').css({
-    'height':'80%'
-  })
   $('.bannerContainer .image-area img').css({
+    'height':'calc(100vw * 685 /1920)'
+  })
+  $('.bannerContainer .thumbnail p').css({
     'opacity':'0'
   })
-  $('.bannerContainer .video-area iframe').css({
-    'opacity':'0.5'
-  })
-  $('.bannerContainer .thumbnail').css({
-    'opacity':'0'
-  })
-  $('.bannerContainer .video-area').css({
-    'opacity':'0.5'
-  })
-}
-if (documentHeight >= section6Top+600 && documentHeight < section6Top+700){
-  $('.bannerContainer .video-area iframe').css({
-    'height':'90%'
-  })
-  $('.bannerContainer .image-area img').css({
-    'opacity':'0'
-  })
-  $('.bannerContainer .video-area iframe').css({
-    'opacity':'1'
-  })
-  $('.bannerContainer .thumbnail').css({
-    'opacity':'0'
-  })
-  $('.bannerContainer .video-area').css({
+  $('.bannerContainer .text-area').css({
     'opacity':'1'
   })
 }
-if (documentHeight >= section6Top+900 && documentHeight < section6Top+3000){
-  $('.bannerContainer .video-area iframe').css({
-    'height':'100%'
-  })
+if (documentHeight >= section6Top+500 && documentHeight < section6Top+1000){
   $('.bannerContainer .image-area img').css({
+    'height':'calc(100vw * 685 /1920)'
+  })
+  $('.bannerContainer .thumbnail p').css({
     'opacity':'0'
   })
-  $('.bannerContainer .video-area iframe').css({
-    'opacity':'1'
-  })
-  $('.bannerContainer .thumbnail').css({
-    'opacity':'0'
-  })
-  $('.bannerContainer .video-area').css({
+  $('.bannerContainer .text-area').css({
     'opacity':'1'
   })
 }

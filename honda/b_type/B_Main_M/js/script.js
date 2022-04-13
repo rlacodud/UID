@@ -1,3 +1,21 @@
+/* ---- main ---- */
+$(document).ready(function() {
+  let documentHeight = $(document).scrollTop();
+  let section1Top = jQuery('#section1').offset().top;
+  let $title = $('#section1 .text-area .title');
+  let $desc = $('#section1 .text-area .desc');
+  let $moreBtn = $('#section1 .text-area .more-btn');
+  let $li1 = $('#section1 .text-area ul li:nth-child(1)');
+  let $li2 = $('#section1 .text-area ul li:nth-child(2)');
+
+  if (documentHeight >= section1Top-300){
+    $title.addClass('up1');
+    $desc.addClass('up2');
+    $moreBtn.addClass('up3');
+    $li1.addClass('up4');
+    $li2.addClass('up5');
+  }
+});
 
 /* ---- section2 text ---- */
 $(document).ready(function() {

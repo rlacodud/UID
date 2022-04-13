@@ -48,8 +48,8 @@ p{font-size: calc(100vw * 18 /1920);}
 
 .section .content .contentLeft .content2 {font-family: 'Noto Sans KR', sans-serif; padding-top: calc(100vw * 25.5 /1920); padding-bottom: calc(100vw * 31.9 /1920); border-bottom: 1px solid black;}
 .section .content .contentLeft .content2 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
-.section .content .contentLeft .content2 .contentArea .item .itemLeft{color: #888888;}
-.section .content .contentLeft .content2 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentLeft .content2 .contentArea .item .itemLeft{ padding-left: calc(100vw * 20 /1920);color: #888888;}
+.section .content .contentLeft .content2 .contentArea .item .itemRight{padding-right: calc(100vw * 20 /1920); font-weight: 700;}
 .section .content .contentLeft .content2 .contentArea .item .itemRight.btnFlex{display: flex;}
 .section .content .contentLeft .content2 .contentArea .result{width: 100%; background-color: #F5F5F5; padding-top: calc(100vw * 20 /1920); padding-bottom: calc(100vw * 20 /1920); padding-left: calc(100vw * 30 /1920); padding-right: calc(100vw * 20 /1920);}
 .section .content .contentLeft .content2 .contentArea .result div{display: flex; justify-content: space-between; align-items: center;}
@@ -59,29 +59,29 @@ p{font-size: calc(100vw * 18 /1920);}
 .section .content .contentLeft .content2 .contentArea .result div p:nth-child(2){font-family: 'Montserrat', sans-serif; font-weight: 700;}
 .section .content .contentLeft .content2 .contentArea .item.item2 {margin-top: calc(100vw * 15 /1920);}
 
-.section .content .contentLeft .content3 {font-family: 'Noto Sans KR', sans-serif; padding-top: calc(100vw * 25.5 /1920); padding-bottom: calc(100vw * 31.9 /1920);}
-.section .content .contentLeft .content3 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
-.section .content .contentLeft .content3 .contentArea .item .itemLeft{color: #888888;}
-.section .content .contentLeft .content3 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentLeft .content3 {font-family: 'Noto Sans KR', sans-serif; padding-top: calc(100vw * 25 /1920); padding-bottom: calc(100vw * 0 /1920);}
+.section .content .contentLeft .content3 .contentArea .item{display: flex;justify-content: space-between; align-items: center;}
+.section .content .contentLeft .content3 .contentArea .item .itemLeft{padding-left: calc(100vw * 20 /1920);color: #888888;}
+.section .content .contentLeft .content3 .contentArea .item .itemRight{padding-right: calc(100vw * 20 /1920); font-weight: 700;}
 .section .content .contentLeft .content3 .contentArea .item .itemRight.btnFlex{display: flex;}
 .section .content .contentLeft .content3 .contentArea .item.item2 {margin-top: calc(100vw * 15 /1920);}
 .section .content .contentLeft .content3 .contentArea .item.item1 {color: #DD001A !important; font-weight: 700;}
 .section .content .contentLeft .content3 .contentArea .item.item1 .itemLeft {font-size: calc(100vw * 16 /1920);color: #DD001A;}
 .section .content .contentLeft .content3 .contentArea .item.item1 .itemRight {font-size: calc(100vw * 28 /1920);}
 
-.section .content .contentRight .content1 {font-family: 'Noto Sans KR', sans-serif; padding-bottom: calc(100vw * 30.5 /1920); border-bottom: 1px solid black;}
-.section .content .contentRight .content1 .title {font-size: calc(100vw * 28 /1920); font-weight: 700;  margin-bottom: calc(100vw * 20 /1920);}
-.section .content .contentRight .content1 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
-.section .content .contentRight .content1 .contentArea .item .itemLeft{color: #888888;}
-.section .content .contentRight .content1 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentRight .content1 {font-family: 'Noto Sans KR', sans-serif; padding-bottom: calc(100vw * 0 /1920); border-bottom: 1px solid black;}
+.section .content .contentRight .content1 .title {font-size: calc(100vw * 28 /1920); font-weight: 700;  margin-bottom: calc(100vw * 25 /1920);}
+.section .content .contentRight .content1 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 23 /1920); align-items: center;}
+.section .content .contentRight .content1 .contentArea .item .itemLeft{padding-left: calc(100vw * 20 /1920); color: #888888;}
+.section .content .contentRight .content1 .contentArea .item .itemRight{padding-right: calc(100vw * 20 /1920); font-weight: 700;}
 .section .content .contentRight .content1 .contentArea .item .itemRight:nth-child(1),.section .content .contentRight .content1 .contentArea .item .itemRight:nth-child(2){font-family: 'Noto Sans KR', sans-serif;}
 .section .content .contentRight .content1 .contentArea .item .itemRight.btnFlex{display: flex;}
 
 .section .content .contentRight .content2 {font-family: 'Noto Sans KR', sans-serif; padding-top: calc(100vw * 30.5 /1920); border-bottom: 1px solid black;}
-.section .content .contentRight .content2 .title {font-size: calc(100vw * 28 /1920); font-weight: 700;  margin-bottom: calc(100vw * 20 /1920);}
-.section .content .contentRight .content2 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 20 /1920); align-items: center;}
-.section .content .contentRight .content2 .contentArea .item .itemLeft{color: #888888;}
-.section .content .contentRight .content2 .contentArea .item .itemRight{font-weight: 700;}
+.section .content .contentRight .content2 .title {font-size: calc(100vw * 28 /1920); font-weight: 700;  margin-bottom: calc(100vw * 25 /1920);}
+.section .content .contentRight .content2 .contentArea .item{display: flex;justify-content: space-between; margin-bottom: calc(100vw * 23 /1920); align-items: center;}
+.section .content .contentRight .content2 .contentArea .item .itemLeft{padding-left: calc(100vw * 20 /1920); color: #888888;}
+.section .content .contentRight .content2 .contentArea .item .itemRight{padding-right: calc(100vw * 20 /1920); font-weight: 700;}
 .section .content .contentRight .content2 .contentArea .item .itemRight:nth-child(5){font-family: 'Noto Sans KR', sans-serif; display: none;}
 .section .content .contentRight .content2 .contentArea .item .itemRight.btnFlex{display: flex;}
 .section .content .contentRight .content2 .contentArea .result{width: 100%; background-color: #F5F5F5; height: calc(100vw * 76 /1920); display: flex; justify-content: space-between; align-items: center; padding: 0 calc(100vw * 30 /1920);}

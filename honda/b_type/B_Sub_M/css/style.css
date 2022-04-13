@@ -10,10 +10,13 @@ body{width:100%;height:100%; background-color: #000; -ms-overflow-style: none;  
   display: none;
 }
 
-.btn {position: fixed; margin-left: calc(100vw * 1800 /1920); margin-top: calc(100vw * 30 /1920);}
+.btn { float: right; padding: calc(100vw * 20 / 375);}
+.btn img {width: calc(100vw * 35 / 375); height: calc(100vw * 35 / 375);}
 
 /* ---- section1 ---- */
 #section1 {width: 100%; height: 100%;}
+#section1 .btn {position: fixed; margin-left: calc(100vw * 300 / 375); padding: calc(100vw * 20 / 375);}
+#section1 .btn img {width: calc(100vw * 35 / 375); height: calc(100vw * 35 / 375);}
 
 /* ---- select1 ---- */
 #select1 {width: 100%; height: 100%;background-color: #fff;}

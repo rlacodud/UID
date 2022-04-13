@@ -49,7 +49,6 @@ body{width:100%;height:100%; background-color: #ffffff; -ms-overflow-style: none
 /* ---- section3 ---- */
 #section3 {margin-left: calc(100vw * 1220 /1920); width: calc(100vw * 700 /1920); height: calc(100vw * 1080 /1920); background-color: #ffffff;}
 .container{width: calc(100vw * 700 /1920); height: calc(100vw * 1000 /1920); background-color: #ffffff;}
-
 #section3 .container .tabArea{width: 100%; height: calc(100vw * 190 /1920); position: fixed; top: 0; background-color: white; z-index: 1;}
 #section3 .container .tabArea ul.tabs{margin-left: calc(100vw * 80 /1920); margin-top: calc(100vw * 100 /1920);}
 #section3 .container .tabArea li{padding-right: calc(100vw * 32 /1920); background: none; display: inline-block; display: inline-block; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 20 /1920); font-weight: 500; line-height: calc(100vw * 29 /1920); color:#C9C9C9; cursor: pointer;}
@@ -68,126 +67,35 @@ body{width:100%;height:100%; background-color: #ffffff; -ms-overflow-style: none
 .Accordion li .Question img.choice2 {display: none;}
 .Accordion li .Question img.choice1.show {display: block;}
 .Accordion li .Question img.choice2.show {display: block;}
-.Accordion li .Question h1 {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 18 /1920); font-weight: 700; line-height: calc(100vw * 75 /1920); color:#000000;}
+.Accordion li .Question h1 { padding: calc(100vw * 20 /1920); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 18 /1920); font-weight: 700; line-height: calc(100vw * 38 / 1920); color:#000000;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Accordion .type{
-  transition: all 1s;
-  border-bottom: 1px solid ;
-}
-.Accordion li.show .Question::after {
-}
-.Accordion li.show .Answer {
-  display: block;
-}
-.Accordion li .Answer {
-  padding-bottom: calc(100vw * 30 /1920);
-  display: none;
-}
-
-.Accordion li .Answer ul {
-  display: flex;
-}
-
-.Accordion li .Answer ul li {
-  width: calc(100vw * 260 /1920); 
-  height: calc(100vw * 70 /1920); 
-  text-align: center;
-  border: 1px solid #DDDDE1;
-  margin-left: calc(100vw * 20 /1920);
-  font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 14 /1920); font-weight: 500; line-height: calc(100vw * 70 /1920); color:#000000;
-}
-.Accordion li .Answer ul li:first-child {
-  margin-left: calc(100vw * 0 /1920);
-}
-
-.Accordion li .Answer ul li.show {
-  border: 2px solid #DD001A;
-}
-.Accordion li:nth-child(2) .Answer ul {
-  width: calc(100vw * 365 /1920); 
-  display:grid;
-  grid-template-columns: 50% 50% 50%;
-}
-.Accordion li:nth-child(2) .Answer ul li {
-  position: relative;
-  width: calc(100vw * 174 /1920); 
-  height: calc(100vw * 140 /1920); 
-  text-align: center;
-  border: 1px solid #DDDDE1;
-  margin-left: calc(100vw * 0 /1920);
-  margin-bottom: calc(100vw * 10 /1920);
-  font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 14 /1920); font-weight: 500; line-height: calc(100vw * 30 /1920); color:#000000;
-}
-.Accordion li:nth-child(2) .Answer ul li.show {
-  border: 2px solid #DD001A;
-  background-image: url(../img/popUp);
-  /* display: none; */
-}
-.Accordion li .Answer ul li .circle {
-  width: calc(100vw * 40 /1920);
-  height: calc(100vw * 40 /1920);
-  background-color: blue;
-  border-radius: 50%;
-  position:relative;
-  margin-top: calc(100vw * 30 /1920);
-  margin-left: calc(100vw * 65 /1920);
-  margin-bottom: calc(100vw * 10 /1920);
-}
-
+.Accordion .type{  transition: all 1s;  border-bottom: 1px solid ;}
+.Accordion .type:last-child{  transition: all 1s;  border-bottom: 0px solid ;}
+.Accordion li.show .Answer {  display: block;}
+.Accordion li .Answer {  padding-bottom: calc(100vw * 30 /1920);  display: none;}
+.Accordion li .Answer ul {  display: flex;}
+.Accordion li .Answer ul li {  width: calc(100vw * 260 /1920);   height: calc(100vw * 70 /1920);   text-align: center;  border: 1px solid #DDDDE1;  margin-left: calc(100vw * 20 /1920);  font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 14 /1920); font-weight: 500; line-height: calc(100vw * 70 /1920); color:#000000;}
+.Accordion li .Answer ul li:first-child {  margin-left: calc(100vw * 0 /1920);}
+.Accordion li .Answer ul li.show {  border: 2px solid #DD001A;}
+.Accordion li:nth-child(2) .Answer ul {  width: calc(100vw * 365 /1920);   display:grid;  grid-template-columns: 50% 50% 50%;}
+.Accordion li:nth-child(2) .Answer ul li {  position: relative;  width: calc(100vw * 174 /1920);   height: calc(100vw * 140 /1920);   text-align: center;  border: 1px solid #DDDDE1;  margin-left: calc(100vw * 0 /1920);  margin-bottom: calc(100vw * 10 /1920);  font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 14 /1920); font-weight: 500; line-height: calc(100vw * 30 /1920); color:#000000;}
+.Accordion li:nth-child(2) .Answer ul li.show {  border: 2px solid #DD001A;  background-image: url(../img/popUp);  /* display: none; */}
+.Accordion li .Answer ul li .circle {  width: calc(100vw * 40 /1920);  height: calc(100vw * 40 /1920); background-color: blue; border-radius: 50%; position:relative; margin-top: calc(100vw * 30 /1920);  margin-left: calc(100vw * 65 /1920);  margin-bottom: calc(100vw * 10 /1920);}
 .Accordion li .Answer ul li:nth-child(1) .circle {background-color: #EEEDF1; }
 .Accordion li .Answer ul li:nth-child(2) .circle {background-color: #A8A9AD; }
 .Accordion li .Answer ul li:nth-child(3) .circle {background-color: #424348; }
 .Accordion li .Answer ul li:nth-child(4) .circle {background-color: #000000; }
 .Accordion li .Answer ul li:nth-child(5) .circle {background-color: #061C3C; }
 .Accordion li .Answer ul li:nth-child(6) .circle {background-color: #7C151B; }
-
 .checkImg {display: none;position: absolute; width: 15.4px; left: 50%; transform: translateX(-50%); top: 44.7px; z-index: 4;}
 .checkImg.show {display: block;}
-
-.bar {
-  bottom: 0;
-  position: fixed;
-  width: calc(100vw * 700 /1920);
-  height: calc(100vw * 160 /1920);
-  margin-left: calc(100vw * -80 /1920);
-  margin-top: calc(100vw *  97 /1920);
-  background-color: #000000;
-  padding-left: calc(100vw * 80 /1920); padding-top: calc(100vw * 20 /1920);
-}
-.bar ul {display: flex; width: calc(100vw * 540 /1920) !important; justify-content: space-between; color: white; align-items: center;}
+.bar {  bottom: 0;  position: fixed;  width: calc(100vw * 700 /1920);  height: calc(100vw * 160 /1920);  margin-left: calc(100vw * -80 /1920);  margin-top: calc(100vw *  97 /1920);  background-color: #000000;  padding-left: calc(100vw * 80 /1920); padding-top: calc(100vw * 30 /1920);}
+.bar ul {display: flex; width: calc(100vw * 540 /1920); justify-content: space-between; color: white; align-items: center;}
 .bar ul li:nth-child(1) {font-size: calc(100vw * 16 /1920);}
 .bar ul li:nth-child(2) {font-size: calc(100vw * 28 /1920);font-family: 'Montserrat', sans-serif; font-weight: 700;}
 .bar div {margin-top: calc(100vw * 20 /1920);background-color: #DD001A; color: white; width: calc(100vw * 540 /1920); height:calc(100vw * 50 /1920);justify-content: center;align-items: center; display: flex;}
-
-.Accordion li:nth-child(3) .Answer ul li {
-  height: calc(100vw * 140 /1920);
-  line-height: 0;
-  position: relative;
-}
-
-.Accordion li:nth-child(3) .Answer ul li p {
-  position: absolute;
-  bottom: 34px;
-  line-height: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
+.Accordion li:nth-child(3) .Answer ul li {  height: calc(100vw * 140 /1920);  line-height: 0;  position: relative;}
+.Accordion li:nth-child(3) .Answer ul li p {  position: absolute;  bottom: 34px;  line-height: 22px;  left: 50%;  transform: translateX(-50%);}
 .cir {width: 40px; margin-top: 34px; margin-bottom: 14px; position: absolute; left: 50%; transform: translateX(-50%);}
 .cir {display: none;}
 .cir.show {display: block;}
