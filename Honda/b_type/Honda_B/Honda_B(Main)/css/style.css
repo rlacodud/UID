@@ -32,8 +32,9 @@ header nav .right {float: right; margin-top: calc(100vw * 10 /1920); margin-righ
 header nav .right ul {display: flex;}
 header nav .right ul li {margin-left: calc(100vw * 20 /1920);}
 header nav .right ul li a {text-align: center; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 16 /1920); font-weight: 400; line-height:calc(100vw * 24 / 1920); color:#ffffff; text-decoration: underline;}
-header nav .right .login img {width:calc(100vw * 24 /1920); height: calc(100vw * 26 /1920);}
-header nav .right .alarm img {margin-top: calc(100vw * -2 /1920); width:calc(100vw * 25 /1920); height: calc(100vw * 28 /1920);}
+header nav .right .car img {width:calc(100vw * 26 /1920); height: calc(100vw * 26 /1920);}
+header nav .right .login img {margin-left: calc(100vw * 3 /1920); width:calc(100vw * 24 /1920); height: calc(100vw * 26 /1920);}
+header nav .right .alarm img {margin-top: calc(100vw * -1 /1920); width:calc(100vw * 25 /1920); height: calc(100vw * 28 /1920);}
 
 
 /* ---- fixed ---- */
