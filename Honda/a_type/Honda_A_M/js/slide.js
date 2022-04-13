@@ -5,7 +5,10 @@ function slider() {
     first = slider.firstElementChild
   slider.insertBefore(last, first);
 
+  setInterval(function () {$('.button-container .button').addClass('opacity'); }, 1500);
+  setInterval(function () {$('.button-container .button').removeClass('opacity'); }, 3000);
   setInterval(function () { movement({ target: { id: "next" } }); }, 3000);
+
   setInterval(function () { progressbar({ target: { id: "next" } }); }, 3000);
 
   function movement(e) {
@@ -27,24 +30,20 @@ function slider() {
   }
   function progressbar () {
     if($('.slide_one').hasClass('active')) {
-      $('#number').text('01');
       $('.sub-title h3').removeClass('upAni1')
       $('.slide_one .sub-title h3').addClass('upAni1')
       $('.title h2').removeClass('upAni2')
       $('.slide_one .title h2').addClass('upAni2')
     } else if($('.slide_two').hasClass('active')) {
-      $('#number').text('02');
       $('.sub-title h3').removeClass('upAni1')
       $('.slide_two .sub-title h3').addClass('upAni1')
       $('.title h2').removeClass('upAni2')
       $('.slide_two .title h2').addClass('upAni2')
     } else if($('.slide_three').hasClass('active')) {
-      $('#number').text('03');
       $('.sub-title h3').removeClass('upAni1')
       $('.slide_three .sub-title h3').addClass('upAni1')
       $('.title h2').removeClass('upAni2')
       $('.slide_three .title h2').addClass('upAni2')
-
     }
   }
   progressbar();

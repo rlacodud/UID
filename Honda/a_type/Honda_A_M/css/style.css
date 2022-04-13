@@ -112,7 +112,21 @@ section {width: 100%; position: relative;}
 #section1 .main-text-container .title h2 {width: 100%; position: absolute; left: 50%; transform: translateX(-50%); line-height: 90px; font-size: 80px; color: #fff;}
 #section1 .main-text-container .new {font-size: 14px; margin-right: -12px;}
 #section1 .button-container {position: absolute; top: 372px; left: 50%; transform: translateX(-50%); z-index: 10000;}
-#section1 .button-container .button {width: 140px; height: 50px; background: transparent; border: 1px solid #fff; position: relative;}
+#section1 .button-container .button {opacity: 0; width: 140px; height: 50px; background: transparent; border: 1px solid #fff; position: relative;}
+.opacity {animation-name: opacity; animation-fill-mode: forwards;}
+#section1 .button-container #button-one {animation-delay: 0s; animation-duration: 1.2s;}
+#section1 .button-container #button-two {animation-delay: 0.1s; animation-duration: 1.3s;}
+#section1 .button-container #button-three {animation-delay: 0.2s; animation-duration: 1.4s;}
+@keyframes opacity {
+	0% {
+		opacity: 0;
+		top: 20px;
+	}
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+}
 #section1 .button-container .button.active {background: #CC2132; border: none;}
 #section1 .button-container .button:nth-child(2) {margin: 11PX 0;}
 #section1 .button-container .button:nth-child(2) a {display: inline-block; width: 100%; height: 100%;}
