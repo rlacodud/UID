@@ -31,7 +31,7 @@ section {z-index: 1000;}
 
 .float-menu-container {width: 375px; height: 350px; position: fixed; top:0; left: 50%; transform: translateX(-50%); z-index: 1001;}
 .menu-container {width: 100%; height: 350px; position: relative; top: 0; left: 0;}
-.float-menu  {position: absolute; margin: 0 auto; text-align: center; z-index: 10000; top: 680px; right: 30px;}
+.float-menu  {position: absolute; margin: 0 auto; text-align: center; z-index: 10000; top: 600px; right: 30px;}
 .float-menu .button {position: relative; width: 70px; height: 70px; border-radius: 50%; background: #CC2132; cursor: pointer; z-index: 1001;}
 .float-menu #quote .icon {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; background-image: url('../img/float_icon.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; transition: all ease-in-out 0.3s;}
 .float-menu #quote.on .icon {background-image: url('../img/quick_close.png'); width: 16px; height: 16px;}
