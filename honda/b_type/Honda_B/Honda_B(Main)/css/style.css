@@ -156,7 +156,7 @@ section {width: 100%; height: 100vh; position: relative;}
 #section5 .box-area .box-item .text-area a {font-family: 'Noto Sans KR', sans-serif; font-size: calc(100vw * 36 /1920); font-weight: 700; line-height:calc(100vw * 52 /1920);  color:#FFFFFF;}
 
 /* ---- section6 ---- */
-#section6 {padding: calc(100vw * -200 /1920); width: 100%; height: calc(100vw * 2000 /1920); background-color: #ffffff; position: relative;}
+#section6 {padding: calc(100vw * -200 /1920); width: 100%; height: calc(100vw * 1500 /1920); background-color: #ffffff; position: relative;}
 #section6 .box-banner {padding: calc(100vw * -200 /1920);}
 #section6 .box-banner .image-area {width: 100%; height: calc(100vw * 740 /1920);}
 #section6 .box-banner.fixed{position: fixed; top: 0; left: 0; z-index: 0;}

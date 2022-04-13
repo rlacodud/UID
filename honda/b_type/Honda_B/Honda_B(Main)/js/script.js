@@ -289,7 +289,6 @@ if (documentHeight >= section2Top+100 && documentHeight < section2Top+200){
   $text3.css({
     'color':'#e8e8e8'        
   })
-  console.log('400');
 }
 if (documentHeight >= section2Top+400 && documentHeight < section2Top+500){
   $text1.css({
@@ -301,7 +300,7 @@ if (documentHeight >= section2Top+400 && documentHeight < section2Top+500){
   $text3.css({
     'color':'#e8e8e8'        
   })
-  console.log('700');
+
 }
 if (documentHeight >= section2Top+600 && documentHeight < section2Top+700){
   $text1.css({
@@ -313,7 +312,6 @@ if (documentHeight >= section2Top+600 && documentHeight < section2Top+700){
   $text3.css({
     'color':'#000000'        
   })
-  console.log('1000');
 }
 if (documentHeight >= section2Bottom-200) {
   $('.swiper').removeClass('fixed');
@@ -434,7 +432,62 @@ if (documentHeight >= section6Top+400 && documentHeight < section6Top+500){
     'opacity':'1'
   })
 }
-if (documentHeight >= section6Top+500 && documentHeight < section6Top+1000){
+if (documentHeight >= section6Top+500 && documentHeight < section6Top+600){
+  $('.bannerContainer .image-area img').css({
+    'height':'calc(100vw * 685 /1920)'
+  })
+  $('.bannerContainer .thumbnail p').css({
+    'opacity':'0'
+  })
+  $('.bannerContainer .text-area').css({
+    'opacity':'1'
+  })
+}
+if (documentHeight >= section6Top+600 && documentHeight < section6Top+700){
+  $('.bannerContainer .image-area img').css({
+    'height':'calc(100vw * 685 /1920)'
+  })
+  $('.bannerContainer .thumbnail p').css({
+    'opacity':'0'
+  })
+  $('.bannerContainer .text-area').css({
+    'opacity':'1'
+  })
+}
+if (documentHeight >= section6Top+700 && documentHeight < section6Top+800){
+  $('.bannerContainer .image-area img').css({
+    'height':'calc(100vw * 685 /1920)'
+  })
+  $('.bannerContainer .thumbnail p').css({
+    'opacity':'0'
+  })
+  $('.bannerContainer .text-area').css({
+    'opacity':'1'
+  })
+}
+if (documentHeight >= section6Top+800 && documentHeight < section6Top+900){
+  $('.bannerContainer .image-area img').css({
+    'height':'calc(100vw * 685 /1920)'
+  })
+  $('.bannerContainer .thumbnail p').css({
+    'opacity':'0'
+  })
+  $('.bannerContainer .text-area').css({
+    'opacity':'1'
+  })
+}
+if (documentHeight >= section6Top+900 && documentHeight < section6Top+1000){
+  $('.bannerContainer .image-area img').css({
+    'height':'calc(100vw * 685 /1920)'
+  })
+  $('.bannerContainer .thumbnail p').css({
+    'opacity':'0'
+  })
+  $('.bannerContainer .text-area').css({
+    'opacity':'1'
+  })
+}
+if (documentHeight >= section6Top+1000 && documentHeight < section6Top+1100){
   $('.bannerContainer .image-area img').css({
     'height':'calc(100vw * 685 /1920)'
   })
@@ -453,6 +506,7 @@ if (documentHeight >= section6Bottom) {
     $('.box-banner').addClass('fixed');
     $('.box-banner').removeClass('absolute');
 }
+console.log(documentHeight, section6Top);
 }
 
 $(window).scroll(function () {
@@ -487,7 +541,6 @@ $(document).ready(function() {
     $titel.addClass('up2');
     $btn.addClass('up3');
     $car.addClass('up7');
-    console.log("차")
   })
 });
 
@@ -507,8 +560,7 @@ if (documentHeight >= section3Top){
   $desc.addClass('up2');
   $slide1.addClass('up3');
   $slide2.addClass('up4');
-  $slide3.addClass('up5');
-  console.log("3에 닿음")    
+  $slide3.addClass('up5');   
 } else {
   $titel.addClass('none');
   $desc.addClass('none');
@@ -532,8 +584,7 @@ function sct5ScrollEvent() {
 
 if (documentHeight+100 >= section4Top+200){
   $boxl.addClass('up1');
-  $box2.addClass('up2');
-  console.log("4에 닿음")    
+  $box2.addClass('up2');  
 } else {
   $boxl.addClass('none');
   $box2.addClass('none');
