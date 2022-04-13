@@ -20,18 +20,18 @@
 }
 body, html {width: 375px; max-width: 375px; text-align: center; margin: 0 auto;	font-family: 'pretendardBold'; font-weight: bolder; overflow-x: hidden;}
 header {width: 100%; position: relative; z-index: 10000;}
-header .container {width: 100%; padding: 15px 20px 0; display: flex;}
+header .container {width: 375px; position: fixed; padding: 15px 20px 0; display: flex;}
 header .container .left {text-align: left; flex: 1}
 header .container .left .logo {width: 50px; height: 32px; background-image: url('../img/logo.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 header .container .right {text-align: right; flex: 1;}
 header .container .right .hamburger {display: inline-block; width: 34px; height: 34px; background-image: url('../img/hamburger.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 
 section {z-index: 1000;}
-.main-container {width: 357px; margin: 0 auto; text-align: center; position: relative;}
+.main-container {width: 100%; margin: 0 auto; text-align: center; position: relative;}
 
 .float-menu-container {width: 375px; height: 350px; position: fixed; top:0; left: 50%; transform: translateX(-50%); z-index: 1001;}
 .menu-container {width: 100%; height: 350px; position: relative; top: 0; left: 0;}
-.float-menu  {position: absolute; margin: 0 auto; text-align: center; z-index: 10000; top: 680px; right: 30px;}
+.float-menu  {position: absolute; margin: 0 auto; text-align: center; z-index: 10000; top: 600px; right: 30px;}
 .float-menu .button {position: relative; width: 70px; height: 70px; border-radius: 50%; background: #CC2132; cursor: pointer; z-index: 1001;}
 .float-menu #quote .icon {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; background-image: url('../img/float_icon.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; transition: all ease-in-out 0.3s;}
 .float-menu #quote.on .icon {background-image: url('../img/quick_close.png'); width: 16px; height: 16px;}
@@ -123,15 +123,15 @@ section {width: 100%; position: relative;}
 #section2 .contents:nth-child(2) {margin-bottom: 64px;}
 #section2 .contents:nth-child(1) .image {margin-bottom: 34px; width: 100%; height: 230px; background-image: url('../img/section2_contents1.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 #section2 .contents:nth-child(2) .image {margin-bottom: 34px; width: 100%; height: 230px; background-image: url('../img/section2_contents2.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
-#section2 .contents .text-container {padding-left: 30px; text-align: left;}
+#section2 .contents .text-container {padding-left: 22px; text-align: left;}
 #section2 .contents .text-container .title {margin-bottom: 15px;}
-#section2 .contents .text-container .title h2 {font-size: 24px; font-weight: bolder;	font-family: 'Pretendard-ExtraBold';}
+#section2 .contents .text-container .title h2 {font-size: 24px;}
 #section2 .contents .text-container .text h5 {font-size: 16px; color: #666666;	font-family: 'Pretendard-Medium';}
 
 #section3 {background: #F4F4F4;}
 #section3 .text-container {padding-top: 131px; margin: 0 auto; text-align: center; margin-bottom: 16px;}
 #section3 .text-container .sub-title {margin-bottom: 7px;}
-#section3 .text-container .sub-title h4 {font-size: 20px; line-height: 24px; font-weight: bolder;	font-family: 'Pretendard-ExtraBold';}
+#section3 .text-container .sub-title h4 {font-size: 20px; line-height: 24px;}
 #section3 .text-container .title {margin-bottom: 12px;}
 #section3 .text-container .title h2 {font-size: 48px; line-height: 56px; font-weight: 900;}
 #section3 .text-container .price h5 {font-size: 16px; line-height: 19px; color: #666666;	font-family: 'Pretendard-ExtraBold'; font-weight: bold;}
@@ -158,7 +158,7 @@ section {width: 100%; position: relative;}
 #section4 {background: #D4D4D4;}
 #section4 .text-container {padding-top: 100px; margin: 0 auto; text-align: center; margin-bottom: 31px; font-weight: bolder; font-family: 'Pretendard-ExtraBold';}
 #section4 .text-container .sub-title {margin-bottom: 10px;}
-#section4 .text-container .sub-title h3 {font-size: 24px; color: #CC2132; font-weight: bolder; font-family: 'Pretendard-ExtraBold';}
+#section4 .text-container .sub-title h3 {font-size: 24px; color: #CC2132;}
 #section4 .text-container .title h2 {font-size: 40px;}
 #section4 .contents-container {padding-bottom: 100.8px;}
 #section4 .contents-container .contents {margin-bottom: 30px;}
@@ -175,8 +175,8 @@ section {width: 100%; position: relative;}
 #section6 {height: 696px;}
 #section6 .text-container {padding-top: 96px; margin: 0 auto; text-align: center; margin-bottom: 31px; font-weight: bolder;}
 #section6 .text-container .sub-title {margin-bottom: 10px;}
-#section6 .text-container .sub-title h3 {font-size: 24px; color: #CC2132;	font-family: 'Pretendard-ExtraBold'; font-weight: bolder;}
-#section6 .text-container .title h2 {font-size: 40px;	font-family: 'Pretendard-ExtraBold'; font-weight: bolder;}
+#section6 .text-container .sub-title h3 {font-size: 24px; color: #CC2132;}
+#section6 .text-container .title h2 {font-size: 40px;}
 #section6 .image-area {text-align: center; margin: 0 auto; margin-bottom: 24px; width: 337px; height: 420px;}
 #section6 .image-area img {width: 300px; height: 420px; object-fit: cover; background-position: center; background-repeat: no-repeat; background-size: cover;}
 #section6 .swiper {position: relative; float: right; width: 337px; height: 420px;}

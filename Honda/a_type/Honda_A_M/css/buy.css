@@ -9,6 +9,7 @@ header .container .right .hamburger {display: inline-block; width: 34px; height:
 
 .border {width: 100%; height: 1px; background: #D2D2D7; margin: 30px 0;}
 .wrap {width: 100%; padding: 0 24px;}
+.main-container {width: 100%; margin: 0 auto; text-align: center; position: relative;}
 
 .comparison-container {display: none; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 10000; width: 375px; height: 1736px;}
 .comparison-container.on {display: block; position: fixed;}
@@ -64,9 +65,9 @@ header .container .right .hamburger {display: inline-block; width: 34px; height:
 .comparison-container .comparison .text .title h2 {font-size: 20px;}
 
 .comparison-container .comparison .engine-option .engine {display: inline-block; width: 50px; height: 50px; background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-right: 0;}
-.comparison-container .comparison .engine-option .engine:nth-child(1) {position: relative; background: #000; border-radius: 10px; margin-right: 10px;}
+.comparison-container .comparison .engine-option .engine:nth-child(1) {position: relative; background: #000; border-radius: 6px; margin-right: 2px;}
 .comparison-container .comparison .engine-option .engine:nth-child(1) .text {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; font-size: 12px; line-height: 15px;}
-.comparison-container .comparison .engine-option .engine:nth-child(2) {background-image: url('../img/engine2.png'); border-radius: 0px;}
+.comparison-container .comparison .engine-option .engine:nth-child(2) {background-image: url('../img/engine2.png'); border-radius: 6px;}
 
 .comparison-container .comparison .engine:nth-child(3) .engine-option .engine:nth-child(1),
 .comparison-container .comparison .engine:nth-child(4) .engine-option .engine:nth-child(1) {background-image: url('../img/engine3.png');}
@@ -76,6 +77,7 @@ header .container .right .hamburger {display: inline-block; width: 34px; height:
 section {position: relative; width: 100%; top: 0; left: 0; font-size: 0;}
 section .form-container {position: absolute; top: 0; right: 0; display: inline-block; width: 100%;}
 body.on { overflow: hidden; max-height: 1574px; position: fixed;}
+.scroll {height: 100vh; overflow-y: scroll;}
 .scroll::-webkit-scrollbar {opacity: 0;}
 section .form-container::-webkit-scrollbar {display: none;}
 
@@ -106,10 +108,10 @@ section .form-container::-webkit-scrollbar {display: none;}
 .main-image .button-container .button.active h5 {color: #fff;}
 .slideContainer {display: none;}
 .slideContainer.on {display: block;}
-.slideContainer ul li {position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; animation: mainFade 6.5s infinite;}
+.slideContainer ul li {position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; animation: mainFade 12.5s infinite;}
 .slideContainer .slideList li:first-child {animation-delay: 0s;}
-.slideContainer .slideList li:nth-child(2) {animation-delay: 2.5s;}
-.slideContainer .slideList li:nth-child(3) {animation-delay: 4.5s;}
+.slideContainer .slideList li:nth-child(2) {animation-delay: 4.5s;}
+.slideContainer .slideList li:nth-child(3) {animation-delay: 8.5s;}
 .slideContainer .slideList li .slideImg {width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center;}
 .slideContainer .slideList li:first-child .slideImg {background-image: url("../img/trim.png");}
 .slideContainer .slideList li:nth-child(2) .slideImg {background-image: url("../img/option.png");}
@@ -123,8 +125,8 @@ section .form-container::-webkit-scrollbar {display: none;}
   100% {opacity: 0;}
 }
 
-.step-title {margin-bottom: 30px; text-align: left;}
-.step-title h2 {font-size: 28px; line-height: 33px; font-family: 'Pretendard-ExtraBold';}
+.step-title {margin-bottom: 20px; text-align: left;}
+.step-title h2 {font-size: 28px; line-height: 33px; font-family: 'Pretendard-ExtraBold'; font-weight: bolder;}
 
 .contents {display: none;}
 .contents.active {display: block;}
@@ -211,8 +213,8 @@ section .form-container::-webkit-scrollbar {display: none;}
 .contents .accord-container .text-container .title h2 {font-size: 36px; line-height: 42px;}
 .contents .accord-container .text-container .sub-title {margin-bottom: 22px;}
 .contents .accord-container .text-container .sub-title h4 {font-size: 13px; line-height: 15px; color: #CC2132;}
-.contents .accord-container .text-container .option-text .color {margin-bottom: 5px; font-size: 12px; font-family: 'Pretendard-Medium'; font-weight: 100;}
-.contents .accord-container .text-container .option-text .option {font-size: 12px;	font-family: 'Pretendard-Medium'; font-weight: 100;}
+.contents .accord-container .text-container .option-text .color {margin-bottom: 5px; font-size: 12px; font-family: 'Pretendard-Medium';}
+.contents .accord-container .text-container .option-text .option {font-size: 12px;	font-family: 'Pretendard-Medium';}
 .contents .accord-container .image {position: absolute; top: 64%; right: 0; transform: translateY(-50%); width: 142px; height: 80px; background-image: url('../img/accord.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 
 .contents .delivery-container .title {margin-bottom: 26px;}
@@ -251,7 +253,7 @@ section .form-container::-webkit-scrollbar {display: none;}
 .contents .caution-container .caution {width: 100%; height: 100%;}
 .contents .caution-container .caution .title {margin-bottom: 13px;}
 .contents .caution-container .caution .title h4 {font-size: 13px; line-height: 28px; color: #555; font-family: 'Pretendard-ExtraBold'; font-weight: bolder;}
-.contents .caution-container .caution .text h6 {font-size: 12px; line-height: 19px; color: #888; font-family: 'Pretendard-Light';}
+.contents .caution-container .caution .text h6 {font-size: 12px; line-height: 19px; font-weight: 100; color: #888; font-family: 'Pretendard-Light';}
 .contents .caution-container .caution .text h6 p {margin-bottom: 13px; text-align: left;}
 .contents .caution-container .caution .text h6 p:last-child {margin-bottom: 0;}
 /* ------------------------------------------------------ */
