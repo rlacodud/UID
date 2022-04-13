@@ -18,7 +18,12 @@
 	font-family: 'Pretendard-ExtraBold';
 	src: url('../font/Pretendard-1.2.1/public/static/Pretendard-ExtraBold.otf') format('opentype');
 }
-body, html {width: 375px; max-width: 375px; text-align: center; margin: 0 auto;	font-family: 'pretendardBold'; font-weight: bolder; overflow-x: hidden;}
+body, html {width: 425; max-width: 425px; text-align: center; margin: 0 auto;	font-family: 'pretendardBold'; font-weight: bolder; overflow-x: hidden;}
+.phone {position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; text-align: center;}
+.phone img {width: 399px; height: 800px;object-fit: cover;}
+.total {width: 100%; text-align: center; margin: 0 auto;}
+.total-container {position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 375px; height: 772px; overflow-y: scroll; text-align: center; margin: 0 auto; border-radius: 50px;}
+.total-container::-webkit-scrollbar {display: none;}
 header {width: 100%; position: relative; z-index: 10000;}
 header .container {width: 375px; position: fixed; padding: 15px 20px 0; display: flex;}
 header .container .left {text-align: left; flex: 1}
