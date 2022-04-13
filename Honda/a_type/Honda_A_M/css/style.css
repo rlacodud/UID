@@ -25,7 +25,7 @@ body, html {width: 425; max-width: 425px; text-align: center; margin: 0 auto;	fo
 .total-container {position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 375px; height: 772px; overflow-y: scroll; text-align: center; margin: 0 auto; border-radius: 50px;}
 .total-container::-webkit-scrollbar {display: none;}
 header {width: 100%; position: relative; z-index: 10000;}
-header .container {width: 375px; position: fixed; padding: 15px 20px 0; display: flex;}
+header .container {width: 375px; position: fixed; padding: 15px 20px 0; display: flex; top: 28px; left: 50%; transform: translateX(-50%);}
 header .container .left {text-align: left; flex: 1}
 header .container .left .logo {width: 50px; height: 32px; background-image: url('../img/logo.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 header .container .right {text-align: right; flex: 1;}
