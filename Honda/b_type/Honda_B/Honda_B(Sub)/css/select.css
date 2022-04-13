@@ -48,6 +48,6 @@
 #tab-2 .bottomFixed .item2 .items.items1 p:nth-child(2) {font-size: calc(100vw * 28 /1920); font-family: 'Montserrat', sans-serif; font-weight: 700;}
 #tab-2 .bottomFixed .item2 .items.items2 div {margin-top: calc(100vw * 20 /1920);}
 #tab-2 .bottomFixed .item2 .items.items2 div {width: calc(100vw * 265 /1920); height:calc(100vw * 50 /1920);justify-content: center;align-items: center; display: flex;}
-#tab-2 .bottomFixed .item2 .items.items2>div {border:2px solid white}
+#tab-2 .bottomFixed .item2 .items.items2>div {background-color: #606060; color: white;}
 #tab-2 .bottomFixed .item2 .items.items2 a div {background-color: #DD001A; color: white;}
 
