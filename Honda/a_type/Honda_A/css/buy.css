@@ -1,0 +1,365 @@
+body, html {font-family: 'pretendardBold';}
+body::-webkit-scrollbar {display: none;}
+
+header {width: 100vw; height: calc(100vw*100/1920); position: fixed; top: 0; left: 0; z-index: 100; transition: all ease-in-out 0.3s; background: #fff; color: #000;}
+header nav {width: 100%; padding: 0 calc(100vw*53/1920); display: flex;}
+header nav .left {text-align: left; flex: 0.2; padding-top: calc(100vw*18/1920);}
+header nav .left a {display: inline-block;}
+header nav .left a .logo {display: inline-block; width: calc(100vw*100/1920); height: calc(100vw*64/1920); background-image: url('../img/logo.png'); background-position: center; background-repeat: no-repeat; background-size: cover;}
+header nav .center {flex: 0.6; text-align: center; padding-top: calc(100vw*38/1920);}
+header nav .center ul li {display: inline-block; font-size: calc(100vw*20/1920); color: #000000; line-height: calc(100vw*24/1920); margin-right: calc(100vw*60/1920);}
+header nav .center ul li:last-child {margin: 0;}
+header nav .right {text-align: right; flex: 0.2; padding-top: calc(100vw*38/1920);}
+header nav .right li {display: inline-block;}
+header nav .right li {margin-right: calc(100vw*36/1920);}
+header nav .right li:last-child {margin: 0;}
+header nav .right li .icon {display: inline-block; background-position: center; background-repeat: no-repeat; background-size: contain; vertical-align: middle;}
+header nav .right li:nth-child(1) .icon {width: calc(100vw*23/1920); height: calc(100vw*23/1920); background-image: url('../img/header_icon_search_on.png');}
+header nav .right li:nth-child(2) .icon {width: calc(100vw*20/1920); height: calc(100vw*20/1920); background-image: url('../img/header_icon_people_on.png');}
+header nav .right li:nth-child(3) .icon {width: calc(100vw*20/1920); height: calc(100vw*20/1920); background-image: url('../img/header_icon_shop_on.png');}
+
+.border {width: 100%; height: 1px; background: #D2D2D7; margin: calc(100vw*40/1920) 0;}
+.wrap {width: 100%; padding:  0 calc(100vw*38/1920);}
+
+.comparison-container {display: none; position: absolute; top: 0; left: 0; width: 100%; height: calc(100vw*2425/1920);}
+.comparison-container.on {display: block;}
+.comparison-container .dim {position: absolute; top: 0; left: 0; width: 100vw; height: calc(100vw*2425/1920); background: rgba(0, 0, 0, 0.5); z-index: 100;}
+.comparison-container .comparison {position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw*1280/1920); height: calc(100vw*800/1920); background: #fff; z-index: 101;}
+.comparison-container .comparison .border {margin: calc(100vw*18/1920) 0 calc(100vw*16/1920); width: 100%; height: 2px; background: #000;}
+.comparison-container .comparison .main-title {width: 100%; display: flex; padding: calc(100vw*30/1920) calc(100vw*50/1920); box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);}
+.comparison-container .comparison .main-title .left {flex: 1; text-align: left;}
+.comparison-container .comparison .main-title .left h4 {font-size: calc(100vw*22/1920); line-height: calc(100vw*26/1920);}
+.comparison-container .comparison .main-title .right {flex: 1; text-align: right;}
+.comparison-container .comparison .main-title .right .close {display: inline-block; width: calc(100vw*20/1920); height: calc(100vw*20/1920); background-image: url('../img/buy/close.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; cursor: pointer; user-select: none;}
+.comparison-container .comparison .car-list {width: 100%; padding: calc(100vw*60/1920) calc(100vw*50/1920) calc(100vw*20/1920); display: flex;}
+.comparison-container .comparison .car-list .car {flex: 1; margin-right: calc(100vw*37/1920);}
+.comparison-container .comparison .car-list .car:last-child {margin-right: 0;}
+.comparison-container .comparison .car-list .car .text {margin: 0 auto; text-align: center; margin-bottom: calc(100vw*8/1920);}
+.comparison-container .comparison .car-list .car .text span {font-size: calc(100vw*24/1920); vertical-align: middle;}
+.comparison-container .comparison .car-list .car .text .arrow {display: inline-block; width: calc(100vw*14/1920); height: calc(100vw*7/1920); background-image: url('../img/buy/arrow.png'); background-repeat: no-repeat; background-position: center; background-size: cover; object-fit: cover; margin-left: calc(100vw*11/1920); vertical-align: middle;}
+.comparison-container .comparison .car-list .car .image {width: calc(100vw*267/1920); height: calc(100vw*178/1920); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.comparison-container .comparison .car-list .car:nth-child(1) .image {background-image: url('../img/buy/accord_car.png');}
+.comparison-container .comparison .car-list .car:nth-child(2) .image {background-image: url('../img/buy/crv_car.png');}
+.comparison-container .comparison .car-list .car:nth-child(3) .image {background-image: url('../img/buy/pilot_car.png');}
+.comparison-container .comparison .car-list .car:nth-child(4) .image {background-image: url('../img/buy/odyssey_car.png');}
+.comparison-container .dropbtn {border: none; display: block; text-align: center; padding: 0; cursor: pointer;}
+.comparison-container .dropbtn span {font-size: calc(100vw*24/1920); color: #000;	font-family: 'pretendardBold';}
+.comparison-container .dropdown-content {display: none; position: absolute; background-color: #f1f1f1; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; width: 100%;}
+.comparison-container .dropdown-content a {color: #000; padding: calc(100vw*12/1920) calc(100vw*16/1920); text-decoration: none; display: block; width: 100%;}
+.comparison-container .dropdown-content a:hover {background-color: #ddd;}
+.comparison-container .dropdown:hover .dropdown-content {display: block;}
+
+.comparison-container .comparison .engine-container,
+.comparison-container .comparison .gearbox-container,
+.comparison-container .comparison .size-container {width: 100%; padding: 0 calc(100vw*71/1920);}
+.comparison-container .comparison .size-container {margin-bottom: calc(100vw*70/1920);}
+.comparison-container .comparison .title h2 {font-size: calc(100vw*24/1920);}
+.comparison-container .comparison .engine-list,
+.comparison-container .comparison .gearbox-list,
+.comparison-container .comparison .size-list {width: 100%; display: flex; margin-bottom: calc(100vw*60/1920);}
+.comparison-container .comparison .engine,
+.comparison-container .comparison .gearbox,
+.comparison-container .comparison .size {flex: 1; height: calc(100vw*380/1920); padding: calc(100vw*40/1920) calc(100vw*28/1920) calc(100vw*40/1920); margin-right: calc(100vw*24/1920); background: #F8F8F8; border-radius: calc(100vw*10/1920);}
+.comparison-container .comparison .engine {height: calc(100vw*600/1920);}
+.comparison-container .comparison .gearbox {height: calc(100vw*274/1920);}
+.comparison-container .comparison .engine:last-child,
+.comparison-container .comparison .gearbox:last-child,
+.comparison-container .comparison .size:last-child {margin-right: 0;}
+.comparison-container .comparison .engine .text,
+.comparison-container .comparison .gearbox .text,
+.comparison-container .comparison .size .text {margin-bottom: calc(100vw*28/1920);}
+.comparison-container .comparison .engine .text:last-child,
+.comparison-container .comparison .gearbox .text:last-child,
+.comparison-container .comparison .size .text:last-child {margin-bottom: 0;}
+.comparison-container .comparison .text .sub-title {margin-bottom: calc(100vw*4/1920);}
+.comparison-container .comparison .text .sub-title:last-child {margin-bottom: 0;}
+.comparison-container .comparison .text .title {margin-bottom: 0;}
+.comparison-container .comparison .text .sub-title h6 {font-size: calc(100vw*15/1920); color: #999999;	font-family: 'Pretendard-Regular'; font-weight: 300;}
+.comparison-container .comparison .text .title h2 {font-size: calc(100vw*32/1920);}
+.comparison-container .comparison .engine-option {margin-top: calc(100vw*10/1920);}
+.comparison-container .comparison .engine-option .engine {display: inline-block; width: calc(100vw*78/1920); height: calc(100vw*78/1920); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-right: 0;}
+.comparison-container .comparison .engine-option .engine:nth-child(1) {background-image: url('../img/buy/engine1.png'); margin-right: calc(100vw*11/1920);}
+.comparison-container .comparison .engine-option .engine:nth-child(2) {background-image: url('../img/buy/engine2.png'); width: calc(100vw*89/1920); height: calc(100vw*79/1920);}
+.comparison-container .comparison .engine:nth-child(3) .engine-option .engine:nth-child(1),
+.comparison-container .comparison .engine:nth-child(4) .engine-option .engine:nth-child(1) {background-image: url('../img/buy/engine3.png');}
+.comparison-container .comparison .gearbox-option {width: calc(100vw*78/1920); height: calc(100vw*78/1920); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-top: calc(100vw*10/1920);}
+.comparison-container .comparison .gearbox:nth-child(1) .gearbox-option,
+.comparison-container .comparison .gearbox:nth-child(2) .gearbox-option {background-image: url('../img/buy/gearbox1.png');}
+.comparison-container .comparison .gearbox:nth-child(3) .gearbox-option {background-image: url('../img/buy/gearbox2.png');}
+.comparison-container .comparison .gearbox:nth-child(4) .gearbox-option {background-image: url('../img/buy/gearbox3.png');}
+
+section {width: 100vw; position: relative; font-size: 0;}
+section .image-container {position: fixed; top: 0; left: 0; display: inline-block; width: 74%; height: 100%; background: #000; overflow: hidden; z-index: 10;}
+.sketchfab-embed-wrapper {display: none; position: absolute; bottom: 0; left: 0; width: calc(100vw*1420/1920) !important; height: calc(100vw*980/1920) !important;}
+.sketchfab-embed-wrapper.on {display: block;}
+.car-model {width: calc(100vw*1420/1920) !important; height: calc(100vw*980/1920) !important;}
+section .image-container .slideContainer {display: none;}
+section .image-container .slideContainer.on {display: block;}
+section .image-container .slideContainer ul li {position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; animation: mainFade 6.5s infinite;}
+section .image-container .slideContainer .slideList li:first-child {animation-delay: 0s;}
+section .image-container .slideContainer .slideList li:nth-child(2) {animation-delay: 2.5s;}
+section .image-container .slideContainer .slideList li:nth-child(3) {animation-delay: 4.5s;}
+section .image-container .slideContainer .slideList li .slideImg {width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center;}
+section .image-container .slideContainer .slideList li:first-child .slideImg {background-image: url("../img/buy/trim.png");}
+section .image-container .slideContainer .slideList li:nth-child(2) .slideImg {background-image: url("../img/buy/option.png");}
+section .image-container .slideContainer .slideList li:nth-child(3) .slideImg {background-image: url("../img/buy/color.png");}
+.slideContainer ul li::before {content: ""; display: block; margin: 0; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: black; opacity: 0; z-index: 1;}
+@keyframes mainFade {
+  0% {opacity: 0;}
+  5% {opacity: 1;}
+  25% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 0;}
+}
+section .image-container .angle {display: none; position: absolute; top: calc(100vw*150/1920); left: calc(100vw*60/1920); width: calc(100vw*80/1920); height: calc(100vw*80/1920); background-image: url('../img/buy/angle.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+section .image-container .angle.on {display: block;}
+section .image-container .button-container {display: none; position: absolute; z-index: 99; bottom: calc(100vw*60/1920); left: 50%; transform: translateX(-50%);}
+section .image-container .button-container.on {display: block;}
+section .image-container .button-container .button {position: relative; display: inline-block; width: calc(100vw*140/1920); height: calc(100vw*50/1920); background: transparent; border: 1px solid #000; cursor: pointer; transition: all ease-in-out 0.3s; user-select: none;}
+section .image-container .button-container .button.on {color: #000; border: 1PX solid #000; background: #FFF;}
+section .image-container .button-container .button.on h5 {color: #000;}
+section .image-container .button-container .button:first-child {margin-right: calc(100vw*12/1920);}
+section .image-container .button-container .button.active {background: #000; border: none;}
+section .image-container .button-container .button h5 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: calc(100vw*14/1920); text-align: center; color: #000;}
+section .image-container .button-container .button.active h5 {color: #fff;}
+section .form-container {position: absolute; top: 0; right: 0; display: inline-block; width: 26%; overflow: scroll;}
+body.on { overflow: hidden; }
+.scroll {height: calc(100vw*400/1920); overflow-y: scroll;}
+.scroll::-webkit-scrollbar {opacity: 0;}
+section .form-container::-webkit-scrollbar {display: none;}
+section .form-container .step-container {position: fixed; width: calc(100vw*500/1920); top: 0; background: #fff; z-index: 99; margin-bottom: calc(100vw*58/1920); padding-top: calc(100vw*102/1920); box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1);}
+section .form-container .step-container .step {width: 100%; padding: 0 calc(100vw*38/1920); padding-top: calc(100vw*20/1920); display: flex;}
+section .form-container .step-container li {flex: 1; font-size: calc(100vw*32/1920); text-align: left; line-height: calc(100vw*38/1920); color: rgba(0,0,0,0.15);}
+section .form-container .step-container li::after {content: ''; display: block; margin-top: calc(100vw*13/1920); width: 0%; height: calc(100vw*4/1920); background: #000; opacity: 0; transition: all ease-in-out 0.3s;}
+section .form-container .step-container li.active::after {opacity: 1; width: 100%;}
+section .form-container .step-container li a {color: rgba(0,0,0,0.15);}
+section .form-container .step-container li.active a {color: #000;}
+section .form-container .step-title {margin-bottom: calc(100vw*40/1920);}
+section .form-container .step-title h2 {font-size: calc(100vw*40/1920); line-height: calc(100vw*47/1920);}
+
+.contents {display: none;}
+.contents.active {display: block;}
+.contents-container {margin-top: calc(100vw*237/1920);}
+.contents-container .contents .title {margin-bottom: calc(100vw*20/1920); width: 100%; display: flex;}
+.contents-container .contents .title h2 {display: inline-block; flex: 1; color: #000; font-size: calc(100vw*20/1920); line-height: calc(100vw*24/1920);}
+.contents-container .contents .title .more {display: inline-block; flex: 1; text-align: right; font-size: calc(100vw*16/1920); line-height: calc(100vw*19/1920); color: #CC2132;	font-family: 'Pretendard-Medium'; font-weight: 100; vertical-align: middle;}
+.contents-container .contents .title .more .icon {margin-left: calc(100vw*5/1920); display: inline-block; width: calc(100vw*7/1920); height: calc(100vw*12/1920); background-image: url('../img/buy/more_arrow.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; vertical-align: middle;}
+.dropdown {position: relative; display: inline-block; width: 100%;}
+.dropbtn {background: #fff; color: #999999; padding: calc(100vw*20/1920); font-size: calc(100vw*18/1920); border: 1px solid #DDDDDD; border-radius: calc(100vw*10/1920); text-align: left; width: 100%; display: flex;}
+.dropbtn div {flex: 1; display: inline-block;}
+.dropbtn .text {text-align: left;}
+.dropbtn .down-arrow-container {text-align: right;}
+.dropbtn .down-arrow {display: inline-block; width: calc(100vw*15/1920); height: calc(100vw*9/1920); background-image: url('../img/buy/down_arrow.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; vertical-align: middle;}
+.dropdown-content {display: none; position: absolute; background-color: #f1f1f1; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; width: 100%;}
+.dropdown-content a {color: #000; padding: calc(100vw*12/1920) calc(100vw*16/1920); text-decoration: none; display: block; width: 100%;}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+
+.bottom-button {position: fixed; bottom: 0; right: 0; display: none; width: calc(100vw*500/1920);}
+.bottom-button.active {display: block;}
+.total-price {position: relative; width: 100%; height: calc(100vw*110/1920); background: #F2F2F2;}
+.total-price.active {display: block;}
+.total-price .text-container {padding: 0 calc(100vw*38/1920); position: absolute; top: 50%; left: 50%; width: 100%; display: flex; transform: translate(-50%, -50%);}
+.total-price .text-container div {flex: 1; vertical-align: middle;}
+.total-price .text-container .text {text-align: left; font-size: calc(100vw*18/1920); line-height: calc(100vw*21/1920); display: inline-block; vertical-align: middle; margin-top: calc(100vw*10/1920);}
+.total-price .text-container .price {text-align: right; font-size: calc(100vw*30/1920); line-height: calc(100vw*35/1920);}
+
+.estimate-button {position: relative; width: 100%; height: calc(100vw*80/1920); background: #CC2132;}
+#estimate .estimate-button {display: flex;}
+#estimate .estimate-button .consulting {position: relative; flex: 1; background: #000;}
+#estimate .estimate-button .buy {position: relative; flex: 1; background: #CC2132;}
+#estimate .estimate-button .consulting .text {color: #fff;}
+.estimate-button a {display: inline-block; width: 100%; height: 100%;}
+.estimate-button .text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: calc(100vw*20/1920); line-height: calc(100vw*24/1920); color: #fff;}
+
+.model-list,
+.contents .trim-list {width: 100%; display: grid; grid-template-columns: 1fr 1fr; row-gap: calc(100vw*10/1920); column-gap: calc(100vw*10/1920);}
+.model-list .model-opt,
+.contents .trim-list .trim-opt {width: calc(100vw*207/1920); height: calc(100vw*88/1920); border-radius: calc(100vw*10/1920); background: #F2F2F2; border: 1px solid #DDDDDD; position: relative; cursor: pointer; transition: all ease-in-out 0.1s; user-select: none;}
+.model-list .model-opt.active,
+.contents .trim-list .trim-opt.active {background: #000;}
+.model-list .model-opt .text-container,
+.contents .trim-list .trim-opt .text-container {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+.model-list .model-opt .title,
+.contents .trim-list .trim-opt .title {display: inline-block; font-size: calc(100vw*18/1920); color: #999999; margin-bottom: calc(100vw*5/1920); font-family: 'Pretendard-Medium';}
+.model-list .model-opt.active .title,
+.contents .trim-list .trim-opt.active .title {color: #fff;}
+.model-list .model-opt .price,
+.contents .trim-list .trim-opt .price {font-size: calc(100vw*14/1920); color: #999999; font-family: 'Pretendard-Regular';}
+.model-list .model-opt.active .price,
+.contents .trim-list .trim-opt.active .price {color: #C7C7C7;}
+
+.contents .option-list {width: 100%; display: grid; grid-template-columns: 1fr 1fr; row-gap: calc(100vw*10/1920); column-gap: calc(100vw*10/1920);}
+.contents .option-list .opt {background: #F2F2F2; width: calc(100vw*207/1920); height: calc(100vw*178/1920); border-radius: calc(100vw*10/1920); border: 1px solid #DDDDDD; overflow: hidden; transition: all ease-in-out 0.1s; cursor: pointer;}
+.contents .option-list .opt.active {border: 2px solid #000; background: #fff;}
+.contents .option-list .opt .image {width: calc(100vw*206/1920); height: calc(100vw*121/1920); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.contents .option-list .opt:nth-child(1) .image {background-image: url('../img/buy/option1_sun.png');}
+.contents .option-list .opt:nth-child(2) .image {background-image: url('../img/buy/option2_around.png');}
+.contents .option-list .opt:nth-child(3) .image {background-image: url('../img/buy/option3_camera.png');}
+.contents .option-list .opt:nth-child(4) .image {background-image: url('../img/buy/option4_vvcl.png');}
+.contents .option-list .opt .check-container {padding: calc(100vw*17/1920) calc(100vw*20/1920) 0; vertical-align: middle;} 
+.contents .option-list .opt .check .checkbox {display: inline-block; width: calc(100vw*20/1920); height: calc(100vw*20/1920); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; background-image: url('../img/buy/check.png'); margin-right: calc(100vw*10/1920);}
+.contents .option-list .opt.active .check .checkbox {background-image: url('../img/buy/check_on.png');}
+.contents .option-list .opt .check .text {font-size: calc(100vw*18/1920); color: #999999;	font-family: 'Pretendard-Medium'; vertical-align: middle;}
+.contents .option-list .opt.active .check .text {color: #000;}
+
+.contents .color {margin-bottom: calc(100vw*280/1920);}
+.contents .color-list li {position: relative; display: inline-block; margin-right: calc(100vw*10/1920); width: calc(100vw*52/1920); height: calc(100vw*52/1920); border-radius: 50%; cursor: pointer;}
+.contents .color-list li.active {border: 2px solid #000;}
+.contents .color-list li:last-child {margin: 0;}
+.contents .color-list li .color-chip {position: absolute; top: 50%; left: 50%; border-radius: 50%; transform: translate(-50%, -50%); width: calc(100vw*40/1920); height: calc(100vw*40/1920); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.contents .color-list #blue div {background-image: url('../img/buy/color_blue.png');}
+.contents .color-list #green div {background-image: url('../img/buy/color_green.png');}
+.contents .color-list #black div {background-image: url('../img/buy/color_black.png');}
+.contents .color-list #yellow div {background-image: url('../img/buy/color_yellow.png');}
+.contents .color-list #white div {background-image: url('../img/buy/color_white.png');}
+/* ------------------------------------------------- */
+
+.contents .accord-container {position: relative; width: 100%; height: calc(100vw*207/1920); background: #F2F2F2; border: 1px solid #D2D2D7; border-radius: calc(100vw*10/1920);}
+.contents .accord-container .text-container {position: absolute; top: 47%; left: calc(100vw*30/1920); transform: translateY(-50%);}
+.contents .accord-container .text-container .title {margin-bottom: calc(100vw*3/1920);}
+.contents .accord-container .text-container .title h2 {font-size: calc(100vw*44/1920); line-height: calc(100vw*51/1920);}
+.contents .accord-container .text-container .sub-title {margin-bottom: calc(100vw*34/1920);}
+.contents .accord-container .text-container .sub-title h4 {font-size: calc(100vw*18/1920); line-height: calc(100vw*21/1920); font-family: 'Pretendard-Medium'; color: #CC2132;}
+.contents .accord-container .text-container .option-text .color {margin-bottom: calc(100vw*7/1920); font-size: calc(100vw*16/1920);	font-family: 'Pretendard-Medium'; font-weight: 100;}
+.contents .accord-container .text-container .option-text .option {font-size: calc(100vw*16/1920);	font-family: 'Pretendard-Medium'; font-weight: 100;}
+.contents .accord-container .image {position: absolute; top: 62%; right: 0; transform: translateY(-50%); width: calc(100vw*179/1920); height: calc(100vw*104/1920); background-image: url('../img/buy/accord.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.contents .delivery-container .title {margin-bottom: calc(100vw*26/1920);}
+.contents .delivery-container .delivery-list {width: 100%; display: flex;}
+#estimate .left {flex: 0.3;}
+#estimate .left ul li {margin-bottom: calc(100vw*33/1920); font-size: calc(100vw*18/1920); font-family: 'Pretendard-Medium'; color: #000;}
+#estimate .left ul li:last-child {margin: 0;}
+#estimate .right {flex: 0.7; text-align: right;}
+#estimate .right ul li {font-size: calc(100vw*18/1920); line-height: calc(100vw*21/1920);}
+#estimate .right ul #place {margin: calc(100vw*20/1920) 0; width: 100%; display: flex;}
+#estimate .right ul #place .dropbtn {background: #fff; color: #000; padding: calc(100vw*14/1920); font-size: calc(100vw*18/1920); border: 1px solid #D2D2D7; border-radius: calc(100vw*4/1920); text-align: left; width: 100%; display: flex; font-family: 'Pretendard-Medium';}
+#estimate .right ul #place .dropdown:first-child {margin-right: calc(100vw*8/1920);}
+#estimate .right ul #place .dropbtn .text {flex: 0.8;}
+#estimate .right ul #place .dropbtn .down-arrow-container {flex: 0.2;}
+#estimate .right ul #place .dropdown:hover .dropdown-content {text-align: center;}
+
+.contents .Payment-container .method-container {width: 100%; display: flex;}
+.contents .Payment-container .method-container .method {position: relative; flex: 1; height: calc(100vw*88/1920); background: #F2F2F2; border: 1px solid #D2D2D7; border-radius: calc(100vw*10/1920); transition: all ease-in-out 0.1s; cursor: pointer;}
+.contents .Payment-container .method-container .method.active {background: #000;}
+.contents .Payment-container .method-container .method:first-child {margin-right: calc(100vw*10/1920);}
+.contents .Payment-container .method-container .method .text {position: absolute; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); text-align: center; font-size: calc(100vw*18/1920); line-height: calc(100vw*21/1920); color: #888888;	font-family: 'Pretendard-Medium'; font-weight: 100;}
+.contents .Payment-container .method-container .method.active .text {color: #fff;}
+
+.contents .registration-container {margin-bottom: calc(100vw*40/1920);}
+.contents .registration-container .registration-list {width: 100%; display: flex;}
+.contents .registration-container .title {margin-bottom: calc(100vw*32/1920);}
+#estimate .registration-container .registration-list .left ul li {line-height: calc(100vw*21/1920); margin-bottom: calc(100vw*20/1920); color: #000;}
+#estimate .registration-container .registration-list .left ul li:last-child {margin: 0;}
+#estimate .registration-container .registration-list .right {margin-top: calc(100vw*-9/1920);}
+#estimate .registration-container .registration-list .right ul li {margin-bottom: calc(100vw*20/1920);}
+#estimate .registration-container .registration-list .right ul li:last-child {margin: 0;}
+#estimate .registration-container .registration-list .right ul #division {display: inline-block; position: relative; text-align: right; width: calc(100vw*79/1920); height: calc(100vw*40/1920); background: #F2F2F2; border: 1px solid #D2D2D7; border-radius: calc(100vw*4/1920); margin-bottom: calc(100vw*12/1920);}
+#estimate .registration-container .registration-list .right ul #division h4 {position: absolute; top: 50%; right: calc(100vw*12/1920); transform: translateY(-50%); text-align: right; font-family: 'Pretendard-Medium'; font-weight: 100;}
+
+.contents .caution-container {width: 100%; padding: calc(100vw*32/1920) calc(100vw*27/1920); background: #F2F2F2; border-radius: calc(100vw*10/1920); margin-bottom: calc(100vw*250/1920);}
+.contents .caution-container .caution {width: 100%; height: 100%;}
+.contents .caution-container .caution .title {margin-bottom: calc(100vw*20/1920);}
+.contents .caution-container .caution .title h4 {font-size: calc(100vw*16/1920); color: #555;}
+.contents .caution-container .caution .text h6 {font-size: calc(100vw*14/1920); line-height: calc(100vw*22/1920); color: #888; font-family: 'Pretendard-Light'; font-weight: 100;}
+.contents .caution-container .caution .text h6 p {margin-bottom: calc(100vw*14/1920);}
+.contents .caution-container .caution .text h6 p:last-child {margin-bottom: 0;}
+/* ------------------------------------------------- */
+
+.main-wrap {width: 100%; position: relative; padding: calc(100vw*180/1920) calc(100vw*320/1920) calc(100vw*183/1920); margin: 0 auto;}
+.main-wrap .title {margin: 0 auto; margin-bottom: calc(100vw*28/1920); text-align: center;}
+.main-wrap .title h2 {margin: 0 auto; text-align: center; font-size: calc(100vw*40/1920); line-height: calc(100vw*47/1920); margin-bottom: calc(100vw*20/1920); color: #CC2132;}
+.main-wrap .title .check {margin: 0 auto; text-align: center; width: calc(100vw*42/1920); height: calc(100vw*42/1920); background-image: url('../img/buy/check_circle.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.main-wrap .text {margin-bottom: calc(100vw*70/1920);}
+.main-wrap .text h6 {text-align: center; font-size: calc(100vw*20/1920); line-height: calc(100vw*30/1920);	font-family: 'Pretendard-Medium'; font-weight: 100;}
+.main-wrap .number-container {position: relative; width: 100%; height: calc(100vw*84/1920); margin-bottom: calc(100vw*30/1920); background: #000;}
+.main-wrap .number-container .number {position: absolute; top: 74%; transform: translateY(-50%); width: 100%; height: 100%; padding: 0 calc(100vw*30/1920); font-size: 0;}
+.main-wrap .number-container .left,
+.main-wrap .number-container .right {display: inline-block; width: 50%;}
+.main-wrap .number-container .left span {font-size: calc(100vw*20/1920); line-height: calc(100vw*48/1920); color: #fff;}
+.main-wrap .number-container .left span:last-child {margin-left: calc(100vw*20/1920);}
+.main-wrap .number-container .right {text-align: right;}
+.main-wrap .number-container .right h4 {font-size: calc(100vw*20/1920); line-height: calc(100vw*48/1920); color: #fff;	font-family: 'Pretendard-Medium'; font-weight: 100;}
+.main-wrap .contents-container {width: 100%; display: flex; margin-top: 0;}
+.main-wrap .contents-container .first .title {margin-bottom: calc(100vw*40/1920);}
+.main-wrap .contents-container .first .title h2 {font-size: calc(100vw*28/1920); line-height: calc(100vw*48/1920);	font-family: 'Pretendard-ExtraBold';}
+.main-wrap .contents-container .left {flex: 0.6; margin-top: calc(100vw*20/1920);}
+.main-wrap .contents-container .left .title {margin-bottom: calc(100vw*30/1920);}
+.main-wrap .contents-container .left .title h2 {margin-bottom: 0; text-align: left; font-size: calc(100vw*28/1920); line-height: calc(100vw*40/1920);	font-family: 'Pretendard-ExtraBold'; color: #000;}
+.main-wrap .contents-container .left .contents {width: 100%; display: flex;}
+.main-wrap .contents-container .left .contents .left,
+.main-wrap .contents-container .left .contents .right {flex: 1;}
+.main-wrap .contents-container .left .contents .right {text-align: right;}
+.main-wrap .contents-container .left .left {margin-top: 0;}
+.main-wrap .contents-container .left .contents ul li {font-size: calc(100vw*18/1920); color: #000; margin-bottom: calc(100vw*23/1920);	font-family: 'Pretendard-Medium'; font-weight: 100;}
+.main-wrap .contents-container .left .contents ul li:last-child {margin-bottom: 0;}
+.main-wrap .contents-container .left .first .right .red {color: #CC2132;}
+.main-wrap .contents-container .left .first .right .bold {font-family: 'pretendardBold';}
+.main-wrap .border {width: 100%; height: 1px; background: #CBCBCB; margin: calc(100vw*44/1920) 0;}
+.main-wrap .contents-container .title {text-align: left; width: 100%; display: flex; margin-bottom: calc(100vw*40/1920);}
+.main-wrap .contents-container .title h2 {flex: 1; font-size: calc(100vw*28/1920); line-height: calc(100vw*48/1920);	font-family: 'Pretendard-ExtraBold';}
+.main-wrap .contents-container .title .gray {font-size: calc(100vw*16/1920); font-family: 'Pretendard-Regular'; font-weight: 100; color: #888888; margin-left: calc(100vw*5/1920); display: inline-block; vertical-align: bottom;}
+.main-wrap .contents-container .title .price {flex: 1; text-align: right; font-size: calc(100vw*26/1920); line-height: calc(100vw*48/1920);}
+.main-wrap .contents-container .title .price .red {font-size: calc(100vw*16/1920); font-family: 'Pretendard-Medium'; font-weight: 100; color: #CC2132; margin-right: calc(100vw*16/1920); display: inline-block; vertical-align: bottom;}
+.main-wrap .contents-container .right-container {flex: 0.4; margin-left: calc(100vw*54/1920); width: 100%; background: #F8F8F8; border: 1px solid #CBCBCB;}
+.main-wrap .contents-container .right-container .right {width: 100%; height: 100%; padding: calc(100vw*60/1920) calc(100vw*40/1920) calc(100vw*40/1920);}
+.main-wrap .contents-container .right-container .right .image {margin: 0 auto; text-align: center; background-image: url('../img/buy/accord_min.png'); width: calc(100vw*331/1920); height: calc(100vw*129/1920); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-bottom: calc(100vw*30/1920);}
+.main-wrap .contents-container .right-container .right .text-container {margin-bottom: calc(100vw*50/1920);}
+.main-wrap .contents-container .right-container .right .accord {height: calc(100vw*56/1920); margin-bottom: calc(100vw*8/1920);}
+.main-wrap .contents-container .right-container .right .accord h2 {font-size: calc(100vw*48/1920); line-height: calc(100vw*48/1920);}
+.main-wrap .contents-container .right-container .right .text-container .option p {font-size: calc(100vw*18/1920); font-family: 'Pretendard-Medium'; font-weight: 100;}
+.main-wrap .contents-container .right-container .right .text-container .option p:first-child {margin-bottom: calc(100vw*10/1920);}
+.main-wrap .contents-container .right-container .right .text-container .border {width: 100%; height: 1px; background: #000;}
+.main-wrap .contents-container .right-container .right .text-container .border.one {margin: calc(100vw*39/1920) 0 calc(100vw*34/1920);}
+.main-wrap .contents-container .right-container .right .text-container .border.two {margin: calc(100vw*34/1920) 0 calc(100vw*39/1920);}
+.main-wrap .contents-container .right-container .right .text-container .title {margin-bottom: calc(100vw*20/1920); display: flex; width: 100%;}
+.main-wrap .contents-container .right-container .right .text-container .title h2 {flex: 1; text-align: left; vertical-align: middle; font-size: calc(100vw*18/1920); line-height: calc(100vw*48/1920); margin-bottom: 0; color: #000;}
+.main-wrap .contents-container .right-container .right .text-container .title span {flex: 1; text-align: right; vertical-align: middle; font-size: calc(100vw*26/1920); line-height: calc(100vw*48/1920);}
+.main-wrap .contents-container .right-container .right .text-container .contents {width: 100%; display: flex;}
+.main-wrap .contents-container .right-container .right .text-container .contents .left {margin: 0;}
+.main-wrap .contents-container .right-container .right .text-container .contents .left,
+.main-wrap .contents-container .right-container .right .text-container .contents .right {flex: 1; padding: 0;}
+.main-wrap .contents-container .right-container .right .text-container .contents .left ul li {font-size: calc(100vw*16/1920); line-height: calc(100vw*34/1920); font-family: 'Pretendard-Medium'; font-weight: 100;}
+.main-wrap .contents-container .right-container .right .text-container .contents .right {text-align: right;}
+.main-wrap .contents-container .right-container .right .text-container .contents .right ul li {font-size: calc(100vw*16/1920); line-height: calc(100vw*34/1920); color: #000; font-family: 'Pretendard-Medium'; font-weight: 100;}
+.main-wrap .button-container {width: 100%; height: calc(100vw*80/1920); background: #CC2132; position: relative;}
+.main-wrap .button-container h2 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: calc(100vw*20/1920); line-height: calc(100vw*24/1920); color: #fff;}
+
+.footer {background: #000; position: relative;}
+.footer .footer-container {padding: calc(100vw*27/1920) calc(100vw*51/1920) calc(100vw*43.5/1920); width: 100%;}
+.footer .news {width: 100%; height: calc(100vw*66/1920); padding: calc(100vw*26/1920) calc(100vw*51/1920); background: #111111;}
+.footer .news ul li {display: inline-block; font-size: calc(100vw*15/1920); line-height: calc(100vw*18/1920); color: #fff;	font-family: 'Pretendard-ExtraBold'; cursor: pointer;}
+.footer .news ul li a {color: #fff; display: inline-block; width: 100%; height: 100%;}
+.footer .news ul li:first-child {margin-right: calc(100vw*57/1920); color: #CC2132;}
+.footer .news ul li:first-child a {color: #CC2132;}
+.footer .footer-container .text-contents {width: 100%; display: flex;}
+.footer .footer-container .text-contents .left,
+.footer .footer-container .text-contents .right {flex: 1;}
+.footer .footer-container .text-contents .left {text-align: left;}
+.footer .footer-container .text-contents .left .menu {margin-bottom: calc(100vw*20/1920);}
+.footer .footer-container .text-contents .left .menu ul li {display: inline-block; margin-right: calc(100vw*24/1920);}
+.footer .footer-container .text-contents .left .menu ul li:last-child {margin: 0;}
+.footer .footer-container .text-contents .left .menu ul li a {font-size: calc(100vw*15/1920); font-family: 'Pretendard-ExtraBold'; color: #848484; line-height: calc(100vw*18/1920);}
+.footer .footer-container .text-contents .left .copy ul li {display: inline-block; font-size: calc(100vw*14/1920); color: #848484;	font-family: 'Pretendard-Regular'; line-height: calc(100vw*16/1920);}
+.footer .footer-container .text-contents .left .copy ul li:first-child {margin-right: calc(100vw*27/1920);}
+.footer .footer-container .text-contents .right {text-align: right;}
+.footer .footer-container .text-contents .right ul li {display: inline-block;}
+.footer .footer-container .text-contents .right ul li:first-child {margin-right: calc(100vw*27/1920);}
+.footer .footer-container .text-contents .right ul li a {font-size: calc(100vw*17/1920); color: #848484; line-height: calc(100vw*20/1920);	font-family: 'Pretendard-ExtraBold';}
+.footer .footer-container .text-contents .right ul li a .icon {vertical-align: middle; display: inline-block; background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; margin-right: calc(100vw*5/1920);}
+.footer .footer-container .text-contents .right ul li:first-child a .icon {width: calc(100vw*19/1920); height: calc(100vw*15/1920); background-image: url('../img/footer_icon_moter.png');}
+.footer .footer-container .text-contents .right ul li:last-child a .icon {width: calc(100vw*24/1920); height: calc(100vw*15/1920); background-image: url('../img/footer_icon_logo.png');}
+.footer .footer-container .border {margin: calc(100vw*40/1920) 0; width: 100%; height: 1px; background: #444444;}
+.footer .footer-container .icon-container {width: 100%; display: flex;}
+.footer .footer-container .icon-container .left,
+.footer .footer-container .icon-container .right {flex: 1;}
+.footer .footer-container .icon-container .left {text-align: left;}
+.footer .footer-container .icon-container .left .footer-logo {width: calc(100vw*160/1920); height: calc(100vw*22/1920); background-image: url('../img/footer_logo.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.footer .footer-container .icon-container .right {text-align: right;}
+.footer .footer-container .icon-container .right .sns-icon li {display: inline-block; margin-right: calc(100vw*15/1920);}
+.footer .footer-container .icon-container .right .sns-icon li:last-child {margin: 0;}
+.footer .footer-container .icon-container .right .sns-icon li {width: calc(100vw*30/1920); height: calc(100vw*30/1920);}
+.footer .footer-container .icon-container .right .sns-icon li a,
+.footer .footer-container .icon-container .right .sns-icon li a .icon {display: inline-block; width: 100%; height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.footer .footer-container .icon-container .right .sns-icon li:nth-child(1) .icon {background-image: url('../img/footer_icon_facebook.png');}
+.footer .footer-container .icon-container .right .sns-icon li:nth-child(2) .icon {background-image: url('../img/footer_icon_youtube.png');}
+.footer .footer-container .icon-container .right .sns-icon li:nth-child(3) .icon {background-image: url('../img/footer_icon_insta.png');}
