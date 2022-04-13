@@ -238,7 +238,7 @@ header nav .right li:nth-child(3) .icon.on {background-image: url('../img/header
 #section7 .title .text {height: calc(100vw*70/1920); overflow: hidden;}
 #section7 .title .text p {display: inline-block; color: #fff; font-size: calc(100vw*60/1920); line-height: calc(100vw*71/1920); margin-top: calc(100vw*70/1920); animation-duration: 0.4s; animation-fill-mode: forwards; transition:.5s;}
 #section7 .swipe-container {padding-bottom: calc(100vw*133/1920);}
-#section7 .swiper {width: calc(100vw*1991/1920); height: calc(100vw*682.5/1920); overflow: hidden;}
+#section7 .swiper {width: calc(100vw*1991/1920); height: calc(100vw*700/1920); overflow: hidden;}
 #section7 .swiper .swiper-wrapper {display: flex; width: calc(100vw*1991/1920); animation: scroll 20s linear infinite;}
 #section7 .swiper-slide {flex: 1; width: calc(100vw*461/1920) !important; height: 100%; margin-right: calc(100vw*49/1920);}
 #section7 .swiper-slide:last-child {margin-right: 0;}
