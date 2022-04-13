@@ -1,0 +1,21 @@
+#section2 {width: 100vw; height: 100vh; overflow: hidden; position: relative; display: flex;}
+.image-container {flex: 0.6; background: #000;}
+.form-container {flex: 0.4; padding: 20px 10px;}
+.form-container .step-container a {display: inline-block; margin-right: 40px;}
+.form-container .step-container a:last-child {margin: 0;}
+
+.contents-container {margin-top: 80px;}
+.contents-container .contetns .title {margin-bottom: 20px;}
+.choice {margin-bottom: 40px;}
+.dropdown {position: relative; display: inline-block; width: 100%;}
+.dropbtn {background: #000; color: #fff; padding: 16px; font-size: 16px; border: none; text-align: left; width: 100%;}
+.dropdown-content {display: none; position: absolute; background-color: #f1f1f1; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; width: 100%;}
+.dropdown-content a {color: #000; padding: 12px 16px; text-decoration: none; display: block; width: 100%;}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: red;}
+
+.checkbox {width: 100%; display: flex;}
+.checkbox li {flex: 1; display: inline-block;}
+.checkbox input.checkbox1 {font-size: 1em; width: 1.25em; height: 1.25em; vertical-align: middle;}
+.checkbox input.checkbox1 + label {font-size: 1.125em; vertical-align: middle;}
