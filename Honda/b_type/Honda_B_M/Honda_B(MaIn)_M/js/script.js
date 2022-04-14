@@ -101,9 +101,9 @@ function mainScrollEvent() {
   let $text1 = $('#section2 .text-area ul li:nth-child(1)');
   let $text2 = $('#section2 .text-area ul li:nth-child(2)');
   let $text3 = $('#section2 .text-area ul li:nth-child(3)');
+  console.log(documentHeight);
 
-
-if (documentHeight >= section2Top && documentHeight < section2Top+100){
+if (documentHeight >= section2Top-200 && documentHeight < section2Top-100){
   $text1.css({
     'color':'#000000'        
   })
@@ -115,7 +115,7 @@ if (documentHeight >= section2Top && documentHeight < section2Top+100){
   })
   console.log('400');
 }
-if (documentHeight >= section2Top+100 && documentHeight < section2Top+200){
+if (documentHeight >= section2Top-100 && documentHeight < section2Top){
   $text1.css({
     'color':'#e8e8e8'        
   })
@@ -127,7 +127,7 @@ if (documentHeight >= section2Top+100 && documentHeight < section2Top+200){
   })
   console.log('700');
 }
-if (documentHeight >= section2Top+200 && documentHeight < section2Top+300){
+if (documentHeight >= section2Top && documentHeight < section2Top+100){
   $text1.css({
     'color':'#e8e8e8'        
   })
@@ -142,7 +142,7 @@ if (documentHeight >= section2Top+200 && documentHeight < section2Top+300){
 
 }
 
-$(window).scroll(function () {
+$('.total-container').scroll(function () {
 mainScrollEvent();
 })
 
