@@ -1,6 +1,11 @@
-body, html {width: 375px; max-width: 375px; text-align: center; margin: 0 auto;	font-family: 'pretendardBold'; font-weight: bolder; overflow-x: hidden;}
-.header-container {width: 100%; text-align: center; margin: 0 auto; position: fixed; top: 0; left: 0; z-index: 10000;}
-header {width: 375px; height: 65px; box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1); margin: 0 auto; text-align: center; background: #fff;}
+body, html {width: 425; max-width: 425px; text-align: center; margin: 0 auto;	font-family: 'pretendardBold'; font-weight: bolder; overflow-x: hidden;}
+.phone {position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; text-align: center;}
+.phone img {width: 399px; height: 800px;object-fit: cover;}
+.total {width: 100%; text-align: center; margin: 0 auto;}
+.total-container {position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 377px; height: 775px; overflow-y: scroll; text-align: center; margin: 0 auto; border-radius: 32px;}
+.total-container::-webkit-scrollbar {display: none;}
+.header-container {width: 100%; text-align: center; margin: 0 auto; position: fixed; top: 10px; left: 0; z-index: 10000;}
+header {width: 375px; height: 65px; box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1); margin: 0 auto; text-align: center; background: #fff; border-top-left-radius: 32px; border-top-right-radius: 32px;}
 header .container {width: 100%; padding: 15px 20px 0; display: flex;}
 header .container .left {text-align: left; flex: 1}
 header .container .left .logo {width: 50px; height: 32px; background-image: url('../img/logo.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
@@ -9,11 +14,11 @@ header .container .right .hamburger {display: inline-block; width: 34px; height:
 
 .border {width: 100%; height: 1px; background: #D2D2D7; margin: 30px 0;}
 .wrap {width: 100%; padding: 0 24px;}
-.main-container {width: 100%; margin: 0 auto; text-align: center; position: relative;}
+.main-container {width: 100%; height: 100%; margin: 0 auto; top: -10px; text-align: center; position: relative;}
 
-.comparison-container {display: none; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 10000; width: 375px; height: 1736px;}
+.comparison-container {display: none; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 10000; width: 377px; height: 1736px;}
 .comparison-container.on {display: block; position: fixed;}
-.comparison-container .dim {position: absolute; top: 0; left: 0; text-align: center; width: 100%; height: 1736px; background: rgba(0, 0, 0, 0.5); z-index: 100;}
+.comparison-container .dim {position: absolute; top: 0; left: 0; text-align: center; width: 100%; height: 800px; background: rgba(0, 0, 0, 0.5); z-index: 100; border-radius: 32px;}
 .comparison-container .comparison {position: absolute; top: 77px; left: 50%; transform: translateX(-50%); width: 340px; height: 600px; background: #fff; z-index: 101;}
 .comparison-container .comparison .border {margin: 9px 0 11.9px; width: 100%; height: 1px; background: #000;}
 .comparison-container .comparison .main-title {width: 100%; display: flex; padding: 13px 20px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);}
@@ -81,7 +86,7 @@ body.on { overflow: hidden; max-height: 1574px; position: fixed;}
 .scroll::-webkit-scrollbar {opacity: 0;}
 section .form-container::-webkit-scrollbar {display: none;}
 
-.step-container {display: none; position: fixed; width: 375px; top: 0; background: #fff; z-index: 99; padding-top: 65px;}
+.step-container {display: none; position: fixed; width: 377px; top: 70px; left: 50%; transform: translateX(-50%); background: #fff; z-index: 99;}
 .step-container.on {display: block;}
 .step-container .step {width: 100%; padding: 0 24px; padding-top: 16px; display: flex;}
 .step-container li {flex: 1; font-size: 22px; text-align: left; line-height: 26px; color: rgba(0,0,0,0.15);}
@@ -90,9 +95,9 @@ section .form-container::-webkit-scrollbar {display: none;}
 .step-container li a {color: rgba(0,0,0,0.15);}
 .step-container li.active a {color: #000;}
 .main-image {display: none; margin-top: 119px; width: 100%; height: 294px; position: relative;}
-.sketchfab-embed-wrapper {display: none; position: absolute; bottom: 0; left: 0; width: 375px !important; height: 294px !important;}
+.sketchfab-embed-wrapper {display: none; position: absolute; bottom: 0; left: 0; width: 377px !important; height: 294px !important;}
 .sketchfab-embed-wrapper.on {display: block;}
-.car-model {width: 375px !important; height: 294px !important;}
+.car-model {width: 377px !important; height: 294px !important;}
 .main-image.on {display: block;}
 .main-image .image {width: 100%; height: 100%;}
 .main-image .angle {display: none; position: absolute; top: 22px; left: 24px; width: 40px; height: 40px; background-image: url('../img/angle.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
@@ -128,6 +133,8 @@ section .form-container::-webkit-scrollbar {display: none;}
 .step-title {margin-bottom: 20px; text-align: left;}
 .step-title h2 {font-size: 28px; line-height: 33px; font-family: 'Pretendard-ExtraBold'; font-weight: bolder;}
 
+#model {height: 1100px;}
+#estimate {height: 1340px;}
 .contents {display: none;}
 .contents.active {display: block;}
 .contents-container {margin-top: 40px;}
@@ -145,9 +152,9 @@ section .form-container::-webkit-scrollbar {display: none;}
 .dropdown-content a {color: #000; padding: 12px 16px; text-align: center; text-decoration: none; display: block; width: 100%;}
 .dropdown-content a:hover {background-color: #ddd;}
 
-.bottom-button-container {width: 100%; position: fixed; bottom: 0; left: 0; text-align: center; margin: 0 auto;}
-.bottom-button {display: none; width: 375px; margin: 0 auto; text-align: center;}
-.bottom-button.active {display: block;}
+.bottom-button-container {display: none; width: 100%; position: fixed; top: 657px; z-index: 1000; left: 0; text-align: center; margin: 0 auto;}
+.bottom-button-container.active {display: block;}
+.bottom-button {width: 377px; margin: 0 auto; text-align: center;}
 .total-price {position: relative; width: 100%; height: 70px; background: #F5F5F5;}
 .total-price.active {display: block;}
 .total-price .text-container {padding: 0 24px; position: absolute; top: 50%; left: 50%; width: 100%; display: flex; transform: translate(-50%, -50%);}
@@ -155,11 +162,11 @@ section .form-container::-webkit-scrollbar {display: none;}
 .total-price .text-container .text {text-align: left; font-size: 13px; line-height: 15px; display: inline-block; vertical-align: middle; margin-top: 5px;}
 .total-price .text-container .price {text-align: right; font-size: 20px; line-height: 24px; vertical-align: middle;}
 
-.estimate-button {position: relative; width: 100%; height: 60px; background: #CC2132;}
-#estimate .estimate-button {display: flex;}
-#estimate .estimate-button .consulting {position: relative; flex: 1; background: #000;}
-#estimate .estimate-button .buy {position: relative; flex: 1; background: #CC2132; cursor: pointer;}
-#estimate .estimate-button .consulting .text {color: #fff;}
+.estimate-button {position: relative; width: 100%; height: 63px; background: #CC2132; border-bottom-left-radius: 32px; border-bottom-right-radius: 32px;}
+#estimate-button-two {display: flex;}
+#estimate-button-two .consulting {position: relative; flex: 1; background: #000; border-bottom-left-radius: 32px;}
+#estimate-button-two .buy {position: relative; flex: 1; background: #CC2132; cursor: pointer; border-bottom-right-radius: 32px;}
+#estimate-button-two .consulting .text {color: #fff;}
 .estimate-button a {display: inline-block; width: 100%; height: 100%;}
 .estimate-button .text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; line-height: 19px; color: #fff;}
 

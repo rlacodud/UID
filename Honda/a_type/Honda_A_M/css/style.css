@@ -22,10 +22,10 @@ body, html {width: 425; max-width: 425px; text-align: center; margin: 0 auto;	fo
 .phone {position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; text-align: center;}
 .phone img {width: 399px; height: 800px;object-fit: cover;}
 .total {width: 100%; text-align: center; margin: 0 auto;}
-.total-container {position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 375px; height: 772px; overflow-y: scroll; text-align: center; margin: 0 auto; border-radius: 50px;}
+.total-container {position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 377px; height: 779px; overflow-y: scroll; text-align: center; margin: 0 auto; border-radius: 32px;}
 .total-container::-webkit-scrollbar {display: none;}
 header {width: 100%; position: relative; z-index: 10000;}
-header .container {width: 375px; position: fixed; padding: 15px 20px 0; display: flex; top: 28px; left: 50%; transform: translateX(-50%);}
+header .container {width: 375px; position: fixed; z-index: 10000000; padding: 15px 20px 0; display: flex; top: 28px; left: 50%; transform: translateX(-50%);}
 header .container .left {text-align: left; flex: 1}
 header .container .left .logo {width: 50px; height: 32px; background-image: url('../img/logo.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 header .container .right {text-align: right; flex: 1;}
@@ -34,9 +34,9 @@ header .container .right .hamburger {display: inline-block; width: 34px; height:
 section {z-index: 1000;}
 .main-container {width: 100%; margin: 0 auto; text-align: center; position: relative;}
 
-.float-menu-container {width: 375px; height: 350px; position: fixed; top:0; left: 50%; transform: translateX(-50%); z-index: 1001;}
-.menu-container {width: 100%; height: 350px; position: relative; top: 0; left: 0;}
-.float-menu  {position: absolute; margin: 0 auto; text-align: center; z-index: 10000; top: 600px; right: 30px;}
+.float-menu-container {width: 375px; height: 2px; position: fixed; top:0; left: 50%; transform: translateX(-50%); z-index: 1001;}
+.menu-container {width: 100%; height: 2px; position: relative; top: 0; left: 0;}
+.float-menu  {position: absolute; margin: 0 auto; text-align: center; z-index: 10000; top: 660px; right: 30px;}
 .float-menu .button {position: relative; width: 70px; height: 70px; border-radius: 50%; background: #CC2132; cursor: pointer; z-index: 1001;}
 .float-menu #quote .icon {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; background-image: url('../img/float_icon.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover; transition: all ease-in-out 0.3s;}
 .float-menu #quote.on .icon {background-image: url('../img/quick_close.png'); width: 16px; height: 16px;}
@@ -77,8 +77,8 @@ section {z-index: 1000;}
 section {width: 100%; position: relative;}
 
 #section1 {margin-top: -49px; height: 812px;}
-#section1 .slider__wrapper .slider {background-color: #000; position: relative; width: 375px; height: 812px; margin: auto; overflow: hidden;}
-#section1 .slider__wrapper .slider .slide {opacity: 0; position: absolute; width: 375px; height: 812px; text-align: center;}
+#section1 .slider__wrapper .slider {background-color: #000; position: relative; width: 377px; height: 812px; margin: auto; overflow: hidden;}
+#section1 .slider__wrapper .slider .slide {opacity: 0; position: absolute; width: 377px; height: 812px; text-align: center;}
 #section1 .slider__wrapper .slider .slide video {object-fit: cover; width: 100%; position: absolute; top:0; left: 0;}
 #section1 .slider__wrapper .slider .slide.active {animation-duration: 2s;animation-fill-mode: forwards;animation-delay: 0; animation-name: fadeIn;-webkit-transform: translate(0, 0); transform: translate(0, 0);}
 #section1 .slider__wrapper .slider .slide.active~.slide {-webkit-transform: translate(100%, 0); transform: translate(100%, 0);}
@@ -116,7 +116,7 @@ section {width: 100%; position: relative;}
 }
 #section1 .main-text-container .title h2 {width: 100%; position: absolute; left: 50%; transform: translateX(-50%); line-height: 90px; font-size: 80px; color: #fff;}
 #section1 .main-text-container .new {font-size: 14px; margin-right: -12px;}
-#section1 .button-container {position: absolute; top: 372px; left: 50%; transform: translateX(-50%); z-index: 10000;}
+#section1 .button-container {position: absolute; top: 372px; left: 50%; transform: translateX(-50%); z-index: 10000; user-select: none;}
 #section1 .button-container .button {opacity: 0; width: 140px; height: 50px; background: transparent; border: 1px solid #fff; position: relative;}
 .opacity {animation-name: opacity; animation-fill-mode: forwards;}
 #section1 .button-container #button-one {animation-delay: 0s; animation-duration: 1.2s;}

@@ -128,6 +128,8 @@ $(".dropbtn").on('click', function() {
 $(".estimate-button").on('click', function() {
   $("#model").removeClass("active");
   $("#estimate").addClass("active");
+  $("#button-one").css({'display': 'none'});
+  $("#button-two").css({'display': 'block'});
   $(".step-container #one").removeClass("active");
   $(".step-container #two").addClass("active");
 });
@@ -136,7 +138,8 @@ $(".estimate-button").on('click', function() {
 $(".step-container #one").on('click', function() {
   $(this).addClass("active");
   $("#model").addClass("active");
-  $(".bottom-button").addClass("active");
+  $("#button-one").css({'display': 'block'});
+  $("#button-two").css({'display': 'none'});
   $("#estimate").removeClass("active");
   $(".step-container #two").removeClass("active");
   $('.angle').addClass('on');
@@ -145,18 +148,22 @@ $(".step-container #one").on('click', function() {
 
 $(".step-container #two").on('click', function() {
   $(this).addClass("active");
+  $("#button-one").css({'display': 'none'});
+  $("#button-two").css({'display': 'block'});
   $("#estimate").addClass("active");
   $("#model").removeClass("active");
   $(".step-container #one").removeClass("active");
 });
 
-$(".estimate-button .buy").on('click', function() {
+$("#estimate-button-two .buy").on('click', function() {
   goTop();
-  $('.bottom-button').removeClass("active");
+  $('.bottom-button').css({'display': 'none'});
+  // $('#estimate-button-two').css({'display': 'none'});
   $("#estimate").css({'display': 'none'});
   $(".step-container").removeClass("on");
   $(".buy-container").addClass("on");
   $(".main-image").removeClass("on");
+  console.log('왜');
 });
 
 function goTop () {
