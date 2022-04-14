@@ -4,7 +4,8 @@ function slider() {
     last = slider.lastElementChild,
     first = slider.firstElementChild
   slider.insertBefore(last, first);
-
+  setInterval(function () {$('.button-container button').addClass('opacity'); }, 1500);
+  setInterval(function () {$('.button-container button').removeClass('opacity'); }, 3000);
   setInterval(function () { movement({ target: { id: "next" } }); }, 3000);
   setInterval(function () { progressbar({ target: { id: "next" } }); }, 3000);
 

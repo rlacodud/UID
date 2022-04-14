@@ -99,7 +99,7 @@ $("section .image-container .button-container #Exterior").on('click', function()
   $('#Interior').removeClass("active");
   $('#Interior').addClass("on");
   $('.sketchfab-embed-wrapper').addClass("on");
-  $('section .image-container .slideContainer').toggleClass("on");
+  $('section .image-container .slideContainer').removeClass("on");
   $('section .image-container .angle').addClass('on');
 });
 $("section .image-container .button-container #Interior").on('click', function() {
@@ -107,7 +107,7 @@ $("section .image-container .button-container #Interior").on('click', function()
   $('#Exterior').removeClass("active");
   $('#Exterior').addClass("on");
   $('.sketchfab-embed-wrapper').removeClass("on");
-  $('section .image-container .slideContainer').toggleClass("on");
+  $('section .image-container .slideContainer').addClass("on");
   $('section .image-container .angle').removeClass('on');
 });
 
