@@ -10,7 +10,6 @@
 > ---
 >#### __(+) 프레임워크란?__
 >##### 여기서 자주 헷갈리는 프레임워크(Framework)와의 차이점에 대해서 짚고 넘어가려 한다.
-
 >##### 프레임워크(Framework)는 Frame + Work 의 합성어로,
 >##### 말 그대로 __특정 프로그램을 개발하기 위한 여러 요소들과 메뉴얼인 룰을 제공하는__ 프로그램이다.
 >##### 라이브러리와의 가장 큰 차이점은 __자유도이다.__
@@ -112,7 +111,6 @@ class HelloMessage extends React.Component {
 
 ## __3. React Project 생성__
 #### 그럼 긴 말 않고 이제 React Project를 생성하고 직접 코딩을 해보며 익혀보는 시간을 가져보자.
-
 <br>
 
 #### 우선 들어가기 전에 [Node.js](https://nodejs.org/en/)가 준비되어 있어야 한다. __링크로 들어가 Node.js를 설치하자.__
@@ -170,7 +168,7 @@ class HelloMessage extends React.Component {
 
 <br>
 
-#### 그럼 이제 각 폴더들의 역할에 대해 알아보자.
+#### 그럼 다시 코드 에디터로 돌아와 각 폴더들의 역할에 대해 알아보자.
 ### __(1) public__
 #### 앞서 말했듯 React는 가상 DOM을 사용하기에 가상 DOM이 들어갈 빈 껍데기 html이 필요한데 해당 html이 존재하는 폴더이다.
 ### __(2) src__
@@ -191,13 +189,10 @@ class HelloMessage extends React.Component {
 
 <br>
 
-#### 그럼 이제 Component 기본 작성 방식에 대해 먼저 다뤄보자.
 #### 쉬운 코드 작성을 위해 Extension 메뉴에서 __React/Redux/React-Native snippets__ 를 검색하여 다운로드해준다.
 ![extension][extension]
 
 [extension]: ./img/extension.png "tool"  
-
-<br>
 
 #### 해당 extension을 설치하면 코드 작성 시 __`rcc` + tab만으로도 React Component 기본 작성__ 이 완료된다.
 
@@ -223,7 +218,7 @@ class HelloMessage extends React.Component {
     )
   }
 ```
-#### 기본적으로 위와 같은 형식을 갖고 있다.
+#### Component는 기본적으로 위와 같은 형식을 갖고 있다.
 #### `render` 함수를 호출하고 그 속에 `return`값으로 JSX문법을 이용하여    화면에 나타날 요소들을 작성해주는 형식이다.
 
 <br>
@@ -259,7 +254,7 @@ export default class App extends Component {
 <br>
 
 #### state는 __`render` 함수 호출 전__ 에 생성하며 객체로 작성한다.
-#### 또한 `return` 안에서는 JSX 문법에 따라 __변수는 `{}` 안에__ 작성해야 한다.
+#### 또한 `return` 안에서는 JSX 문법에 따라 __`{}` 안에 변수를__ 작성해야 한다.
 #### `this.state.hello`는 해당 Component(`this`)의 `state`의 hello의 값을 가져오겠다는 의미이다.
 
 <br>
@@ -318,7 +313,7 @@ root.render(
   </React.StrictMode>
 );
 ```
-#### 위 코드를 보면 `message`라는 변수를 `App.js`가 __props로 사용할 수 있게 전달(상속)하고__ 있다
+#### 위 코드를 보면 `message`라는 변수를 `App.js`가 __props로 사용할 수 있게 전달(상속)하고__ 있다.
 #### 이렇게 받은 문자열을 `<App></App>` 내에서 아래와 같이 사용할 수 있다.
 ```jsx
 // App.js
@@ -413,7 +408,7 @@ class InsideApp extends Component {
 <br>
 
 ### __요약__
-#### __1. JSX 문법으로 작성하므로 소문자로 시작하면 html 문법과 혼동되기 때문에 Component 이름은 대문자로 시작하여 작성한다.__
+#### __1. JSX 문법으로 작성하므로 소문자로 시작하면 HTML 문법과 혼동되기 때문에 Component 이름은 대문자로 시작하여 작성한다.__
 #### &nbsp; ex) Nav
 #### __2. extension이 설치되어 있다면 `rcc` + tab만으로도 React Component 기본 작성이 완료된다.__
 #### __3. rcc의 기본 구조는 아래와 같다.__
@@ -496,7 +491,7 @@ export default class App extends Component {
 
 #### 업데이트 과정은 다음과 같다.
 #### `componentWillReceiveProps` 메소드가 호출되고 그 후에 `shouldComponentUpdate`, `componentWillUpdate`가 차례대로 호출된 후,
-#### 업데이트가 완료(render)되면 componentDidUpdate가 된다.
+#### 업데이트가 완료(render)되면 `componentDidUpdate`가 된다.
 #### 해당 메소드들은 첫번째 인자로 prevProps와 prevState를 받아
 #### 현재 업데이트된 props|state와 업데이트되기 전 props|state를 비교해서 원하는 작업을 수행할 수 있다.
 
@@ -582,11 +577,8 @@ npx serve -s build
 
 <br>
 
-#### 이렇게 React만을 사용할 때 알아야 하는 사항에 대해서는 다 배웠다.
+#### 이렇게 React만을 사용할 때 알아야 하는 사항에 대해 배워봤다.
 #### 이젠 주소에 따라 화면을 바꿔주는 React-Router에 대해 알아보자.
-
-<br>
-
 ---
 
 [React_Router](./React_Router.md)
