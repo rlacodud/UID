@@ -209,6 +209,10 @@ class HelloMessage extends React.Component {
 
 #### Component는 Class를 이용해 사용하게 되는데 
 #### 여기서 `export default`란 다른 파일에서도 현재 작성 중인 Component를 사용 가능하도록 연결해주는 역할이라고 보면 된다.
+#### `default`를 안 붙이게 된다면 아래와 같이 `import` tag에서 {} 안에 Component명을 넣음으로써 연결해줄 수 있다.
+```jsx
+import {Home} from './components/Home';
+```
 
 <br>
 
