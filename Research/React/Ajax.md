@@ -1,4 +1,4 @@
-__[02.React_Router](./React_Router.md)__
+[02.React_Router](./React_Router.md)
 
 ---
 
@@ -325,7 +325,7 @@ console.log(text);
 
 <br>
 
-#### 그 후 해당 경로로 들어가 fetch 폴더 속 내용을 복사하여 가져온다.
+#### 그 후 [해당 경로](https://github.com/rlacodud/UID/tree/mit/Research/React/Ajax/fetch)로 들어가 fetch 폴더 속 내용을 복사하여 가져온다.
 #### 루트 디렉토리에 css 파일과 fetch.html 파일 생성 후 아래와 같은 내용을 작성한다.
 ```text
 // css
@@ -344,3 +344,36 @@ console.log(text);
     })
   ">
 ```
+#### 그럼 아래와 같이 fetch 버튼을 눌렀을 때 css text 파일에 작성했던 내용이 html로 작성된다.
+#### 과정을 하나하나 짚어보자.
+![Ajax_fetch][Ajax_fetch]
+
+[Ajax_fetch]: ./img/Ajax_fetch.png "Ajax_fetch"
+#### 1. `<button>` tag의 `onclick` 속성으로 내장 함수를 입력하여 버튼 클릭 시 익명 함수가 작동되도록 한다.
+#### 2. `fetch(css)` 로 웹 브라우저에게 css 파일의 데이터를 서버에게 요청한다.
+#### 3. 서버가 요청받은 데이터에 대한 응답이 끝나면 `then` 내부의 익명 함수를 실행시키는데
+#### 4. 그 내용으로 `response.text()`로 인해 텍스트를 반환하도록 한다.
+#### 5. 반환된 text 값을 매개변수로 설정하여 css 파일의 내용을 `article` 속에 html문법으로 삽입시킴으로써 화면에 나타나게 한다.
+
+<br>
+
+#### 이렇듯 fetch를 이용하면 리로드없이 브라우저 속 데이터의 내용만 변경함으로써 효율성을 높일 수 있다.
+
+<br>
+
+#### 추가적으로 서버 내에 데이터를 직접 관리하는 경우, 더 쉽게 fetch로 반환시키는 방법이 있다.
+```javascript
+  var items = text.split(',');
+```
+#### 위와 같이 split를 이용해 ,를 기준으로 원소를 나눠 배열로 만든 후 items 변수에 대입 후
+#### 반복문을 이용해 items 배열의 내용을 tag에 삽입하는 방법도 있다.
+
+<br>
+
+#### 이렇게 Ajax에 대해 어느정도 알아봤으니 이제 React와 연동하여 사용하는 방법에 대해 알아보자.
+
+<br>
+
+---
+
+[04.React_Ajax](./React_Ajax.md)
