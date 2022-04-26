@@ -10,7 +10,7 @@ __[02.React_Router](./React_Router.md)__
 
 <br>
 
-#### Ajax는 웹 페이지 전체를 리로드하지 않아도 웹 페이지의 일부분만은 갱신할 수 있다.
+#### Ajax는 웹 페이지 전체를 리로드하지 않아도 웹 페이지의 일부분만을(DOM) 갱신할 수 있다.
 #### 즉 Ajax를 이용하면 백그라운드 영역에서 서버와 통신하여 그 결과를 웹 페이지의 일부분에만 표시할 수 있다.
 
 <br>
@@ -48,35 +48,16 @@ __[02.React_Router](./React_Router.md)__
 
 <br>
 
----
+### __(4) Ajax 구성 요소__
+#### - 웹페이지의 표현을 위한 HTML과 CSS
+#### - 데이터에 접근하거나 화면 구성을 동적으로 조작하기 위해 사용되는 DOM 모델
+#### - 데이터의 교환을 위한 JSON이나 XML
+#### - 웹 서버와의 비동기식 통신을 위한 XMLHttpRequest 객체
+#### - 위에서 언급한 모든 기술을 결합하여 사용자의 작업 흐름을 제어하는 데 사용되는 Javascript
 
 <br>
 
-### __(4) Ajax 프레임워크__
-#### Ajax를 이용하여 개발을 손쉽게 할 수 있도록 여러가지 기능을 포함해놓은 개발 환경을 의미한다.
-#### 가장 많이 사용되는 프레임워크는 다음과 같다.
->#### Prototype
->#### script.aculo.us
->#### dojo
->#### jQuery
-
-<br>
-
----
-
-<br>
-
-## __2. Ajax 동작원리__
-#### Ajax에서 사용하는 기존 기술을 아래와 같다.
-#### 1. 웹 페이지의 표현을 위한 HTML과 CSS
-#### 2. 데이터에 접근하거나 화면 구성을 동적으로 조작하기 위해 사용되는 DOM 모델
-#### 3. 데이터의 교환을 위한 JSON이나 XML
-#### 4. 웹 서버와의 비동기식 통신을 위한 XMLHttpRequest 객체
-#### 5. 위에서 언급한 모든 기술을 결합하여 사용자의 작업 흐름을 제어하는 데 사용되는 자바스크립트
-
-<br>
-
-### __(1) Ajax 동작 원리__
+### __(5) Ajax 동작 원리__
 #### Ajax를 이용한 웹 응용 프로그램은 자바스크립트 코드를 통해 웹 서버와 통신을 하게 된다.
 #### 따라서 사용자의 동작에는 영향을 주지 않으면서도 백그라운드에서 지속해서 서버와 통신할 수 있다.
 
@@ -86,58 +67,23 @@ __[02.React_Router](./React_Router.md)__
 
 #### 위 그림의 동작원리는 아래와 같은 순서로 진행된다.
 #### 1. 사용자에 의한 요청 이벤트가 발생한다.
-#### 2. 요청 이벤트가 발생하면 이벤트 핸들러에 의해 자바스크립트가 호출된다.
-#### 3. 자바스크립트는 XMLHttpRequest 객체를 사용하여 서버로 요청을 보낸다.
+#### 2. 요청 이벤트가 발생하면 이벤트 핸들러에 의해 Javascript가 호출된다.
+#### 3. Javascript는 XMLHttpRequest 객체를 사용하여 서버로 요청을 보낸다.
 #### 이 때 웹 브라우저는 요청을 보내고 나서 서버의 응답을 기다릴 필요없이 다른 작업을 처리할 수 있다.
 #### 4. 서버는 전달받은 XMLHttpRequest 객체를 가지고 Ajax 요청을 처리한다.
 #### 5-6. 서버는 처리한 결과를 HTML, XML 또는 JSON 형태의 데이터로 웹 브라우저에 전달한다.
-#### 7. 서버로부터 전달받은 데이터를 가지고 웹 페이지의 일부분만을 갱신하는 자바스크립트를 호출한다.
+#### 7. 서버로부터 전달받은 데이터를 가지고 웹 페이지의 일부분만을 갱신하는 Javascript를 호출한다.
 #### 8. 결과적으로 웹 페이지의 일부분만이 다시 로딩되어 표시된다.
 
 <br>
 
----
-
-<br>
-
-## __3. XMLHttpRequest 객체__
+### __(6) XMLHttpRequest 객체__
 #### Ajax의 가장 핵심적인 구성 요소는 XMLHttpRequest 객체이다.
-#### 웹 브라우저가 서버와 데이터를 교환할 때 사용되는데
-#### 웹 브라우저가 백그라운드에서 계속해서 서버와 통신할 수 있는 것도 이 객체를 사용하기 때문이다.
-
-<br>
-
-#### 현재 대부분의 주요 웹 브라우저는 XMLHttpRequest 객체를 내장하고 있다.
-#### 이런 XMLHttpRequest 객체를 생성하는 방법은 브라우저의 종류에 따라 다음과 같이 나뉜다.
-
-<br>
-
-#### <i> XMLHttpRequest 객체를 이용한 방법 </i>
-#### <i> ActiveXObject 객체를 이용한 방법 </i>
-
-<br>
-
-#### 익스플로러7과 그 이상의 버전, 크롬, 파이어폭스, 사파리, 오페라에서는 XMLHttpRequest 객체를 사용한다.
->#### var 변수 이름 = new XMLHttpRequest();
-
-<br>
-
-#### 하지만 익스플로러의 구형 버전인 5와 6 버전에서는 ActiveXObject 객체를 사용해야 한다.
->#### var 변수 이름 = new ActiveXObject("Microsoft.XMLHTTP");
-
-<br>
-
-#### 따라서 모든 웹 브라우저에서 XMLHttpRequest 인스턴스를 제대로 생성하기 위해서는 다음과 같이 작성해야 한다.
-```js
-var httpRequest;
-function createRequest() {
-  if(window.XMLHttpRequest) // 익스플로러 7과 그 이상의 버전, 크롬, 파이어폭스, 사파리, 오페라 등
-    return new XMLHttpRequest();
-} else { // 익스플로러 6과 그 이하의 버전
-  return new ActiveXObject("Microsoft.XMLHTTP");
-}
+#### Ajax에서 XMLHttpRequest 객체는 웹 브라우저가 서버와 데이터를 교환할 때 사용된다.
+#### 웹 브라우저가 백그라운드에서 계속해서 서버와 통신할 수 있는 것은 이 객체를 사용하기 때문이다.
+```javascript
+var httpRequest = new XMLHttpRequest();
 ```
-#### 하지만 현재 익스플로러6과 그 이하 버전을 사용하는 사용자는 거의 없으므로 우리는 XMLHttpRequest 객체만을 사용할 것이다.
 
 <br>
 
@@ -145,38 +91,256 @@ function createRequest() {
 
 <br>
 
-## __3. 서버에 요청하기__
-#### 그렇다면 계속 언급되는 서버에 요청하는 것이란 어떻게 하는걸까?
-#### 앞서 말했듯  Ajax에서는 XMLHttpRequest 객체를 사용하여 서버와 데이터를 교환하기에
-#### 서버에 요청을 보내기 위해서는 XMLHttpRequest 인스턴스를 생성해야 한다.
-#### XMLHttpRequest 인스턴스의 open() 메소드와 send() 메소드를 사용하여 요청을 보낼 수 있다.
-
-<br>
-
-### __(1) open() 메소드__
-#### open() 메소드는 서버로 보낼 Ajax 요청의 형식을 설정한다.
+## __2. Fetch API__
+### __(1) XMLHttpRequest 방식__
+#### XMLHttpRequest 객체를 이용한 정통적인 초창기 비동기 서버 요청 방식이다.
+#### 성능에는 문제가 없지만 코드가 복잡하고 가독성이 좋지 않다는 단점이 있다.
 ```javascript
-open(전달방식, URL 주소, 동기여부);
-```
-#### 전달방식은 요청을 전달할 방식으로 GET 방식과 POST 방식 중 하나를 선택할 수 있다.
-#### URL 주소는 요청을 처리할 서버의 파일 주소를 전달한다.
-#### 동기 여부는 요청을 동기식으로 전달할지 비동기식으로 전달할지를 전달한다.
-
-<br>
-
-### __(2) send() 메소드__
-#### send() 메소드는 작성된 Ajax 요청을 서버로 전달한다.
-#### 이 메소드는 전달 방식에 따라 인수를 가질 수도, 안 가질 수도 있다.
-```javascript
-send(); // GET 방식
-send(문자열); // POST 방식
+// XMLHttpRequest 방식
+var httpRequest = new XMLHttpRequest();
+httpRequest.onreadystatechange = function () {
+if (httpRequest.readyState == XMLHttpRequest.DONE && httpRequest.status == 200) {
+document.getElementById("text").innerHTML = httpRequest.responseText;
+}
+}
+httpRequest.open("GET", "ajax_intro_data.txt", true);
+httpRequest.send();
 ```
 
 <br>
 
-### __(3) GET 방식과 POSt 방식__
-#### __(3-1) GEt 방식__
-#### 주소에 데이터(data)를 추가하여 전달하는 방식이다.
-#### GET 방식의 HTTP 요청은 브라우저에 의해 캐시되어(cashed) 저장된다.
-#### 또한 GET 방식은 보통 쿼리 문자열(query string)에 포함되어 전솔되므로 길이의 제한이 있다.
-#### 따라서 보안상 취약점이 존재하므로 중요한 데이터는 POST 방식을 사용하여 요청하는 것이 좋다.
+### __(2) Fetch API 방식__
+#### Fetch API는 기본적으로 XMLHttpRequest보다 더 강력하고 유연하다.
+#### 이벤트 기반인 XMLHttpRequest과는 달리 Fetch API는 Promise 기반으로 구성되어 있어 비동기 처리 프로그래밍 방식에 잘 맞는 형태이다.
+#### 그래서 `then`이나 `catch`와 같은 체이닝으로 작성할 수 있다는 장점이 있다.
+```javascript
+// Fetch API 방식
+fetch('ajax_intro_data.txt')
+.then( response => response.text() )
+.then( text => { document.getElementById("#t").innerHTML = text; } )
+/* 'fetch('서버주소')' 는 웹 브라우저에게 '이 서버주소로 요청해줘' 라는 의미이고,
+뒤에 .then이 붙으면 '요청 끝나고나서 이 할일을 해줘!' 라는 것이다. */
+```
+<br>
+
+>#### __여기서 Promise 기반이란?__
+>#### Promise는 자바스크립트 비동기 처리에 사용되는 객체이다.
+>#### 비동기 처리란 __특정 코드의 실행이 완료될 때까지 기다리지 않고 다음 코드를 먼저 수행하는 자바스크립트의 특성__ 을 의미한다.
+
+<br>
+
+#### 또한 Fetch API는 JS 기본 라이브러리이기 때문에 Jquery와 같이 CDN과 같은 다른 작업을 하지 않아도 바로 사용할 수 있디.
+
+<br>
+
+#### __(2-1) Fetch 문법&사용법__
+```javascript
+fetch("https://jsonplaceholder.typicode.com/posts", option)
+.then(res => res.text())
+.then(text => console.log(text));
+```
+
+<br>
+
+#### 1. fetch에는 기본적으로 첫번째 인자에 요청할 URL(가져오려고 하는 데이터의 주소)이 들어간다.
+#### 2. 기본적으로 http 메소드 중 GET으로 동작한다.
+#### 3. fetch를 통해 ajax 호출 시 해당 주소에 요청을 보낸 다음, 응답 객체(Promise object Response)를 받는다.
+#### 4. 그러면 첫번째 `then`에서 그 응답을 받게 되고, `res.text()` 메소드로 파싱한 text값을 return한다.
+#### 5. 그 다음 `then`에서 return받은 text값을 받고 원하는 처리를 할 수 있게 된다.
+
+<br>
+
+#### 개발자 도구의 네트워크 탭에 가보면 fetch를 통해 얻어온 데이터를 볼 수 있다.
+![fetch][fetch]
+
+[fetch]: ./img/fetch.png "fetch"
+
+<br>
+
+#### __(3) response 프로퍼티와 메소드__
+#### fetch를 통해 요청을 하고 서버로부터 값을 응답받으면 `.then`을 통해 함수의 인자에 담기게 되는데 이 값은 Response 객체로서 여러가지 정보를 담고 있다.
+#### 필요한 변수값이나 메소드를 뽑아내서 값을 얻으면 된다.
+>#### - response.status: HTTP 상태 코드
+>#### - response.ok: HTTP 상태 코드가 200과 299 사이일 경우 true
+>#### - response.body: 내용
+>#### - response.text(): 응답을 읽고 텍스트를 반환한다.
+>#### - response.json(): 응답을 JSON 형태로 파싱한다. = 데이터를 자바스크립트 객체로 변환한다.
+>#### - response.formData(): 응답을 FormData 객체 형태로 반환한다.
+>#### - response.blob(): 응답을 Blob(타입이 있는 바이너리 데이터) 형태로 반환한다.
+>#### - response.arrayBuffer(): 응답을 ArrayBuffer(바이너리 데이터를 로우 레벨 형식으로 표현한 것) 형태로 반환한다.
+
+<br>
+
+#### 응답 자료 형태 반환 메소드는 한번만 사용할 수 있다.
+#### 만일 response.text()를 사용해 응답을 얻었다면 본문의 콘텐츠는 모두 처리된 상태이기 때문에
+#### 뒤에 또 response.json()을 써도 동작하지 않게 된다.
+
+<br>
+
+#### __(4) HTTP 요청 방식__
+#### HTTP 요청에는 GET, POST 뿐만 아니라 PUT, DELETE같은 여러가지 방식이 존재한다.
+
+<br>
+
+#### __HTTP Method 종류__
+   METHOD   |    역할  
+----------- | ---------  
+POST        |  POST를 통해 해당 URI를 요청하면 리소스를 생성
+GET         |  GET을 통해 해당 리소스를 조회
+PUT         |  PUT을 통해 해당 리소스를 수정
+DELETE      |  DELETE를 통해 해당 리소스를 삭제
+
+<br>
+
+>#### __URL과 URI의 차이는?__
+>#### __URL__
+>#### 흔히 웹 주소라고도 하며 컴퓨터 네트워크 상에서 리소스가 어디 있는지 알려주기 위한 규약이고 URI의 서브셋이다.
+>#### __URI__
+>#### 특정 리소스를 식별하는 통합 자원 식별자(Uniform Resource Identifier)를 의미한다.
+>#### 웹 기술에서 사용하는 논리적 또는 물리적 리소스를 식별하는 고유한 문자열 시퀀스다.
+>![url_uri][url_uri]
+
+[url_uri]: ./img/url_uri.png "url_uri"
+>#### 둘의 가장 큰 차이점은 URI는 식별하고 URL은 위치를 가르킨다는 점이다.
+
+<br>
+
+#### __(4-1) GET Method__
+#### __GET: 존재하는 자원을 요청__
+#### 단순히 원격 API에 있는 데이터를 가져올 때 쓰임.
+#### fetch 함수는 기본으로 GET 방식으로 작동하고 option 인자가 필요 없다.
+#### 응답(response) 객체는 `json()` 메소드를 제공하고 이 메소드를 호출하면 응답(response) 객체로부터 JSON 형태의 데이터를 자바스크립트 객체로 변환하여 얻을 수 있다.
+```javascript
+// GET METHOD
+fetch("https://jsonplaceholder.typicode.com/posts/1") // posts의 id 1인 엘리먼트를 가져옴
+.then((response) => response.json())
+.then((data) => console.log(data))
+```
+<br>
+
+#### __(4-2) POST Method__
+#### __POST: 새로운 자원 생성 요청__
+#### 폼 등을 사용해서 데이터를 만들어 낼 때 보내는 데이터의 양이 많거나, 비밀번호 등 개인정보를 보낼 때 POST 메소드 사용
+#### 새로운 POST 생성을 위해 method option을 POST로 지정해주고 headers option으로 JSON 포맷을 사용한다고 알려줘야 한다. | body option에는 요청 데이터를 JSON 포맷으로 넣어준다.
+```javascript
+// POST METHOD
+fetch("https://jsonplaceholder.typicode.com/posts", {
+method: "POST", // POST
+headers: { // 헤더 조작
+"Content-Type": "application/json",
+},
+body: JSON.stringify({ // 자바스크립트 객체를 json화 한다.
+title: "Test",
+body: "I am testing!",
+userId: 1,
+}),
+})
+.then((response) => response.json())
+.then((data) => console.log(data))
+```
+
+<br>
+
+#### __(4-3) PUT Method__
+#### __PUT: 존재하는 자원 변경(수정) 요청__
+#### API에서 관리하는 데이터의 수정을 위해 PUT 메소드 사용
+#### method option만 PUT으로 설정한다는 점 제외하고는 POST 방식과 비슷하다.
+#### 아예 전체를 body의 데이터로 교체해버린다.
+```javascript
+// PUT METHOD
+fetch("https://jsonplaceholder.typicode.com/posts", {
+method: "PUT",
+headers: {
+"Content-Type": "application/json",
+},
+body: JSON.stringify({
+title: "Test" // 아예 title 엘리먼트로 전체 데이터를 바꿈. 마치 innerHTML같이.
+}),
+})
+.then((response) => response.json())
+.then((data) => console.log(data))
+```
+
+<br>
+
+#### __(4-4) PATCH Method__
+#### __PATCH: 존재하는 자원 일부 변경 요청__
+#### body의 데이터와 알맞는 일부만을 교체한다.
+```javascript
+// PATCH METHOD
+fetch("https://jsonplaceholder.typicode.com/posts/1", { // posts의 id 1인 엘리먼트를 수정
+method: "PATCH",
+headers: {
+"Content-Type": "application/json",
+},
+body: JSON.stringify({
+title: "Test" // title만 바꿈. 나머지 요소는 건들지 않음.
+}),
+})
+.then((response) => response.json())
+.then((data) => console.log(data))
+```
+
+<br>
+
+#### __(4-5) DELETE Method__
+#### __DELETE: 존재하는 자원 삭제 요청__
+#### 보낼 데이터가 없기 때문에 headers, body option이 필요 없다.
+```javascript
+// DELETE METHOD
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+method: "DELETE",
+})
+.then((response) => response.json())
+.then((data) => console.log(data))
+```
+<br>
+
+### __(5) async / await 문법__
+#### 앞서 말했듯 fetch의 return값 response는 Promise 객체이다.
+#### 이는 async / await 문법으로 가독성 높게 코딩할 수 있다.
+```javascript
+fetch("https://jsonplaceholder.typicode.com/posts", option)
+.then(res => res.text())
+.then(text => console.log(text));
+
+// =
+
+(async () => {
+let res = await fetch("https://jsonplaceholder.typicode.com/posts", option);
+let text = await res.text();
+console.log(text);
+})() //await은 async함수내에서만 쓸수 있으니, 익명 async 바로 실행함수를 통해 활용합니다.
+```
+#### function 키워드 앞에 async를 붙여주고
+#### 비동기로 처리되는 부분 앞에 await을 붙여준다.
+#### async가 붙은 함수는 Promise를 반환하고 Promise가 아닌 것을 Promise로 감싸 반환한다.
+#### await 키워드를 만나면 Promise가 처리(settled)될 때까지 기다린다.
+
+<br>
+
+### __(6) 실습__
+#### 글로만 읽고 이해하는 건 어려우니 지금껏 배운 걸 실습을 통해 익혀보자.
+#### 우선 Ajax 실습을 진행할 폴더 생성 후 코드 에디터에서 열어준다.
+
+<br>
+
+#### 그 후 해당 경로로 들어가 fetch 폴더 속 내용을 복사하여 가져온다.
+#### 루트 디렉토리에 css 파일과 fetch.html 파일 생성 후 아래와 같은 내용을 작성한다.
+```text
+// css
+<h2>CSS</h2>CSS is...
+```
+```html
+<!-- fetch.html -->
+  <article>
+ 
+  </article>
+  <input type="button" value="fetch" onclick="
+    fetch('css').then(function(response){
+      response.text().then(function(text){
+        document.querySelector('article').innerHTML = text;
+      })
+    })
+  ">
+```
