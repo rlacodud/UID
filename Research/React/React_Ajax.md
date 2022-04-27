@@ -6,10 +6,11 @@
 
 ## __1. React Ajax란?__
 #### 우리가 지금껏 배워온 React 애플리케이션은 페이지를 새로고침함으로써 변경되는 부분이 있었다.
-#### 이러한 점들을 보완하고자 Ajax와 연동하는 방법을 배우고 앞으로 API 요청을 할 때 특별한 상황을 제외하고는 페이지를 리로드하지 않는 방법을 사용해보고자 한다.
+#### 이러한 점들을 보완하고자 Ajax와 연동하는 방법을 배우고 앞으로 API 요청을 할 때 __특별한 상황을 제외하고는 페이지를 리로드하지 않는 방법을__ 사용해보고자 한다.
 
 <br>
 
+### __(1) 기본 세팅__
 #### 우선 실습을 위해 React Ajax 코딩을 진행할 폴더를 생성해주고 본인이 사용하는 코드 에디터에 해당 폴더를 열어준다.
 #### 그 후, 터미널을 열어 __`npx create-react-app .`__ 명령을 실행함으로써 __React 프로젝트를 새로 생성__ 해보자.
 
@@ -47,9 +48,9 @@ export default App;
 
 <br>
 
-#### 이제 Ajax 방식으로 불러올 데이터가 담긴 파일을 생성해보자.
-#### Ajax 방식으로 데이터를 가져올 때 public 디렉토리 내의 파일을 가져올 수 있으므로
-#### public 디렉토리에 데이터 파일인 list.json 파일을 생성하고 아래와 같이 작성한다.
+#### 이제 Ajax 방식으로 불러올 __데이터가 담긴 파일을 생성해보자.__
+#### Ajax 방식으로 데이터를 가져올 때 __public 디렉토리 내의 파일을 가져올 수 있으므로__
+#### public 디렉토리에 데이터 파일인 `list.json` 파일을 생성하고 아래와 같이 작성한다.
 ```json
 // public/list.json
 [
@@ -61,7 +62,7 @@ export default App;
 
 <br>
 
-#### 이어서 각 item의 id에 따른 상세정보를 {id}.json 형식의 파일로 작성해보자.
+#### 이어서 각 item의 id에 따른 상세정보를 `{id}.json` 형식의 파일로 작성해보자.
 #### 다음 세 파일을 마찬가지로 public 디렉토리에서 생성 후 작성하면 된다.
 ```json
 // public/1.json
@@ -87,8 +88,12 @@ export default App;
   "desc": "JS is..."
 }
 ```
+
+<br>
+
+### __(2) Component 생성__
 #### 이제 데이터는 모두 생성되었으니 Component를 만들어보자.
-#### `App` Component에서 `Nav` Component를 생성하자.
+#### `App.js`에서 __`Nav` Component를 생성하자.__
 ```jsx
 // src/App.js
 import React, { Component } from 'react'
@@ -125,8 +130,9 @@ export default App;
 
 <br>
 
-#### 이제 `Nav` Component가 생성되는 시점에서 Component 목록의 내용을 Ajax를 통해 만들어야 한다.
-#### 이전에 생명주기에서 배웠던 `componentDidMount` 메소드를 이용하여 Component가 초기화될 때 네트워크 통신이 가능하게끔 할 것이다.
+### __(3) fetch API__
+#### 이제 __`Nav` Component가 생성되는 시점에서__ Component 목록의 내용을 Ajax를 통해 만들어야 한다.
+#### 이전에 생명주기에서 배웠던 __`componentDidMount` 메소드를 이용하여 Component가 초기화될 때 네트워크 통신이 가능하게끔__ 할 것이다.
 
 <br>
 
@@ -146,7 +152,7 @@ class Nav extends Component {
   render() {
 // ...생략
 ```
-#### `list.json` 파일을 자바스크립트 객체 형식으로 변환한 뒤
+#### `list.json` 파일을 __자바스크립트 객체 형식으로 변환__ 한 뒤
 #### 이를 console창에 띄우는 작업을 진행했다.
 ![console][console]
 
@@ -185,15 +191,18 @@ class Nav extends Component {
     )
 // ...생략
 ```
-#### 위 코드를 보면 state의 list를 생성하여 JSON 데이터를 저장하고 목록의 항목을 생성했다.
-#### Ajax를 이용해서 가져온 데이터는 직접 렌더링에 영향을 주면 안되고 state에 넘긴 다음 render 메소드가 state의 변화에 영향을 받아 처리하도록 해야 한다.
-#### 그래야 값이 변경될 때마다 render 메소드가 실행되기 때문이다.
-#### 또한 배열을 렌더링할 때에는 꼭 key값이 있어야 한다.
+#### 위 코드를 보면 __state의 `list`를 생성하여 JSON 데이터를 저장하고__ 이를 이용해 목록의 항목을 생성했다.
 
 <br>
 
-#### 이어서 리스트 항목을 클릭할 경우 해당 항목의 정보를 읽어서 `<article>`에 출력하는 기능을 만들어보자.
-#### 우선 `Article` Component를 생성하고 이를 `<article>` 영역을 대체한다.
+#### __Ajax를 이용해서 가져온 데이터는 직접 렌더링에 영향을 주면 안되고 state에 넘긴 다음 `render` 메소드가 state의 변화에 영향을 받아 처리하도록__ 해야 한다.
+#### 그래야 __값이 변경될 때마다 `render` 메소드가 실행되기 때문이다.__
+#### 또한 __배열을 렌더링할 때에는 꼭 `key`값이__ 있어야 한다.
+
+<br>
+
+#### 이어서 __리스트 항목을 클릭할 경우 해당 항목의 정보를 읽어서 `<article>`에 출력하는 기능을__ 만들어보자.
+#### 우선 `Article` Component를 생성하고 `<article>` 영역을 대체한다.
 #### 그 후 리스트 항목 클릭 시, 해당 리스트에 대한 정보가 `article`에 출력되도록 한다.
 ```jsx
 // src/App.js
@@ -279,18 +288,285 @@ class App extends Component {
 
 export default App;
 ```
-#### 1. `App` Component 내에 state를 생성하여 article의 title과 desc값을 삽입하여 기본값을 설정해준다.
-#### 2. `Nav` Component의 `a` tag에 `data-id={li.id}`로 각 리스트의 id값을 받아온다.
-#### 3. 이 id값을 `this.props.onClick(e.target.dataset.id);`을 통해 현재 클릭된 리스트의 id값을 props로 넘겨준다.
+#### 1. `App` Component 내에 state를 생성하여 `article`의 title과 desc값을 삽입하여 기본값을 설정해준다.
+#### 2. `Nav` Component의 `<a>`에 __`data-id={li.id}`로 각 리스트의 id값을 받아온다.__
+#### 3. 이 id값을 `this.props.onClick(e.target.dataset.id);`을 통해 __현재 클릭된 리스트의 id값을 props로 넘겨준다.__
 >#### __여기서 dataset이란?__
 >#### `data-`로 시작되는 부분을 가리킨다.
 >#### 즉, 위 코드에서는 data- __id__ 이기에 `dataset.id`로 값을 받아올 수 있는 것이다.
-#### 4. 이어서 `App` Component의 `Nav` Component에서 위에서 전달받은 id를 매개변수로 삼아 `fetch` 메소드에서 현재 클릭된 리스트 id.json을 불러옴으로써 해당하는 데이터를 가져오는 것이다.
-#### 5. 해당 데이터는 이어서 article의 title과 desc에 삽입되는 것이다.
+#### 4. 이어서 `Nav` Component에서 __전달받은 id를 `App` Component의 매개변수로 삼아__ `fetch` 메소드에서 현재 클릭된 리스트 `id.json`을 불러옴으로써 해당하는 데이터를 가져오는 것이다.
+#### 5. 해당 데이터는 이어서 `article`의 title과 desc에 삽입되는 것이다.
 
 <br>
 
-#### 이렇게 props와 state, 반복문, fetch를 통해 효율적으로 페이지를 리로드하지 않고 필요한 데이터만 가져와보는 예제를 진행해보았다.
+#### 이렇게 props와 state, 반복문, Fetch를 통해 __효율적으로 페이지를 리로드하지 않고 필요한 데이터만 가져와보는__ 예제를 진행해보았다.
 #### 여기서 더 효율적으로 작성하기 위해 나아가 보자면 아래의 과정을 따라해보자.
 
 <br>
+
+---
+
+<br>
+
+### __(4) Presentational Component & Container Component__
+#### 우선 현재 `Nav` Component를 보면 __navigation뿐만 아니라 Fetch API를 통한 Ajax 기능까지 구현하는,__ 기능이 상당히 많은 Component가 된다.
+#### 그러나 navigation은 `App` Component뿐만 아니라 __다른 곳에서도 사용 가능하다.__
+#### 우리가 React를 사용하는 가장 중요한 이유는 __재사용 가능한 Component를 만들기 위해서이다.__
+
+<br>
+
+#### 즉, 그러기 위해서는 `Nav` Component가 __어떤 특정한 데이터에 종속되지 않게__ 뜯어내는 게 좋다.
+#### 이 작업을 __디커플링(decoupling)__ 이라고 한다.
+
+<br>
+
+#### 여기서 아래의 개념들을 짚고 가면 이해하기 쉽다.
+
+>#### __프레젠테이셔널(presentational) Component__
+>#### 데이터에 종속되지 않고 순수하게 __보여주는 역할만__ 담당하는 Component
+>#### __컨테이너(container) Component__
+>#### 프레젠테이셔널 컴포넌트를 둘러싼 __데이터를 처리하고 사용자의 상호작용을 처리하는,__ 애플리케이션에 완전히 종속된 Component
+
+<br>
+
+#### 현재 `Nav` Component는 프레젠테이셔널 Component와 컨테이너 Component의 기능을 모두 갖고 있는데 
+#### __`Nav` Component에서 프레젠테이셔널을 담당하는 부분만__ 남기고 컨테이너 기능은 이미 컨테이너 역할을 하는 App.ja의 `App` Component로 분산시킬 것이다.
+#### `App.js`를 다음과 같이 수정하자.
+```jsx
+// src/App.js
+import React, { Component } from 'react';
+class Nav extends Component {
+  render(){
+    var listTag = [];
+    for(var i=0; i<this.props.list.length; i++){
+      var li = this.props.list[i];
+      listTag.push(
+        <li key={li.id}>
+          <a href={li.id} data-id={li.id} onClick={function(e){
+            e.preventDefault();
+            console.log('trigger');
+            this.props.onClick(e.target.dataset.id);
+          }.bind(this)}>
+            {li.title}
+          </a>
+        </li>)
+    }
+    return (
+      <nav>
+        <ul>
+          {listTag}
+        </ul>
+      </nav>
+    )
+  }
+}
+
+class Article extends Component{
+  render(){
+    return(
+      <article>
+        <h2>{this.props.title}</h2>
+        {this.props.desc}
+      </article>
+    );
+  }
+}
+
+
+class App extends Component {
+  state = {
+    article:{title:'Welcome', desc:'Hello, React & Ajax'},
+    list:[]
+  }
+  componentDidMount(){
+    fetch('list.json')
+      .then(function(result){
+        return result.json();
+      })
+      .then(function(json){
+        console.log(json);
+        this.setState({list:json});
+      }.bind(this));
+  }
+  render(){
+    return (
+      <div className="App">
+        <h1>WEB</h1>
+        <Nav list={this.state.list} onClick={function(id){
+          fetch(id+'.json')
+            .then(function(result){
+              return result.json();
+            })
+            .then(function(json){
+              this.setState({
+                article:{
+                  title:json.title,
+                  desc:json.desc
+                }
+              })
+            }.bind(this));
+        }.bind(this)}></Nav>
+        <Article title={this.state.article.title} desc={this.state.article.desc}></Article>
+      </div>
+    )
+  }
+}
+
+export default App;
+```
+#### 위 작업을 통해 __컨테이너 Component인 `App` Component에서 Fetch를 사용하여 데이터를 다루고__
+#### 이 데이터를 `Nav` Component에 props로 넘겨줌으로써 __`Nav`는 오직 전달받은 데이터를 화면에 보여주는 역할만__ 담당하는 프레젠테이셔널 Component로 분리되었다.
+
+<br>
+
+---
+
+<br>
+
+### __(5) 로딩 중 기능__
+#### 이번에는 서버와 통신하는 시간이 길어질 때 __사용자에게 로딩 중이라는 것을 알려주는 방법__ 을 배워보자.
+#### 현재 우리가 제작한 애플리케이션은 로딩 시간이 길어질만큼 복잡하지 않으므로
+#### 아래 이미지와 같이 __개발자 도구의 네트워크 설정을 `Slow 3G`로 설정함으로써 인위적으로 네트워크 속도를 늦추자.__
+![network][network]
+
+[network]: ./img/network.png "network"
+
+<br>
+
+#### 네트워크 설정을 완료했으니 `App.js`를 다음과 같이 수정하며 기능을 구현해보자.
+```jsx
+// src/App.js
+import React, { Component } from 'react';
+class Nav extends Component {
+  render(){
+    var listTag = [];
+    for(var i=0; i<this.props.list.length; i++){
+      var li = this.props.list[i];
+      listTag.push(
+        <li key={li.id}>
+          <a href={li.id} data-id={li.id} onClick={function(e){
+            e.preventDefault();
+            console.log('trigger');
+            this.props.onClick(e.target.dataset.id);
+          }.bind(this)}>
+            {li.title}
+          </a>
+        </li>)
+    }
+    return (
+      <nav>
+        <ul>
+          {listTag}
+        </ul>
+      </nav>
+    )
+  }
+}
+
+class Article extends Component{
+  render(){
+    return(
+      <article>
+        <h2>{this.props.title}</h2>
+        {this.props.desc}
+      </article>
+    );
+  }
+}
+
+class NowLoading extends Component {
+  render() {
+    return (
+      <div>Now Loading...</div>
+    )
+  }
+}
+
+class App extends Component {
+  state = {
+    article:{
+      item: {title:'Welcome', desc:'Hello, React & Ajax'},
+      isLoading: false
+    },
+    list:{
+      items:[],
+      isLoading: false
+    }
+  }
+  componentDidMount(){
+    var newList = Object.assign({}, this.state.list, {isLoading: true});
+    this.setState({list:newList});
+    fetch('list.json')
+      .then(function(result){
+        return result.json();
+      })
+      .then(function(json){
+        console.log(json);
+        this.setState({list:{
+          items:json,
+          isLoading:false
+        }});
+      }.bind(this));
+  }
+  render(){
+    var NavTag = null;
+    if(this.state.list.isLoading) {
+      NavTag = <NowLoading/>
+    } else {
+      NavTag = <Nav list={this.state.list.items} onClick={function(id){
+        var newArticle = Object.assign({}, this.state.article, {isLoading:true});
+        this.setState({article:newArticle});
+        fetch(id+'.json')
+          .then(function(result){
+            return result.json();
+          })
+          .then(function(json){
+            this.setState({
+              article:{
+                item: {
+                  title:json.title,
+                  desc:json.desc
+                },
+                isLoading:false
+              }
+            })
+          }.bind(this));
+      }.bind(this)}></Nav>
+    }
+
+    var ArticleTag = null;
+    if(this.state.article.isLoading) {
+      ArticleTag = <NowLoading/>
+    } else {
+      ArticleTag = <Article title={this.state.article.item.title} desc={this.state.article.item.desc}></Article>
+
+    }
+    return (
+      <div className="App">
+        <h1>WEB</h1>
+        {NavTag}
+        {ArticleTag}
+      </div>
+    )
+  }
+}
+
+export default App;
+```
+#### 우선 __로딩 중일 때 보여질 Component인 `NowLoading` Component를 생성하고 이를 조건에 따라 보여지게끔__ 했다.
+#### 해당 조건으로 `isLoading`이란 Boolean 타입의 변수를 생성하고 
+#### `componentDidMount`를 통해 __렌더가 되는 중에는 `isLoading`를 true로 설정하여__ `NowLoading` Component가 보여지게
+#### __렌더가 끝난 뒤에는 `isLoading`을 다시 false로 설정하여__ 각 Component가 보여지게끔 하였다.
+
+<br>
+
+#### 이렇듯 생명주기와 조건문을 활용하면 다양한 상태에 따른 구현을 할 수 있다.
+
+<br>
+
+#### 이렇게 React Ajax까지 진행해보았다.
+#### 다음에는 React Redux를 위해 Redux 공부부터 진행하고자 한다.
+
+---
+
+[05.Redux](./Redux.md)

@@ -10,7 +10,7 @@
 
 <br>
 
-#### Ajax는 웹 페이지 전체를 리로드하지 않아도 웹 페이지의 일부분만을(DOM) 갱신할 수 있다.
+#### Ajax는 __웹 페이지 전체를 리로드하지 않아도 웹 페이지의 일부분만을(DOM) 갱신__ 할 수 있다.
 #### 즉 Ajax를 이용하면 백그라운드 영역에서 서버와 통신하여 그 결과를 웹 페이지의 일부분에만 표시할 수 있다.
 
 <br>
@@ -26,18 +26,18 @@
 
 ### __(2) Ajax의 장점__
 #### Ajax를 이용하면 다음과 같은 장점이 있다.
-#### __1. 웹 페이지 전체를 리로드하지 않고도 웹 페이지의 일부분만을 갱신할 수 있다.__
-#### __2. 웹 페이지가 로드된 후에 서버로 데이터 요청을 보낼 수 있다.__
-#### __3. 웹 페이지가 로드된 후에 서버로부터 데이터를 받을 수 있다.__
-#### __4. 백그라운드 영역에서 서버로 데이터를 보낼 수 있다.__
+#### 1. 웹 페이지 전체를 리로드하지 않고도 웹 페이지의 일부분만을 갱신할 수 있다.
+#### 2. 웹 페이지가 로드된 후에 서버로 데이터 요청을 보낼 수 있다.
+#### 3. 웹 페이지가 로드된 후에 서버로부터 데이터를 받을 수 있다.
+#### 4. 백그라운드 영역에서 서버로 데이터를 보낼 수 있다.
 
 <br>
 
 ### __(3) Ajax의 한계__
-#### __1. Ajax는 클라이언트가 서버에 데이터를 요청하는 클라이언트 풀링 방식을 사용하므로, 서버 푸시 방식의 실시간 서비스는 만들 수 없다.__
-#### __2. Ajax로는 바이너리 데이터를 보내거나 받을 수 없다.__
-#### __3. Ajax 스크립트가 포함된 서버가 아닌 다른 서버로 Ajax 요청을 보낼 수 없다.__
-#### __4. 클라이언트의 PC로 Ajax 요청을 보낼 수 없다.__
+#### 1. Ajax는 클라이언트가 서버에 데이터를 요청하는 클라이언트 풀링 방식을 사용하므로, 서버 푸시 방식의 실시간 서비스는 만들 수 없다.
+#### 2. Ajax로는 바이너리 데이터를 보내거나 받을 수 없다.
+#### 3. Ajax 스크립트가 포함된 서버가 아닌 다른 서버로 Ajax 요청을 보낼 수 없다.
+#### 4. 클라이언트의 PC로 Ajax 요청을 보낼 수 없다.
 
 <br>
 
@@ -59,7 +59,7 @@
 
 ### __(5) Ajax 동작 원리__
 #### Ajax를 이용한 웹 응용 프로그램은 자바스크립트 코드를 통해 웹 서버와 통신을 하게 된다.
-#### 따라서 사용자의 동작에는 영향을 주지 않으면서도 백그라운드에서 지속해서 서버와 통신할 수 있다.
+#### 따라서 __사용자의 동작에는 영향을 주지 않으면서도 백그라운드에서 지속해서 서버와 통신__ 할 수 있다.
 
 ![ajax][ajax]
 
@@ -78,9 +78,8 @@
 <br>
 
 ### __(6) XMLHttpRequest 객체__
-#### Ajax의 가장 핵심적인 구성 요소는 XMLHttpRequest 객체이다.
-#### Ajax에서 XMLHttpRequest 객체는 웹 브라우저가 서버와 데이터를 교환할 때 사용된다.
-#### 웹 브라우저가 백그라운드에서 계속해서 서버와 통신할 수 있는 것은 이 객체를 사용하기 때문이다.
+#### Ajax의 __가장 핵심적인 구성 요소는 XMLHttpRequest 객체__ 이다.
+#### Ajax에서 XMLHttpRequest 객체는 __웹 브라우저가 서버와 데이터를 교환할 때 사용__ 된다.
 ```javascript
 var httpRequest = new XMLHttpRequest();
 ```
@@ -94,7 +93,7 @@ var httpRequest = new XMLHttpRequest();
 ## __2. Fetch API__
 ### __(1) XMLHttpRequest 방식__
 #### XMLHttpRequest 객체를 이용한 정통적인 초창기 비동기 서버 요청 방식이다.
-#### 성능에는 문제가 없지만 코드가 복잡하고 가독성이 좋지 않다는 단점이 있다.
+#### 성능에는 문제가 없지만 __코드가 복잡하고 가독성이 좋지 않다__ 는 단점이 있다.
 ```javascript
 // XMLHttpRequest 방식
 var httpRequest = new XMLHttpRequest();
@@ -111,15 +110,15 @@ httpRequest.send();
 
 ### __(2) Fetch API 방식__
 #### Fetch API는 기본적으로 XMLHttpRequest보다 더 강력하고 유연하다.
-#### 이벤트 기반인 XMLHttpRequest과는 달리 Fetch API는 Promise 기반으로 구성되어 있어 비동기 처리 프로그래밍 방식에 잘 맞는 형태이다.
-#### 그래서 `then`이나 `catch`와 같은 체이닝으로 작성할 수 있다는 장점이 있다.
+#### 이벤트 기반인 XMLHttpRequest과는 달리 __Fetch API는 Promise 기반으로 구성되어 있어 비동기 처리 프로그래밍 방식에 잘 맞는 형태__ 이다.
+#### 그래서 `then`이나 `catch`와 같은 __체이닝으로 작성할 수 있다__ 는 장점이 있다.
 ```javascript
 // Fetch API 방식
 fetch('ajax_intro_data.txt')
 .then( response => response.text() )
 .then( text => { document.getElementById("#t").innerHTML = text; } )
 /* 'fetch('서버주소')' 는 웹 브라우저에게 '이 서버주소로 요청해줘' 라는 의미이고,
-뒤에 .then이 붙으면 '요청 끝나고나서 이 할일을 해줘!' 라는 것이다. */
+뒤에 .then이 붙으면 '요청 끝나고나서 이 할 일을 해줘!' 라는 것이다. */
 ```
 <br>
 
@@ -142,15 +141,15 @@ fetch("https://jsonplaceholder.typicode.com/posts", option)
 
 <br>
 
-#### 1. fetch에는 기본적으로 첫번째 인자에 요청할 URL(가져오려고 하는 데이터의 주소)이 들어간다.
-#### 2. 기본적으로 http 메소드 중 GET으로 동작한다.
-#### 3. fetch를 통해 ajax 호출 시 해당 주소에 요청을 보낸 다음, 응답 객체(Promise object Response)를 받는다.
-#### 4. 그러면 첫번째 `then`에서 그 응답을 받게 되고, `res.text()` 메소드로 파싱한 text값을 return한다.
+#### 1. Fetch에는 기본적으로 __첫번째 인자에 요청할 URL(가져오려고 하는 데이터의 주소)__ 이 들어간다.
+#### 2. 기본적으로 http 메소드 중 __GET으로 동작한다.__
+#### 3. Fetch를 통해 Ajax 호출 시 해당 주소에 요청을 보낸 다음, 응답 객체(Promise object Response)를 받는다.
+#### 4. 그러면 첫번째 `then`에서 그 응답을 받게 되고, __`res.text()` 메소드로 파싱한 text값을 return한다.__
 #### 5. 그 다음 `then`에서 return받은 text값을 받고 원하는 처리를 할 수 있게 된다.
 
 <br>
 
-#### 개발자 도구의 네트워크 탭에 가보면 fetch를 통해 얻어온 데이터를 볼 수 있다.
+#### 개발자 도구의 네트워크 탭에 가보면 Fetch를 통해 얻어온 데이터를 볼 수 있다.
 ![fetch][fetch]
 
 [fetch]: ./img/fetch.png "fetch"
@@ -158,22 +157,22 @@ fetch("https://jsonplaceholder.typicode.com/posts", option)
 <br>
 
 #### __(3) response 프로퍼티와 메소드__
-#### fetch를 통해 요청을 하고 서버로부터 값을 응답받으면 `.then`을 통해 함수의 인자에 담기게 되는데 이 값은 Response 객체로서 여러가지 정보를 담고 있다.
+#### Fetch를 통해 요청을 하고 서버로부터 값을 응답받으면 `.then`을 통해 함수의 인자에 담기게 되는데 이 값은 __Response 객체로서 여러가지 정보를 담고 있다.__
 #### 필요한 변수값이나 메소드를 뽑아내서 값을 얻으면 된다.
->#### - response.status: HTTP 상태 코드
->#### - response.ok: HTTP 상태 코드가 200과 299 사이일 경우 true
->#### - response.body: 내용
->#### - response.text(): 응답을 읽고 텍스트를 반환한다.
->#### - response.json(): 응답을 JSON 형태로 파싱한다. = 데이터를 자바스크립트 객체로 변환한다.
->#### - response.formData(): 응답을 FormData 객체 형태로 반환한다.
->#### - response.blob(): 응답을 Blob(타입이 있는 바이너리 데이터) 형태로 반환한다.
->#### - response.arrayBuffer(): 응답을 ArrayBuffer(바이너리 데이터를 로우 레벨 형식으로 표현한 것) 형태로 반환한다.
+>#### - `response.status`: HTTP 상태 코드
+>#### - `response.ok`: HTTP 상태 코드가 200과 299 사이일 경우 true
+>#### - `response.body`: 내용
+>#### - `response.text()`: 응답을 읽고 텍스트를 반환한다.
+>#### - `response.json()`: 응답을 JSON 형태로 파싱한다. = 데이터를 자바스크립트 객체로 변환한다.
+>#### - `response.formData()`: 응답을 FormData 객체 형태로 반환한다.
+>#### - `response.blob()`: 응답을 Blob(타입이 있는 바이너리 데이터) 형태로 반환한다.
+>#### - `response.arrayBuffer()`: 응답을 ArrayBuffer(바이너리 데이터를 로우 레벨 형식으로 표현한 것) 형태로 반환한다.
 
 <br>
 
 #### 응답 자료 형태 반환 메소드는 한번만 사용할 수 있다.
-#### 만일 response.text()를 사용해 응답을 얻었다면 본문의 콘텐츠는 모두 처리된 상태이기 때문에
-#### 뒤에 또 response.json()을 써도 동작하지 않게 된다.
+#### 만일 `response.text()`를 사용해 응답을 얻었다면 본문의 콘텐츠는 모두 처리된 상태이기 때문에
+#### 뒤에 또 `response.json()`을 써도 동작하지 않게 된다.
 
 <br>
 
@@ -201,18 +200,18 @@ DELETE      |  DELETE를 통해 해당 리소스를 삭제
 >![url_uri][url_uri]
 
 [url_uri]: ./img/url_uri.png "url_uri"
->#### 둘의 가장 큰 차이점은 URI는 식별하고 URL은 위치를 가르킨다는 점이다.
+>#### <i>둘의 가장 큰 차이점은 URI는 식별하고 URL은 위치를 가리킨다는 점이다.</i>
 
 <br>
 
 #### __(4-1) GET Method__
 #### __GET: 존재하는 자원을 요청__
-#### 단순히 원격 API에 있는 데이터를 가져올 때 쓰임.
-#### fetch 함수는 기본으로 GET 방식으로 작동하고 option 인자가 필요 없다.
+#### 단순히 원격 API에 있는 __데이터를 가져올 때__ 쓰임.
+#### Fetch 함수는 기본으로 GET 방식으로 작동하고 option 인자가 필요 없다.
 #### 응답(response) 객체는 `json()` 메소드를 제공하고 이 메소드를 호출하면 응답(response) 객체로부터 JSON 형태의 데이터를 자바스크립트 객체로 변환하여 얻을 수 있다.
 ```javascript
 // GET METHOD
-fetch("https://jsonplaceholder.typicode.com/posts/1") // posts의 id 1인 엘리먼트를 가져옴
+fetch("https://jsonplaceholder.typicode.com/posts/1")
 .then((response) => response.json())
 .then((data) => console.log(data))
 ```
@@ -220,7 +219,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/1") // posts의 id 1인 엘리
 
 #### __(4-2) POST Method__
 #### __POST: 새로운 자원 생성 요청__
-#### 폼 등을 사용해서 데이터를 만들어 낼 때 보내는 데이터의 양이 많거나, 비밀번호 등 개인정보를 보낼 때 POST 메소드 사용
+#### 폼 등을 사용해서 데이터를 만들어 낼 때 보내는 __데이터의 양이 많거나,__ 비밀번호 등 __개인정보를 보낼 때__ POST 메소드 사용
 #### 새로운 POST 생성을 위해 method option을 POST로 지정해주고 headers option으로 JSON 포맷을 사용한다고 알려줘야 한다. | body option에는 요청 데이터를 JSON 포맷으로 넣어준다.
 ```javascript
 // POST METHOD
@@ -243,9 +242,9 @@ userId: 1,
 
 #### __(4-3) PUT Method__
 #### __PUT: 존재하는 자원 변경(수정) 요청__
-#### API에서 관리하는 데이터의 수정을 위해 PUT 메소드 사용
-#### method option만 PUT으로 설정한다는 점 제외하고는 POST 방식과 비슷하다.
-#### 아예 전체를 body의 데이터로 교체해버린다.
+#### API에서 관리하는 __데이터의 수정을__ 위해 PUT 메소드 사용
+#### method option만 PUT으로 설정한다는 점 제외하고는 __POST 방식과 비슷하다.__
+#### 아예 __전체를__ body의 데이터로 교체해버린다.
 ```javascript
 // PUT METHOD
 fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -265,10 +264,10 @@ title: "Test" // 아예 title 엘리먼트로 전체 데이터를 바꿈. 마치
 
 #### __(4-4) PATCH Method__
 #### __PATCH: 존재하는 자원 일부 변경 요청__
-#### body의 데이터와 알맞는 일부만을 교체한다.
+#### body의 데이터와 __알맞는 일부만을__ 교체한다.
 ```javascript
 // PATCH METHOD
-fetch("https://jsonplaceholder.typicode.com/posts/1", { // posts의 id 1인 엘리먼트를 수정
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
 method: "PATCH",
 headers: {
 "Content-Type": "application/json",
@@ -297,8 +296,8 @@ method: "DELETE",
 <br>
 
 ### __(5) async / await 문법__
-#### 앞서 말했듯 fetch의 return값 response는 Promise 객체이다.
-#### 이는 async / await 문법으로 가독성 높게 코딩할 수 있다.
+#### 앞서 말했듯 Fetch의 return값 response는 Promise 객체이다.
+#### 이는 __`async` / `await` 문법으로 가독성 높게__ 코딩할 수 있다.
 ```javascript
 fetch("https://jsonplaceholder.typicode.com/posts", option)
 .then(res => res.text())
@@ -310,12 +309,12 @@ fetch("https://jsonplaceholder.typicode.com/posts", option)
 let res = await fetch("https://jsonplaceholder.typicode.com/posts", option);
 let text = await res.text();
 console.log(text);
-})() //await은 async함수내에서만 쓸수 있으니, 익명 async 바로 실행함수를 통해 활용합니다.
+})()
 ```
-#### function 키워드 앞에 async를 붙여주고
-#### 비동기로 처리되는 부분 앞에 await을 붙여준다.
-#### async가 붙은 함수는 Promise를 반환하고 Promise가 아닌 것을 Promise로 감싸 반환한다.
-#### await 키워드를 만나면 Promise가 처리(settled)될 때까지 기다린다.
+#### __function 키워드 앞에 `async`를__ 붙여주고
+#### __비동기로 처리되는 부분 앞에 `await`을__ 붙여준다.
+#### __`async`가 붙은 함수는 Promise를 반환하고 Promise가 아닌 것을 Promise로 감싸 반환한다.__
+#### __`await` 키워드를 만나면 Promise가 처리(settled)될 때까지 기다린다.__
 
 <br>
 
@@ -326,7 +325,7 @@ console.log(text);
 <br>
 
 #### 그 후 [해당 경로](https://github.com/rlacodud/UID/tree/mit/Research/React/Ajax/fetch)로 들어가 fetch 폴더 속 내용을 복사하여 가져온다.
-#### 루트 디렉토리에 css 파일과 fetch.html 파일 생성 후 아래와 같은 내용을 작성한다.
+#### 루트 디렉토리에 `css` 파일과 `fetch.html` 파일 생성 후 아래와 같은 내용을 작성한다.
 ```text
 // css
 <h2>CSS</h2>CSS is...
@@ -344,35 +343,35 @@ console.log(text);
     })
   ">
 ```
-#### 그럼 아래와 같이 fetch 버튼을 눌렀을 때 css text 파일에 작성했던 내용이 html로 작성된다.
+#### 그럼 아래와 같이 fetch 버튼을 눌렀을 때 __`css` text 파일에 작성했던 내용이 HTML로 작성된다.__
 #### 과정을 하나하나 짚어보자.
 ![Ajax_fetch][Ajax_fetch]
 
 [Ajax_fetch]: ./img/Ajax_fetch.png "Ajax_fetch"
 #### 1. `<button>` tag의 `onclick` 속성으로 내장 함수를 입력하여 버튼 클릭 시 익명 함수가 작동되도록 한다.
-#### 2. `fetch(css)` 로 웹 브라우저에게 css 파일의 데이터를 서버에게 요청한다.
+#### 2. `fetch(css)` 로 __웹 브라우저에게 `css` 파일의 데이터를 서버에게 요청한다.__
 #### 3. 서버가 요청받은 데이터에 대한 응답이 끝나면 `then` 내부의 익명 함수를 실행시키는데
-#### 4. 그 내용으로 `response.text()`로 인해 텍스트를 반환하도록 한다.
-#### 5. 반환된 text 값을 매개변수로 설정하여 css 파일의 내용을 `article` 속에 html문법으로 삽입시킴으로써 화면에 나타나게 한다.
+#### 4. 그 내용으로 __`response.text()`로 인해 text를 반환하도록__ 한다.
+#### 5. 반환된 text 값을 매개변수로 설정하여 `css` 파일의 내용을 `article` 속에 HTML문법으로 삽입시킴으로써 화면에 나타나게 한다.
 
 <br>
 
-#### 이렇듯 fetch를 이용하면 리로드없이 브라우저 속 데이터의 내용만 변경함으로써 효율성을 높일 수 있다.
+#### 이렇듯 Fetch를 이용하면 __리로드없이 브라우저 속 데이터의 내용만 변경함으로써 효율성을 높일 수 있다.__
+
+---
 
 <br>
 
-#### 추가적으로 서버 내에 데이터를 직접 관리하는 경우, 더 쉽게 fetch로 반환시키는 방법이 있다.
+#### 추가적으로 서버 내에 데이터를 직접 관리하는 경우, 더 쉽게 Fetch로 반환시키는 방법이 있다.
 ```javascript
   var items = text.split(',');
 ```
-#### 위와 같이 split를 이용해 ,를 기준으로 원소를 나눠 배열로 만든 후 items 변수에 대입 후
-#### 반복문을 이용해 items 배열의 내용을 tag에 삽입하는 방법도 있다.
+#### 위와 같이 __`split`를 이용해 `,`를 기준으로 원소를 나눠 배열로__ 만든 후 `items` 변수에 대입 후
+#### 반복문을 이용해 `items` 배열의 내용을 tag에 삽입하는 방법도 있다.
 
 <br>
 
 #### 이렇게 Ajax에 대해 어느정도 알아봤으니 이제 React와 연동하여 사용하는 방법에 대해 알아보자.
-
-<br>
 
 ---
 
