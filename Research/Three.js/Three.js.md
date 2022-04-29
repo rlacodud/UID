@@ -1,7 +1,14 @@
 # __Three.js__
 
 ## __1. Three.js란?__
-#### __`Three.js`는 3D Javascript 라이브러리이다.__
+#### __`Three.js`는 WebGL을 이용해 웹페이지에 3D 객체를 쉽게 렌더링하도록 도와주는 3D Javascript 라이브러리이다.__
+>#### __여기서 WebGL이란?__
+>#### html의 canvas 요소를 이용하여 웹브라우저에서 인터렉티브한 3D 그래픽을 사용할 수 있도록 하는 도구.
+>#### CPU가 아닌 GPU를 사용하여 화면 렌더링이 굉장히 빠르다.
+>#### 이를 이용해 웹 게임, 인터렉티브 페이지, VR 콘텐츠 등 여러 3D 작업물을 만들곤 한다.
+
+<br>
+
 #### 웹 상에서 3D 그래픽을 활용하기 위해서는 HTML5, Canvas, WebGL, SVG 등의 다양한 수단을 사용할 수 있는데
 #### `Three.js`는 이런 여러 primitive를 사용한 __3D 그래픽을 좀 더 쉽게 구현하기 위해 한 단계를 감싸놓은 Javascript Wrapper__ 역할을 하는 라이브러리이다.
 
@@ -23,6 +30,9 @@
 
 ## __2. 3D 그래픽의 구성요소__
 #### 그럼 우선 3D 그래픽의 구성요소를 하나하나 살펴보며 이해해보자.
+![structure][structure]
+
+[structure]: ./img/structure.png "structure" 
 
 <br>
 
@@ -105,7 +115,13 @@ geometry.faces.push(new THREE.Face3(0, 1, 2));
 <br>
 
 #### 그런 사태를 방지하기 위해 __`Three.js`에서 미리 정의된 다양한 형태의 `Geometry`를 제공하고 있다.__
-#### 사면체, 육면체, 팔면체와 같은 다면체와 구, 평면 등의 `Geometry`를 제공하고 이에 대한 전체 목록은 [공식 가이드](https://threejs.org/docs/#api/en/geometries/BoxGeometry)에 들어가서 확인할 수 있다.
+#### 사면체, 육면체, 팔면체와 같은 다면체와 구, 평면 등의 `Geometry`를 제공하고 기본적으로 자주 쓰이는 `Geometry`에 대해 언급하자면 아래와 같다.
+>#### - `BoxGeometry`: 정육면체
+>#### - `CylinderGeometry`: 원기둥
+>#### - `PlaneGeometry`: 평평한 면 | 주로 바닥을 만들 때 사용
+>#### - `SphereGeometry`: 구
+>#### - `TorusGeometry`: 도넛 모양
+#### 이에 대한 전체 목록은 [공식 가이드](https://threejs.org/docs/#api/en/geometries/BoxGeometry)에 들어가서 확인할 수 있다.
 
 <br>
 
@@ -154,7 +170,7 @@ mesh.position.z = -RADIUS * 10
 const WIDTH = 400
 const HEIGHT = WIDTH
 
-const VIEW_ANGLE = 20;
+const Field_of_View = 20;
 const ASPECT = WIDTH / HEIGHT;
 const NEAR = 0.1;
 const FAR = 10000;
@@ -167,7 +183,7 @@ const camera = new THREE.PerspectiveCamera(
 )
 ```
 #### 생성자가 받는 네개의 인자는 각각 다음과 같은 의미를 갖는다.
->#### __- `VIEW ANGLE`__
+>#### __- `Field of View`__
 >#### __카메라의 시야각__ 을 의미한다. __커질수록 카메라가 바라보는 시야각이 넓어짐을 의미한다.__ 단위는 `degree`
 >#### __- `ASPECT`__
 >#### __시야의 가로세로비__ 를 의미한다. __`container`의 가로세로비와 동일한 값__ 을 넣어주는 게 좋다. 단위는 없다.
