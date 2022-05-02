@@ -24,6 +24,16 @@
 <br>
 
 #### 그 후 `index.html` 파일을 생성하고 [해당 링크](https://github.com/rlacodud/UID/blob/mit/Research/Three.js/example/js/Three.min.js)에서 `Three.min.js`를 가져와서 html에 연결해준다.
+
+<br>
+
+#### 또는 [Three.js](https://threejs.org/)에 접속하여 `download` 메뉴를 클릭하면 압축폴더를 다운받게 되는데
+#### 이를 통해 html과 필요 파일을 연결할 수도 있다.
+#### `Three.js` 라이브러리 파일 외에도 __다양한 sample과 API 문서들도 포함되어__ 있으므로 처음 배우는 사람들에게 유용하다.
+#### 위 압축폴더 속 파일들을 이용한 예제는 다음 시간에 활용해보도록 하자.
+
+<br>
+
 #### 아래에서 진행하는 코드들은 모두 __html 내부 `<script>` 태그 안에 작성한다.__
 
 <br>
@@ -89,6 +99,23 @@ const renderer = new THREE.WebGLRenderer({
 #### 그럼 팔면체 `Mesh`를 만들기 위해 우선 뼈대인 `Geometry`가 필요하다.
 #### __3D 모델링의 기본 단위는 삼각형__ 이다. 즉, 모든 면은 삼각형의 합으로 표현된다.
 #### 수학시간에 배웠듯이 점점 꼭짓점의 개수를 늘려가다보면 결국 원에 가까워지는 원리와 같다.
+
+<br>
+
+#### Geometry를 형상을 정의하기 위한 데이터는 다음과 같다.
+![geometry][geometry]
+
+[geometry]: ./img/geometry.png "geometry" 
+>#### __- 정점(vertex)__
+>#### 형상을 정의하는 정점 데이터. x, y, z축에 대한 좌표
+>#### __- 정점 인덱스(vertex index)__
+>#### 3차원 오브젝트의 면을 구성하는 정점에 대한 index
+>#### __- 수직 벡터(Normal vector)__
+>#### 정점에 대한 수직 벡터
+>#### __- 정점 색상(Vertex Color)__
+>#### 벡터 정점의 색상
+>#### __- 텍스쳐 맵핑을 위한 UV 좌표__
+>#### __- 사용자 정의 데이터__
 
 <br>
 
@@ -334,3 +361,7 @@ requestAnimationFrame(update)
 
 #### 이렇게 간단한 예제를 진행해보며 `Three.js`에 대해 알아봤다.
 #### 위 코드들은 [example폴터](https://github.com/rlacodud/UID/tree/mit/Research/Three.js/example)에서 확인 가능하다.
+
+---
+
+[02_Three.js_활용](./02_Three.js_uses.md)
