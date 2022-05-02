@@ -403,14 +403,14 @@ const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 ![02_circleGeometry_basic][02_circleGeometry_basic]
 
 [02_circleGeometry_basic]: ./img/02_circleGeometry_basic.png "02_circleGeometry_basic" 
->#### __- radius(반지름)__
+>#### __- radius__
 >#### 원판의 크기를 정의하며 기본값은 1이다.
->#### __- segments(분할 개수)__
+>#### __- segments__
 >#### 원판을 구성하는 분할 개수이며 기본값은 8이다.
 >#### 그렇기에 해당값이 클수록 좀 더 완전한 원의 형태가 된다.
->#### __- thetaStart(시작 각도)__
+>#### __- thetaStart__
 >#### 원판의 시작 각도를 정의하며 각도에 대한 단위는 radian이고 기본값은 0이다.
->#### __- thetaLength(연장 각도)__
+>#### __- thetaLength__
 >#### 원판의 시작 각도를 정의하며 각도에 대한 단위는 radian이고 기본값은 2pi(360도)이다.
 
 <br>
@@ -433,19 +433,19 @@ const geometry = new THREE.CircleGeometry(0.9, 16, Math.PI/2, Math.PI/2);
 ![02_coneGeometry_basic][02_coneGeometry_basic]
 
 [02_coneGeometry_basic]: ./img/02_coneGeometry_basic.png "02_coneGeometry_basic" 
->#### __- radius(반지름)__
+>#### __- radius__
 >#### 밑면에 해당되는 원판의 반지름 크기를 정의하며 기본값은 1이다.
->#### __- height(원통 높이)__
+>#### __- height__
 >#### 원뿔의 높이를 정의하며 기본값은 1이다.
->#### __- radialSegments(둘레 분할 개수)__
+>#### __- radialSegments__
 >#### 원뿔의 둘레 방향에 대한 분할 개수이며 기본값은 8이다.
->#### __- heightSegments(높이 분할 개수)__
+>#### __- heightSegments__
 >#### 원뿔의 높이 방향에 대한 분할 개수이며 기본값은 1이다.
->#### __- openEnded(원뿔 밑면 개방 여부)__
+>#### __- openEnded__
 >#### 원뿔 밑면을 열어놓을 것인지에 대한 여부를 정의하며 기본값은 false이기에 닫혀있다.
->#### __- thetaStart(원뿔의 시작각)__
+>#### __- thetaStart__
 >#### 원뿔의 시작각을 정의하며 기본값은 0이다.
->#### __- thetaLength(원뿔의 연장각)__
+>#### __- thetaLength__
 >#### 원뿔의 연장각을 정의하며 기본값은 2pi(360도)이다.
 
 <br>
@@ -468,21 +468,21 @@ const geometry = new THREE.ConeGeometry(0.5, 1.6, 16, 9, true, 0, Math.PI);
 ![02_cylinderGeometry_basic][02_cylinderGeometry_basic]
 
 [02_cylinderGeometry_basic]: ./img/02_cylinderGeometry_basic.png "02_cylinderGeometry_basic" 
->#### __- radiusTop(윗면 반지름)__
+>#### __- radiusTop__
 >#### 윗면에 해당하는 원의 반지름 크기이며 기본값은 1이다.
->#### __- radiusBottom(밑면 반지름)__
+>#### __- radiusBottom__
 >#### 밑면에 해당하는 원의 반지름 크기이며 기본값은 1이다.
->#### __- height(원뿔 높이)__
+>#### __- height__
 >#### 원뿔의 높이를 정의하며 기본값은 1이다.
->#### __- radiusSegments(둘레 분할 개수)__
+>#### __- radiusSegments__
 >#### 원통의 둘레 방향에 대한 분할 개수이며 기본값은 8이다.
->#### __- heightSegments(높이 분할 개수)__
+>#### __- heightSegments__
 >#### 원통의 높이 방향에 대한 분할 개수이며 기본값은 1이다.
->#### __- openEnded(원통 윗|밑면 개방 여부)__
+>#### __- openEnded__
 >#### 원통의 윗면과 밑면을 열어놓을 것인지에 대한 여부를 정의하며 기본값은 false이기에 닫혀있다.
->#### __- thetaStart(원통의 시작각)__
+>#### __- thetaStart__
 >#### 원통의 시작각을 정의하며 기본값은 0이다.
->#### __- thetaLength(원통의 연장각)__
+>#### __- thetaLength__
 >#### 원통의 연장각을 정의하며 기본값은 2pi(360도)이다.
 
 <br>
@@ -504,19 +504,19 @@ const geometry = new THREE.CylinderGeometry(0.9, 0.9, 1.6, 32, 12, true, 0, Math
 ![02_sphereGeometry_basic][02_sphereGeometry_basic]
 
 [02_sphereGeometry_basic]: ./img/02_sphereGeometry_basic.png "02_sphereGeometry_basic" 
->#### __- radius(반지름)__
+>#### __- radius__
 >#### 구의 반지름 크기이며 기본값은 1이다.
->#### __- widthSegments(수평 분할 개수)__
+>#### __- widthSegments__
 >#### 수평 방향에 대한 분할 개수이며 기본값은 32이다.
->#### __- heightSegments(수직 분할 개수)__
+>#### __- heightSegments__
 >#### 수직 방향에 대한 분할 개수이며 기본값은 16이다.
->#### __- phiStart(수평 시작각)__
+>#### __- phiStart__
 >#### 수평 방향에 대한 구의 시작각을 정의하며 기본값은 0이다.
->#### __- phiLength(수평 연장각)__
+>#### __- phiLength__
 >#### 수평 방향에 대한 구의 연장각을 정의하며 기본값은 2pi(260도)이다.
->#### __- thetaStart(수직 시작각)__
+>#### __- thetaStart__
 >#### 수직 방향에 대한 구의 시작각을 정의하며 기본값은 0이다.
->#### __- thetaLength(수직 연장각)__
+>#### __- thetaLength__
 >#### 수직 방향에 대한 구의 연장각을 정의하며 기본값은 pi(180도)이다.
 
 <br>
@@ -535,9 +535,73 @@ const geometry = new THREE.SphereGeometry(0.9, 32, 12, 0, Math.PI, 0, Math.PI/2)
 
 ### __(9) RingGeometry__
 #### `RingGeometry`는 2차원 형태의 반지 모양 Geometry이고 다음과 같은 6개의 인자를 받는다.
+![02_ringGeometry_basic][02_ringGeometry_basic]
+
+[02_ringGeometry_basic]: ./img/02_ringGeometry_basic.png "02_ringGeometry_basic"
 >#### __- innerRadius__
+>#### 내부 반지릅값을 정의하며 기본값은 0.5이다.
 >#### __- outerRadius__
+>#### 외부 반지름값을 정의하며 기본값은 1이다.
 >#### __- thetaSegments__
+>#### 가장자리 둘레 방향으로의 분할 개수이며 기본값은 8이다.
 >#### __- phiSegments__
+>#### 내부 방향에 대한 분할 개수이며 기본값은 1이다.
 >#### __- thetaStart__
+>#### 시작각을 정의하며 기본값은 0이다.
 >#### __- thetaLength__
+>#### 시작각을 정의하며 기본값은 2pi(360도)이다. 
+
+<br>
+
+#### `SphereGeometry`에 대한 정의를 주석처리하고
+#### `RingGeometry`의 인자에 다양한 값을 줘보며 각 인자에 대해 감을 잡아보자.
+![02_ringGeometry][02_ringGeometry]
+
+[02_ringGeometry]: ./img/02_ringGeometry.png "02_ringGeometry"
+```javascript
+// const geometry = new THREE.SphereGeometry(0.9, 32, 12, 0, Math.PI, 0, Math.PI/2);
+const geometry = new THREE.RingGeometry(0.2, 1, 6, 2, 0, Math.PI);
+```
+
+<br>
+
+### __(10) PlaneGeometry__
+#### `PlaneGeometry`는 평면 모양의 사각형 Geometry이고 다음과 같은 4개의 인자를 받는다.
+![02_planeGeometry_basic][02_planeGeometry_basic]
+
+[02_planeGeometry_basic]: ./img/02_planeGeometry_basic.png "02_planeGeometry_basic"
+>#### __- width__
+>#### 너비에 대한 길이를 정의하며 기본값은 1이다.
+>#### __- height__
+>#### 높이에 대한 길이를 정의하며 기본값은 1이다.
+>#### __- widthSegments__
+>#### 너비 방향에 대한 분할 개수이며 기본값은 1이다.
+>#### __- heightSegments__
+>#### 높이 방향에 대한 분할 개수이며 기본값은 1이다.
+
+<br>
+
+#### `RingGeometry`에 대한 정의를 주석처리하고
+#### `PlaneGeometry`의 인자에 다양한 값을 줘보며 각 인자에 대해 감을 잡아보자.
+![02_planeGeometry][02_planeGeometry]
+
+[02_planeGeometry]: ./img/02_planeGeometry.png "02_planeGeometry"
+```javascript
+// const geometry = new THREE.RingGeometry(0.2, 1, 6, 2, 0, Math.PI);
+const geometry = new THREE.PlaneGeometry(1, 1.4, 1, 5);
+```
+#### 앞서 말했듯 해당 `PlaneGeometry`는 지리 정보 시스템(GIS)에서 3차원 지형 등을 표현하는 데 유용하게 사용된다.
+
+<br>
+
+### __(11) TorusGeometry__
+#### `TorusGeometry`는 3차원 반지 모양의 Geometry이고 다음과 같은 4개의 인자를 받는다.
+![02_torusGeometry_basic][02_torusGeometry_basic]
+
+[02_torusGeometry_basic]: ./img/02_torusGeometry_basic.png "02_torusGeometry_basic"
+>#### __- radius__
+>#### 반지름값을 정의하며 기본값은 1이다.
+>#### __- tube__
+>#### Torus는 긴 원통이 360도 돌아 이루어진 도형인데 이 원통의 반지름값을 정의하며 기본값은 
+>#### __- radialSegments__
+>#### __- tubularSegments__
