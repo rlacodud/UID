@@ -364,4 +364,4 @@ requestAnimationFrame(update)
 
 ---
 
-[02_Three.js_활용](./02_Three.js_uses.md)
+[02_Three.js module 활용 - (1) Basic](./02_Three.js_module_basic.md)
