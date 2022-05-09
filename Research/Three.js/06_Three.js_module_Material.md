@@ -479,4 +479,4 @@ const material = new THREE.MeshPhysicalMaterial({
 
 ---
 
-[2_Three.js module 활용 - (7) Texture Material](./07_Three.js_module_texture.md)
+[02_Three.js module 활용 - (7) Texture Material](./07_Three.js_module_texture.md)
