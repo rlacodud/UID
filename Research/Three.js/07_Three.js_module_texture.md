@@ -40,7 +40,7 @@ const map = TextureLoader.load(
 );
 ```
 #### 먼저 __`TextureLoader` CLASS를 생성하고 이미지의 경로를 지정한다.__
-#### 그리고 이 이미지가 성공적으로 네트워크를 통해 다운로드된 후 __텍스쳐 생성이 완료되면 호출되는__ 콜백 함수를 지정한다.
+#### 그리고 이 이미지가 성공적으로 네트워크를 통해 다운로드된 후 __Texture 생성이 완료되면 호출되는__ 콜백 함수를 지정한다.
 
 <br>
 
@@ -173,8 +173,10 @@ texture => {
 
   texture.rotation = THREE.MathUtils.degToRad(45);
 
+  // 추가된 부분
   texture.center.x = 0.5;
   texture.center.y = 0.5;
+  // 
 }
 ```
 #### 아래와 같이 __`(0.5, 0.5)`를 기준 즉, 각 `Mesh`의 가운데를 기준으로__ 이미지가 회전되어 맵핑된다.
@@ -520,8 +522,8 @@ aoMapIntensity: 1,
 
 <br>
 
-### __(6) mapRoughness__
-#### __`mapRoughness`는 해당 속성에 대한 맵 이미지의 pixel값이 밝을수록 거칠기가 강하게__ 되는데
+### __(6) roughnessMap
+#### __`roughnessMap`는 해당 속성에 대한 맵 이미지의 pixel값이 밝을수록 거칠기가 강하게__ 되는데
 #### 다음과 같이 코드를 작성하면
 ```javascript
 const material = new THREE.MeshStandardMaterial({
@@ -635,7 +637,7 @@ side: THREE.DoubleSide
 
 <br>
 
-#### 해당 미이지에 대한 Texture 객체를 생성하기 위해 다음 코드를 추가해보자.
+#### 해당 이미지에 대한 Texture 객체를 생성하기 위해 다음 코드를 추가해보자.
 ```javascript
 const mapLight = TextureLoader.load("images/glass/light.jpg")
     
@@ -686,4 +688,5 @@ lightMapIntensity: 2,
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (8) 사용자 정의 Geometry](./08_Three.js_module_custom_geometry.md)

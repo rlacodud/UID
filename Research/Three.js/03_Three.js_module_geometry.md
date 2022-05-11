@@ -41,8 +41,8 @@ _setupModel() {
   this._cube = group;
 }
 ```
-#### `color`가 `515151`(gray)인 박스를 만들고 `color`가 `ffff00`(yellow)인 `line`(선) Material을 만들어
-#### __`WireframeGeometry`를 이용해 앞서 생성한 박스 `geometry`의 골격을 참조하여 `lineMaterial` 색상의 line을 만든다.__
+#### `color`가 `515151`(gray)인 `box`를 만들고 `color`가 `ffff00`(yellow)인 `line`(선) Material을 만들어
+#### __`WireframeGeometry`를 이용해 앞서 생성한 `box` `geometry`의 골격을 참조하여 `lineMaterial` 색상의 line을 만든다.__
 
 ![02_box_line][02_box_line]
 
@@ -255,7 +255,7 @@ const geometry = new THREE.CylinderGeometry(0.9, 0.9, 1.6, 32, 12, true, 0, Math
 >#### __- `phiStart`__
 >#### 수평 방향에 대한 구의 시작각을 정의하며 기본값은 0이다.
 >#### __- `phiLength`__
->#### 수평 방향에 대한 구의 연장각을 정의하며 기본값은 2pi(260도)이다.
+>#### 수평 방향에 대한 구의 연장각을 정의하며 기본값은 2pi(360도)이다.
 >#### __- `thetaStart`__
 >#### 수직 방향에 대한 구의 시작각을 정의하며 기본값은 0이다.
 >#### __- `thetaLength`__
@@ -332,7 +332,7 @@ const geometry = new THREE.RingGeometry(0.2, 1, 6, 2, 0, Math.PI);
 // const geometry = new THREE.RingGeometry(0.2, 1, 6, 2, 0, Math.PI);
 const geometry = new THREE.PlaneGeometry(1, 1.4, 1, 5);
 ```
-#### 앞서 말했듯 해당 __`PlaneGeometry`는 지리 정보 시스템(GIS)에서 3차원 지형 등을 표현하는 데 유용하게 사용된다.__
+#### 해당 __`PlaneGeometry`는 지리 정보 시스템(GIS)에서 3차원 지형 등을 표현하는 데 유용하게 사용된다.__
 
 <br>
 
@@ -383,7 +383,7 @@ const geometry = new THREE.TorusGeometry(0.9, 0.4, 24, 32, Math.PI);
 >#### __- `p`__
 >#### 회전대칭축 중심의 회전수를 정의한다.
 >#### __- `q`__
->#### 내부의 원 주위 형사으이 회전수를 정의한다.
+>#### 내부의 원 주위 형상의 회전수를 정의한다.
 
 <br>
 
@@ -392,4 +392,5 @@ const geometry = new THREE.TorusGeometry(0.9, 0.4, 24, 32, Math.PI);
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (4) Geometry 마무리](./04_Three.js_module_geometry.md)

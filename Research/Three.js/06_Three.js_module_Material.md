@@ -5,7 +5,7 @@
 # __Three.js module 활용 - (6) Material__
 
 #### `01_basic.html`, `css`, `js` 파일들을 복사하여 붙여넣기한 후 __파일명을 `04_material`로 변경하고__
-#### 그에 맞춰 `04_material.html`에서 `css`와 `js` `link` 부분을 변경된 파일명에 맞춰 수정해보자.
+#### 그에 맞춰 `04_material.html`에서 `css`와 `js`를 `import`하는 부분을 변경된 파일명에 맞춰 수정해보자.
 
 <br>
 
@@ -344,7 +344,7 @@ const material = new THREE.MeshBasicMaterial({
 
 #### 아래 두 개념을 이해하려면 `Depth Buffer`에 대해 알아야 한다.
 #### __`Depth Buffer`는 깊이 버퍼 혹은 z버퍼__ 라고도 한다.
-#### __z 버퍼는 3차원 객체를 `camera`를 통해 좌표를 변환시켜 화면상에 렌더링될 때 해당 3차원 객체를 구성하는 각 픽셀에 대한 z 좌표값을 0과 1 사이로 정규화시킨다.__
+#### __z 버퍼는 3차원 객체를 `camera`를 통해 좌표를 변환시켜 화면상에 렌더링될 때 해당 3차원 객체를 구성하는 각 pixel에 대한 z 좌표값을 0과 1 사이로 정규화시킨다.__
 #### 이 정규화된 z값이 저장된 버퍼가 z 버퍼이다.
 #### 즉 이 값이 __작을수록 `camera`에서 가까운 3차원 객체의 pixel이다.__
 
@@ -479,4 +479,5 @@ const material = new THREE.MeshPhysicalMaterial({
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (7) Texture Material](./07_Three.js_module_texture.md)

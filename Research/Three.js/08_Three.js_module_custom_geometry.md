@@ -11,20 +11,15 @@
 #### `Geometry`는 `Three.js`에서 `BufferGeometry` CLASS를 통해 정의되는데
 #### 해당 CLASS를 통해 정의될 수 있는 속성은 다음과 같다.
 >#### __- `position`__
->#### `BufferAttribute`로 지정
->#### `Geometry`를 구성하는 3차원 좌표에 대한 정점
+>#### `BufferAttribute`로 지정 | `Geometry`를 구성하는 3차원 좌표에 대한 정점
 >#### __- `normal`__
->#### `BufferAttribute`로 지정
->#### 각 정점에 대한 수직 벡터
+>#### `BufferAttribute`로 지정 | 각 정점에 대한 수직 벡터
 >#### __- `color`__
->#### `BufferAttribute`로 지정
->#### 각 정점에 대한 색상
+>#### `BufferAttribute`로 지정 | 각 정점에 대한 색상
 >#### __- `uv`__
->#### `BufferAttribute`로 지정
->#### 각 정점에 대한 Texture 맵핑좌표
+>#### `BufferAttribute`로 지정 | 각 정점에 대한 Texture 맵핑좌표
 >#### __- `Vertex Index`__
->#### `BufferAttribute`의 `setIndex` 메소드로 지정
->#### `position` 속성으로 지정된 정점에 대한 `index` 배열로 지정
+>#### `BufferAttribute`의 `setIndex` 메소드로 지정 | `position` 속성으로 지정된 정점에 대한 `index` 배열로 지정
 
 <br>
 
@@ -34,7 +29,7 @@
 
 ## __1. 세팅__
 #### `01_basic.html`, `01_basic.css`, `01_basic.js`를 복사하여 붙여넣기 한 후 파일명을 __`05_custom_geometry`로 변경한다.__
-#### 그에 맞춰 `05_custom_geometry.html`에서 `css`와 `js` `link` 부분을 변경된 파일명에 맞춰 수정해보자.
+#### 그에 맞춰 `05_custom_geometry.html`에서 `css`와 `js`를 `import`하는 부분을 변경된 파일명에 맞춰 수정해보자.
 
 <br>
 
@@ -285,4 +280,5 @@ const material = new THREE.MeshPhongMaterial({
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (9) 광원](./09_Three.js_module_light.md)

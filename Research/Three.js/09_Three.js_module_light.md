@@ -16,7 +16,7 @@
 ## __1. 세팅__
 #### 이제 6개의 광원을 이해하기 위해 먼저 장면을 구성해보자.
 #### `01_basic.html`, `01_basic.css`, `01_basic.js`를 복사하여 붙여넣기 한 후 파일명을 __`06_light`로 변경한다.__
-#### 그에 맞춰 `06_light.html`에서 `css`와 `js` `link` 부분을 변경된 파일명에 맞춰 수정해보자.
+#### 그에 맞춰 `06_light.html`에서 `css`와 `js`를 `import`하는 부분을 변경된 파일명에 맞춰 수정해보자.
 
 <br>
 
@@ -75,7 +75,7 @@ this._scene.add(bigSphere);
 <br>
 
 ### __(3) torusPivot & torus__
-#### 아어서 __회전하는 구가 통과할__ 도넛 모양의 `Geometry`를 만들기 위해 `TorusGeometry`를 활용하여 틀을 생성한다.
+#### 이어서 __회전하는 구가 통과할__ 도넛 모양의 `Geometry`를 만들기 위해 `TorusGeometry`를 활용하여 틀을 생성한다.
 #### 그리고 각 도넛인 `torus`들의 부모인 `torusPivot`을 생성하고 __360도를 기준으로 8개의 `torus`를 둘 것이기에 `45 * i` 를 통해 8개의 `torus`가 각자의 위치를 잡도록__ 한다.
 ```javascript
 const torusGeometry = new THREE.TorusGeometry(0.4, 0.1, 32, 32);
@@ -447,4 +447,5 @@ light.add(helper);
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (10) Camera](./10_Three.js_module_camera.md)

@@ -164,7 +164,7 @@ _setupModel() {
 [04_curve]: ./img/04_curve.png "04_curve"
 
 #### __`getPoint` 메소드를 통해 0과 1 사이의 `t`값에 대한 `Curve`의 구성 좌표__ 를 계산할 수 있다.
-#### 현재 `Curve`가 각져있는 상황인데 좀 더 부드러운 곡선을 그리고 싶다면 `CustomSinCurve` CLASS의 `getPoints` 메서드의 인자에 정수값을 지정하면 된다.
+#### 현재 `Curve`가 각져있는 상황인데 좀 더 부드러운 곡선을 그리고 싶다면 `CustomSinCurve` CLASS의 `getPoints` 메소드 인자에 정수값을 지정하면 된다.
 #### 이 값은 기본값이 5인데 이를 30으로 변경해보자.
 ```javascript
 const points = path.getPoints(30);
@@ -227,9 +227,6 @@ _setupModel() {
 >#### 원통에 대한 분할 개수를 정의하며 기본값은 8이다.
 >#### __- `closed`__
 >#### 원통의 끝단을 닫을지에 대한 여부를 정의하며 기본값은 false이기에 열려있다.
-![04_tube2][04_tube2]
-
-[04_tube2]: ./img/04_tube2.png "04_tube2"
 
 <br>
 
@@ -304,9 +301,6 @@ _setupModel() {
 >#### 시작 각도를 정의하며 기본값은 0이다.
 >#### __- `phiLength`__
 >#### 연장 각도를 정의하며 기본값은 2pi(360도)이다.
-![04_lathe2][04_lathe2]
-
-[04_lathe2]: ./img/04_lathe2.png "04_lathe2"
 
 <br>
 
@@ -315,7 +309,7 @@ _setupModel() {
 <br>
 
 ## __4. ExtrudeGeometry__
-#### __평면 `shape`에 깊이값을 부여해주고 Mash의 윗면과 밑면을 비스듬하게 처리해주는 `Geometry`__ 이다.
+#### __평면 `shape`에 깊이값을 부여해주고 `Mesh`의 윗면과 밑면을 비스듬하게 처리해주는 `Geometry`__ 이다.
 #### 이렇게 __비스듬하게 처리해주는 것을 `Beveling`__ 이라고 한다.
 
 <br>
@@ -376,7 +370,7 @@ camera.position.x = -15;
 
 <br>
 
-#### 본격적으로 `settings`를 알아보자.
+#### 이제 본격적으로 `settings`를 알아보자.
 >#### __- `steps`__
 >#### 깊이 방향으로의 분할 개수를 정의하며 기본값은 1이다.
 >#### __- `depth`__
@@ -464,4 +458,5 @@ loadFont(this);
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (5) Scene Graph](./05_Three.js_module_sceneGraph.md)

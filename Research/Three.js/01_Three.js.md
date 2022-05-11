@@ -102,25 +102,8 @@ const renderer = new THREE.WebGLRenderer({
 
 <br>
 
-#### Geometry를 형상을 정의하기 위한 데이터는 다음과 같다.
-![geometry][geometry]
-
-[geometry]: ./img/geometry.png "geometry" 
->#### __- 정점(vertex)__
->#### 형상을 정의하는 정점 데이터. x, y, z축에 대한 좌표
->#### __- 정점 인덱스(vertex index)__
->#### 3차원 오브젝트의 면을 구성하는 정점에 대한 index
->#### __- 수직 벡터(Normal vector)__
->#### 정점에 대한 수직 벡터
->#### __- 정점 색상(Vertex Color)__
->#### 벡터 정점의 색상
->#### __- 텍스쳐 맵핑을 위한 UV 좌표__
->#### __- 사용자 정의 데이터__
-
-<br>
-
 #### 그럼 3D 모델의 뼈대를 만들어내는 가장 기본적인 방법은 다음과 같을 것이다.
->#### 꼭짓점(vertex)를 정의한다.
+>#### 꼭짓점(vertex)을 정의한다.
 >#### 어떤 세 꼭짓점이 이어져서 삼각형 면(Face)을 이루는지를 정의한다.
 ```javascript
 const geometry = new THREE.Geometry();
@@ -142,12 +125,6 @@ geometry.faces.push(new THREE.Face3(0, 1, 2));
 <br>
 
 #### 그런 사태를 방지하기 위해 __`Three.js`에서 미리 정의된 다양한 형태의 `Geometry`를 제공하고 있다.__
-#### 사면체, 육면체, 팔면체와 같은 다면체와 구, 평면 등의 `Geometry`를 제공하고 기본적으로 자주 쓰이는 `Geometry`에 대해 언급하자면 아래와 같다.
->#### - `BoxGeometry`: 정육면체
->#### - `CylinderGeometry`: 원기둥
->#### - `PlaneGeometry`: 평평한 면 | 주로 바닥을 만들 때 사용
->#### - `SphereGeometry`: 구
->#### - `TorusGeometry`: 도넛 모양
 #### 이에 대한 전체 목록은 [공식 가이드](https://threejs.org/docs/#api/en/geometries/BoxGeometry)에 들어가서 확인할 수 있다.
 
 <br>
@@ -175,7 +152,7 @@ const mesh  = new THREE.Mesh(geometry, material)
 
 <br>
 
-#### 기본적은 `scene.add` 함수를 통해 공간에 추가한 물체는 `(0, 0, 0)` 위치에 놓인다.
+#### 기본적으로 `scene.add` 함수를 통해 공간에 추가한 물체는 `(0, 0, 0)` 위치에 놓인다.
 #### 나중에 관찰을 위해 z축으로 약간 밀어두자.
 ```javascript
 scene.add(mesh)
@@ -186,8 +163,7 @@ mesh.position.z = -RADIUS * 10
 
 ### __(3) 카메라 - Camera__
 #### 같은 공간에 같은 물체들이 배치되어 있어도,
-#### __어디에 서서 어떤 시선으로 바라보느냐에 따라__ 보이는 풍경이 다른데
-#### 이 시선에 해당하는 것이 카메라다.
+#### __어디에 서서 어떤 시선으로 바라보느냐에 따라__ 보이는 풍경이 다른데 이 시선에 해당하는 것이 `camera`다.
 
 <br>
 
@@ -245,7 +221,7 @@ container.appendChild(renderer.domElement)
 
 <br>
 
-#### 마지막으로 우리가 지금까지 만들어놓은 __장면과 카메라를 이용해 화면을 실제로 그리라는 명령__ 을 내린다.
+#### 마지막으로 우리가 지금까지 만들어놓은 __장면과 `camera`를 이용해 화면을 실제로 그리라는 명령__ 을 내린다.
 #### 이 명령은 __`renderer.render` 메소드__ 를 사용한다.
 ```javascript
 renderer.render(scene, camera)
@@ -253,7 +229,7 @@ renderer.render(scene, camera)
 
 <br>
 
-#### 여기까지 모든 과정을 잘 따라왔다면 아래왁 같은 화면을 볼 수 있을 것이다.
+#### 여기까지 모든 과정을 잘 따라왔다면 아래와 같은 화면을 볼 수 있을 것이다.
 ![example1][example1]
 
 [example1]: ./img/example1.png "example1"  
@@ -310,7 +286,7 @@ scene.add(pointLight)
 <br>
 
 #### `Three.js`에서는 빛과 상호작용하는 표면 중 자주 쓰이는 표면 모델 몇가지를 기본적으로 제공한다.
-#### 그중 여기에서는 __람베르드 반사율(관찰자가 바라보는 각도와 관계없이 같은 겉보기 밝기)을 갖는 물체의 표면을 나타내는 `MashLambertMaterial`__ 을 이용해보겠다.
+#### 그중 여기에서는 __람베르드 반사율(관찰자가 바라보는 각도와 관계없이 같은 겉보기 밝기)을 가지며 물체의 표면을 나타내는 `MashLambertMaterial`__ 을 이용해보겠다.
 #### 기존에 작성된 코드에서 `material`의 정의를 아래와 같이 변경해보자.
 ```javascript
 const material = new THREE.MeshLambertMaterial({ color: '0xFF3030 ' })
@@ -350,17 +326,17 @@ function update () {
 
 requestAnimationFrame(update)
 ```
-#### 매 프레임마다 0 ~ 0.05 사이의 값을 임의로 정한 뒤, __x, y, z축마다 해당 값만큼의 회전__ 을 준다.
+#### 매 프레임마다 0 ~ 0.05 사이의 값을 임의로 정한 뒤 __x, y, z축마다 해당 값만큼의 회전__ 을 준다.
 #### 그 뒤에 __`scene`을 다시 그리고 자기 자신을 `requestAnimationFrame` 함수의 인자로 다시 넘겨 호출__ 하는 내용이다.
 ![example3][example3]
 
-[example3]: ./img/example3.png "example3"
+[example3]: ./img/example3.gif "example3"
 #### 그럼 이제 성공적으로 위와 같이 팔면체가 여러 방향으로 회전할 것이다.
 
 <br>
 
 #### 이렇게 간단한 예제를 진행해보며 `Three.js`에 대해 알아봤다.
-#### 위 코드들은 [example폴터](https://github.com/rlacodud/UID/tree/mit/Research/Three.js/example)에서 확인 가능하다.
+#### 위 코드들은 [example폴더](https://github.com/rlacodud/UID/tree/mit/Research/Three.js/example)에서 확인 가능하다.
 
 ---
 

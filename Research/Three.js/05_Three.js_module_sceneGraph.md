@@ -20,7 +20,7 @@
 <br>
 
 #### 이전에 생성했던  `01_basic.html`, `css`, `js` 파일들을 복사하여 붙여넣기한 후 파일명을 __`03_scenegraph`로 변경하고__
-#### 그에 맞춰 `03_scenegraph.html`에서 `css`와 `js` `link` 부분을 변경된 파일명에 맞춰 수정해보자.
+#### 그에 맞춰 `03_scenegraph.html`에서 `css`와 `js`를 `import`하는 부분을 변경된 파일명에 맞춰 수정해보자.
 
 <br>
 
@@ -187,4 +187,5 @@ update(time){
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (6) Material](./06_Three.js_module_Material.md)

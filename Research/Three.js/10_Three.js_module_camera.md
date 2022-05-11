@@ -10,7 +10,7 @@
 
 ## __1. 세팅__
 #### `06_light.html`, `06_light.css`, `06_light.js`를 복사하여 붙여넣기 한 후 파일명을 __`07_camera`로 변경한다.__
-#### 그에 맞춰 `07_camera.html`에서 `css`와 `js` `link` 부분을 변경된 파일명에 맞춰 수정해보자.
+#### 그에 맞춰 `07_camera.html`에서 `css`와 `js`를 `import`하는 부분을 변경된 파일명에 맞춰 수정해보자.
 
 <br>
 
@@ -24,7 +24,7 @@
 ![10_perspectiveCamera][10_perspectiveCamera]
 
 [10_perspectiveCamera]: ./img/10_perspectiveCamera.png "10_perspectiveCamera"
-#### `PerspectiveCamera`는 4개의 인자를 받는데 위 사진에서도 알 수 있듯이 `fovy`, `aspect`, `zNear`, `zFar`이다.
+#### `PerspectiveCamera`는 4개의 인자를 받는데 위 사진에서도 알 수 있듯이 `fovy`, `aspect`, `zNear`, `zFar`이고
 #### 이 __4개의 인자값을 통해 그림 속 연두색 육면체가 구성되는데 이 육면체를 절두체__ 라고 한다.
 #### 이 __절두체 안에 존재하는 물체가 `camera`를 통해 보여지게 되고 화면상에 렌더링된다.__
 >#### __- `fovy`__
@@ -188,4 +188,5 @@ if(targetPivot) {
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (11) 그림자](./11_Three.js_module_shadow.md)

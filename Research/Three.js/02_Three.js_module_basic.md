@@ -178,7 +178,7 @@ _setupCamera () {
 <br>
 
 #### __`light`의 색깔을 `color`를 통해 정의하고 `intensity`로 빛의 세기를__ 정의한 뒤
-#### 이를 `light`라는 변수 안에 `DirectionalLight` 기능을 통해 __위에서 정의한 설정들을 대입함으로써 `light`를 생성한다.__
+#### 이를 `light`라는 변수 안에 `DirectionalLight` 광원으로 __위에서 정의한 설정들을 대입함으로써 `light`를 생성한다.__
 #### 이어서 `light`의 `position`을 설정하고 공간인 __`scene`에 추가함으로써 3D object와 상호작용할 수 있게__ 한다.
 ```javascript
 _setupLight() {
@@ -195,7 +195,7 @@ _setupLight() {
 ### __(3) Model__
 #### __`_setupModel`은 `Model`(3D object | Mesh)을 정의하는 함수다.__
 #### __`Mesh` 생성 시에는 `geometry`(뼈대)와 `material`(질감) 설정이 필수인데__
-#### x, y, z가 `(1, 1, 1)`이며 색상이 `44a88`인 박스를 생성하고 있다.
+#### x, y, z가 `(1, 1, 1)`이며 색상이 `44a88`인 `box`를 생성하고 있다.
 
 <br>
 
@@ -239,7 +239,7 @@ resize() {
 
 ### __(2) render__
 #### `render` 함수 또한 초반에 `requestAnimationFrame` 내에서 실행됐었는데 `time`을 인자로 받고 있다.
-#### 이 __`time`은 `requestAnimationFrame`가 전달해주는 값이다.__
+#### 이 __`time`은 `requestAnimationFrame`이 전달해주는 값이다.__
 ```javascript
 render(time) {
   this._renderer.render(this._scene, this._camera);
@@ -258,7 +258,7 @@ update(time){
 
 <br>
 
-#### __`update` 함수는 시간이 갈수록 우리가 생성한 cube가 x축과 y축을 따라 회전하도록__ 하는 함수이다.
+#### __`update` 함수는 시간이 갈수록 우리가 생성한 `cube`가 x축과 y축을 따라 회전하도록__ 하는 함수이다.
 
 <br>
 
@@ -272,9 +272,9 @@ update(time){
 
 <br>
 
-![01_result][01_result]
+![01_basic][01_basic]
 
-[01_result]: ./img/01_result.png "01_result" 
+[01_basic]: ./img/01_basic.gif "01_basic" 
 #### 그럼 위와 같이 x축과 y축으로 회전하는 파란색 큐브를 볼 수 있을 것이다.
 
 <br>
@@ -284,4 +284,5 @@ update(time){
 
 ---
 
+[전체 코드 파일]()
 [02_Three.js module 활용 - (2) Geometry](./03_Three.js_module_geometry.md)
