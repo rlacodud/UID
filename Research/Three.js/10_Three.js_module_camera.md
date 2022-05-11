@@ -172,10 +172,14 @@ if(targetPivot) {
 ```
 #### 위에서 생성한 빨간색 구와 똑같은 경로를 따르는 `targetPivot`을 찾아 `targetPivot` 상수에 대입하고 이를 빨간색 구보다 10 빨리 회전하도록 한다.
 #### 그리고 __새로운 좌표를 `pt`로 생성하고 이를 `target`의 `position`을 가져와 시점으로 설정함으로써__ 빨간색 구의 궤도와 시점을 따라갈 수 있도록 한다.
-<!-- gif 삽입 -->
+![10_target_before][10_target_before]
+
+[10_target_before]: ./img/10_target_before.gif "10_target_before"
 #### 결과를 보면 뭔가 이상해보이는데 __원근감(거리감)이 없는 `OrthographicCamera`로 설정되어있기 때문에__ 그렇다.
 #### 이를 `OrthographicCamera`를 주석처리하고 __`PerspectiveCamera` 주석을 해제시킴으로써__ 변경해보자.
-<!-- gif 삽입 -->
+![10_target][10_target]
+
+[10_target]: ./img/10_target.gif "10_target"
 
 <br>
 
