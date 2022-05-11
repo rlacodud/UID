@@ -688,5 +688,5 @@ lightMapIntensity: 2,
 
 ---
 
-[전체 코드 파일]()
+[전체 코드 파일](https://github.com/rlacodud/UID/blob/mit/Research/Three.js/three.js-master/study/04_material.js)
 [02_Three.js module 활용 - (8) 사용자 정의 Geometry](./08_Three.js_module_custom_geometry.md)

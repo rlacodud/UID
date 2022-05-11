@@ -280,5 +280,5 @@ const material = new THREE.MeshPhongMaterial({
 
 ---
 
-[전체 코드 파일]()
+[전체 코드 파일](https://github.com/rlacodud/UID/blob/mit/Research/Three.js/three.js-master/study/05_custom_geometry.js)
 [02_Three.js module 활용 - (9) 광원](./09_Three.js_module_light.md)
