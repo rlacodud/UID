@@ -1,4 +1,4 @@
-console.log("start")
+console.log("ver2")
 
 history.scrollRestoration = "manual"
 

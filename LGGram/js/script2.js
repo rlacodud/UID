@@ -69,10 +69,6 @@ gsap.timeline({scrollTrigger:{trigger:'.scrollDist3', start:'top bottom', end:'b
 .fromTo('.background-area', {y: 0},{y: -1000}, 0)
 .fromTo('.sub-area', {y: 1000},{y: 0}, 0)
 
-.fromTo('.pen1', {y: 555},{y: -300}, 0)
-.fromTo('.pen1', {x: 130},{x: 500}, 0)
-.fromTo('.pen1', {rotation: -50},{rotation: -40}, 0)
-
 .fromTo('.pen2', {scale: 1},{scale: 0.15}, 0) 
 .fromTo('.pen2', {y: 48},{y: -70}, 0)
 .fromTo('.pen2', {x: -50},{x: -120}, 0)
@@ -81,9 +77,6 @@ gsap.timeline({scrollTrigger:{trigger:'.scrollDist3', start:'top bottom', end:'b
 
 gsap.set('.scrollDist2', {width:'720px', height:'30%'})
 gsap.timeline({scrollTrigger:{trigger:'.scrollDist2', start:'top bottom', end:'bottom bottom', scrub:0}})
-.fromTo('.pen1', {y: 180},{y: 555}, 0)
-.fromTo('.pen1', {x: -40},{x: 130}, 0)
-.fromTo('.pen1', {rotation: -35},{rotation: -50}, 0)
 
 .fromTo('.pen2', {y: 48},{y: 48}, 0)
 .fromTo('.pen2', {x: -15},{x: -50}, 0)
@@ -91,6 +84,7 @@ gsap.timeline({scrollTrigger:{trigger:'.scrollDist2', start:'top bottom', end:'b
 
 gsap.set('.scrollDist1', {width:'720px', height:'30%'})
 gsap.timeline({scrollTrigger:{trigger:'.scrollDist1', start:'top top', end:'bottom bottom', scrub:0}})
+.fromTo('.pen1', {opacity: 100},{opacity: 0}, 0)
 .fromTo('.pen1', {y: 0},{y: 180}, 0)
 .fromTo('.pen1', {x: 0},{x: -40}, 0)
 .fromTo('.pen1', {rotation: 0},{rotation: -35}, 0)
