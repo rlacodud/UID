@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@400;500&display=swap');
+
+
+body{-ms-overflow-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif; 
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+body {max-width: 720px; width: 720px; margin: 0 auto; overflow-x: hidden;}
+
+.mobile {position: absolute; max-width: 720px; width: 720px; overflow-x: hidden; margin: 0 auto; border: solid red 1px;}
+
+.header {width: 100%;}
+
+.section1 { width: 100%; height: 100vh; position: relative;}
+.section1 .sec1Container{position: absolute; z-index: 90; width: 100%; height: 100vh;}
+.section1 .sec1Container.fixed{position:fixed; top: 0; left: 0;overflow-x: hidden;}
+.section1 .sec1Container .video{overflow: hidden; transition: .3s; position: absolute; left: 50%; transform: translateX(-50%); height: 100vh; object-fit: cover;}
+.section1 .sec1Container .video video{height: 100%; position: relative; left: 50%; transform: translateX(-50%);}
+.section1 .sec1Container .sec1Text1{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width:  240px;}
+.section1 .sec1Container .sec1Text2{display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width:  628px;}
+
+.section2 {width: 100%; height:  5000px; background-color: white; position: relative; overflow-x: hidden;}
+.section2 .sec2Container{position: relative;width: 100%; height: 100vh;overflow-x: hidden; z-index: 1;}
+.section2 .sec2Container.fixed{position:fixed; top: 0; left: 0;overflow-x: hidden;}
+.section2 .sec2Container .text1{width:  242px; position: absolute; top:  300px; left: 50%; transform: translateX(-50%);}
+.section2 .sec2Container .text2{display: none; width:  398px; position: absolute; top:  300px; left: 50%; transform: translateX(-50%);}
+.section2 .sec2Container .text3{transition: .5s; opacity: 0; display: none; width:  548px; position: absolute; top:  249px; left: 50%; transform: translateX(-50%);}
+.section2 .sec2Container .gram{transition: .5s; width:  841px; position: absolute; top:  484px; left: 50%; transform: translateX(-50%);}
+.section2 .content {z-index: 2; box-sizing: border-box; position: absolute; top:  2160px; width: 100%; height:  2728px;}
+.section2 .content .sec2Text1 {position: absolute; top: 300px; right:  50px; width:  193px; }
+.section2 .content .sec2Text2 {position: absolute; top: 997px; left:  50px; width:  270px; }
+.section2 .content .sec2Text3 {position: absolute; top: 1694px; left:  270px; width:  276px; }
+.section2 .content .sec2Text4 {position: absolute; top: 2391px; left:  50px; width:  382px; }
+.section2 .video1 {position: absolute; top: 0; right: 0; width:  500px; height:  330px; object-fit: cover;}
+.section2 .video2 {position: absolute; top:  697px; left: 0; width:  500px; height:  330px; object-fit: cover;}
+.section2 .video3 {position: absolute; top:  1394px; right: 0; width:  500px; height:  330px; object-fit: cover;}
+.section2 .video4 {position: absolute; top:  2091px; left: 0; width:  500px; height:  330px; object-fit: cover;}
+/* ------------------------------------------------------- */
+/* ---- section3 ---- */
+#section3 {width: 100%; height:   5000 px; position: relative; background-color: #000000;}
+#section3 .sec3Container {z-index: 3; width: 100%; height: 100vh; position: absolute; top: 0; left: 0;}
+#section3 .sec3Container.fixed{position:fixed; top: 0; left: 0;overflow-x: hidden;}
+#section3 .sec3Container .sec3Text1{transition: .5s; position: absolute; top: 50%; left:   720 px; transform: translate(0, -50%); width:   896 px;}
+#section3 .sec3Container .sec3Text2{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width:   628 px; display: none;}
+#section3 .sec3Container .sec3Text3{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width:   406 px; display: none;}
+
+/* ---- section4 ---- */
+#section4 {position: relative; width: 100%; height:   1500 px; z-index: 10; background-color: #FFFFFF;}
+#section4 .title {width:   414 px; position: absolute; top:   150 px; left:   50 px;}
+#section4 .box-area {top:   355 px; position: absolute; width:   720 px; height:   630 px; overflow-x: auto; font-size: 0; display: flex;}
+#section4 .box-area .box-item:nth-child(1) { margin-left:   50 px;}
+#section4 .box-area .box-item {position: relative; background-color: #F5F6F8; margin-right:   20 px;}
+#section4 .box-area .box-item p{position: absolute; font-size: 10px;}
+#section4 .box-area .box-item .video-area {overflow: hidden; width:   400 px; height:   630 px; object-fit: cover; }
+#section4 .box-area .box-item .video-area .vid {display: flex;justify-content: center;}
+#section4 .box-area .box-item .video-area img {width:   400 px}
+#section4 .hand {width:   720 px; position: absolute; bottom: 0; left: 0;}
+
+
+/* ---- section5 ---- */
+#section5 {width: 100%; height:   1560 px; background-color: white; position: relative;}
+/* #section5 .title-area .title img {margin-top:   0 px; margin-left:   0 px; width:   376 px; height:   87 px; object-fit: cover;} */
+
+#section5 .box-area {width:   720 px; height:   1560 px; object-fit: cover;}
+/* #section5 .box-area .box-item {border: solid 1px red; background-color: #F5F6F8;} */
+#section5 .box-area .video {z-index: 1; margin-left: 50%; transform: translateX(-50%); height:   1560 px;}
+
+/* #section5 .box-area .background img {width: 100%;} */
+#section5 .box-area .text-area {position: absolute; margin-top:   -1252 px; left: 50%; transform: translateX(-50%); text-align: center;}
+#section5 .box-area .text-area .title { font-family: 'Noto Sans KR', sans-serif; font-size:  60 px; font-weight: 700; line-height:   80 px; color: #000000;}
+#section5 .box-area .text-area .title span {font-family: 'Montserrat', sans-serif; font-size:  60 px; font-weight: 700; line-height:   80 px; color: #000000;}
+#section5 .box-area .text-area .sub {margin-top:   30 px; font-family: 'Noto Sans KR', sans-serif; font-size:  18 px; font-weight: 500; line-height:   26 px; color: #000000;}
+#section5 .box-area .image-area {position: absolute; top:   718 px; margin-top:   40 px; margin-left:   40 px; width:   641 px; height:   585 px; object-fit: cover;}
+#section5 .box-area .image-area .img img{width:   641 px;}
+
+/* ---- section6 ---- */
+/* ---- section6 ---- */
+#section6 {width: 100%;height:   5000 px; position: relative;}
+#section6 .fixed-area {position: absolute; height:   1560 px;}
+#section6 .title-area {z-index: 50;position: absolute; position: absolute; width:   720 px; margin-top:   700 px; margin-left:   50 px; }
+#section6 .title-area .title { font-family: 'Noto Sans KR', sans-serif; font-size:  60 px; font-weight: 700; line-height:   80 px; color: #000000;}
+#section6 .title-area .title span {font-weight: 500;}
+#section6 .title-area .sub {margin-top:   25 px; font-family: 'Noto Sans KR', sans-serif; font-size:  24 px; font-weight: 400; line-height:   34 px; color: #888888;}
+
+#section6 .fixed-area.fixed{position:fixed; top:0; left:0;}
+#section6 .fixed-area.absolute{position: absolute; bottom: 0; left: 0; margin-top:   550px;}
+
+#section6 .line-area {z-index: 10; position: absolute;}
+#section6 .line-area .sketch1 {position: absolute; margin-left:   22 px; margin-top:   761 px;}
+#section6 .line-area .sketch1 img {width:   342 px; height:   153 px;}
+
+#section6 .background-area {z-index: -10; position: absolute; }
+#section6 .background-area .sketch2 {position: absolute; transform: rotate( -7deg ); margin-left:   -100 px; margin-top:   200 px;}
+#section6 .background-area .sketch3 {position: absolute; transform: rotate( -6deg ); margin-left:   50 px; margin-top:   1100 px;}
+#section6 .background-area .sketch4 {position: absolute; transform: rotate( 2deg ); margin-left:   480 px; margin-top:   1300 px;}
+#section6 .background-area .sketch2 img {width:   355 px; height:   355 px;}
+#section6 .background-area .sketch3 img {width:   265 px; height:   200 px;}
+#section6 .background-area .sketch4 img  {width:   230 px; height:   191 px;}
+
+#section6 .image-area .pen1 {z-index: -1; transition: 1s; position: absolute; transform: rotate( 1deg ); margin-left:   176 px; margin-top:   -325 px;}
+#section6 .image-area .pen2 {z-index: 50; transition: 1s; position: absolute; transform: rotate( 0deg ); margin-left:   242 px; margin-top:   255 px;}
+#section6 .image-area .pen1 img {width:   670 px; height:   908 px;}
+#section6 .image-area .pen2 img {width:   1048 px; height:   848 px;}
+
+#section6 .sub-area {position: absolute; width:   720 px; margin-top:   430 px; margin-left:   50 px; }
+#section6 .sub-area .display {margin-left:   30 px; object-fit: cover;}
+#section6 .sub-area .display img {width:   553 px; height:   349 px;}
+#section6 .sub-area .text-area {position: absolute; width:   720 px; margin-top:   75 px;}
+#section6 .sub-area .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:  60 px; font-weight: 500; line-height:   80 px; color: #000000;}
+#section6 .sub-area .text-area .title span {font-weight: 700;}
+#section6 .sub-area .text-area .sub {margin-top:   25 px; font-family: 'Noto Sans KR', sans-serif; font-size:  24 px; font-weight: 400; line-height:   34 px; color: #888888;}
+
+/* #section6 {width: 100%;height:   5000 px; position: relative;}
+#section6 .fixed-area {position: absolute; height:   1560 px;}
+#section6 .title-area {position: absolute; width:   720 px; margin-top:   700 px; margin-left:   50 px; }
+#section6 .title-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:  60 px; font-weight: 700; line-height:   80 px; color: #000000;}
+#section6 .title-area .title span {font-weight: 500;}
+#section6 .title-area .sub {margin-top:   25 px; font-family: 'Noto Sans KR', sans-serif; font-size:  24 px; font-weight: 400; line-height:   34 px; color: #888888;}
+
+#section6 .fixed-area.fixed{position:fixed; top:0; left:0;}
+#section6 .fixed-area.absolute{position: absolute; bottom: 0; left: 0; margin-top:   550 / 1920);}
+
+
+#section6 .image-area .pen1 {z-index: -100; transition: 1s; position: absolute; transform: rotate( 1deg ); margin-left:   176 px; margin-top:   -325 px;}
+#section6 .image-area .pen2 {z-index: 50; transition: 1s; position: absolute; transform: rotate( 0deg ); margin-left:   242 px; margin-top:   255 px;}
+#section6 .image-area .pen1 img {width:   670 px; height:   908 px;}
+#section6 .image-area .pen2 img {width:   1048 px; height:   848 px;}
+
+#section6 .sub-area {position: absolute; width:   720 px; margin-top:   430 px; margin-left:   50 px; }
+#section6 .sub-area .display {margin-left:   30 px; object-fit: cover;}
+#section6 .sub-area .display img {width:   553 px; height:   349 px;}
+#section6 .sub-area .text-area {position: absolute; width:   720 px; margin-top:   75 px;}
+#section6 .sub-area .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:  60 px; font-weight: 500; line-height:   80 px; color: #000000;}
+#section6 .sub-area .text-area .title span {font-weight: 700;}
+#section6 .sub-area .text-area .sub {margin-top:   25 px; font-family: 'Noto Sans KR', sans-serif; font-size:  24 px; font-weight: 400; line-height:   34 px; color: #888888;} */
+
+/* ---- section7 ---- */
+#section7 {width:   720 px; height:   1266 px; position: relative;}
+#section7 .img {width:   620 px; position: absolute; left: 50%; transform: translateX(-50%);}
+
+
+/* ---- section8 ---- */
+#section8 {width: 100%; height:   1436 px;}
+#section8 .titleArea {margin-left:   50 px; }
+#section8 .titleArea .title {font-family: 'Montserrat', sans-serif; font-size:  70 px; font-weight: 700; line-height:   68 px; color: #000000;}
+#section8 .titleArea .title span {font-size:  80 px; color: #EA3116;}
+
+#section8 .box-area {position: absolute; width:   720 px; height:   960 px; overflow-x: auto; font-size: 0; display: flex;}
+
+#section8 .box-area {display: flex; margin-top:   40 px;}
+#section8 .box-area .box-item:nth-child(1) { margin-left:   50 px;}
+#section8 .box-area .box-item {margin-right:   20 px;}
+#section8 .box-area .box-item .video-area {overflow: hidden; width:   540 px; height:   960 px; object-fit: cover; }
+#section8 .box-area .box-item .video-area .vid {display: flex;justify-content: center;}
+#section8 .box-area .box-item .video-area img {width:   540 px}
+#section8 .box-area .box-item .image-area {overflow: hidden;  margin-top:   -960 px; width:   540 px; height:   960 px; object-fit: cover;}
+#section8 .box-area .box-item .image-area img {width:   540 px;}
+#section8 .box-area .box-item .text-area {margin-top:   -275 px; margin-left:   50 px;}
+#section8 .box-area .box-item .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:  50 px; font-weight: 700; line-height:   68 px; color: #FFFFFF;}
+#section8 .box-area .box-item .text-area .hashtag {margin-top:   30 px;   font-family: 'Noto Sans KR', sans-serif; font-size:  24 px; font-weight: 500; line-height:   40 px; color: #FFFFFF}
+
+/* ---- section9 ---- */
+/* #section9 {height:   1667 px; width: 100%; background-color: #000000; position: relative;}
+#section9 .video {position: absolute; height:   1667 px; left: 50%; transform: translateX(-50%);}
+
+#section9 .title{position: absolute; top:   100 px; left:   50 px; width:   424 px;}
+
+
+
+#section9 .img {position: absolute; top:   307 px; left: 50%; transform: translateX(-50%); width:   620  px;} */
+/* #section9 .text {position: absolute; top:   1487 px; left: 50%; transform: translateX(-50%); width:   348  px;} */
+#section9 {height:   1931 px; width: 100%; background-color: #000000; position: relative;}
+#section9 .video {position: absolute; height:   1931 px; left: 50%; transform: translateX(-50%);}
+
+#section9 .title{position: absolute; top:   100 px; left:   50 px; width:   424 px;}
+
+
+
+#section9 .img {position: absolute; top:   307 px; left: 50%; transform: translateX(-50%); width:   620  px;}
+#section9 .text {position: absolute; top:   1447 px; left: 50%; transform: translateX(-50%); width:   348  px;}
+
+
+
+
+/* #section8 {width: 100%;}
+#section8 .title-area {margin-top:   200 px; margin-left:   50 px; }
+#section8 .title-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:  60 px; font-weight: 700; line-height:   80 px; color: #000000;}
+#section8 .title-area .title span {font-family: 'Montserrat', sans-serif; font-size:  60 px;}
+#section8 .title-area .title span:last-child {font-size:  80 px; color: #A216E6;}
+
+#section8 .box-area {margin-top:   40 px;}
+#section8 .box-area .box-item { margin-bottom:   85 px;}
+#section8 .box-area .box-item .image-area {width: 100%; height:   400 px; object-fit: cover;}
+#section8 .box-area .box-item .image-area img {width: 100%;}
+#section8 .box-area .box-item .text-area {margin-top:   -277 px; text-align: center;}
+#section8 .box-area .box-item .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:  40 px; font-weight: 700; line-height:   50 px; color: #FFFFFF;}
+#section8 .box-area .box-item .text-area .title span {font-family: 'Montserrat', sans-serif; font-size:  40 px; font-weight: 700; line-height:   50 px; color: #FFFFFF;}
+#section8 .box-area .box-item .text-area .sub {margin-top:   55 px;}
+#section8 .box-area .box-item .text-area .sub a {font-family: 'Noto Sans KR', sans-serif; font-size:  26 px; font-weight: 500; line-height:   60 px; color: #FFFFFF; text-decoration: underline;} */

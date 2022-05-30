@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="630" viewBox="0 0 400 630">
+  <g id="그룹_240" data-name="그룹 240" transform="translate(-14371 -8740)">
+    <g id="그룹_239" data-name="그룹 239" transform="translate(-89 -488)">
+      <rect id="사각형_534" data-name="사각형 534" width="400" height="630" transform="translate(14460 9228)" fill="#a20d35"/>
+      <g id="그룹_238" data-name="그룹 238" transform="translate(3233 2153)">
+        <path id="사각형_507" data-name="사각형 507" d="M0,0H340a0,0,0,0,1,0,0V120A130,130,0,0,1,210,250H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(11257 7158)" fill="#e55725"/>
+        <path id="사각형_522" data-name="사각형 522" d="M0,0H340a0,0,0,0,1,0,0V120A130,130,0,0,1,210,250H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(11597 7657) rotate(180)" fill="#e55725"/>
+      </g>
+      <text id="키워드와_스펙_검색으로_gram찾기" data-name="키워드와 
+스펙 검색으로 
+gram찾기" transform="translate(14529 9380)" font-size="34" font-family="SourceHanSansK-Bold, Source Han Sans K" font-weight="700"><tspan x="0" y="0">키워드와 </tspan><tspan x="0" y="44">스펙 검색으로 </tspan><tspan font-family="Montserrat-Bold, Montserrat"><tspan x="0" y="88">gram</tspan><tspan y="88" font-family="SourceHanSansK-Bold, Source Han Sans K">찾기</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

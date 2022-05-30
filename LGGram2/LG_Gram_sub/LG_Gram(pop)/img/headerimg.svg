@@ -1,0 +1,17 @@
+<svg id="그룹_290" data-name="그룹 290" xmlns="http://www.w3.org/2000/svg" width="720" height="103" viewBox="0 0 720 103">
+  <g id="top_title">
+    <path id="패스_4" data-name="패스 4" d="M0,0H720V102H0Z" fill="#fff"/>
+    <text id="LG_올레드_evo_오브제컬렉션" data-name="LG 올레드 evo 오브제컬렉션" transform="translate(180 64)" fill="#111" font-size="30" font-family="SourceHanSansK-Bold, Source Han Sans K" font-weight="700"><tspan x="0" y="0">LG 올레드 evo 오브제컬렉션</tspan></text>
+    <g id="그룹_281" data-name="그룹 281" transform="translate(630)">
+      <g id="그룹_2" data-name="그룹 2" transform="translate(36.322 34)">
+        <rect id="사각형_76" data-name="사각형 76" width="3" height="22" rx="1.5" transform="translate(0 15.444) rotate(-45)" fill="#111"/>
+        <rect id="사각형_77" data-name="사각형 77" width="3" height="22" rx="1.5" transform="translate(15.557 0) rotate(45)" fill="#111"/>
+      </g>
+      <g id="그룹_280" data-name="그룹 280" transform="translate(23 34)">
+        <rect id="사각형_76-2" data-name="사각형 76" width="3" height="22" rx="1.5" transform="translate(2.122 31) rotate(-135)" fill="#111"/>
+        <rect id="사각형_77-2" data-name="사각형 77" width="3" height="22" rx="1.5" transform="translate(17.678 15.556) rotate(135)" fill="#111"/>
+      </g>
+    </g>
+  </g>
+  <rect id="사각형_402" data-name="사각형 402" width="720" height="1" transform="translate(0 102)" fill="#e2e2e2"/>
+</svg>
