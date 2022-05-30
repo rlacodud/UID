@@ -107,8 +107,20 @@ body, html {max-width: 720px; margin: 0 auto; overflow-x: hidden;}
 #section6 .background-area .sketch3 img {width: 265px; height: 200px;}
 #section6 .background-area .sketch4 img  {width: 230px; height: 191;}
 
-#section6 .image-area .pen1 {z-index: -1; transition: 1s; position: absolute; transform: rotate( 1deg ); margin-left: 176px; margin-top: -325px;}
-#section6 .image-area .pen2 {z-index: 50; transition: 1s; position: absolute; transform: rotate( 0deg ); margin-left: 242px; margin-top: 255px;}
+#section6 .image-area .pen1 {
+  -webkit-transition:1s;
+  -moz-transition:1s;
+  -o-transition:1s;
+  -ms-transition:1s;
+  transition:1s;
+  z-index: -1; position: absolute; transform: rotate( 1deg ); margin-left: 176px; margin-top: -325px;}
+#section6 .image-area .pen2 {
+  -webkit-transition:1s;
+  -moz-transition:1s;
+  -o-transition:1s;
+  -ms-transition:1s;
+  transition:1s;
+  z-index: 50; position: absolute; transform: rotate( 0deg ); margin-left: 242px; margin-top: 255px;}
 #section6 .image-area .pen1 img {width: 670px; height: 908px;}
 #section6 .image-area .pen2 img {width: 1048px; height: 848px;}
 
@@ -136,7 +148,7 @@ body, html {max-width: 720px; margin: 0 auto; overflow-x: hidden;}
 }
 
 /* ---- section8 ---- */
-#section8 {width: 100%; height: 1436px;}
+#section8 {width: 100%; height: 1185px;}
 #section8 .titleArea {margin-left: 50px; }
 #section8 .titleArea .title {font-family: 'Montserrat', sans-serif; font-size: 70px; font-weight: 700; line-height: 68px; color: #000000;}
 #section8 .titleArea .title span {font-size: 80px; color: #EA3116;}
