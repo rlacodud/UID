@@ -1,0 +1,129 @@
+/* 
+@font-face {
+    font-family: 'ITCAvantGardeStd-XLt';
+    src: url('../font/ITCAvantGardeStd-XLt.otf') format('opentype');
+}
+@font-face {
+    font-family: 'AppleSDGothicNeoH';
+    src: url('../font/AppleSDGothicNeoH.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'AppleSDGothicNeoB';
+    src: url('../font/AppleSDGothicNeoB.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'AppleSDGothicNeoM';
+    src: url('../font/AppleSDGothicNeoM.ttf') format('opentype');
+}
+
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=8f9d6a97-b8a2-4039-967b-8eb9d94c6025&fontids=6289470,6289510");
+    @font-face{
+        font-family:"ITCAvantGardeStd-Md";
+        src:url("../font/Fonts/6289470/03d52b20-0d03-49fe-818b-25b6bb19d206.woff2") format("woff2"),url("Fonts/6289470/08704875-1f34-4b0c-88bf-04f54e3edb21.woff") format("woff");
+    }
+    @font-face{
+        font-family:"ITCAvantGardeStd-Bold";
+        src:url("../font/Fonts/6289510/90737b0f-5bf5-4991-aae6-cd2f7e4019c4.woff2") format("woff2"),url("Fonts/6289510/4764e046-4e82-4a13-b189-531e068595f4.woff") format("woff");
+    } */
+
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+strong {font-style:normal; font-weight:normal;}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}

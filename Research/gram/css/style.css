@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@400;500&display=swap');
+
+
+body{-ms-overflow-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif; 
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+body {max-width: 720px; margin: 0 auto; overflow-x: hidden;}
+
+.header {width: 100%;}
+
+.section1 { width: 100%; height: 100vh; position: relative;}
+.section1 .sec1Container{position: absolute; z-index: 90; width: 100%; height: 100vh;}
+.section1 .sec1Container.fixed{position:fixed; top: 0; left: 0;overflow-x: hidden;}
+.section1 .sec1Container .video{overflow: hidden; transition: .3s; position: absolute; left: 50%; transform: translateX(-50%); height: 100vh; object-fit: cover;}
+.section1 .sec1Container .video video{height: 100%; position: relative; left: 50%; transform: translateX(-50%);}
+.section1 .sec1Container .sec1Text1{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw*240/720);}
+.section1 .sec1Container .sec1Text2{display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw*628/720);}
+
+.section2 {width: 100%; height: calc(100vw*5000/720); background-color: white; position: relative; overflow-x: hidden;}
+.section2 .sec2Container{position: relative;width: 100%; height: 100vh;overflow-x: hidden; z-index: 1;}
+.section2 .sec2Container.fixed{position:fixed; top: 0; left: 0;overflow-x: hidden;}
+.section2 .sec2Container .text1{width: calc(100vw*242/720); position: absolute; top: calc(100vw*300/720); left: 50%; transform: translateX(-50%);}
+.section2 .sec2Container .text2{display: none; width: calc(100vw*398/720); position: absolute; top: calc(100vw*300/720); left: 50%; transform: translateX(-50%);}
+.section2 .sec2Container .text3{transition: .5s; opacity: 0; display: none; width: calc(100vw*548/720); position: absolute; top: calc(100vw*249/720); left: 50%; transform: translateX(-50%);}
+.section2 .sec2Container .gram{transition: .5s; width: calc(100vw*841/720); position: absolute; top: calc(100vw*484/720); left: 50%; transform: translateX(-50%);}
+.section2 .content {z-index: 2; box-sizing: border-box; position: absolute; top: calc(100vw*2160/720); width: 100%; height: calc(100vw*2728/720);}
+.section2 .content .sec2Text1 {position: absolute; top:calc(100vw*300/720); right: calc(100vw*50/720); width: calc(100vw*193/720); }
+.section2 .content .sec2Text2 {position: absolute; top:calc(100vw*997/720); left: calc(100vw*50/720); width: calc(100vw*270/720); }
+.section2 .content .sec2Text3 {position: absolute; top:calc(100vw*1694/720); left: calc(100vw*270/720); width: calc(100vw*276/720); }
+.section2 .content .sec2Text4 {position: absolute; top:calc(100vw*2391/720); left: calc(100vw*50/720); width: calc(100vw*382/720); }
+.section2 .video1 {position: absolute; top: 0; right: 0; width: calc(100vw*500/720); height: calc(100vw*330/720); object-fit: cover;}
+.section2 .video2 {position: absolute; top: calc(100vw*697/720); left: 0; width: calc(100vw*500/720); height: calc(100vw*330/720); object-fit: cover;}
+.section2 .video3 {position: absolute; top: calc(100vw*1394/720); right: 0; width: calc(100vw*500/720); height: calc(100vw*330/720); object-fit: cover;}
+.section2 .video4 {position: absolute; top: calc(100vw*2091/720); left: 0; width: calc(100vw*500/720); height: calc(100vw*330/720); object-fit: cover;}
+/* ------------------------------------------------------- */
+/* ---- section3 ---- */
+#section3 {width: 100%; height: calc(100vw * 5000 /720); position: relative; background-color: #000000;}
+#section3 .sec3Container {z-index: 3; width: 100%; height: 100vh; position: absolute; top: 0; left: 0;}
+#section3 .sec3Container.fixed{position:fixed; top: 0; left: 0;overflow-x: hidden;}
+#section3 .sec3Container .sec3Text1{transition: .5s; position: absolute; top: 50%; left: calc(100vw * 720 /720); transform: translate(0, -50%); width: calc(100vw * 896 /720);}
+#section3 .sec3Container .sec3Text2{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw * 628 /720); display: none;}
+#section3 .sec3Container .sec3Text3{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw * 406 /720); display: none;}
+
+/* ---- section4 ---- */
+#section4 {position: relative; width: 100%; height: calc(100vw * 1500 /720); z-index: 10; background-color: #FFFFFF;}
+#section4 .title {width: calc(100vw * 414 /720); position: absolute; top: calc(100vw * 150 /720); left: calc(100vw * 50 /720);}
+#section4 .box-area {top: calc(100vw * 355 / 720); position: absolute; width: calc(100vw * 720 /720); height: calc(100vw * 630 / 720); overflow-x: auto; font-size: 0; display: flex;}
+#section4 .box-area .box-item:nth-child(1) { margin-left: calc(100vw * 50 /720);}
+#section4 .box-area .box-item {position: relative; background-color: #F5F6F8; margin-right: calc(100vw * 20 /720);}
+#section4 .box-area .box-item p{position: absolute; font-size: 10px;}
+#section4 .box-area .box-item .video-area {overflow: hidden; width: calc(100vw * 400 / 720); height: calc(100vw * 630 / 720); object-fit: cover; }
+#section4 .box-area .box-item .video-area .vid {display: flex;justify-content: center;}
+#section4 .box-area .box-item .video-area img {width: calc(100vw * 400 / 720)}
+#section4 .hand {width: calc(100vw * 720 /720); position: absolute; bottom: 0; left: 0;}
+
+
+/* ---- section5 ---- */
+#section5 {width: 100%; height: calc(100vw * 1560 /720); background-color: white; position: relative;}
+/* #section5 .title-area .title img {margin-top: calc(100vw * 0 / 720); margin-left: calc(100vw * 0 / 720); width: calc(100vw * 376 / 720); height: calc(100vw * 87 / 720); object-fit: cover;} */
+
+#section5 .box-area {width: calc(100vw * 720 / 720); height: calc(100vw * 1560 / 720); object-fit: cover;}
+/* #section5 .box-area .box-item {border: solid 1px red; background-color: #F5F6F8;} */
+#section5 .box-area .video {z-index: 1; margin-left: 50%; transform: translateX(-50%); height: calc(100vw * 1560 / 720);}
+
+/* #section5 .box-area .background img {width: 100%;} */
+#section5 .box-area .text-area {position: absolute; margin-top: calc(100vw * -1252 / 720); left: 50%; transform: translateX(-50%); text-align: center;}
+#section5 .box-area .text-area .title { font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 60 /720); font-weight: 700; line-height: calc(100vw * 80 /720); color: #000000;}
+#section5 .box-area .text-area .title span {font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 60 /720); font-weight: 700; line-height: calc(100vw * 80 /720); color: #000000;}
+#section5 .box-area .text-area .sub {margin-top: calc(100vw * 30 / 720); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 18 /720); font-weight: 500; line-height: calc(100vw * 26 /720); color: #000000;}
+#section5 .box-area .image-area {position: absolute; top: calc(100vw * 718 / 720); margin-top: calc(100vw * 40 / 720); margin-left: calc(100vw * 40 / 720); width: calc(100vw * 641 / 720); height: calc(100vw * 585 / 720); object-fit: cover;}
+#section5 .box-area .image-area .img img{width: calc(100vw * 641 / 720);}
+
+/* ---- section6 ---- */
+/* ---- section6 ---- */
+#section6 {width: 100%;height: calc(100vw * 5000 /720); position: relative;}
+#section6 .fixed-area {position: absolute; height: calc(100vw * 1560 /720);}
+#section6 .title-area {z-index: 50;position: absolute; position: absolute; width: calc(100vw * 720 /720); margin-top: calc(100vw * 700 /720); margin-left: calc(100vw * 50 /720); }
+#section6 .title-area .title { font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 60 /720); font-weight: 700; line-height: calc(100vw * 80 /720); color: #000000;}
+#section6 .title-area .title span {font-weight: 500;}
+#section6 .title-area .sub {margin-top: calc(100vw * 25 / 720); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 24 /720); font-weight: 400; line-height: calc(100vw * 34 /720); color: #888888;}
+
+#section6 .fixed-area.fixed{position:fixed; top:0; left:0;}
+#section6 .fixed-area.absolute{position: absolute; bottom: 0; left: 0; margin-top: calc(100vw * 550 / 1920);}
+
+#section6 .line-area {z-index: 10; position: absolute;}
+#section6 .line-area .sketch1 {position: absolute; margin-left: calc(100vw * 22 / 720); margin-top: calc(100vw * 761 / 720);}
+#section6 .line-area .sketch1 img {width: calc(100vw * 342 /720); height: calc(100vw * 153 /720);}
+
+#section6 .background-area {z-index: -10; position: absolute; }
+#section6 .background-area .sketch2 {position: absolute; transform: rotate( -7deg ); margin-left: calc(100vw * -100 / 720); margin-top: calc(100vw * 200 / 720);}
+#section6 .background-area .sketch3 {position: absolute; transform: rotate( -6deg ); margin-left: calc(100vw * 50 / 720); margin-top: calc(100vw * 1100 / 720);}
+#section6 .background-area .sketch4 {position: absolute; transform: rotate( 2deg ); margin-left: calc(100vw * 480 / 720); margin-top: calc(100vw * 1300 / 720);}
+#section6 .background-area .sketch2 img {width: calc(100vw * 355 /720); height: calc(100vw * 355 /720);}
+#section6 .background-area .sketch3 img {width: calc(100vw * 265 /720); height: calc(100vw * 200 /720);}
+#section6 .background-area .sketch4 img  {width: calc(100vw * 230 /720); height: calc(100vw * 191 /720);}
+
+#section6 .image-area .pen1 {z-index: -1; transition: 1s; position: absolute; transform: rotate( 1deg ); margin-left: calc(100vw * 176 / 720); margin-top: calc(100vw * -325 / 720);}
+#section6 .image-area .pen2 {z-index: 50; transition: 1s; position: absolute; transform: rotate( 0deg ); margin-left: calc(100vw * 242 / 720); margin-top: calc(100vw * 255 / 720);}
+#section6 .image-area .pen1 img {width: calc(100vw * 670 /720); height: calc(100vw * 908 /720);}
+#section6 .image-area .pen2 img {width: calc(100vw * 1048 /720); height: calc(100vw * 848 /720);}
+
+#section6 .sub-area {position: absolute; width: calc(100vw * 720 /720); margin-top: calc(100vw * 430 /720); margin-left: calc(100vw * 50 /720); }
+#section6 .sub-area .display {margin-left: calc(100vw * 30 / 720); object-fit: cover;}
+#section6 .sub-area .display img {width: calc(100vw * 553 /720); height: calc(100vw * 349 /720);}
+#section6 .sub-area .text-area {position: absolute; width: calc(100vw * 720 /720); margin-top: calc(100vw * 75 /720);}
+#section6 .sub-area .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 60 /720); font-weight: 500; line-height: calc(100vw * 80 /720); color: #000000;}
+#section6 .sub-area .text-area .title span {font-weight: 700;}
+#section6 .sub-area .text-area .sub {margin-top: calc(100vw * 25 / 720); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 24 /720); font-weight: 400; line-height: calc(100vw * 34 /720); color: #888888;}
+
+/* #section6 {width: 100%;height: calc(100vw * 5000 /720); position: relative;}
+#section6 .fixed-area {position: absolute; height: calc(100vw * 1560 /720);}
+#section6 .title-area {position: absolute; width: calc(100vw * 720 /720); margin-top: calc(100vw * 700 /720); margin-left: calc(100vw * 50 /720); }
+#section6 .title-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 60 /720); font-weight: 700; line-height: calc(100vw * 80 /720); color: #000000;}
+#section6 .title-area .title span {font-weight: 500;}
+#section6 .title-area .sub {margin-top: calc(100vw * 25 / 720); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 24 /720); font-weight: 400; line-height: calc(100vw * 34 /720); color: #888888;}
+
+#section6 .fixed-area.fixed{position:fixed; top:0; left:0;}
+#section6 .fixed-area.absolute{position: absolute; bottom: 0; left: 0; margin-top: calc(100vw * 550 / 1920);}
+
+
+#section6 .image-area .pen1 {z-index: -100; transition: 1s; position: absolute; transform: rotate( 1deg ); margin-left: calc(100vw * 176 / 720); margin-top: calc(100vw * -325 / 720);}
+#section6 .image-area .pen2 {z-index: 50; transition: 1s; position: absolute; transform: rotate( 0deg ); margin-left: calc(100vw * 242 / 720); margin-top: calc(100vw * 255 / 720);}
+#section6 .image-area .pen1 img {width: calc(100vw * 670 /720); height: calc(100vw * 908 /720);}
+#section6 .image-area .pen2 img {width: calc(100vw * 1048 /720); height: calc(100vw * 848 /720);}
+
+#section6 .sub-area {position: absolute; width: calc(100vw * 720 /720); margin-top: calc(100vw * 430 /720); margin-left: calc(100vw * 50 /720); }
+#section6 .sub-area .display {margin-left: calc(100vw * 30 / 720); object-fit: cover;}
+#section6 .sub-area .display img {width: calc(100vw * 553 /720); height: calc(100vw * 349 /720);}
+#section6 .sub-area .text-area {position: absolute; width: calc(100vw * 720 /720); margin-top: calc(100vw * 75 /720);}
+#section6 .sub-area .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 60 /720); font-weight: 500; line-height: calc(100vw * 80 /720); color: #000000;}
+#section6 .sub-area .text-area .title span {font-weight: 700;}
+#section6 .sub-area .text-area .sub {margin-top: calc(100vw * 25 / 720); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 24 /720); font-weight: 400; line-height: calc(100vw * 34 /720); color: #888888;} */
+
+/* ---- section7 ---- */
+#section7 {width: calc(100vw * 720 /720); height: calc(100vw * 1266 /720); position: relative;}
+#section7 .img {width: calc(100vw * 620 /720); position: absolute; left: 50%; transform: translateX(-50%);}
+
+
+/* ---- section8 ---- */
+#section8 {width: 100%; height: calc(100vw * 1436 /720);}
+#section8 .titleArea {margin-left: calc(100vw * 50 /720); }
+#section8 .titleArea .title {font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 70 /720); font-weight: 700; line-height: calc(100vw * 68 /720); color: #000000;}
+#section8 .titleArea .title span {font-size:calc(100vw * 80 /720); color: #EA3116;}
+
+#section8 .box-area {position: absolute; width: calc(100vw * 720 /720); height: calc(100vw * 960 / 720); overflow-x: auto; font-size: 0; display: flex;}
+
+#section8 .box-area {display: flex; margin-top: calc(100vw * 40 /720);}
+#section8 .box-area .box-item:nth-child(1) { margin-left: calc(100vw * 50 /720);}
+#section8 .box-area .box-item {margin-right: calc(100vw * 20 /720);}
+#section8 .box-area .box-item .video-area {overflow: hidden; width: calc(100vw * 540 / 720); height: calc(100vw * 960 / 720); object-fit: cover; }
+#section8 .box-area .box-item .video-area .vid {display: flex;justify-content: center;}
+#section8 .box-area .box-item .video-area img {width: calc(100vw * 540 / 720)}
+#section8 .box-area .box-item .image-area {overflow: hidden;  margin-top: calc(100vw * -960 / 720); width: calc(100vw * 540 / 720); height: calc(100vw * 960 / 720); object-fit: cover;}
+#section8 .box-area .box-item .image-area img {width: calc(100vw * 540 / 720);}
+#section8 .box-area .box-item .text-area {margin-top: calc(100vw * -275 / 720); margin-left: calc(100vw * 50 /720);}
+#section8 .box-area .box-item .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 50 /720); font-weight: 700; line-height: calc(100vw * 68 /720); color: #FFFFFF;}
+#section8 .box-area .box-item .text-area .hashtag {margin-top: calc(100vw * 30 / 720);   font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 24 /720); font-weight: 500; line-height: calc(100vw * 40 /720); color: #FFFFFF}
+
+/* ---- section9 ---- */
+/* #section9 {height: calc(100vw * 1667 /720); width: 100%; background-color: #000000; position: relative;}
+#section9 .video {position: absolute; height: calc(100vw * 1667 /720); left: 50%; transform: translateX(-50%);}
+
+#section9 .title{position: absolute; top: calc(100vw * 100 / 720); left: calc(100vw * 50 / 720); width: calc(100vw * 424 / 720);}
+
+
+
+#section9 .img {position: absolute; top: calc(100vw * 307 / 720); left: 50%; transform: translateX(-50%); width: calc(100vw * 620  / 720);} */
+/* #section9 .text {position: absolute; top: calc(100vw * 1487 / 720); left: 50%; transform: translateX(-50%); width: calc(100vw * 348  / 720);} */
+#section9 {height: calc(100vw * 1931 /720); width: 100%; background-color: #000000; position: relative;}
+#section9 .video {position: absolute; height: calc(100vw * 1931 /720); left: 50%; transform: translateX(-50%);}
+
+#section9 .title{position: absolute; top: calc(100vw * 100 / 720); left: calc(100vw * 50 / 720); width: calc(100vw * 424 / 720);}
+
+
+
+#section9 .img {position: absolute; top: calc(100vw * 307 / 720); left: 50%; transform: translateX(-50%); width: calc(100vw * 620  / 720);}
+#section9 .text {position: absolute; top: calc(100vw * 1447 / 720); left: 50%; transform: translateX(-50%); width: calc(100vw * 348  / 720);}
+
+
+
+
+/* #section8 {width: 100%;}
+#section8 .title-area {margin-top: calc(100vw * 200 /720); margin-left: calc(100vw * 50 /720); }
+#section8 .title-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 60 /720); font-weight: 700; line-height: calc(100vw * 80 /720); color: #000000;}
+#section8 .title-area .title span {font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 60 /720);}
+#section8 .title-area .title span:last-child {font-size:calc(100vw * 80 /720); color: #A216E6;}
+
+#section8 .box-area {margin-top: calc(100vw * 40 /720);}
+#section8 .box-area .box-item { margin-bottom: calc(100vw * 85 /720);}
+#section8 .box-area .box-item .image-area {width: 100%; height: calc(100vw * 400 / 720); object-fit: cover;}
+#section8 .box-area .box-item .image-area img {width: 100%;}
+#section8 .box-area .box-item .text-area {margin-top: calc(100vw * -277 / 720); text-align: center;}
+#section8 .box-area .box-item .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 40 /720); font-weight: 700; line-height: calc(100vw * 50 /720); color: #FFFFFF;}
+#section8 .box-area .box-item .text-area .title span {font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 40 /720); font-weight: 700; line-height: calc(100vw * 50 /720); color: #FFFFFF;}
+#section8 .box-area .box-item .text-area .sub {margin-top: calc(100vw * 55 / 720);}
+#section8 .box-area .box-item .text-area .sub a {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 26 /720); font-weight: 500; line-height: calc(100vw * 60 /720); color: #FFFFFF; text-decoration: underline;} */
