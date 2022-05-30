@@ -1,3 +1,4 @@
+console.log('ver3')
 function penScrollEvent() {
   var convertPx = {
     vw: function(px){
@@ -22,7 +23,11 @@ function penScrollEvent() {
   console.log('fixedAreaBottom = '+ fixedAreaBottom);
   console.log('section7Top = '+ section7Top);
 
-
+  if (section6Top < documentHeight) {
+    $('.fixed-area').addClass('fixed');
+  } else {
+    $('.fixed-area').removeClass('fixed');
+  }
 
   // if (fixedAreaBottom >= section7Top) {
   //   console.log('ddd')
@@ -34,6 +39,7 @@ function penScrollEvent() {
   // }
 
   if (documentHeight > section7Top - windowHeight) {
+    console.log('그렇습니다');
     $('.fixed-area').removeClass('fixed');
     $('.fixed-area').addClass('absolute');
   } else if (documentHeight < section7Top - windowHeight && documentHeight >= section6Top){
@@ -64,7 +70,9 @@ gsap.timeline({scrollTrigger:{trigger:'.scrollDist3', start:'top bottom', end:'b
 .fromTo('.background-area', {y: 0},{y: -1200}, 0)
 .fromTo('.sub-area', {y: 1200},{y: 0}, 0)
 
-
+// .fromTo('.pen1', {y: 555},{y: -300}, 0)
+// .fromTo('.pen1', {x: 130},{x: 500}, 0)
+// .fromTo('.pen1', {rotation: -50},{rotation: -40}, 0)
 
 .fromTo('.pen2', {scale: 1},{scale: 0.15}, 0) 
 .fromTo('.pen2', {y: 48},{y: -200}, 0)
