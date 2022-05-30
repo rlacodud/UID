@@ -257,6 +257,7 @@ function mainScrollEvent() {
 
 // 윈도우가(창이) 스크롤될 때마다 실행되는 기능
 $(document).ready(function () {
+    console.log('레디');
     $(window).scroll(function () {
         // mainScrollEvent 함수를 호출하여 실행시킴
         mainScrollEvent();
@@ -276,6 +277,7 @@ slider.addEventListener("mouseleave", () => isGrab = false);
 
 
 function grabSlider(e) {
+    console.log('grab');
     e.preventDefault();
     isGrab = true;
     startX = e.x;
@@ -283,6 +285,7 @@ function grabSlider(e) {
 }
 
 function grabMove(e) {
+    console.log('grab2');
     e.preventDefault();
     if (!isGrab) return;
     let moveX = e.x;
@@ -301,6 +304,7 @@ sec4Slide.addEventListener("mouseleave", () => isGrab = false);
 // console.log(sec4Slide)
 
 function grabSlider4(e) {
+    console.log('grab3');
     e.preventDefault();
     isGrab = true;
     startX = e.x;
@@ -308,6 +312,7 @@ function grabSlider4(e) {
 }
 
 function grabMove4(e) {
+    console.log('grab4');
     e.preventDefault();
     if (!isGrab) return;
     let moveX = e.x;
