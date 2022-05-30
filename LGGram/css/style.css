@@ -84,7 +84,7 @@ body, html {max-width: 720px; margin: 0 auto; overflow-x: hidden;}
 /* ---- section6 ---- */
 #section6 {width: 720px; overflow-x: hidden; height: 5000px; position: relative;}
 #section6 .fixed-area {position: absolute; height: 100vh;}
-#section6 .title-area {z-index: 50;position: absolute; position: absolute; width: 720px; margin-top: 700px; margin-left: 50px; }
+#section6 .title-area {z-index: 50;position: absolute; position: absolute; width: 720px; margin-top: 500px; margin-left: 50px; }
 #section6 .title-area .title { font-family: 'Noto Sans KR', sans-serif; font-size: 60px; font-weight: 700; line-height: 80px; color: #000000;}
 #section6 .title-area .title span {font-weight: 400;}
 #section6 .title-area .sub {margin-top: 25px; font-family: 'Noto Sans KR', sans-serif; font-size: 24px; font-weight: 400; line-height: 34px; color: #888888;}
@@ -96,41 +96,30 @@ body, html {max-width: 720px; margin: 0 auto; overflow-x: hidden;}
 #section6 .fixed-area.absolute{position: absolute; bottom: 0; left: 0; margin-top: 550px;}
 
 #section6 .line-area {z-index: 10; position: absolute;}
-#section6 .line-area .sketch1 {position: absolute; margin-left: 22px; margin-top: 761px;}
+#section6 .line-area .sketch1 {position: absolute; margin-left: 22px; margin-top: 560px;}
 #section6 .line-area .sketch1 img {width: 342px; height: 153px;}
 
 #section6 .background-area {z-index: -10; position: absolute; }
-#section6 .background-area .sketch2 {position: absolute; transform: rotate( -7deg ); margin-left: -100px; margin-top: 200px;}
-#section6 .background-area .sketch3 {position: absolute; transform: rotate( -6deg ); margin-left: 50px; margin-top: 1100px;}
-#section6 .background-area .sketch4 {position: absolute; transform: rotate( 2deg ); margin-left: 480px; margin-top: 1300px;}
+#section6 .background-area .sketch2 {position: absolute; transform: rotate( -7deg ); margin-left: -100px; margin-top: 100px;}
+#section6 .background-area .sketch3 {position: absolute; transform: rotate( -6deg ); margin-left: 50px; margin-top: 750px;}
+#section6 .background-area .sketch4 {position: absolute; transform: rotate( 2deg ); margin-left: 480px; margin-top: 900px;}
 #section6 .background-area .sketch2 img {width: 355px; height: 355px;}
 #section6 .background-area .sketch3 img {width: 265px; height: 200px;}
 #section6 .background-area .sketch4 img  {width: 230px; height: 191;}
 
-#section6 .image-area .pen1 {
-  -webkit-transition:1s;
-  -moz-transition:1s;
-  -o-transition:1s;
-  -ms-transition:1s;
-  transition:1s;
-  z-index: -1; position: absolute; transform: rotate( 1deg ); margin-left: 176px; margin-top: -325px;}
-#section6 .image-area .pen2 {
-  -webkit-transition:1s;
-  -moz-transition:1s;
-  -o-transition:1s;
-  -ms-transition:1s;
-  transition:1s;
-  z-index: 50; position: absolute; transform: rotate( 0deg ); margin-left: 242px; margin-top: 255px;}
+#section6 .image-area .pen1 {z-index: -1; transition: 1s; position: absolute; transform: rotate( 1deg ); margin-left: 176px; margin-top: -325px;}
+#section6 .image-area .pen2 {z-index: 50; transition: 1s; position: absolute; transform: rotate( 0deg ); margin-left: 242px; margin-top: 255px;}
 #section6 .image-area .pen1 img {width: 670px; height: 908px;}
 #section6 .image-area .pen2 img {width: 1048px; height: 848px;}
 
-#section6 .sub-area {position: absolute; width: 720px; margin-top: 430px; margin-left: 50px; }
+#section6 .sub-area {position: absolute; width: 720px; margin-top: 300px; margin-left: 50px; }
 #section6 .sub-area .display {margin-left: 30px; object-fit: cover;}
 #section6 .sub-area .display img {width: 553px; height: 349px;}
 #section6 .sub-area .text-area {position: absolute; width: 720px; margin-top: 75px;}
 #section6 .sub-area .text-area .title {font-family: 'Noto Sans KR', sans-serif; font-size: 60px; font-weight: 500; line-height: 80px; color: #000000;}
 #section6 .sub-area .text-area .title span {font-weight: 700;}
 #section6 .sub-area .text-area .sub {margin-top: 25px; font-family: 'Noto Sans KR', sans-serif; font-size: 24px; font-weight: 400; line-height: 34px; color: #888888;}
+
 
 /* ---- section7 ---- */
 #section7 {width: 720px; height: 1266px; position: relative;}
