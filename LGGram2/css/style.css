@@ -54,7 +54,7 @@ body, html {max-width: 720px; margin: 0 auto; overflow-x: hidden;}
 #section3 .sec3Container .sec3Text3{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 406px; display: none;}
 
 /* ---- section4 ---- */
-#section4 {position: relative; width: 100%; height: 1085px; z-index: 10; background-color: #E5EAF1; margin-bottom: 100px;}
+#section4 {position: relative; width: 100%; height: 1085px; z-index: 10; background-color: white; }
 #section4 .title {width: 414px; position: absolute; top: 150px; left: 50px;}
 #section4 .box-area {transition: .5s; top: 355px; position: absolute; width: 720px; height: 630px; overflow-x: auto; font-size: 0; display: flex;}
 #section4 .box-area .box-item:nth-child(1) { margin-left: 50px;}
@@ -122,13 +122,13 @@ body, html {max-width: 720px; margin: 0 auto; overflow-x: hidden;}
 
 
 /* ---- section7 ---- */
-#section7 {width: 720px; height: 1266px; position: relative;}
-#section7 .sec7Title{position: absolute; top: 0; left: 50px; width: 215px;}
+#section7 {width: 720px; height: 1266px; position: relative; background-color: #F4F7FC; margin-bottom: 100px;}
+#section7 .sec7Title{position: absolute; top: 100px; left: 50px; width: 215px;}
 #section7 .sec7Img{opacity: 0;animation-duration: 1s;animation-fill-mode: forwards;animation-direction: alternate;transition: .5s; position: absolute;width: 300px;}
-#section7 .sec7Img.sec7Img1{ top: 45px; right: 50px; opacity: 0;}
-#section7 .sec7Img.sec7Img2{animation-delay: 0.4s; top: 146px; left: 50px;}
-#section7 .sec7Img.sec7Img3{animation-delay: 0.8s; top: 515px; right: 50px;}
-#section7 .sec7Img.sec7Img4{animation-delay: 1.2s; top: 616px; left: 50px;}
+#section7 .sec7Img.sec7Img1{ top: 145px; right: 50px; opacity: 0;}
+#section7 .sec7Img.sec7Img2{animation-delay: 0.4s; top: 246px; left: 50px;}
+#section7 .sec7Img.sec7Img3{animation-delay: 0.8s; top: 615px; right: 50px;}
+#section7 .sec7Img.sec7Img4{animation-delay: 1.2s; top: 716px; left: 50px;}
 #section7 .img {width: 620px; position: absolute; left: 50%; transform: translateX(-50%);}
 
 @keyframes opacity {
