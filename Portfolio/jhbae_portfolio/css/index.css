@@ -1,0 +1,76 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@font-face {
+    src : url("/fonts/Zapfino.ttf"); font-family: "Zapfino";
+    src : url("/fonts/Pretendard-Bold.ttf"); font-family: "Pretendard_B";
+    src : url("/fonts/Pretendard-ExtraBold.ttf"); font-family: "Pretendard_EB";
+    src : url("/fonts/Pretendard-ExtraLight.ttf"); font-family: "Pretendard_EL";
+    src : url("/fonts/Pretendard-Light.ttf"); font-family: "Pretendard_L";
+    src : url("/fonts/Pretendard-Medium.ttf"); font-family: "Pretendard_M";
+    src : url("/fonts/Pretendard-Regular.ttf"); font-family: "Pretendard_R";
+    src : url("/fonts/Pretendard-SemiBold.ttf"); font-family: "Pretendard_SB";
+    src : url("/fonts/Pretendard-Thin.ttf"); font-family: "Pretendard_T";
+}
+* {margin:0;padding:0;box-sizing:border-box;}
+
+body
+{
+    margin: 0px;
+    background-color: #FDF6EE;
+    background-size: 100%;
+}
+
+.menu
+{
+    margin: 15px;
+    float: right;
+    list-style: none;
+}
+.menu ul li
+{
+    float:left;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.menu li a {
+    color: #f2dedb;
+    padding: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+.menu li a:hover {
+    color: #e5c7c3;
+}
+body{
+    background: url(../img/MAIN.png);
+}
+/* .circle{
+    margin-left:440px;
+    margin-top: 175px;
+    width:800px;
+    height:600px;
+    border-radius:50%;
+    background-color:#f2dedb;
+    text-align: center;
+}
+.circle:hover{
+    transition: all 0.5s;
+    background-color:#56678D;
+}
+.circle li {
+    padding-top:110px;
+    list-style: none;
+    text-align: center;
+}
+.circle li a {
+    color: #f2dedb;
+    font-size: 100px;
+    font-weight: 100;
+    text-decoration: none;
+}
+.circle li a:hover {
+    font-style: italic;
+    text-decoration: underline;
+} */

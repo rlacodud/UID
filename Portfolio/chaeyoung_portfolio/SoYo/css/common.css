@@ -1,0 +1,593 @@
+body {width: 100vw; height: 100vh; margin: 0 auto; padding: 0; box-sizing: border-box; line-height: 1em; font-family: 'Noto Sans KR', sans-serif; overflow: hidden;
+  --main-coY: #F6B64E;
+  --main-coB: #115C9E;
+  --line-height: 1.5em;
+  --font-size: calc(100vw * 16 / 1920);
+}
+::-moz-selection {color: #fff; background: var(--main-coY);}
+::selection {color: #fff; background: var(--main-coY);}
+section {position: relative; overflow: hidden; width: 100%; height: 100%; padding: 0; margin: 0 auto; text-align: center;}
+.box {width:100vw !important; height:100vh !important;}
+.blind {display: none;}
+.svg {position: absolute; animation-direction: alternate; animation-iteration-count: infinite;}
+.animationBefore {opacity: 0; margin-top: calc(100vw * 40 / 1920);}
+
+/* header */
+header {z-index: 1000; position: fixed; display: block; text-align: center; top: calc(100vw * 430 / 1920); left: calc(100vw * 60 / 1920); background-color: transparent;}
+header nav ul li .navCircle {display: block; position: relative; width: calc(100vw * 16 / 1920); height: calc(100vw * 16 / 1920); margin-bottom: calc(100vw * 18 / 1920); border-radius: 50%; border: 1px solid var(--main-coB);}
+header nav ul li:last-child .navCircle {margin-bottom: 0;}
+header nav ul li .navCircle.borderY {border: 1px solid var(--main-coY);}
+header nav ul li .navCircle.activeB {background: var(--main-coB);}
+header nav ul li .navCircle.activeY {background: var(--main-coY);}
+
+/* SECTION1 */
+#section1 .shapes {position: relative; overflow: hidden; width: 100vw; height: 100vh; background: var(--main-coY);}
+#section1 .shapes .shape {will-change: transform; position: absolute; border-radius: 50%;}
+#section1 .shapes .shape.shape-1 {width: calc(100vw * 650 / 1920); height: calc(100vw * 650 / 1920); margin: calc(100vw * -325 / 1920) 0 0 calc(100vw * -325 / 1920); background: var(--main-coY);}
+#section1 .shapes .shape.shape-2 {width: calc(100vw * 440 / 1920); height: calc(100vw * 440 / 1920); margin: calc(100vw * -220 / 1920) 0 0 calc(100vw * -220 / 1920); background: #ffe5e3;}
+#section1 .shapes .shape.shape-3 {width: calc(100vw * 270 / 1920); height: calc(100vw * 270 / 1920); margin: calc(100vw * -135 / 1920) 0 0 calc(100vw * -135 / 1920); background: var(--main-coB);}
+#section1 .content {position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; mix-blend-mode: screen; background: #fff;}
+#section1 .slogan {opacity: 0; overflow: hidden; position: absolute; left: 0; right: 0; width: 100%; text-align: center; font-size: calc(100vw * 20 / 1920);font-weight:normal; animation-name: slogan; animation-delay: 0.5s; animation-duration: 1s; animation-fill-mode: forwards; line-height: 2em;}
+@keyframes slogan {
+    0% {
+        top: 75%;
+    }
+    100% {
+        opacity: 1;
+        top: 70%;
+    }
+}
+/* SVG */
+#section1 .svg1_1 {animation-name: move1; animation-duration: 3s; left: -13%;}
+@keyframes move1 {
+  from {
+    top: -25%;
+  }
+  to {
+    top: -31%;
+  }
+}
+#section1 .svg1_2 {animation-name: move2; animation-duration: 5s; left: 31%;}
+@keyframes move2 {
+  from {
+    top: -30%;
+  }
+  to {
+    top: -24%;
+  }
+}
+#section1 .svg1_3 {animation-name: move3; animation-duration: 3s; left: 78%;}
+@keyframes move3 {
+  from {
+    top: -15%;
+  }
+  to {
+    top: -18%;
+  }
+}
+#section1 .svg1_4 {animation-name: move4; animation-duration: 7s; left: -5%;}
+@keyframes move4 {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 36%; 
+  }
+}
+#section1 .svg1_str1 {position: absolute; top: calc(100vw * 399 / 1920); right: -3%;}
+#section1 .svg1_5 {animation-name: move5; animation-duration: 5s; left: 93%;}
+@keyframes move5 {
+  from {
+    top: 46%;
+  }
+  to {
+    top: 40%;
+  }
+}
+/* WAVE */
+#section1 .waves {position:absolute; width: 100%; left: 0; bottom: 0; z-index: 10; min-height: calc(100vw * 100 / 1920); max-height: calc(100vw * 150 / 1920);}
+/* Animation */
+.parallax > use {animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;}
+.parallax > use:nth-child(1) {animation-delay: -2s; animation-duration: 7s;}
+.parallax > use:nth-child(2) {animation-delay: -3s; animation-duration: 10s;}
+.parallax > use:nth-child(3) {animation-delay: -4s; animation-duration: 13s;}
+.parallax > use:nth-child(4) {animation-delay: -5s; animation-duration: 20s;}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(calc(100vw * -90 / 1920), 0, 0);
+  }
+  100% { 
+    transform: translate3d(calc(100vw * 85 / 1920), 0, 0);
+  }
+}
+/* SCROLL BTN */
+#section1 #Scroll {position: absolute; left: 0; right: 0; text-align: center;}
+#section1 .demo a {position: absolute; display: inline-block; z-index: 10; left: 50%; bottom: calc(100vw * 20 / 1920); text-align: center; color: rgb(110, 110, 110); letter-spacing: .1em; transition: opacity .3s;}
+#section1 .demo a:hover {opacity: .5;}
+#section1 #Scroll a {position: absolute; left: 0; right: 0; text-align: center; padding-top: calc(100vw * 60 / 1920);}
+#section1 #Scroll a span {position: absolute; top: 0; left: 50%; width: calc(100vw * 30 / 1920); height: calc(100vw * 50 / 1920); margin-left: calc(100vw * -15 / 1920); text-align: center; box-sizing: border-box; border: 3px solid rgb(110, 110, 110); border-radius: calc(100vw * 50 / 1920);}
+#section1 #Scroll a span::before {content: ''; position: absolute; top: calc(100vw * 10 / 1920); width: calc(100vw * 6 /1920); height: calc(100vw * 6 /1920); margin-left: calc(100vw * -3 /1920); text-align: center; border-radius: 100%; box-sizing: border-box; background-color: rgb(110, 110, 110); animation: scroll 2s infinite;}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* SECTION2 */
+#section2 #myVideo {height: 100vh; margin: 0 auto; display: block;}
+#section2 .videoContainer {overflow:hidden; position:relative; width:100%; height:100%; color:#ccc; background:#000;}
+#section2 .videoContainer .control {color:#ccc; position:absolute; left:0; bottom:0; z-index:5; display:none;}
+#section2 .videoContainer .control .btmControl {clear:both;}
+#section2 .videoContainer .control .btmControl .btnPlay {float:left; position: absolute; width:calc(100vw * 15 / 1920);	height:calc(100vw * 15 / 1920);	padding:calc(100vw * 5 / 1920); top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); cursor:pointer; border-radius: 6px 0 0 6px; border: 1px solid rgba(0,0,0,0.7); box-shadow: inset 0 0 1px rgba(255,255,255,0.5);}
+#section2 .videoContainer .control .btmControl .btnPlay .icon-play {left: 0; width: calc(100vw * 6 / 1920); height: calc(100vw * 9 / 1920);	margin: 0 auto; display: block; background:url('../img/play-icon.webp') no-repeat -11px 0;}
+#section2 .videoContainer .control .btmControl .btnPlay .icon-pause {display: block; width: calc(100vw * 8 / 1920); height: calc(100vw * 9 / 1920); margin: 0 auto; background:url('../img/pause-icon.webp') no-repeat -34px -1px;}
+#section2 .videoContainer .control .selected {color:#ccc; font-size:calc(100vw * 15 / 1920);}
+#section2 .videoContainer .control .btmControl .progress-bar::before {content: ''; display: inline-block; clear: both; width: 1px; height: 1px;}
+#section2 .videoContainer .control .btmControl .progress-bar {float:left; width: calc(100vw * 1860 / 1920); height: calc(100vw * 30 / 1920); padding: calc(100vw * 10 / 1920); margin-left: calc(100vw * 20 / 1920);	border: 1px solid rgba(0,0,0,0.7);	border-left: none; box-shadow: inset 0 0 1px rgba(255,255,255,0.5); background: rgba(0,0,0,0.6);}
+#section2 .videoContainer .control .btmControl .progress-bar .progress {position:absolute; top: 50%; transform: translateY(-50%); width:calc(100vw * 1860 / 1920);	height:calc(100vw * 7 / 1920); border-radius:calc(100vw * 10 / 1920);	background: rgba(0,0,0,0.4); box-shadow: 0 1px 0 rgba(255,255,255,0.1), inset 0 1px 1px rgba(0,0,0,1);	cursor:pointer;}
+#section2 .videoContainer .control .btmControl .progress-bar .progress span {position:absolute; top:0; left:0; height:100%; display:block; border-radius:calc(100vw * 10 / 1920);}
+#section2 .videoContainer .control .btmControl .progress-bar .progress .timeBar {width:0;	z-index:10;	box-shadow: 0 0 7px rgba(107,204,226,.5); background: -webkit-linear-gradient(top, var(--main-coY) 0%,#f99a00 100%);}
+#section2 .videoContainer .control .btmControl .progress-bar .progress .bufferBar{width:0; z-index:5; background: rgba(255,255,255,0.2);}
+#section2 .videoBack {position: absolute; top: 0; left: 0; z-index: 7; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7);}
+#section2 .videoBack .playButton {position: absolute; top: 50%; left: 50%; z-index: 12; transform: translate(-50%, -50%); width: calc(100vw * 158 / 1920); height: calc(100vw * 158 / 1920); background-size: cover; background-repeat: no-repeat; background-image: url("../img/play.png"); cursor: pointer;}
+
+/* SECTION3 */
+#section3 .svg {z-index: -10;}
+#section3 .svg3_1 {animation-name: move6; animation-duration: 3s; right: -15%;}
+@keyframes move6 {
+  from {
+    top: -23%;
+  }
+  to {
+    top: -27%;
+  }
+}
+#section3 .svg3_2 {animation-name: move7; animation-duration: 5s; left: 41%;}
+@keyframes move7 {
+  from {
+    top: -1.5%;
+  }
+  to {
+    top: 0;
+  }
+}
+#section3 .svg3_3 {animation-name: move8; animation-duration: 5s; left: 30%;}
+@keyframes move8 {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 45%;
+  }
+}
+#section3 .svg3_4 {animation-name: move9; animation-duration: 7s; left: -8%;}
+@keyframes move9 {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 40%;
+  }
+}
+#section3 .svg3_str1 {position: absolute; top: 45%; right: -14%;}
+#section3 .meanBg {position: absolute; left: 0; bottom: 0; width: 100%;}
+#section3 .mean {position: absolute; top: 15%; left: 7%; text-align: left; line-height: var(--line-height); font-size: calc(100vw * 20 / 1920); opacity: 0;}
+#section3 .mean h2 {font-size: calc(100vw * 30 / 1920); font-weight: bold; margin-bottom: calc(100vw * 50 / 1920);}
+#section3 .iphoneL {position: absolute; top: 15%; left: 45%; z-index: 100; opacity: 0;}
+#section3 .iphoneR {position: absolute; top: 15%; left: 68%; z-index: 100; opacity: 0;}
+
+/* SECTION4 */
+#section4 {background: var(--main-coY);}
+#section4 .mean {position: absolute; top: 10%; left: 10%; text-align: left; z-index: 1000; color: #fff; font-size: calc(100vw * 20 / 1920); line-height: var(--line-height);}
+#section4 .mean h2,
+#section4 .mean h3 {display: inline-block;}
+#section4 .mean h2 {margin: 0; padding: 0; font-weight: bold; font-size: calc(100vw * 30 / 1920); line-height: var(--line-height);}
+#section4 .mean h3 {margin-left: calc(100vw * 144 / 1920); line-height: var(--line-height);}
+#section4 .meanCircle {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100; text-align: center; opacity: 0;}
+
+/* SECTION5 */
+#section5 .svg5_str1 {position: absolute; top: 26%; left: -6%;}
+#section5 .svg {z-index: -10;}
+#section5 .svg5_1 {animation-name: move10; animation-duration: 7s; right: -5%;}
+@keyframes move10 {
+  from {
+    top: -34%;
+  }
+  to {
+    top: -30%;
+  }
+}
+#section5 .svg5_2 {animation-name: move11; animation-duration: 2s; left: -16%;}
+@keyframes move11 {
+  from {
+    top: 54%;
+  }
+  to {
+    top: 50%;
+  }
+}
+#section5 .svg5_3 {animation-name: move12; animation-duration: 5s; right: -14%;}
+@keyframes move12 {
+  from {
+    top: 75%;
+  }
+  to {
+    top: 70%;
+  }
+}
+#section5 .backgroundContainer {position: absolute; top: 10%; left: 10%;}
+#section5 .backgroundContainer .background {display: inline-block; text-align: left; font-weight: bold; font-size: calc(100vw * 30 / 1920); line-height: var(--line-height);}
+#section5 .backgroundContainer .back-des {display: inline-block; margin-left: calc(100vw * 60 / 1920); text-align: left; font-weight: normal; font-size: calc(100vw * 20 / 1920); line-height: var(--line-height);}
+#section5 .reasonContainer {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; font-weight: bold;}
+#section5 .reasonContainer #reason {position: relative; display: inline-block;}
+#section5 .reasonContainer #reason li {position: relative; display: inline-block; width: calc(100vw * 269 / 1920); height: calc(100vw * 269 / 1920); margin: 0 calc(100vw * 40 / 1920); vertical-align: middle; border-radius: 50%; border: 2px solid var(--main-coB);}
+#section5 .reasonContainer #reason li .textBox {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#section5 .reasonContainer #reason li .textBox h2 {color: var(--main-coB); font-weight: bold; text-align: center; font-size: calc(100vw * 30 / 1920);}
+#section5 .reasonContainer #reason li .textBox h3 {color: var(--main-coB); margin-top: calc(100vw * 26 / 1920); text-align: center; font-weight: normal; line-height: var(--line-height); font-size: var(--font-size);}
+#section5 .reasonContainer #reason .plus,
+#section5 .reasonContainer #reason .arrow {position: relative; vertical-align: middle;}
+#section5 .reasonContainer #reason li:first-child {margin-left: 0;}
+#section5 .reasonContainer #reason li:last-child {background: var(--main-coB); border: none; margin-right: 0;}
+#section5 .reasonContainer #reason li:last-child h2 {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color:#fff; line-height: var(--line-height); font-size: calc(100vw * 20 / 1920);}
+
+/* SECTION6 */
+#section6 .cursorGif {position: absolute; top: 50%; left: 60%; transform: translate(-50%, -50%); z-index: 1000000;}
+#section6 .cursorGif.off {display: none;}
+#section6 .circle {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw * 70 / 1920); height: calc(100vw * 70 / 1920); border-radius: 50%; background: var(--main-coY); transition: all 0.5s linear; cursor: pointer;}
+#section6 .circle.on {width: calc(100vw * 4000 / 1920); height: calc(100vw * 4000 / 1920);}
+#section6 .emotionBtn {position: absolute; top: 50%; left: 50%; z-index: 500; transform: translate(-50%, -50%); width: calc(100vw * 536 / 1920); height: calc(100vw * 156 / 1920); margin: 0 auto; text-align: center; padding: calc(100vw * 40 / 1920); border: 3px solid var(--main-coY); border-radius: calc(100vw * 80 / 1920); color: var(--main-coY); font-weight: bold; font-size: calc(100vw * 60 / 1920); background-color: #fff; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); cursor: pointer;}
+#section6 .emotionBtn:hover {color: #fff; background-color: var(--main-coY);}
+#section6 .emotionBtn.on:hover {color: var(--main-coY); background-color: #fff;}
+#section6 .desText {position: absolute; top: 65%; left: 50%; transform: translateX(-50%); color: #fff; font-weight: bold; text-align: center; line-height: var(--line-height);}
+#section6 .textList li {position: absolute; z-index: -100; margin: 0 auto; padding: calc(100vw * 20 / 1920) calc(100vw * 40 / 1920); border: 3px solid white; border-radius: calc(100vw * 80 / 1920); text-align: center; font-weight: bold; font-size: calc(100vw * 20 / 1920); color: #fff; transition: all 0.5s linear;}
+#section6 .textList li.on {z-index: 100; color: var(--main-coY); background-color: white; border: 3px solid var(--main-coY); animation-name: up; animation-fill-mode: forwards; animation-delay: 3s;}
+@keyframes up {
+  from {
+    margin-top: calc(100vw * 40 / 1920);
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+#section6 .textList li:first-child {top: 10%; left: 4%;}
+#section6 .textList li:nth-child(2) {top: 15%; left: 60%;}
+#section6 .textList li:nth-child(3) {top: 28%; left: 20%;}
+#section6 .textList li:nth-child(4) {top: 32%; left: 75%;}
+#section6 .textList li:nth-child(5) {top: 56%; left: 8%;}
+#section6 .textList li:nth-child(6) {top: 55%; left: 68%;}
+#section6 .textList li:nth-child(7) {top: 84%; left: 20%;}
+#section6 .textList li:nth-child(8) {top: 80%; left: 58%;}
+
+/* SECTION7 */
+#section7 .textContainer {position: absolute; top: 10%; left: 10%;}
+#section7 .textContainer .talkBack {display: inline-block; text-align: left; font-weight: bold; font-size: calc(100vw * 30 / 1920); line-height: var(--line-height);}
+#section7 .textContainer .talkBack-des {display: inline-block; margin-left: calc(100vw * 100 / 1920); text-align: left; font-weight: normal; font-size: calc(100vw * 20 / 1920); line-height: var(--line-height);}
+#section7 svg {z-index: -10;}
+#section7 .svg7_1 {animation-name: moveP1; animation-duration: 7s; right: -9%;}
+@keyframes moveP1 {
+  from {
+    top: -13%;
+  }
+  to {
+    top: -8%;
+  }
+}
+#section7 .svg7_str1 {position: absolute; top: 55%; right: -3%;}
+#section7 .svg7_2 {animation-name: moveP2; animation-duration: 7s; left: -23%;}
+@keyframes moveP2 {
+  from {
+    top: 70%;
+  }
+  to {
+    top: 75%;
+  }
+}
+#section7 .chat {position: absolute; bottom: 0%; left: 35%; width: calc(100vw * 520 / 1920); height: calc(100vw * 731 / 1920);}
+#section7 .pass {position: absolute; bottom: 4.2%; left: 57%;}
+#section7 .default {position: absolute; bottom: 5%; left: 39%; width: 16%; padding: calc(100vw * 10 / 1920); text-align: left; font-size: calc(100vw * 14 / 1920); color: gray;}
+#section7 .default.defaultAni {transition: all 0.5s linear; border-radius: calc(100vw * 30 / 1920); animation-name: defaultAni; animation-iteration-count: infinite; animation-duration: 1s; animation-delay: 2.5s; cursor: pointer;}
+@keyframes defaultAni {
+  from {
+    background-color: transparent;
+  }
+  to {
+    color: #fff;
+    background-color: var(--main-coY);
+  }
+}
+#section7 .default.typing {width: 25ch; animation: typing 2s steps(22), blink .5s step-end infinite alternate; white-space: nowrap; overflow: hidden; border-right: 3px solid;}
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+.textAni {animation-name: textAni; animation-fill-mode:forwards; animation-duration: 2s;}
+.textAni2 {animation-name: textAni; animation-fill-mode:forwards; animation-duration: 2s; animation-delay: 1s;}
+.textAni3 {animation-name: textAni; animation-fill-mode:forwards; animation-duration: 2s; animation-delay: 3s;}
+@keyframes textAni {
+  from {
+    margin-top: calc(100vw * 40 / 1920);
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.textRemoveAni {animation-name: textRemoveAni; animation-fill-mode:forwards; animation-duration: 3s;}
+@keyframes textRemoveAni {
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
+.choice1Ani {background-color: transparent; border-radius: calc(100vw * 30 / 1920); animation: color; animation-duration: 1s; animation-direction: alternate; animation-delay: 3s; animation-iteration-count: infinite; cursor: pointer;}
+@keyframes color {
+  from {
+    background-color: var(--main-coY);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+#section7 .SoYoTextLeft .chatting,
+#section7 .SoYoTextCenter .SoYo .chatting .chattingText {position: absolute; width: auto; height: auto; font-size: calc(100vw * 14 / 1920); text-align: left; border: 2px solid var(--main-coY); padding: calc(100vw * 10 / 1920) calc(100vw * 26 / 1920); border-radius: calc(100vw * 30 / 1920); line-height: 1em; box-shadow: 5px 5px 10px rgba(246, 182, 70, 30%);}
+#section7 .SoYoTextLeft li {opacity: 0;}
+#section7 .SoYoTextLeft li:nth-child(1),
+#section7 .SoYoTextLeft li:nth-child(3) {top: 50%; left: 20%;}
+#section7 .SoYoTextLeft li:nth-child(2),
+#section7 .SoYoTextLeft li:nth-child(4) {top: 60%; left: 20%;}
+#section7 .SoYoTextCenter {width: calc(100vw * 440 / 1920); height: calc(100vw * 340 / 1920); position: absolute; top: 60%; left: 48.5%; transform: translate(-50%, -50%); overflow-y: scroll;}
+#section7 .SoYoTextCenter::-webkit-scrollbar {width: calc(100vw * 10 / 1920); background-color: #F5F5F5; border-radius: calc(100vw * 30 / 1920);}
+#section7 .SoYoTextCenter::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; border-radius: calc(100vw * 30 / 1920);}
+#section7 .SoYoTextCenter::-webkit-scrollbar-thumb {background-color: var(--main-coY); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent); border-radius: calc(100vw * 30 / 1920);}
+#section7 .SoYoTextCenter .SoYo .chatting {position: absolute; width: 100%; height: 100%; opacity: 0;}
+#section7 .SoYoTextCenter .SoYo .chatting .chatProfile {position: absolute; width: calc(100vw * 30 / 1920); height: calc(100vw * 30 / 1920); border-radius: 50%; border: 2px solid var(--main-coY);}
+#section7 .SoYoTextCenter .SoYo .chatting:nth-child(1) {top: 0%; left: 0%;}
+#section7 .SoYoTextCenter .SoYo .chatting .chattingText {margin-left: calc(100vw * 40 / 1920);}
+#section7 .SoYoTextCenter .SoYo .chatting .chattingText:last-child {margin-top: calc(100vw * 70 / 1920) !important; opacity: 0;}
+#section7 .SoYoTextCenter .SoYo .chatting .chatProfile {top: 0%; left: 0%;}
+#section7 .SoYoTextCenter .SoYo .chatting:nth-child(2) {top: 65%; left: 0%;}
+#section7 .SoYoTextCenter .player .chattingText,
+#section7 .playerTextRight .chatting {position: absolute; width: auto; height: auto; padding: calc(100vw * 10 / 1920) calc(100vw * 26 / 1920); color: #fff; background-color: var(--main-coY); border-radius: calc(100vw * 40 / 1920); line-height: 1em; box-shadow: 5px 5px 10px rgba(246, 182, 70, 30%); opacity: 0;}
+#section7 .SoYoTextCenter .player .chattingText:nth-child(1) {top: 50%; right: 2%;}
+#section7 .SoYoTextCenter .player .chattingText:nth-child(2) {top: 110%; right: 2%;}
+#section7 .playerTextRight .chatting {text-align: right;}
+#section7 .playerTextRight .chatting:nth-child(1) {top: 58%; right: 26%;}
+#section7 .playerTextRight .chatting:nth-child(2) {top: 70%; right: 22%;}
+#section7 .choice {position: absolute; top: 81%; left: 38.2%; text-align: left;}
+#section7 .choice p {padding: calc(100vw * 10 / 1920); width: 172%;}
+#section7 .choice p:last-child {margin-top: calc(100vw * 10 / 1920);}
+
+/* SECTION8 */
+#section8 svg {z-index: -10;}
+#section8 .svg8_1 {animation-name: moveP3; animation-duration: 7s; right: -17%;}
+@keyframes moveP3 {
+  from {
+    top: -10%;
+  }
+  to {
+    top: -5%;
+  }
+}
+#section8 .svg8_2 {animation-name: moveP4; animation-duration: 7s; left: -5%;}
+@keyframes moveP4 {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 55%;
+  }
+}
+#section8 .svg8_str1 {position: absolute; top: 85%; right: -4%; z-index: 1;}
+#section8 .textContainer {position: absolute; top: 10%; left: 10%;}
+#section8 .textContainer .talkBack {display: inline-block; text-align: left; font-weight: bold; font-size: calc(100vw * 30 / 1920); line-height: var(--line-height);}
+#section8 .textContainer .talkBack-des {display: inline-block; margin-left: calc(100vw * 175 / 1920); text-align: left; font-weight: normal; font-size: calc(100vw * 20 / 1920); line-height: var(--line-height);}
+#section8 .emotion {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -100; opacity: 0;}
+
+/* SECTION9 */
+#section9 {width: 400vw !important;}
+#section9 .progressCircle {position: fixed; display: inline-block; opacity: 0; width: 100vw; bottom: 2.5%; left: 0%; margin: 0; padding: 0; z-index: 10000;}
+#section9 .progressCircle li {display: inline-block; width: calc(100vw * 10 / 1920); height: calc(100vw * 10 / 1920); margin-right: calc(100vw * 20 / 1920); border-radius: 50%; background-color: #ffe3c2; cursor: pointer;}
+#section9 .progressCircle li:last-child {margin: 0;}
+#section9 .progressCircle li.active {background-color: var(--main-coY);}
+#section9 .var-wrap {width: 400vw; height: 100%;}
+.clear ::after {content: ""; display: table; clear: both;}
+#section9 .var-wrap .serviceDes {width: 100vw; height: 100vh; float: left; position: relative;}
+#section9 .var-wrap svg {z-index: -10;}
+#section9 .var-wrap .serviceDes .svg9_str1 {position: absolute; top: 80%; left: -14%;}
+#section9 .var-wrap .serviceDes .svg9_1 {animation-name: move13; animation-duration: 7s; left: -6%;}
+@keyframes move13 {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 90%;
+  }
+}
+#section9 .var-wrap .serviceDes .svg9_2 {animation-name: move14; animation-duration: 7s; right: -8%;}
+@keyframes move14 {
+  from {
+    top: 60%;
+  }
+  to {
+    top: 70%;
+  }
+}
+#section9 .var-wrap .serviceDes .svg9_3 {animation-name: movep6; animation-duration: 7s; right: -29%;}
+@keyframes movep6 {
+  from {
+    top: -13%;
+  }
+  to {
+    top: -8%;
+  }
+}
+#section9 .var-wrap .serviceDes .service {position: absolute; display: inline-block; top: 50%; left: 13%; transform: translateY(-50%); text-align: left; line-height: var(--line-height); z-index: 100;}
+#section9 .var-wrap .serviceDes .service h2 {margin-bottom: calc(100vw * 50 / 1920); font-size: calc(100vw * 30 / 1920); font-weight: bold;}
+#section9 .var-wrap .serviceDes .gooey {position: absolute; top: 19%; left: 34%; transform: translateX(-50%); width: calc(100vw * 590 / 1920); height: calc(100vw * 590 / 1920); background-image: linear-gradient(120deg, #115C9E 0%, #82C5FF 100%); border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: morph 3s linear infinite; transform-style: preserve-3d; outline: 1px solid transparent; will-change: border-radius;}
+#section9 .var-wrap .serviceDes .gooey:before,
+#section9 .var-wrap .serviceDes .gooey:after {content: ''; position: absolute; display: block; width: 100%; height: 100%; left: 0; top: 0; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; box-shadow: 5px 5px 89px rgba(0, 102, 255, 0.21); animation-delay: 200ms; background-image: linear-gradient(120deg, #82C5FF 0%, #115C9E 100%); will-change: border-radius, transform, opacity;}
+#section9 .var-wrap .serviceDes .gooey:before {opacity: .21; animation: morph 5s linear infinite; animation-duration: 1.5s;}
+#section9 .var-wrap .serviceDes .gooey:after {content: ""; opacity: .89; line-height: calc(100vw * 120 / 1920); text-indent: calc(100vw * -21 / 1920); animation: morph 5s linear infinite; animation-delay: 400ms;}
+@keyframes morph{
+  0%,100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50% {
+    opacity: .89;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+}
+#section9 .var-wrap .serviceDes:nth-child(2) .gooey {background-image: linear-gradient(120deg, #82C5FF 0%, #cbe7ff 100%);}
+#section9 .var-wrap .serviceDes:nth-child(2) .gooey:before,
+#section9 .var-wrap .serviceDes:nth-child(2) .gooey:after {background-image: linear-gradient(120deg, #82C5FF 0%, #368ad4 100%);}
+#section9 .var-wrap .serviceDes:nth-child(3) .gooey {background-image: linear-gradient(120deg, #cbe7ff 0%, #e7f4ff 100%);}
+#section9 .var-wrap .serviceDes:nth-child(3) .gooey:before,
+#section9 .var-wrap .serviceDes:nth-child(3) .gooey:after {background-image: linear-gradient(120deg, #cbe7ff 0%, #82C5FF 100%);}
+#section9 .var-wrap .serviceDes:nth-child(4) .gooey {background-image: linear-gradient(120deg, #e7f4ff 0%, #e2f1ff 100%);}
+#section9 .var-wrap .serviceDes:nth-child(4) .gooey:before,
+#section9 .var-wrap .serviceDes:nth-child(4) .gooey:after {background-image: linear-gradient(120deg, #e2f1ff 0%, #cbe7ff 100%);}
+#section9 .var-wrap .serviceDes .iphoneMiddle {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 200;}
+#section9 .var-wrap .serviceDes .task {position: absolute; top: 50%; right: 11%; transform: translateY(-50%); text-align: left; line-height: 1.5em;}
+#section9 .var-wrap .serviceDes .task li {margin-bottom: calc(100vw * 70 / 1920);}
+#section9 .var-wrap .serviceDes .task li:last-child {margin: 0;}
+#section9 .var-wrap .serviceDes .task li h2 {margin-bottom: calc(100vw * 20 / 1920); font-weight: bold; font-size: calc(100vw * 20 / 1920);}
+#section9 .var-wrap .serviceDes .svg9_str2 {position: absolute; top: 0; right: 0;}
+#section9 .var-wrap .serviceDes .svg9_4 {animation-name: movep7; animation-duration: 7s; right: -12%;}
+@keyframes movep7 {
+  from {
+    top: 70%;
+  }
+  to {
+    top: 80%;
+  }
+}
+#section9 .var-wrap .serviceDes .svg9_5 {animation-name: movep8; animation-duration: 5s; right: -9%;}
+@keyframes movep8 {
+  from {
+    top: -4.6%;
+  }
+  to {
+    top: -4.1%;
+  }
+}
+#section9 .var-wrap .serviceDes .svg9_6 {animation-name: movep9; animation-duration: 6s; right: -12%;}
+@keyframes movep9 {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 85%;
+  }
+}
+#section9 .var-wrap .serviceDes .svg9_7 {animation-name: movep10; animation-duration: 6s; right: -22%;}
+@keyframes movep10 {
+  from {
+    top: -15%;
+  }
+  to {
+    top: -10%;
+  }
+}
+#section9 .var-wrap .serviceDes .svg9_8 {animation-name: movep11; animation-duration: 7s; right: -9%;}
+@keyframes movep11 {
+  from {
+    top: 70%;
+  }
+  to {
+    top: 80%;
+  }
+}
+
+/* SECTION10 */
+#section10 .gallery {max-width: 100vw; height: 100%; margin: 0 auto;}
+#section10 .gallery .pic {height: 100vh;}
+#section10 .gallery .pic img {position: relative; display: inline-block; width: 100%; height: 100%; z-index: 100;}
+
+/* SECTION11 */
+#section11 {height: auto; overflow-y: scroll;}
+#section11::-webkit-scrollbar {display: none;}
+#section11 .upContents {width: 100vw; height: 100vh;}
+#section11 .upContents svg {z-index: -10;}
+#section11 .upContents .svg11_1 {animation-name: moveP5; animation-duration: 7s; left: -23%;}
+@keyframes moveP5 {
+  from {
+    top: -90%;
+  }
+  to {
+    top: -100%;
+  }
+}
+#section11 .upContents .svg11_2 {animation-name: move15; animation-duration: 5s; right: -8.5%;}
+@keyframes move15 {
+  from {
+    top: -9%;
+  }
+  to {
+    top: -4%;
+  }
+}
+#section11 .upContents .svg11_3 {animation-name: move16; animation-duration: 7s; left: -11%;}
+@keyframes move16 {
+  from {
+    top: 75%;
+  }
+  to {
+    top: 80%;
+  }
+}
+#section11 .upContents .svg11_str1 {position: absolute; top: 85%; right: -7%;}
+#section11 .upContents .viewListContainer {position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+#section11 .upContents .viewListContainer .viewList {position: relative; margin: calc(100vw * 80 / 1920) calc(100vw * 300 / 1920);}
+#section11 .upContents .viewList .view {position: absolute;}
+#section11 .upContents .viewList .view:nth-child(1) {top: 0; left: 0;}
+#section11 .upContents .viewList .view:nth-child(2) {top: 0; left: 50%; transform: translateX(-50%);}
+#section11 .upContents .viewList .view:nth-child(3) {top: 0; right: 0;}
+#section11 .upContents .experience {position: absolute; bottom: 0%; left: 0; right: 0; width: calc(100vw * 400 / 1920); margin: 0 auto; padding: calc(100vw * 40 / 1920); font-size: calc(100vw * 40 / 1920); font-weight: bold; color: var(--main-coY); background-color: white; text-align: center; border-radius: calc(100vw * 80 / 1920); border: 3px solid var(--main-coY); cursor: pointer; z-index: 500; transition: all ease-in-out 0.3s;}
+#section11 .upContents .experience a {color: var(--main-coY);}
+#section11 .upContents .experience:hover {background-color: var(--main-coY); color: #fff;}
+#section11 .upContents .experience:hover a {color: #ffff;}
+#section11 .footer {position: relative; bottom: 0; left: 0; width: 100vw; height: 30vh; overflow: hidden; font-size: calc(100vw * 15 / 1920); line-height: 1.2em; color: #707070; z-index: 1000;}
+#section11 .footer a {color: #707070;}
+#section11 .footer a:hover {color: #fff; font-weight: bold;}
+#section11 .footer .profile {display: inline-block; margin-top: calc(100vw * 120 / 1920); margin-left: calc(100vw * -50 / 1920); margin-right: calc(100vw * 80 / 1920);}
+#section11 .footer .profile ul {display: inline-block; margin-left: calc(100vw * 80 / 1920);}
+#section11 .footer .profile ul:first-child {margin: 0;}
+#section11 .footer .profile ul .bold {margin-bottom: calc(100vw * 30 / 1920); font-weight: bold; font-size: calc(100vw * 17 / 1920);}
+#section11 .footer .profile ul li {text-align: left;}
+#section11 .footer .copyRight {display: inline-block; line-height: 1em; margin-right: calc(100vw * 80 / 1920 );}
+#section11 .footer .copyRight li {font-size: calc(100vw * 10 / 1920); text-align: left;}
+#section11 .footer .copyRight li.bold {margin-bottom: calc(100vw * 5 / 1920); font-size: calc(100vw * 17 / 1920); font-weight: bold;}
+#section11 .footer .footerLogo {position: absolute; right: 10.5%; top: 33.5%; text-align: right;}
+#section11 .footer .right {display: inline-block; text-align: right;}
+#section11 .footer .waves2 {position:absolute; left: 0; bottom: 0; width: 100vw; min-height: calc(100vw * 300 / 1920); max-height: calc(100vw * 325 / 1920); z-index: -10;}

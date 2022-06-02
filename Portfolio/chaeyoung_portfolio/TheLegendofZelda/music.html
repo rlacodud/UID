@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="icon" href="./img/tryforce_iUo_icon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="./img/tryforce_iUo_icon.ico" sizes="180x180" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/music.css" type="text/css">
+  <title>The Legend of Zelda</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="left">
+        <a href="./index.html">
+          <h1 class="logo">LOGO</h1>
+        </a>
+      </div>
+      <div class="right">
+        <nav>
+          <ul>
+            <li><a href="./story.html">STORY</a></li>
+            <li><a href="./character.html">CHARACTER</a></li>
+            <li><a href="./series.html">SERIES</a></li>
+            <li class="active"><a href="./music.html">MUSIC</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="rotating-slider">
+    <ul class="slides">
+      <li id="cd1">
+        <img src="./img/cd_ocarina.png">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_ocarina_contents.png">
+        <div class="play" id="btn1"></div>
+        <audio id="audio1" class="sound">
+          <source src="./sound/ocarina.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Ocarina of Time</h6>
+      </li>
+      <li id="cd2">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_Zora_contents.png">
+        <div class="play" id="btn2"></div>
+        <audio id="audio2" class="sound">
+          <source src="./sound/zora.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Zora's Domain</h6>
+      </li>
+      <li id="cd3">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_Hateno_contents.png">
+        <div class="play" id="btn3"></div>
+        <audio id="audio3" class="sound">
+          <source src="./sound/hateno.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Hateno Village</h6>
+      </li>
+      <li id="cd4">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_Rito_contents.png">
+        <div class="play" id="btn4"></div>
+        <audio id="audio4" class="sound">
+          <source src="./sound/rito.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Rito Village</h6>
+      </li>
+      <li id="cd5">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_Zelda_contents.png">
+        <div class="play" id="btn5"></div>
+        <audio id="audio5" class="sound">
+          <source src="./sound/zelda.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Zelda's Lullaby</h6>
+      </li>
+      <li id="cd6">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_Dragon_contents.png">
+        <div class="play" id="btn6"></div>
+        <audio id="audio6" class="sound">
+          <source src="./sound/dragon.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Purified Dragon</h6>
+      </li>
+      <li id="cd7">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_Midna_contents.png">
+        <div class="play" id="btn7"></div>
+        <audio id="audio7" class="sound">
+          <source src="./sound/midna.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Midna's Lament</h6>
+      </li>
+      <li id="cd8">
+        <div class="inner">
+        </div>
+        <img class="cdContents" src="./img/cd_Fi_contents.png">
+        <div class="play" id="btn8"></div>
+        <audio id="audio8" class="sound">
+          <source src="./sound/fi.mp3" type="audio/mp3">
+        </audio>
+        <h6 class="name">Fi's Farewell</h6>
+      </li>
+    </ul>
+  </div>
+  <div class="dim"></div>
+
+  <script src="./js/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="./js/musicSlider.js" type="text/javascript"></script>
+</body>
+
+</html>

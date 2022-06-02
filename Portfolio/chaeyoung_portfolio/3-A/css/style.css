@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
+html, body {width: 100vw; height: 100vh;}
+body {font-family: 'Noto Serif KR', serif;}
+body::-webkit-scrollbar {display: none;}
+
+section {width: 100%; height: 100%; position: relative;}
+
+header {position: fixed; top: 0; left: 0; width: 100%; height: auto; padding: calc(100vw * 60 / 1920) calc(100vw * 40 / 1920); z-index: 100; font-size: 0; background: black; background: -webkit-linear-gradient(bottom, rgb(0, 0, 0), rgba(0,255,0,0)); background: -moz-linear-gradient(bottom, #000000, rgba(0,255,0,0)); background: -o-linear-gradient(bottom, rgb(0, 0, 0), rgba(0,255,0,0)); background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0,255,0,0));}
+header .right, 
+header .left {width: 50%; display: inline-block;}
+header .left .logo {display: inline-block; font-family: 'Noto Serif JP', serif; font-weight: 600; font-size: calc(100vw * 20 / 1920); color: #fff;}
+header .left .logo a {color: #fff; display: block; width: 100%; height: 100%;}
+header .right {text-align: right;}
+header .right ul {display: inline-block;}
+header .right ul li {display: inline-block; color: #D1D1D1; font-size: calc(100vw * 14 / 1920);}
+header .right ul li:nth-child(2) {margin: 0 calc(100vw * 55 / 1920);}
+header .right ul li a:hover {font-weight: 600; color: #fff;}
+header .right ul li a {display: block; color: #D1D1D1;}
+
+#sectionOne {background-image: url('../img/mainBack.png'); background-repeat: no-repeat; font-size: 0; background-size: cover;}
+#sectionOne .chatConatiner {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#sectionOne .chatConatiner .chat {position: absolute; display: inline-block; width: auto; height: auto; padding: calc(100vw * 30 / 1920) calc(100vw * 28 / 1920); border-radius: calc(100vw * 70 / 1920); background-color: rgba(255, 255, 255, 0.8); font-size: calc(100vw * 20 / 1920); text-align: center; font-weight: 300; font-family: 'Noto Serif JP', serif; color: #000; transition-duration: 0.5s; transition-timing-function: ease-in-out; margin-top: calc(100vw * 20 / 1920); opacity: 0;}
+#sectionOne .chatConatiner .chat:nth-child(1) {top: -3%; left: 53%;}
+#sectionOne .chatConatiner .chat:nth-child(2) {top: 15%; left: 15%; transition-delay: 1.2s;}
+#sectionOne .chatConatiner .chat:nth-child(3) {top: 25%; left: 85%; transition-delay: 1s;}
+#sectionOne .chatConatiner .chat:nth-child(4) {top: 55%; left: 5%; transition-delay: 1.7s;}
+#sectionOne .chatConatiner .chat:nth-child(5) {top: 50%; left: 70%; transition-delay: 1.4s;}
+#sectionOne .chatConatiner .chat:nth-child(6) {top: 65%; left: 30%; transition-delay: 0.5s;}
+#sectionOne .chatConatiner .chat:nth-child(7) {top: 70%; right: -2%; transition-delay: 0.3s;}
+#sectionOne .chatConatiner .chat:nth-child(8) {top: 85%; left: 15%; transition-delay: 1.5s;}
+#sectionOne .chatConatiner .chat:nth-child(9) {top: 80%; left: 60%; transition-delay: 0.7s;}
+#sectionOne .title {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Noto Serif JP', serif; color: #fff; text-align: center;}
+#sectionOne .title h2 {font-weight: 600; font-size: calc(100vw * 170 / 1920);}
+#sectionOne .title h2 .light {font-weight: 500; font-size: calc(100vw * 40 / 1920); display: inline-block; margin-top: calc(100vw * 50 / 1920);}
+#sectionOne .title .stroke1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; width: calc(100vw * 608 / 1920); height: calc(100vw * 53 / 1920);}
+
+#sectionTwo .articleContainer {width: 100%; height: 100vh; font-size: 0;}
+#sectionTwo .articleContainer .article {width: 0%; height: 33.3333%; opacity: 0; position: relative; background-repeat: no-repeat; background-position: center; transition-duration: 1s; background-size: cover;}
+#sectionTwo .articleContainer .article:nth-child(1) {background-image: url('../img/article1.png');}
+#sectionTwo .articleContainer .article:nth-child(2) {background-image: url('../img/article2.png'); transition-delay: 0.5s;}
+#sectionTwo .articleContainer .article:nth-child(3) {background-image: url('../img/article3.png'); transition-delay: 1s;}
+#sectionTwo .articleContainer .article:nth-child(2) .textBox {transition-delay: 1.2s;}
+#sectionTwo .articleContainer .article:nth-child(3) .textBox {transition-delay: 1.5s;}
+#sectionTwo .articleContainer .article .textBox {width: 100%; opacity: 0; position: absolute; top: 50%; transform: translateY(-50%); padding: 0 calc(100vw * 140 / 1920); transition-delay: 1s; transition-duration: 1s;}
+#sectionTwo .articleContainer .article .textBox h6 {color: #D1D1D1; font-size: calc(100vw * 20 / 1920); line-height: 1.5em;}
+#sectionTwo .articleContainer .article .textBox h2 {font-size: calc(100vw * 30 / 1920); color: #fff; font-weight: 600; margin-top: calc(100vw * 30 / 1920);}
+#sectionTwo .articleContainer .article:last-child .textBox h2 {margin: 0;}
+#sectionTwo .articleContainer .article:last-child .textBox h6 {margin-top: calc(100vw * 30 / 1920);}
+#sectionTwo .articleContainer .article .right {text-align: right;}
+#sectionTwo .articleContainer .article .left {text-align: left;}
+#sectionTwo .articleContainer .article .stroke2 {width: calc(100vw * 534 / 1920); height: calc(100vw * 37 /1920); position: absolute; top: 90%; left: 65%; z-index: -1;}
+#sectionTwo .articleContainer .article .stroke3 {width: calc(100vw * 360 / 1920); height: calc(100vw * 34 /1920); position: absolute; top: 90%; left: 7%; z-index: -1;}
+#sectionTwo .articleContainer .article .stroke4 {width: calc(100vw * 679 / 1920); height: calc(100vw * 26 /1920); position: absolute; top: 10%; left: 58%; z-index: -1;}
+
+#sectionThree {background-color: #000; overflow: hidden;}
+#sectionThree .backText {position: absolute; top: 0; left: 0; width: max-content;}
+#sectionThree .backText h5 {font-size: calc(100vw * 100 / 1920); font-weight: 600; color: #1C1C1C; padding: calc(100vw * 20 / 1920) 0;}
+#sectionThree .backText .first {transform: translateX(-5%);}
+#sectionThree .backText .second {transform: translateX(-12%);}
+#sectionThree .characterContainer {position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 0 calc(100vw * 50 / 1920); font-size: 0; text-align: center;}
+#sectionThree .characterContainer .character {display: inline-block; width: calc(33.3333% - 4.5%);}
+#sectionThree .characterContainer .character:nth-child(2) {margin: 0 4.5%;}
+#sectionThree .characterContainer .character img {width: 100%;}
+#sectionThree .characterContainer .character .textBox {margin-top: calc(100vw * 50 / 1920); text-align: left;}
+#sectionThree .characterContainer .character .textBox .name {margin-bottom: calc(100vw * 30 / 1920); vertical-align: middle;}
+#sectionThree .characterContainer .character .textBox .name h2 {vertical-align: bottom; display: inline-block; font-size: calc(100vw * 30 / 1920); font-weight: 600; color: #fff; margin-right: calc(100vw * 28 / 1920);}
+#sectionThree .characterContainer .character .textBox .name h3 {vertical-align: bottom; display: inline-block; font-size: calc(100vw * 16 / 1920); font-weight: 500; color: #D1D1D1; font-family: 'Noto Serif JP', serif;}
+#sectionThree .characterContainer .character .textBox h5 {font-size: calc(100vw * 20 / 1920); color: #BCBCBC; font-weight: 600; line-height: 1.5em;}
+
+#sectionFour {background-image: url('../img/fourBack.png'); background-repeat: no-repeat; background-size: cover;}
+#sectionFour .imageSliderContainer {position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: calc(100vw * 1692 / 1920); height: calc(100vw * 445 / 1920); overflow-x: auto; font-size: 0; display: flex;}
+#sectionFour .imageSliderContainer::-webkit-scrollbar {display: none;}
+#sectionFour .imageSliderContainer .slide {flex: 1; position: relative; margin-right: calc(100vw * 80 / 1920); min-width: calc(100vw * 830 / 1920);}
+#sectionFour .imageSliderContainer .slide .img {width: calc(100vw * 835 / 1920); height: calc(100vw * 445 / 1920); background-position: center; background-repeat: no-repeat; background-size: cover;}
+#sectionFour .imageSliderContainer .slide:nth-child(1) .img {background-image: url('../img/slide1.png');}
+#sectionFour .imageSliderContainer .slide:nth-child(2) .img {background-image: url('../img/slide2.png');}
+#sectionFour .imageSliderContainer .slide:nth-child(3) .img {background-image: url('../img/slide3.png');}
+#sectionFour .imageSliderContainer .slide:nth-child(4) .img {background-image: url('../img/slide4.png');}
+#sectionFour .imageSliderContainer .slide:nth-child(5) .img {background-image: url('../img/slide5.png');}
+#sectionFour .imageSliderContainer .slide .img::after {content: ''; position: absolute; top: 0; left: 0; display: inline-block; width: 100.5%; height: 100%; background-color: #000; opacity: 0; transition: all ease-in-out 0.3s;}
+#sectionFour .imageSliderContainer .slide .img:hover.img::after {opacity: 0.7;}
+#sectionFour .imageSliderContainer .slide .textBox {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+#sectionFour .imageSliderContainer .slide .textBox .title h3 {font-family: 'Noto Serif JP', serif; font-weight: 600; font-size: calc(100vw * 30 / 1920); color: #fff;}
+#sectionFour .imageSliderContainer .slide .textBox .title h4,
+#sectionFour .imageSliderContainer .slide .episodes {font-weight: 500; font-size: calc(100vw * 16 / 1920); color: #D1D1D1;}
+#sectionFour .imageSliderContainer .slide .textBox .title h4 {margin-top: calc(100vw * 20 / 1920); width: 100%;}
+#sectionFour .imageSliderContainer .slide .episodes {position: absolute; bottom: 10%; left: 50%;}
+#sectionFour .imageSliderContainer .slide .textBox .stroke5 {position: absolute; top: -1%; left: -1%; z-index: -1;}
