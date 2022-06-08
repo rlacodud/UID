@@ -1,0 +1,6 @@
+html{overflow-y: hidden;}
+section {width:100%;height:100vh;padding: 0;margin: 0;overflow: hidden;position: relative;background-color: #1D1D20;}
+.section1 {background-color: rgb(76, 138, 253);}
+.section2 {background-color: rgb(231, 157, 231);}
+.section3 {background-color: rgb(236, 235, 163);}
+.sectionTitle{position:absolute;top: 0;left: 0;color: white; font-size: 30px;}
