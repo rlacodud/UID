@@ -17,13 +17,25 @@ var deltaY = 0;
 // square이 swipe될 때마다 실행됨
 manager.on('swipe', function(e) {
   deltaX = deltaX + e.deltaX;
+  deltaY = deltaY + e.deltaY;
   console.log(deltaX, e.deltaX, e.offsetDirection);
+  
   // direction은 오른쪽으로 보내면 4 | 왼쪽으로 보내면 2로 나옴
   var direction = e.offsetDirection;
-  var translate3d = 'translate3d(' + deltaX + 'px, 0, 0)';
+  var translate3dX = 'translate3d(' + deltaX + 'px, 0, 0)';
+  var translate3dY = 'translate3d(' + '0,' + deltaY + 'px, 0)';
   
   if (direction === 4 || direction === 2) {
     e.target.innerText = deltaX;
-    e.target.style.transform = translate3d;
+    e.target.style.transform = translate3dX;
+  } else if (direction === 8 || direction === 16)  {
+    e.target.innerText = deltaX;
+    e.target.style.transform = translate3dY;
+  }
+
+  if(direction === 8) {
+    console.log('up');
+  } else if (direction === 16) {
+    console.log('down');
   }
 });
