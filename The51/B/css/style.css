@@ -1,0 +1,88 @@
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('../font/Pretendard-1.2.1/public/static/Pretendard-Regular.otf') format('opentype');
+}
+
+body {overflow-x: hidden;}
+
+#section1 {width: 100%; height: calc(100vh*4000/1440);}
+#section1 .container{width: 100%; height: 100vh;box-sizing: border-box;}
+#section1 .container .titleBox{position: relative; width: 100%; height: calc(100vw*896/2560); left: 50%; top: 50%; transform: translate(-50%,-50%);}
+#section1 .container .title51 {transition: .5s; position: relative; top: 50%; left: 50%; width:calc(100vw*961.79/2560) ; transform: translate(-50%,-50%); height: auto; }
+#section1 .container .title51 .title {width: 100%; }
+#section1 .container .title51-2 {display: none; transition: .5s; position: relative; top: 50%; left: 50%;width:calc(100vw*235.97/2560) ; transform: translate(-50%,-50%); height:calc(100vw*200/2560); }
+#section1 .container .title51-2 .title5{transition: .5s; width: calc(100vw*153.21/2560); position: absolute;}
+#section1 .container .title51-2 .title5 img{transition: .5s;width: calc(100vw*153.21/2560);}
+#section1 .container .title51-2 .title1{transition: .5s; width: calc(100vw*36.85/2560); position: absolute; top: 0; right: 0;}
+#section1 .container .title51-2 .title1 img{transition: .5s; width: calc(100vw*36.85/2560);}
+#section1 .container .titleText{transition: .5s; opacity: 0; position: absolute;}
+#section1 .container .titleText1{width: calc(100vw*512/2560); top: 0; left: 10%;transform: translateX(-50%);}
+#section1 .container .titleText2{width: calc(100vw*762/2560); top: 50%; left: 50%;transform: translate(-50%,-50%); margin-top: calc(100vw*15/2560);}
+#section1 .container .titleText2Box{transition: .5s; overflow: hidden; width:calc(100vw*762/2560);height: calc(100vw*336/2560); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+#section1 .container .titleText2Box .titleText22{display: none; width: calc(100vw*762/2560); top: 50%; left: 50%;transform: translate(-50%,-50%); margin-top: calc(100vw*15/2560);}
+#section1 .container .titleText2Box .titleText23{display: block; width: calc(100vw*710/2560); top: 50%; left: 50%;transform: translate(-50%,40%); margin-top: calc(100vw*15/2560);}
+#section1 .container .titleText3{width: calc(100vw*550/2560); bottom: 0; left: 50%;transform: translateX(-50%);}
+
+
+#section1 .container.fixed{position: fixed;}
+
+
+.center {width: calc(100vw*2440/2560);margin: 0 auto;}
+
+.header {transition: .5s; opacity: 0; background-color: white !important; width: calc(100vw*2440/2560); height: calc(100vw*190/2560); border-bottom: solid black 1px !important; position: fixed; z-index: 100; top: 0;}
+.header .headerLogo {width: calc(100vw*110/2560); margin-top: calc(100vw*50/2560);}
+.header .headerMenu {width: calc(100vw*150/2560); margin-top: calc(100vw*83/2560); position: absolute; right: 0;}
+
+#section2 {position: relative; width: 100%; height: calc(100vw*1331/2560); border-bottom: solid 1px black;}
+#section2 .sec2Text1 {width: calc(100vw*2194/2560); margin-top: calc(100vw*458/2560) ; position: absolute;}
+#section2 .sec2Text2 {width: calc(100vw*970/2560); margin-top: calc(100vw*1030/2560) ; position: absolute;}
+#section2 .sec2Img {position: absolute; transition: .5s;}
+#section2 .sec2Img1 {width: calc(100vw*137/2560); top: calc(100vw*400/2560); left: calc(100vw*123/2560);}
+#section2 .sec2Img2 {width: calc(100vw*195/2560); top: calc(100vw*351/2560); left: calc(100vw*1798.2/2560);}
+#section2 .sec2Img3 {width: calc(100vw*187/2560); top: calc(100vw*704.8/2560); left: calc(100vw*612/2560);}
+#section2 .sec2Img4 {width: calc(100vw*215/2560); top: calc(100vw*860.8/2560); left: calc(100vw*1627/2560);}
+
+#section3 {position: relative; width: 100%; height: calc(100vw*1000/2560); border-bottom: solid 1px black;}
+#section3 .sec3Text1 {width: calc(100vw*503/2560); margin-top: calc(100vw*81/2560) ;}
+#section3 .rightBox {position: absolute; left: 50%; top: calc(100vw*81/2560);}
+#section3 .rightBox .sec3Text2 {width: calc(100vw*847/2560); margin-bottom: calc(100vw*180/2560);}
+#section3 .rightBox .sec3Text3 {width: calc(100vw*1043/2560);}
+#section3 .rightBox .sec3Border {width: calc(100vw*1220/2560); border-bottom: solid 1px black;margin-bottom: calc(100vw*81/2560);}
+
+#section4 {font-family: 'Pretendard-Regular';position: relative; width: 100%; height: calc(100vw*3523/2560); border-bottom: solid 1px black;}
+#section4 .sec4Text1{width: calc(100vw*145/2560); margin-top:calc(100vw*21/2560); position: absolute;}
+#section4 .sec4Menu {width: calc(100vw*465/2560); margin-top:calc(100vw*20/2560); position: absolute; right: 0;}
+#section4 .imgBox {box-sizing: border-box; overflow: hidden;}
+#section4 .sec4Box1 {padding-top: calc(100vw*90/2560); display: flex; margin-bottom: calc(100vw*79/2560);}
+#section4 .sec4Box1 .contentBox{width: calc(100vw*1200/2560);}
+#section4 .sec4Box1 .contentBox .imgBox{transition: .5s; width: calc(100vw*1200/2560); height: calc(100vw*1000/2560); overflow: hidden; object-fit: cover;}
+#section4 .sec4Box1 .contentBox .imgBox img{width: 100%;transition: .5s;position: relative;}
+#section4 .sec4Box1 .contentBox .textBox{font-size: calc(100vw*26/2560); width: 100%; margin-top: calc(100vw*20/2560); display: flex;justify-content: space-between;}
+#section4 .sec4Box1 .contentBox2{margin-left: calc(100vw*40/2560);}
+#section4 .sec4Border {width: 100%; border-bottom: 1px solid black; margin-bottom: calc(100vw*40/2560);}
+#section4 .sec4Box2 {display: flex; margin-bottom: calc(100vw*450/2560);}
+#section4 .sec4Box2 .contentBox1{width: calc(100vw*1628/2560);}
+#section4 .sec4Box2 .contentBox1 .imgBox{transition: .5s;  width: calc(100vw*1628/2560); height: calc(100vw*1000/2560); overflow: hidden; object-fit: cover;}
+#section4 .sec4Box2 .contentBox2{width: calc(100vw*772/2560);}
+#section4 .sec4Box2 .contentBox2 .imgBox{transition: .5s; width: calc(100vw*772/2560); height: calc(100vw*500/2560); overflow: hidden; object-fit: cover;}
+#section4 .sec4Box2 .contentBox .imgBox img{width: 100%;transition: .5s; position: relative;}
+#section4 .sec4Box2 .contentBox .textBox{font-size: calc(100vw*26/2560); width: 100%; margin-top: calc(100vw*20/2560); display: flex;justify-content: space-between;}
+#section4 .sec4Box2 .contentBox2{margin-left: calc(100vw*40/2560);}
+#section4 .sec4Text2 {position: relative; left: 50%; transform: translateX(-50%); width: calc(100vw*1282/2560); margin-bottom: calc(100vw*178/2560);}
+#section4 .sec4Text2 img {width: calc(100vw*1282/2560);}
+#section4 .sec4Text3 {width: calc(100vw*381/2560); position: relative; left: 50%; transform: translateX(-50%);}
+
+
+#section5 {position: relative; width: 100%; height: calc(100vw*1140/2560);}
+#section5 .sec5Text1 {width:calc(100vw*123/2560); margin-top: calc(100vw*21/2560); margin-bottom: calc(100vw*20/2560);}
+#section5 .sec5Border {width: 100%; border-bottom: 1px solid black;}
+#section5 .sec5Img1 {width: 100%; border-bottom: 1px solid black; margin-bottom: calc(100vw*80/2560);}
+#section5 .leftBox {display: inline-block; width: 50%;}
+#section5 .leftBox .sec5Text2 {width: calc(100vw*715/2560); display: inline-block;  vertical-align: top; margin-right: calc(100vw*505/2560); margin-bottom:calc(100vw*39/2560) ;}
+#section5 .leftBox .sec5Btn {width: calc(100vw*213/2560);}
+#section5 .rightBox {display: inline-block; vertical-align: top; }
+#section5 .rightBox .sec5Text3 {margin-right: calc(100vw*351/2560); width: calc(100vw*289/2560);}
+#section5 .rightBox .sec5Text4 {width: calc(100vw*418/2560);}
+#section5 .sec5Border2 {width: 100%; border-bottom: 1px solid black; margin-top: calc(100vw*250/2560); margin-bottom: calc(100vw*31/2560);}
+#section5 .footerText1 {width: calc(100vw*273/2560); }
+#section5 .footerMenu {width: calc(100vw*708/2560); position: absolute; right: 0;}
