@@ -2,7 +2,6 @@ window.onload = function() {
   setTimeout (function() {
     scrollTo(0, 0);
   }, 100);
-};
 
 // horizontal
 var varWrap = document.querySelector(".var-wrap");
@@ -153,3 +152,4 @@ function mainScrollEvent(e) {
 $(window).scroll(function () {
   mainScrollEvent();
 })
+};
