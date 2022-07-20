@@ -2,6 +2,7 @@ var cursorDotEl = document.querySelector('.cursor-dot');
 var cursorBGEl = document.querySelector('.cursor-bg');
 
 var btnListItemEl = document.querySelectorAll('header .header-container .right ul li');
+var ScrollListEl = document.querySelectorAll('#section4 .parallax-window');
 var moreEl = document.querySelector('#section3 .more');
 var rightTextEl = document.querySelector('#section5 .rightText');
 
@@ -34,6 +35,28 @@ function onLeaveBtnListItenEl(){
     }
     for(var i = 0; i < btnListItemEl.length; i++) {
       btnListItemEl[i].classList.remove('randomOff');
+    }
+}
+
+function onEnterScrollListEl(){
+  classReset();
+    if(!cursorDotEl.classList.contains('on-eye')){
+      cursorDotEl.classList.add('on-eye');
+      cursorBGEl.classList.add('on');
+    }
+    for(var i = 0; i < ScrollListEl.length; i++) {
+      ScrollListEl[i].classList.add('randomOff');
+    }
+}
+
+function onLeaveScrollListEl(){
+    classReset();
+    if(cursorDotEl.classList.contains('on-eye')){
+      cursorDotEl.classList.remove('on-eye');
+      cursorBGEl.classList.remove('on');
+    }
+    for(var i = 0; i < ScrollListEl.length; i++) {
+      ScrollListEl[i].classList.remove('randomOff');
     }
 }
 
@@ -84,6 +107,11 @@ function addEvent(){
 
     moreEl.addEventListener('mouseenter', onEnterMore)
     moreEl.addEventListener('mouseleave', onLeaveMore)
+
+    for(var i = 0; i < ScrollListEl.length; i++){
+      ScrollListEl[i].addEventListener('mouseenter', onEnterScrollListEl);
+      ScrollListEl[i].addEventListener('mouseleave', onLeaveScrollListEl);
+  }
 }
 
 function init(){
@@ -123,7 +151,7 @@ function randomCursorStop() {
 
 // // 랜덤 커서
 let randomCursor = function () {
-  if(btnListItemEl[0].classList.contains('randomOff') || btnListItemEl[1].classList.contains('randomOff') || btnListItemEl[2].classList.contains('randomOff') || rightTextEl.classList.contains('randomOff') || moreEl.classList.contains('randomOff')) {
+  if(btnListItemEl[0].classList.contains('randomOff') || btnListItemEl[1].classList.contains('randomOff') || btnListItemEl[2].classList.contains('randomOff') || rightTextEl.classList.contains('randomOff') || moreEl.classList.contains('randomOff') || btnListItemEl[0].classList.contains('randomOff') || btnListItemEl[1].classList.contains('randomOff') || ScrollListEl[0].classList.contains('randomOff') || ScrollListEl[1].classList.contains('randomOff') || ScrollListEl[2].classList.contains('randomOff') || ScrollListEl[3].classList.contains('randomOff') || ScrollListEl[4].classList.contains('randomOff') || ScrollListEl[5].classList.contains('randomOff')) {
     classReset();
     randomCursorStop()
   }
