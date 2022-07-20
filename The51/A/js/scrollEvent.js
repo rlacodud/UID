@@ -5,13 +5,9 @@ window.onload = function() {
 
 // horizontal
 var varWrap = document.querySelector(".var-wrap");
-var article = document.querySelectorAll("article");
-var varnumber = 0;
 
 var move = 0;
 var varDuration = 500;
-
-var var03 = ((varWrap.offsetWidth / article.length) * (article.length - 1)) * -1;
 
 var fixMode = false;
 
@@ -31,7 +27,6 @@ function mainScrollEvent(e) {
   let marginTop = -backTextMarginTop + documentHeight;
 
   // section1 텍스트 효과
-  console.log(backTextMarginTop)
   if(marginTop <= convertPx.vw(-250)) {
     $('.backText').css({
       'margin-top': marginTop + "px"
@@ -39,6 +34,15 @@ function mainScrollEvent(e) {
   }
 
   function onscrollw(e) {
+    if(documentHeight >= convertPx.vw(1500)) {
+      $('.sec1Top .leftText').addClass('fixEnd');
+      $('.sec1Top .centerText').addClass('fixEnd');
+      $('.sec1Top .rightText').addClass('fixEnd');
+    } else if (documentHeight <= convertPx.vw(1500)){
+      $('.sec1Top .leftText').removeClass('fixEnd');
+      $('.sec1Top .centerText').removeClass('fixEnd');
+      $('.sec1Top .rightText').removeClass('fixEnd');
+    }
     if($('#section3').hasClass('fixed')) {
       window.onmousewheel = function(event){
         if (e.wheelDelta < 0 && move > convertPx.vw(-11500)) {
