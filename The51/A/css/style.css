@@ -130,12 +130,12 @@ section {width: 100vw; height: 100vh; position: relative;}
 	}
 	
 }
-.parallax-window:nth-child(1) {background-image: url('../img/full_img_01.png'); background-attachment: fixed; background-position:center;}
-.parallax-window:nth-child(2) {background-image: url('../img/full_img_02.png'); background-attachment: fixed; background-position:center;}
-.parallax-window:nth-child(3) {background-image: url('../img/full_img_03.png'); background-attachment: fixed; background-position:center;}
-.parallax-window:nth-child(4) {background-image: url('../img/full_img_04.png'); background-attachment: fixed; background-position:center;}
-.parallax-window:nth-child(5) {background-image: url('../img/full_img_05.png'); background-attachment: fixed; background-position:center;}
-.parallax-window:nth-child(6) {background-image: url('../img/full_img_06.png'); background-attachment: fixed; background-position:center;}
+.parallax-window:nth-child(1) {background-image: url('../img/full_img_01.png'); background-attachment: fixed; background-position: center 0; background-size: cover;}
+.parallax-window:nth-child(2) {background-image: url('../img/full_img_02.png'); background-attachment: fixed; background-position: center 0; background-size: cover;}
+.parallax-window:nth-child(3) {background-image: url('../img/full_img_03.png'); background-attachment: fixed; background-position: center 0; background-size: cover;}
+.parallax-window:nth-child(4) {background-image: url('../img/full_img_04.png'); background-attachment: fixed; background-position: center 0; background-size: cover;}
+.parallax-window:nth-child(5) {background-image: url('../img/full_img_05.png'); background-attachment: fixed; background-position: center 0; background-size: cover;}
+.parallax-window:nth-child(6) {background-image: url('../img/full_img_06.png'); background-attachment: fixed; background-position: center 0; background-size: cover;}
 
 #section5 {height: calc(100vw*1729/1920); background: #E8E5E0;}
 .project {position: absolute; top: calc(100vw*120/1920); left: 50%; transform: translateX(-50%); width: calc(100vw*480/1920); height: calc(100vw*130/1920); background-image: url('../img/project.png');}
