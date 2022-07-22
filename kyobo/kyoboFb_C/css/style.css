@@ -1,4 +1,4 @@
-html, body {width: 100vw;}
+html, body {width: 100vw; overflow-x: hidden;}
 body::-webkit-scrollbar {display: none;}
 body.on {height: 100vh; overflow: hidden;}
 .background-image {background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
@@ -19,7 +19,7 @@ header .right .user {display: inline-block; width: calc(100vw*124/1920); height:
 .nav-container {position: relative; width: 100%; height: calc(100vw*60/1920);}
 .nav-container .nav {position: absolute; top: 50%; transform: translateY(-50%); left: calc(100vw*310/1920); width: calc(100vw*884/1920); height: calc(100vw*21/1920); background-image: url('../img/nav.png'); cursor: pointer;}
 .nav-container .navRight {position: absolute; top: 50%; transform: translateY(-50%); right: calc(100vw*309/1920); width: calc(100vw*161/1920); height: calc(100vw*14/1920); background-image: url('../img/nav_right.png'); cursor: pointer;}
-.nav-container .nav-depth {display: none; position: absolute; z-index: 1000; top: calc(100vw*60/1920); left: calc(100vw*0/1920); width: calc(100vw*1920/1920); height: calc(100vw*408/1920); background-image: url('../img/search-bar_on.png');}
+.nav-container .nav-depth {transition: all ease-in-out 0.3s; display: none; position: absolute; z-index: 1000; top: calc(100vw*60/1920); left: calc(100vw*0/1920); width: calc(100vw*1920/1920); height: calc(100vw*408/1920); background-image: url('../img/search-bar_on.png');}
 .nav-container .nav-depth.on {display: block;}
 
 #section1 {width: 100vw; overflow: hidden; height: calc(100vw*710/1920);}
@@ -47,7 +47,9 @@ header .right .user {display: inline-block; width: calc(100vw*124/1920); height:
 .float-right.on {opacity: 1;}
 
 #section3 {height: calc(100vw*740/1920);}
-#section3 .slider-container {background: #FFFDF0; height: calc(100vw*700/1920); overflow-x: hidden;}
+#section3 .container {position: relative; width: 100vw; height: calc(100vw*700/1920); overflow-x: auto;}
+#section3 .container::-webkit-scrollbar {display: none;}
+#section3 .slider-container {background: #FFFDF0; height: calc(100vw*700/1920);}
 #section3 .text {position: absolute; z-index: 100; top: calc(100vw*101/1920); left: 50%; transform: translateX(-50%); width: calc(100vw*626/1920); height: calc(100vw*35/1920); background-image: url('../img/section3_text.png');}
 #section3 .slider {transition: all ease-in-out 0.3s; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: calc(100vw*3500/1920); height: calc(100vw*700/1920); background-image: url('../img/section3_slider.png');}
 #section3 .slider.left {transform: translateX(-20%)}

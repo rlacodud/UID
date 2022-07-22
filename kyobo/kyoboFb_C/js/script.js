@@ -100,14 +100,16 @@ $('body').on('click', function() {
   if($('header .center .search .search_on.on').hasClass('on')) {
     $('header .center .search .search_on.on').removeClass('on')
   }
-  if($('.nav-container .nav-depth.on').hasClass('on')) {
-    $('.nav-container .nav-depth').removeClass('on')
-  }
 })
 
-$('.nav-container .nav').on('click', function(e) {
+$('.nav-container .nav').on('mouseover', function(e) {
   e.stopPropagation();
   $('.nav-container .nav-depth').addClass('on')
+})
+
+$('.nav-container .nav').on('mouseleave', function(e) {
+  e.stopPropagation();
+  $('.nav-container .nav-depth').removeClass('on')
 })
 
 var section1ArrowCount = 0;
@@ -151,10 +153,10 @@ $('#section3 .prev').on('click', function() {
     arrowCount --;
   }
   if(arrowCount == 0) {
-    $('#section3 .next').removeClass('off')
+    // $('#section3 .next').removeClass('off')
     $('#section3 .slider').removeClass('right');
   } else if(arrowCount == -1) {
-    $('#section3 .prev').addClass('off')
+    // $('#section3 .prev').addClass('off')
     $('#section3 .slider').addClass('left')
   }
   console.log(arrowCount)
@@ -165,11 +167,37 @@ $('#section3 .next').on('click', function() {
     arrowCount ++;
   }
   if(arrowCount == 0) {
-    $('#section3 .prev').removeClass('off')
+    // $('#section3 .prev').removeClass('off')
     $('#section3 .slider').removeClass('left');
   } else if(arrowCount == 1) {
-    $('#section3 .next').addClass('off')
+    // $('#section3 .next').addClass('off')
     $('#section3 .slider').addClass('right')
   }
   console.log(arrowCount)
 })
+
+let slider = document.querySelector("#section3 .container");
+let isGrab = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", grabSlider);
+slider.addEventListener("mousemove", grabMove);
+slider.addEventListener("mouseup", () => isGrab = false);
+slider.addEventListener("mouseleave", () => isGrab = false);
+
+
+function grabSlider(e){
+  e.preventDefault();
+  isGrab = true;
+  startX = e.x;
+  scrollLeft = slider.scrollLeft;
+}
+
+function grabMove(e){
+  e.preventDefault();
+  if(!isGrab) return;
+  let moveX = e.x;
+  let walk = (moveX - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+}
