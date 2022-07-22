@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYOBO A</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/swiper.css">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+ 
+
+  <script>
+    //공지순위
+    $(document).ready(function(){
+        var height =  $(".notice").height();
+        var num = $(".rolling li").length;
+        var max = height * num;
+        var move = 0;
+        function noticeRolling(){
+            move += height;
+            $(".rolling").animate({"top":-move},600,function(){
+                if( move >= max ){
+                    $(this).css("top",0);
+                    move = 0;
+                };
+            });
+        };
+        noticeRollingOff = setInterval(noticeRolling,2000);
+        $(".rolling").append($(".rolling li").first().clone());
+
+        $(".rolling_stop").click(function(){
+            clearInterval(noticeRollingOff);
+        });
+        $(".rolling_start").click(function(){
+            noticeRollingOff = setInterval(noticeRolling,2000);
+        });
+    });
+
+    $(document).ready(function(){
+        // 상품리스트 호버 스케일
+        $('#section3 .prod-list ul > li').hover(function(){
+            $(this).find(".prod-img-wrap img").addClass('img-hover');
+        },function(){
+            $(this).find(".prod-img-wrap img").removeClass('img-hover');
+        });
+        $('#section7 .prod-list ul > li').hover(function(){
+            $(this).find(".prod-img-wrap img").addClass('img-hover');
+        },function(){
+            $(this).find(".prod-img-wrap img").removeClass('img-hover');
+        });
+    });
+
+    $(document).ready(function(){
+        // 탭 클릭 활성화
+        $('#section5 .tab-list-wrap ul > li a').click(function(){
+            console.log("aa");
+            $("#section5 .tab-list-wrap ul > li a").removeClass("active");
+            $(this).addClass("active");
+        });
+        $('#section6 .tab-list-wrap ul > li a').click(function(){
+            console.log("aa");
+            $("#section6 .tab-list-wrap ul > li a").removeClass("active");
+            $(this).addClass("active");
+        });
+        $('#section7 .tab-list-wrap ul > li a').click(function(){
+            console.log("aa");
+            $("#section7 .tab-list-wrap ul > li a").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        // FP몰 배너탭 클릭 활성화
+        $('#section6 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet').click(function(){
+            if($("#section6 .swiper-pagination-bullets.swiper-pagination-horizontal > span:nth-child(2)").hasClass("swiper-pagination-bullet-active")){
+                $("#section6 .tab-list-wrap ul > li a").removeClass("active");
+                $("#section6 .tab-list-wrap ul > li:nth-child(1) a").addClass("active");
+                
+            }else if($("#section6 .swiper-pagination-bullets.swiper-pagination-horizontal > span:nth-child(1)").hasClass("swiper-pagination-bullet-active")){
+                $("#section6 .tab-list-wrap ul > li a").removeClass("active");
+                $("#section6 .tab-list-wrap ul > li:nth-child(2) a").addClass("active");
+            }
+        });
+        $('#section6 .swiper-button-next').click(function(){
+            if($("#section6 .swiper-pagination-bullets.swiper-pagination-horizontal > span:nth-child(2)").hasClass("swiper-pagination-bullet-active")){
+                $("#section6 .tab-list-wrap ul > li a").removeClass("active");
+                $("#section6 .tab-list-wrap ul > li:nth-child(2) a").addClass("active");
+                
+            }else if($("#section6 .swiper-pagination-bullets.swiper-pagination-horizontal > span:nth-child(1)").hasClass("swiper-pagination-bullet-active")){
+                $("#section6 .tab-list-wrap ul > li a").removeClass("active");
+                $("#section6 .tab-list-wrap ul > li:nth-child(1) a").addClass("active");
+            }
+        });
+        $('#section6 .swiper-button-prev').click(function(){
+            if($("#section6 .swiper-pagination-bullets.swiper-pagination-horizontal > span:nth-child(2)").hasClass("swiper-pagination-bullet-active")){
+                $("#section6 .tab-list-wrap ul > li a").removeClass("active");
+                $("#section6 .tab-list-wrap ul > li:nth-child(2) a").addClass("active");
+                
+            }else if($("#section6 .swiper-pagination-bullets.swiper-pagination-horizontal > span:nth-child(1)").hasClass("swiper-pagination-bullet-active")){
+                $("#section6 .tab-list-wrap ul > li a").removeClass("active");
+                $("#section6 .tab-list-wrap ul > li:nth-child(1) a").addClass("active");
+            }
+        });
+        
+        //햄버거 메뉴
+        $("nav > a").click(function(e){
+            if($(".ham-menu .gnb-menu").hasClass("active")){
+                e.preventDefault(e);
+                $(".ham-menu .gnb-menu").removeClass("active");
+                $("nav > a").css({"background": "url(./img/menu.png)"});
+                $(".dim").removeClass("active");
+                $("body").css({"overflow": "initial", "height":"auto"});
+            }else{
+                e.preventDefault(e);
+                $(".ham-menu .gnb-menu").addClass("active");
+                $("nav > a").css({"background": "url(./img/menu-active.png)"});
+                $(".dim").addClass("active");
+                $("body").css({"overflow": "hidden", "height":"100%"});
+            }
+        })
+
+        //스크롤 탑 고정
+        $( document ).ready( function() {
+        var jbOffset = $( 'nav' ).offset();
+        $( window ).on("scroll",'mousewheel', function(e) {
+            var wheel = e.originalEvent.wheelDelta;
+          if ( $( document ).scrollTop() > jbOffset.top + 120 ) {
+            $( 'nav' ).addClass( 'jbFixed' );
+            $( '.today-list' ).removeClass( 'today-list-Fixed' );
+          }
+          else {
+            $( 'nav' ).removeClass( 'jbFixed' );
+          }
+
+          if($( document ).scrollTop() > 1030){
+            $( '.today-list' ).addClass( 'today-list-Fixed' );
+            $( 'nav' ).removeClass( 'jbFixed' );
+          }else{
+            $( '.today-list' ).removeClass( 'today-list-Fixed' );
+          }
+        });
+
+        $( window ).on('mousewheel',function(e){ 
+            if($( document ).scrollTop() > 1030){
+              var wheel = e.originalEvent.wheelDelta;
+              //스크롤값을 가져온다.
+              if(wheel>0){
+              //스크롤 올릴때
+              console.log("올림", wheel)
+              $("nav").addClass("jbFixed");
+              $( '.today-list' ).removeClass( 'today-list-Fixed' );
+              } else {
+              //스크롤 내릴때
+              console.log("내림", wheel)
+              $("nav").removeClass("jbFixed");
+              $( '.today-list' ).addClass( 'today-list-Fixed' );
+              }
+            }else if ( $( document ).scrollTop() < jbOffset.top + 120 ) {
+            $( 'nav' ).removeClass( 'jbFixed' );
+            $( '.today-list' ).removeClass( 'today-list-Fixed' );
+          }else if ( $( document ).scrollTop() > jbOffset.top + 120 ) {
+            $( 'nav' ).addClass( 'jbFixed' );
+            $( '.today-list' ).removeClass( 'today-list-Fixed' );
+          }
+          });
+        });
+    });
+  </script>
+
+  <style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+
+
+      html{
+        background-color: #fff;
+      }
+      body{
+        background-color: #fff !important ;max-width: 1920px; margin:0 auto;
+      }
+      /* 공지 롤링 */
+      body{background-color:#d1d1d1;}
+      header{position: relative;z-index: 99;}
+    .notice{width:175px; height:23px; overflow:hidden; position: absolute;right: 33%;top: 37%;}
+    .rolling{position:relative; width:100%; height:auto;}
+    .rolling li{width:100%; height:23px; line-height:50px;}
+    .rolling_stop{display:block; width:100px; height:20px; background-color:#000; color:#fff; text-align:center;}
+    .rolling_start{display:block; width:100px; height:20px; background-color:#000; color:#0f0; text-align:center;}
+
+    .ham-menu{position: absolute;top: 100%;z-index: 10;}
+    nav a{width: 44px;height: 44px;background: url(./img/menu.png);display: inline-block;position: absolute;bottom: 11.3%;left: 18.6%;}
+    nav.jbFixed{position: fixed;margin-top: -118px;box-shadow: 0px 0px 20px 0 grey;}
+    .ham-menu .gnb-menu{display: none;}
+    .ham-menu .gnb-menu.active{display: inline-block;}
+    .float-menu{width: 61px;position: fixed;right: 3%;bottom: 17%;z-index: 9999; cursor: pointer;}
+    .dim{display: none;}
+    .dim.active{width: 99.1vw;height: 100vw;background: #000;opacity: 0.3;position: fixed;top: 0;left: 0;z-index: 9; display: inline-block;}
+    #section1 .swiper-button-prev, #section1 .swiper-button-next{color: #fff;}
+    #section1 .swiper-button-prev{left: 11.5%;}
+    #section1 .swiper-button-next{right:11.5%;}
+    #section1 .swiper-pagination{display: none;}
+    #section1 .swiper-button-next:after, #section1 .swiper-button-prev:after{font-size: 1.5vw;}
+
+    #section2 {background-color: #F7F8FA;}
+    #section2 .today{max-width: 1207px; margin:0 auto;padding:100px 0;}
+    #section2 .today .title{max-width: 689px;}
+    #section2 .today-list {margin-top: 60px;}
+    #section2 .today-list img{ width: 80px; height: 80px;}
+    #section2 .today-list ul{ display: flex; text-align: center; font-size: 15px;justify-content:space-between}
+    #section2 .today-list .today-list-text{margin-top: 20px;}
+    #section2 .today-list ul > li .today-list-thumb{border-radius: 50%;width: 96px;height: 96px;background: linear-gradient(#f7f8fa);position: relative;}
+    #section2 .today-list ul > li:nth-child(1) .today-list-thumb{border-radius: 50%;width: 96px;height: 96px;background: linear-gradient(#659EFD, #39CE68);position: relative;animation: rotate_image 1s linear infinite;}
+    #section2 .today-list ul > li:nth-child(2) .today-list-thumb{border-radius: 50%;width: 96px;height: 96px;background: linear-gradient(#659EFD, #39CE68);position: relative;animation: rotate_image 1s linear infinite;}
+    #section2 .today-list ul > li:nth-child(3) .today-list-thumb{border-radius: 50%;width: 96px;height: 96px;background: linear-gradient(#659EFD, #39CE68);position: relative;animation: rotate_image 1s linear infinite;}
+    @keyframes rotate_image{
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    #section2 .today-list.today-list-Fixed{background: #f7f8fa;position: fixed;top: 0px;left: 50%;width: 100vw;transform: translateX(-50%);z-index: 10;margin-top: 0;padding: 20px 0;box-shadow: 0px 0px 20px 0 grey;}
+    #section2 .today-list.today-list-Fixed ul{width: 1200px;margin: 0 auto;}
+    #section2 .today-list .today-list-thumb img{box-sizing: initial; border: 4px solid #f7f8fa;border-radius: 50%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+    #section2 .today-list ul > li .today-list-con-wrap{position: relative;}
+    #section2 .today-list ul > li .today-list-con-wrap:after{content: "";width: 80px;height: 80px;position: absolute;top: 37%;left: 50%;transform: translate(-50%, -50%);border: 4px solid #f7f8fa;border-radius: 50%;}
+    #section2 .today-list ul > li:nth-child(1) .today-list-con-wrap:after{background: url(./img/to1.png);}
+    #section2 .today-list ul > li:nth-child(2) .today-list-con-wrap:after{background: url(./img/to2.png);}
+    #section2 .today-list ul > li:nth-child(3) .today-list-con-wrap:after{background: url(./img/to3.png);}
+    #section2 .today-list ul > li:nth-child(4) .today-list-con-wrap:after{background: url(./img/to4.png);}
+    #section2 .today-list ul > li:nth-child(5) .today-list-con-wrap:after{background: url(./img/to5.png);}
+    #section2 .today-list ul > li:nth-child(6) .today-list-con-wrap:after{background: url(./img/to6.png);}
+    #section2 .today-list ul > li:nth-child(7) .today-list-con-wrap:after{background: url(./img/to7.png);}
+    #section2 .today-list ul > li:nth-child(8) .today-list-con-wrap:after{background: url(./img/to8.png);}
+    #section2 .today-list ul > li:nth-child(9) .today-list-con-wrap:after{background: url(./img/to1.png);}
+
+    #section3 {background-color: #fff; padding-top: 160px;}
+    #section3 .best {max-width: 1200px; margin:0 auto;}
+    #section3 .best .title{max-width: 617px;}
+    #section3 .prod-img-wrap{width: 273px;height: 273px;overflow: hidden;border-radius: 16px;}
+    #section3 .prod-list {margin-top:80px}
+    #section3 .prod-list ul:after{clear: both; content: ""; display: block;}
+    #section3 .prod-list ul > li:first-child{margin-left: 0%;}
+    #section3 .prod-list ul > li:nth-child(5){margin-left: 0%;}
+    #section3 .prod-list ul > li:nth-child(n + 5){margin-top: 5%;}
+    #section3 .prod-list ul > li{float: left; margin-left: 2.53%; cursor: pointer;}
+    #section3 .prod-text-wrap {margin-top: 35px;}
+    #section3 .prod-text-wrap p{font-size: 16px; letter-spacing: -1.6px;}
+    #section3 .prod-text-wrap p + p{font-size: 18px; margin-top: 15px; letter-spacing: -0.8px;}
+    #section3 .prod-text-wrap p + p > span{color: #10D64F;font-weight: 700;}
+    #section3 .prod-text-wrap p + p > span + span{color: #000;font-weight: 700;}
+    #section3 .prod-img-wrap img { /* hover 뒤 애니메이션 */
+        transform: scale(1.0); /* 이미지 확대 */
+        transition: transform .5s; /* 시간 설정 */
+    }
+    #section3 .prod-img-wrap img.img-hover {    /* hover 시 애니메이션 */
+        transform: scale(1.15);   /* 이미지 확대 */
+        transition: transform .5s;  /* 시간 설정 */
+    }
+    .bott-btn-wrap  {text-align: center;}
+    .bott-btn-wrap img {max-width: 198px; margin:61px auto 0; display: inline-block;}
+    
+    #section4 {position:relative;background-color: #fff; padding-top: 160px;overflow: hidden;}
+    #section4 .swiper{max-width: 1305px;position: absolute;right: -32px;bottom: 50px;height: 495px;overflow: inherit;}
+    #section4 .swiper-button-prev:after, #section4 .swiper-button-next:after{font-size: 0.78vw;color: #fff;}
+    #section4 .swiper-button-next{left: -16%;top: 92%;border: 1px solid #fff;border-radius: 50%;width: 59px;height: 59px;}
+    #section4 .swiper-button-prev{left: -22%;top: 92%;border: 1px solid #fff;border-radius: 50%;width: 59px;height: 59px;}
+    #section4 .swiper-button-prev.swiper-button-disabled{opacity: 1;border: none;}
+    #section4 .swiper-button-next.swiper-button-disabled{opacity: 1;border: none;}
+
+    #section5 {background-color: #fff;padding-top: 160px;}
+    #section5 .cate-wrap {max-width: 1200px; margin:0 auto;}
+    #section5 .cate-wrap .title{max-width: 394px;}
+    #section5 .bott-btn-wrap img {max-width: 180px;}
+
+    .tab-list-wrap ul {display: flex;justify-content: space-between;max-width: 732px;padding:40px 0 60px;}
+    .tab-list-wrap ul > li {position: relative;padding-left: 16px;}
+    .tab-list-wrap ul > li a{font-size: 18px;color: #999999; letter-spacing: -0.5px;}
+    .tab-list-wrap ul > li a:before{ content: ""; border-radius: 50%; width: 6px; height: 6px;background-color: #E6E6E6;position: absolute;left: 0;top: 6px;display: inline-block;}
+    .tab-list-wrap ul > li a.active{color: #000;}
+    .tab-list-wrap ul > li a.active:before{background-color: #39CE68;}
+
+    #section6 {background-color: #f8f9fa;padding-top: 157px;padding-bottom: 161px; margin-top: 160px;}
+    #section6 .ft-mall {max-width: 1200px; margin:0 auto;}
+    #section6 .ft-mall .title{max-width: 340px;}
+    #section6 .swiper {width: 100%;height: 100%;}
+    #section6 .swiper-slide {text-align: center;font-size: 18px; background-color: #f8f9fa;
+        /* Center slide text vertically */
+        display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;
+      }
+    #section6 .swiper-slide img {display: block;width: 100%;height: 100%;object-fit: cover;}
+    #section6  .swiper {margin-left: auto;margin-right: auto; overflow: initial;}
+    #section6 .swiper-button-prev, #section6 .swiper-button-next{color: #ccc;}
+    #section6 .swiper-button-prev:after, #section6 .swiper-button-next:after{font-size: 1.56vw;}
+    #section6 .swiper-button-prev{left: -7.5%;}
+    #section6 .swiper-button-next{right:-7.5%;}
+    #section6 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{position: absolute;top: -18%;height: 5%;}
+    #section6 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets span{float: left;width: 76px;border-radius: 0;height: 21px;opacity: 0;margin-left: 13px;}
+    #section6 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets span + span{float: left;width: 61px;border-radius: 0;height: 21px;opacity: 0;margin-left: 29px;}
+
+    #section7 {padding-top: 157px;}
+    #section7 .price {max-width: 1200px; margin:0 auto;}
+    #section7 .price .title{max-width: 383px;}
+    #section7 .bott-btn-wrap img {max-width: 166px;}
+    #section7 .bott-btn-wrap img {max-width: 166px;}
+    #section7 .prod-img-wrap {width: 273px;height: 273px;overflow: hidden;border-radius: 16px;}
+    #section7 .prod-list ul{display: flex; justify-content: space-between;}
+    #section7 .prod-list ul li{cursor: pointer;}
+    #section7 .prod-text-wrap {margin-top: 35px;}
+    #section7 .prod-text-wrap p{font-size: 16px; letter-spacing: -1.6px;}
+    #section7 .prod-text-wrap p + p{font-size: 18px; margin-top: 15px; letter-spacing: -0.8px;}
+    #section7 .prod-text-wrap p + p > span{color: #10D64F;font-weight: 700;}
+    #section7 .prod-text-wrap p + p > span + span{color: #000;font-weight: 700;}
+    #section7 .prod-img-wrap img { /* hover 뒤 애니메이션 */
+        transform: scale(1.0); /* 이미지 확대 */
+        transition: transform .5s; /* 시간 설정 */
+    }
+    #section7 .prod-img-wrap img.img-hover {    /* hover 시 애니메이션 */
+        transform: scale(1.15);   /* 이미지 확대 */
+        transition: transform .5s;  /* 시간 설정 */
+    }
+    #section7 .price {overflow: hidden;padding: 0 80px; box-sizing: initial;}   
+    #section7 .swiper {overflow: initial;}   
+    #section7 .swiper-button-next:after, #section7 .swiper-button-prev:after {color: #ccc;}
+    #section7 .swiper-button-next {right: -82px;}
+    #section7 .swiper-button-prev {left: -82px;}
+    
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+        <img src="./img/@ pc_gnb.png">
+
+        <div class="notice">
+            <ul class="rolling">
+                <li>
+                    <img src="./img/sil1.png">
+                </li>
+                <li>
+                    <img src="./img/sil2.png">
+                </li>
+                <li>
+                    <img src="./img/sil3.png">
+                </li>
+            </ul>
+        </div>
+        <a href="">
+        </a>
+        <div class="ham-menu">
+            <div class="gnb-menu">
+                <img src="./img/gnb-menu.png">
+            </div>
+        </div>
+    </nav>
+    
+  </header>
+    <div class="dim"></div>
+
+  <div class="float-menu">
+    <img src="./img/QUICK.png">
+  </div>
+
+  <section id="section1">
+    <div class="kv-wrap">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/KV1.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/KV2.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/KV3.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/KV4.png" />
+                  </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+  </section>
+
+  <section id="section2">
+    <div class="today">
+        <div class="title">
+            <img src="./img/tit1.png" />
+        </div>
+        <div class="today-list">
+            <ul>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                            
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                베스트상품
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                시즌상품
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                이벤트
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                기획전
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                최근구매상품
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                선물하기
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                도서/음반
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                대량구매관
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="today-list-con-wrap">
+                        <div class="today-list-thumb">
+                        </div>
+                        <div class="today-list-text">
+                            <p>
+                                핫PICK!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </section>
+
+  <section id="section3">
+    <div class="best">
+        <div class="title">
+            <img src="./img/tit2.png" />
+        </div>
+        <div class="prod-list">
+            <ul>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img1.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            스코티 장스탠드
+                        </p>
+                        <p>
+                            <span>39% </span><span>109,000</span>원
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img2.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            한판 훈제오리 (1팩)
+                        </p>
+                        <p>
+                            <span>8% </span><span>10,800</span>원
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img3.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            PICKLESUIT 보조등
+                        </p>
+                        <p>
+                            <span>10% </span><span>33,000</span>원
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img4.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            [덴마크 120년 전통의 다나] 블루베리잼..
+                        </p>
+                        <p>
+                            <span>2% </span><span>4,180</span>원
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img5.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            발뮤다 더팟 전기주전자
+                        </p>
+                        <p>
+                            <span>30% </span><span>198,000</span>원
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img6.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            [더 메나쥬리] 마카롱 5입세트
+                        </p>
+                        <p>
+                            <span>5% </span><span>9,968</span>원
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img7.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            세안전과 효소 딥클렌징 에어리휩 폼
+                        </p>
+                        <p>
+                            <span>40% </span><span>8,800</span>원
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod-img-wrap">
+                        <img src="./img/img8.png">
+                    </div>
+                    <div class="prod-text-wrap">
+                        <p>
+                            스칸디 원형 세라믹 식탁 테이블
+                        </p>
+                        <p>
+                            <span>10% </span><span>635,500</span>원
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bott-btn-wrap">
+            <img src="./img/btn1.png">
+        </div>
+    </div>
+  </section>
+
+  <section id="section4">
+    <div class="my-kyo">
+        <div class="bg-img">
+            <img src="./img/01_md_pick.png">
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/g1.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/g2.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/g3.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/g4.png" />
+                  </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+  </section>
+
+  <section id="section5">
+    <div class="cate-wrap">
+        <div class="title">
+            <img src="./img/tit3.png">
+        </div>
+        <div class="tab-list-wrap">
+            <ul>
+                <li>
+                    <a href="#none" class="active">
+                        <p>시즌상품</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>주방용품</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>식품/건강</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>위생</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>생활용품</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>패션잡화</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>식당/카페</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="cate-list-wrap">
+            <img src="./img/cate-list.png">
+        </div>
+        <div class="bott-btn-wrap">
+            <img src="./img/btn2.png">
+        </div>
+    </div>
+  </section>
+
+  <section id="section6">
+    <div class="ft-mall">
+        <div class="title">
+            <img src="./img/tit4.png">
+        </div>
+        <div class="tab-list-wrap">
+            <ul>
+                <li>
+                    <a href="#none" class="active">
+                        <p>인테리어</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>기념일</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>여름특집</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>전자제품</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>전문서적</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>우리아이</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>패션/뷰티</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ft-mall-banner">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/FP_img.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/FP_img2.png" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="section7">
+    <div class="price">
+        <div class="title">
+            <img src="./img/tit5.png">
+        </div>
+        <div class="tab-list-wrap">
+            <ul>
+                <li>
+                    <a href="#none" class="active">
+                        <p>인테리어</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>기념일</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>여름특집</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>전자제품</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>전문서적</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>우리아이</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>패션/뷰티</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="prod-list">
+                        <ul>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img9.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        스코티 장스탠드
+                                    </p>
+                                    <p>
+                                        <span>39% </span><span>109,000</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img10.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        한판 훈제오리 (1팩)
+                                    </p>
+                                    <p>
+                                        <span>8% </span><span>10,800</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img11.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        PICKLESUIT 보조등
+                                    </p>
+                                    <p>
+                                        <span>10% </span><span>33,000</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img12.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        [덴마크 120년 전통의 다나] 블루베리잼..
+                                    </p>
+                                    <p>
+                                        <span>2% </span><span>4,180</span>원
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                  <!-- <div class="swiper-slide">
+                    <div class="prod-list">
+                        <ul>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img11.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        PICKLESUIT 보조등
+                                    </p>
+                                    <p>
+                                        <span>10% </span><span>33,000</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img12.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        [덴마크 120년 전통의 다나] 블루베리잼..
+                                    </p>
+                                    <p>
+                                        <span>2% </span><span>4,180</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img9.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        스코티 장스탠드
+                                    </p>
+                                    <p>
+                                        <span>39% </span><span>109,000</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img10.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        한판 훈제오리 (1팩)
+                                    </p>
+                                    <p>
+                                        <span>8% </span><span>10,800</span>원
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="prod-list">
+                        <ul>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img9.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        스코티 장스탠드
+                                    </p>
+                                    <p>
+                                        <span>39% </span><span>109,000</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img10.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        한판 훈제오리 (1팩)
+                                    </p>
+                                    <p>
+                                        <span>8% </span><span>10,800</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img11.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        PICKLESUIT 보조등
+                                    </p>
+                                    <p>
+                                        <span>10% </span><span>33,000</span>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img-wrap">
+                                    <img src="./img/img12.png">
+                                </div>
+                                <div class="prod-text-wrap">
+                                    <p>
+                                        [덴마크 120년 전통의 다나] 블루베리잼..
+                                    </p>
+                                    <p>
+                                        <span>2% </span><span>4,180</span>원
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                  </div> -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+
+        <div class="bott-btn-wrap">
+            <img src="./img/btn3.png">
+        </div>
+    </div>
+
+  </section>
+
+  <section id="footer-wrap">
+    <img src="./img/footer.png">
+  </section>
+</body>
+
+
+<script src="./js/swiper-bundle.min.js"></script>
+<script>
+    //KV
+    var swiper = new Swiper("#section1 .mySwiper", {
+        spaceBetween: 30,
+        loop: true,
+        effect: "fade",
+        autoplay:{
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+    });
+
+    //추천상품
+    var swiper = new Swiper("#section4 .mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+    });
+
+    //FP몰 기획전
+    var swiper = new Swiper("#section6 .mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        effect: "fade",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    //테마존
+    // var swiper = new Swiper("#section7 .mySwiper", {
+    //     spaceBetween: 30,
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //       clickable: true,
+    //     },
+
+    // });
+</script>
+
+</html>
