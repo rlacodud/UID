@@ -23,13 +23,14 @@ header .right .user {display: inline-block; width: calc(100vw*124/1920); height:
 .nav-container .nav-depth.on {display: block;}
 
 #section1 {width: 100vw; overflow: hidden; height: calc(100vw*710/1920);}
-#section1 .slide-container {position: relative; width: 300vw; transform: translateX(-100vw); transition: all ease-in-out 0.3s;}
-#section1 .slide-container.left {transform: translateX(0%)}
-#section1 .slide-container.right {transform: translateX(-200vw)}
-#section1 .slide-container .slide {float: left; width: 100vw; height: calc(100vw*710/1920);}
+#section1 .slide-container {position: relative; width: 200vw; transition: all ease-in-out 0.3s;}
+#section1 .slide-container.right {transform: translateX(-100vw)}
+#section1 .slide-container .slide {position: relative; float: left; width: 100vw; height: calc(100vw*710/1920);}
+#section1 .number {transition: all ease-in-out 0.3s; z-index: 100; background-image: url('../img/slide1_number.png'); width: calc(100vw*81.37/1920); height: calc(100vw*87.21/1920); position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100vw*28.8/1920);}
+#section1 .number.two {background-image: url('../img/slide2_number.png');}
+
 #section1 .slide-container .slide:nth-child(1) {background-image: url('../img/section1_slide1.png');}
 #section1 .slide-container .slide:nth-child(2) {background-image: url('../img/section1_slide1.png');}
-#section1 .slide-container .slide:nth-child(3) {background-image: url('../img/section1_slide1.png');}
 #section1 .prev {position: absolute; z-index: 100; top: 50%; left: calc(100vw*40/1920); transform: translateY(-50%); width: calc(100vw*60/1920); height: calc(100vw*40/1920); background-image: url('../img/prev_arrow.png'); cursor: pointer;}
 #section1 .next {position: absolute; z-index: 100; top: 50%; right: calc(100vw*40/1920); transform: translateY(-50%); width: calc(100vw*60/1920); height: calc(100vw*40/1920); background-image: url('../img/next_arrow.png'); cursor: pointer;}
 #section1 .prev.off,
@@ -42,13 +43,13 @@ header .right .user {display: inline-block; width: calc(100vw*124/1920); height:
 #section2 .rightImage {display: inline-block; position: absolute; margin-top: calc(100vw*150/1920); left: calc(100vw*635/1920); width: calc(100vw*976/1920); height: calc(100vw*1381/1920); background-image: url('../img/section2_rightImage.png');}
 .limit1 {width: 100%; height: calc(100vw*150/1920);}
 
-.float-right {transition: opacity ease-in-out 0.3s; opacity: 0; position: fixed; z-index: 10000; width: calc(100vw*92/1920); height: calc(100vw*512/1920); background-image: url('../img/Float_Right.png'); top: calc(100vw*150/1920); right: calc(100vw*187/1920);}
+.float-right {transition: opacity ease-in-out 0.2s; opacity: 0; position: fixed; z-index: 10000; width: calc(100vw*92/1920); height: calc(100vw*512/1920); background-image: url('../img/Float_Right.png'); top: calc(100vw*150/1920); right: calc(100vw*187/1920);}
 .float-right.on {opacity: 1;}
 
 #section3 {height: calc(100vw*740/1920);}
 #section3 .slider-container {background: #FFFDF0; height: calc(100vw*700/1920); overflow-x: hidden;}
 #section3 .text {position: absolute; z-index: 100; top: calc(100vw*101/1920); left: 50%; transform: translateX(-50%); width: calc(100vw*626/1920); height: calc(100vw*35/1920); background-image: url('../img/section3_text.png');}
-#section3 .slider {transition: all ease-in-out 0.3s; position: absolute; top: calc(100vw*55/1920); left: 50%; transform: translateX(-50%); width: calc(100vw*3394/1920); height: calc(100vw*645/1920); background-image: url('../img/section3_slider.png');}
+#section3 .slider {transition: all ease-in-out 0.3s; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: calc(100vw*3500/1920); height: calc(100vw*700/1920); background-image: url('../img/section3_slider.png');}
 #section3 .slider.left {transform: translateX(-20%)}
 #section3 .slider.right {transform: translateX(-80%)}
 #section3 .prev {position: absolute; top: 50%; left: calc(100vw*40/1920); transform: translateY(-50%); width: calc(100vw*60/1920); height: calc(100vw*40/1920); background-image: url('../img/prev_arrow.png'); cursor: pointer;}

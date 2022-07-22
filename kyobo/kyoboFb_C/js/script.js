@@ -27,17 +27,17 @@ function mainScrollEvent() {
     $('.float-right').removeClass('on')
   }
 
-  if (documentHeight >= section2Top && documentHeight < limit1 - convertPx.vw(300)) {
+  if (documentHeight >= section2Top && documentHeight < limit1 - convertPx.vw(200)) {
       $('#section2 .leftText').addClass('active');
       
   } else if (documentHeight < section2Top) {
       $('#section2 .leftText').removeClass('active');
   }
 
-  if (imgBottom >= limit1 - convertPx.vw(300)) {
+  if (imgBottom >= limit1 - convertPx.vw(200)) {
     $('#section2 .leftText').addClass('finish');
   }
-  if (documentHeight2 < limit1 - convertPx.vw(300)) {
+  if (documentHeight2 < limit1 - convertPx.vw(200)) {
     $('#section2 .leftText').removeClass('finish');
   }
 
@@ -113,10 +113,12 @@ $('.nav-container .nav').on('click', function(e) {
 var section1ArrowCount = 0;
 
 $('#section1 .prev').on('click', function() {
-  if(section1ArrowCount > -1) {
+  if(section1ArrowCount > 0) {
     section1ArrowCount --;
   }
   if(section1ArrowCount == 0) {
+    $('#section1 .prev').addClass('off')
+    $('#section1 .number').removeClass('two')    
     $('#section1 .next').removeClass('off')
     $('#section1 .slide-container').removeClass('right');
   } else if(section1ArrowCount == -1) {
@@ -131,9 +133,10 @@ $('#section1 .next').on('click', function() {
     section1ArrowCount ++;
   }
   if(section1ArrowCount == 0) {
-    $('#section1 .prev').removeClass('off')
     $('#section1 .slide-container').removeClass('left');
   } else if(section1ArrowCount == 1) {
+    $('#section1 .number').addClass('two')    
+    $('#section1 .prev').removeClass('off')
     $('#section1 .next').addClass('off')
     $('#section1 .slide-container').addClass('right')
   }
