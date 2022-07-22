@@ -8,8 +8,9 @@
   <title>KYOBO A</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/swiper.css">
+  <link rel="stylesheet" href="./font/">
   <script src="./js/jquery-3.6.0.min.js"></script>
- 
+  <script src="jquery.fadethis.min.js"></script>
 
   <script>
     //공지순위
@@ -164,10 +165,33 @@
           }
           });
         });
+
+
+        //스크롤 이미지 애니메이션
+        $(window).scroll( function(){
+                
+            $('.s-effect').each( function(i){
+                
+                var bottom_of_element = $(this).offset().top + 500;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                if( bottom_of_window > bottom_of_element ){
+                    $(this).animate({'opacity':'1'},500);
+                }
+                
+            }); 
+        });
     });
   </script>
 
   <style>
+
+    @font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./font/Gotham-Bold.otf")
+    }
     .swiper {
         width: 100%;
         height: 100%;
@@ -184,24 +208,32 @@
       }
 
 
-      html{
-        background-color: #fff;
+      html, body{
+        background-color: #fff !important;
       }
-      body{
+      .body-wrap{
         background-color: #fff !important ;max-width: 1920px; margin:0 auto;
+      }
+      .s-effect{
+        opacity: 0;
+      }
+      .font{
+        font-family:  "Gotham";
       }
       /* 공지 롤링 */
       body{background-color:#d1d1d1;}
-      header{position: relative;z-index: 99;}
+      header{position: relative;z-index: 99;width: 100%;background: #fff;}
     .notice{width:175px; height:23px; overflow:hidden; position: absolute;right: 33%;top: 37%;}
     .rolling{position:relative; width:100%; height:auto;}
-    .rolling li{width:100%; height:23px; line-height:50px;}
+    .rolling li{width:95px;margin-left:81px; height:23px; line-height:50px;}
     .rolling_stop{display:block; width:100px; height:20px; background-color:#000; color:#fff; text-align:center;}
     .rolling_start{display:block; width:100px; height:20px; background-color:#000; color:#0f0; text-align:center;}
 
-    .ham-menu{position: absolute;top: 100%;z-index: 10;}
+    .ham-menu{position: absolute;top: 100%;z-index: 10;width: 100%;background: #fff;}
     nav a{width: 44px;height: 44px;background: url(./img/menu.png);display: inline-block;position: absolute;bottom: 11.3%;left: 18.6%;}
-    nav.jbFixed{position: fixed;margin-top: -118px;box-shadow: 0px 0px 20px 0 grey;}
+    nav{text-align: center;}
+    nav img{max-width: 1920px;margin: 0 auto;display: inline-block;}
+    nav.jbFixed{position: fixed;margin-top: -118px;box-shadow: 0px 0px 20px 0 grey;width: 100%;}
     .ham-menu .gnb-menu{display: none;}
     .ham-menu .gnb-menu.active{display: inline-block;}
     .float-menu{width: 61px;position: fixed;right: 3%;bottom: 17%;z-index: 9999; cursor: pointer;}
@@ -369,643 +401,645 @@
   </header>
     <div class="dim"></div>
 
-  <div class="float-menu">
-    <img src="./img/QUICK.png">
-  </div>
+    <section class="body-wrap">
+        <div class="float-menu">
+            <img src="./img/QUICK.png">
+        </div>
 
-  <section id="section1">
-    <div class="kv-wrap">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/KV1.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/KV2.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/KV3.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/KV4.png" />
-                  </div>
+        <section id="section1">
+            <div class="kv-wrap">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/KV1.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/KV2.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/KV3.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/KV4.png" />
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </div>
-  </section>
+        </section>
 
-  <section id="section2">
-    <div class="today">
-        <div class="title">
-            <img src="./img/tit1.png" />
-        </div>
-        <div class="today-list">
-            <ul>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                            
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                베스트상품
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                시즌상품
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                이벤트
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                기획전
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                최근구매상품
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                선물하기
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                도서/음반
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                대량구매관
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="today-list-con-wrap">
-                        <div class="today-list-thumb">
-                        </div>
-                        <div class="today-list-text">
-                            <p>
-                                핫PICK!
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-  </section>
-
-  <section id="section3">
-    <div class="best">
-        <div class="title">
-            <img src="./img/tit2.png" />
-        </div>
-        <div class="prod-list">
-            <ul>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img1.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            스코티 장스탠드
-                        </p>
-                        <p>
-                            <span>39% </span><span>109,000</span>원
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img2.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            한판 훈제오리 (1팩)
-                        </p>
-                        <p>
-                            <span>8% </span><span>10,800</span>원
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img3.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            PICKLESUIT 보조등
-                        </p>
-                        <p>
-                            <span>10% </span><span>33,000</span>원
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img4.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            [덴마크 120년 전통의 다나] 블루베리잼..
-                        </p>
-                        <p>
-                            <span>2% </span><span>4,180</span>원
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img5.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            발뮤다 더팟 전기주전자
-                        </p>
-                        <p>
-                            <span>30% </span><span>198,000</span>원
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img6.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            [더 메나쥬리] 마카롱 5입세트
-                        </p>
-                        <p>
-                            <span>5% </span><span>9,968</span>원
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img7.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            세안전과 효소 딥클렌징 에어리휩 폼
-                        </p>
-                        <p>
-                            <span>40% </span><span>8,800</span>원
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod-img-wrap">
-                        <img src="./img/img8.png">
-                    </div>
-                    <div class="prod-text-wrap">
-                        <p>
-                            스칸디 원형 세라믹 식탁 테이블
-                        </p>
-                        <p>
-                            <span>10% </span><span>635,500</span>원
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="bott-btn-wrap">
-            <img src="./img/btn1.png">
-        </div>
-    </div>
-  </section>
-
-  <section id="section4">
-    <div class="my-kyo">
-        <div class="bg-img">
-            <img src="./img/01_md_pick.png">
-        </div>
-
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/g1.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/g2.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/g3.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/g4.png" />
-                  </div>
+        <section id="section2">
+            <div class="today">
+                <div class="title">
+                    <img src="./img/tit1.png" />
+                </div>
+                <div class="today-list">
+                    <ul>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                    
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        베스트상품
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        시즌상품
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        이벤트
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        기획전
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        최근구매상품
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        선물하기
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        도서/음반
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        대량구매관
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="today-list-con-wrap">
+                                <div class="today-list-thumb">
+                                </div>
+                                <div class="today-list-text">
+                                    <p>
+                                        핫PICK!
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </div>
-  </section>
+        </section>
 
-  <section id="section5">
-    <div class="cate-wrap">
-        <div class="title">
-            <img src="./img/tit3.png">
-        </div>
-        <div class="tab-list-wrap">
-            <ul>
-                <li>
-                    <a href="#none" class="active">
-                        <p>시즌상품</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>주방용품</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>식품/건강</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>위생</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>생활용품</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>패션잡화</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>식당/카페</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="cate-list-wrap">
-            <img src="./img/cate-list.png">
-        </div>
-        <div class="bott-btn-wrap">
-            <img src="./img/btn2.png">
-        </div>
-    </div>
-  </section>
+        <section id="section3" class="s-effect">
+            <div class="best">
+                <div class="title">
+                    <img src="./img/tit2.png" />
+                </div>
+                <div class="prod-list">
+                    <ul>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img1.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    스코티 장스탠드
+                                </p>
+                                <p>
+                                    <span class="font">39% </span><span class="font">109,000</span>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img2.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    한판 훈제오리 (1팩)
+                                </p>
+                                <p>
+                                    <span class="font">8% </span><span class="font">10,800</span>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img3.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    PICKLESUIT 보조등
+                                </p>
+                                <p>
+                                    <span class="font">10% </span><span class="font">33,000</span>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img4.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    [덴마크 120년 전통의 다나] 블루베리잼..
+                                </p>
+                                <p>
+                                    <span class="font">2% </span><span class="font">4,180</span>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img5.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    발뮤다 더팟 전기주전자
+                                </p>
+                                <p>
+                                    <span class="font">30% </span><span class="font">198,000</span>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img6.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    [더 메나쥬리] 마카롱 5입세트
+                                </p>
+                                <p>
+                                    <span class="font">5% </span><span class="font">9,968</span>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img7.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    세안전과 효소 딥클렌징 에어리휩 폼
+                                </p>
+                                <p>
+                                    <span class="font">40% </span><span class="font">8,800</span>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prod-img-wrap">
+                                <img src="./img/img8.png">
+                            </div>
+                            <div class="prod-text-wrap">
+                                <p>
+                                    스칸디 원형 세라믹 식탁 테이블
+                                </p>
+                                <p>
+                                    <span class="font">10% </span><span class="font">635,500</span>원
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bott-btn-wrap">
+                    <img src="./img/btn1.png">
+                </div>
+            </div>
+        </section>
 
-  <section id="section6">
-    <div class="ft-mall">
-        <div class="title">
-            <img src="./img/tit4.png">
-        </div>
-        <div class="tab-list-wrap">
-            <ul>
-                <li>
-                    <a href="#none" class="active">
-                        <p>인테리어</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>기념일</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>여름특집</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>전자제품</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>전문서적</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>우리아이</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>패션/뷰티</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="ft-mall-banner">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./img/FP_img.png" />
+        <section id="section4" class="s-effect">
+            <div class="my-kyo">
+                <div class="bg-img">
+                    <img src="./img/01_md_pick.png">
+                </div>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/g1.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/g2.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/g3.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/g4.png" />
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./img/FP_img2.png" />
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section5" class="s-effect">
+            <div class="cate-wrap">
+                <div class="title">
+                    <img src="./img/tit3.png">
+                </div>
+                <div class="tab-list-wrap">
+                    <ul>
+                        <li>
+                            <a href="#none" class="active">
+                                <p>시즌상품</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>주방용품</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>식품/건강</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>위생</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>생활용품</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>패션잡화</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>식당/카페</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cate-list-wrap">
+                    <img src="./img/cate-list.png">
+                </div>
+                <div class="bott-btn-wrap">
+                    <img src="./img/btn2.png">
+                </div>
+            </div>
+        </section>
+
+        <section id="section6" class="s-effect">
+            <div class="ft-mall">
+                <div class="title">
+                    <img src="./img/tit4.png">
+                </div>
+                <div class="tab-list-wrap">
+                    <ul>
+                        <li>
+                            <a href="#none" class="active">
+                                <p>인테리어</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>기념일</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>여름특집</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>전자제품</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>전문서적</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>우리아이</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>패션/뷰티</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ft-mall-banner">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/FP_img.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/FP_img2.png" />
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
-        </div>
-    </div>
-  </section>
+        </section>
 
-  <section id="section7">
-    <div class="price">
-        <div class="title">
-            <img src="./img/tit5.png">
-        </div>
-        <div class="tab-list-wrap">
-            <ul>
-                <li>
-                    <a href="#none" class="active">
-                        <p>인테리어</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>기념일</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>여름특집</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>전자제품</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>전문서적</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>우리아이</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <p>패션/뷰티</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <section id="section7" class="s-effect">
+            <div class="price">
+                <div class="title">
+                    <img src="./img/tit5.png">
+                </div>
+                <div class="tab-list-wrap">
+                    <ul>
+                        <li>
+                            <a href="#none" class="active">
+                                <p>인테리어</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>기념일</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>여름특집</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>전자제품</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>전문서적</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>우리아이</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p>패션/뷰티</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="prod-list">
-                        <ul>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img9.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        스코티 장스탠드
-                                    </p>
-                                    <p>
-                                        <span>39% </span><span>109,000</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img10.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        한판 훈제오리 (1팩)
-                                    </p>
-                                    <p>
-                                        <span>8% </span><span>10,800</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img11.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        PICKLESUIT 보조등
-                                    </p>
-                                    <p>
-                                        <span>10% </span><span>33,000</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img12.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        [덴마크 120년 전통의 다나] 블루베리잼..
-                                    </p>
-                                    <p>
-                                        <span>2% </span><span>4,180</span>원
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="prod-list">
+                                <ul>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img9.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                스코티 장스탠드
+                                            </p>
+                                            <p>
+                                                <span class="font">39% </span><span class="font">109,000</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img10.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                한판 훈제오리 (1팩)
+                                            </p>
+                                            <p>
+                                                <span class="font">8% </span><span class="font">10,800</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img11.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                PICKLESUIT 보조등
+                                            </p>
+                                            <p>
+                                                <span class="font">10% </span><span class="font">33,000</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img12.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                [덴마크 120년 전통의 다나] 블루베리잼..
+                                            </p>
+                                            <p>
+                                                <span class="font">2% </span><span class="font">4,180</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide">
+                            <div class="prod-list">
+                                <ul>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img11.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                PICKLESUIT 보조등
+                                            </p>
+                                            <p>
+                                                <span>10% </span><span>33,000</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img12.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                [덴마크 120년 전통의 다나] 블루베리잼..
+                                            </p>
+                                            <p>
+                                                <span>2% </span><span>4,180</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img9.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                스코티 장스탠드
+                                            </p>
+                                            <p>
+                                                <span>39% </span><span>109,000</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img10.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                한판 훈제오리 (1팩)
+                                            </p>
+                                            <p>
+                                                <span>8% </span><span>10,800</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="prod-list">
+                                <ul>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img9.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                스코티 장스탠드
+                                            </p>
+                                            <p>
+                                                <span>39% </span><span>109,000</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img10.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                한판 훈제오리 (1팩)
+                                            </p>
+                                            <p>
+                                                <span>8% </span><span>10,800</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img11.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                PICKLESUIT 보조등
+                                            </p>
+                                            <p>
+                                                <span>10% </span><span>33,000</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="prod-img-wrap">
+                                            <img src="./img/img12.png">
+                                        </div>
+                                        <div class="prod-text-wrap">
+                                            <p>
+                                                [덴마크 120년 전통의 다나] 블루베리잼..
+                                            </p>
+                                            <p>
+                                                <span>2% </span><span>4,180</span>원
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
                     </div>
-                  </div>
-                  <!-- <div class="swiper-slide">
-                    <div class="prod-list">
-                        <ul>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img11.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        PICKLESUIT 보조등
-                                    </p>
-                                    <p>
-                                        <span>10% </span><span>33,000</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img12.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        [덴마크 120년 전통의 다나] 블루베리잼..
-                                    </p>
-                                    <p>
-                                        <span>2% </span><span>4,180</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img9.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        스코티 장스탠드
-                                    </p>
-                                    <p>
-                                        <span>39% </span><span>109,000</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img10.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        한판 훈제오리 (1팩)
-                                    </p>
-                                    <p>
-                                        <span>8% </span><span>10,800</span>원
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="prod-list">
-                        <ul>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img9.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        스코티 장스탠드
-                                    </p>
-                                    <p>
-                                        <span>39% </span><span>109,000</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img10.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        한판 훈제오리 (1팩)
-                                    </p>
-                                    <p>
-                                        <span>8% </span><span>10,800</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img11.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        PICKLESUIT 보조등
-                                    </p>
-                                    <p>
-                                        <span>10% </span><span>33,000</span>원
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prod-img-wrap">
-                                    <img src="./img/img12.png">
-                                </div>
-                                <div class="prod-text-wrap">
-                                    <p>
-                                        [덴마크 120년 전통의 다나] 블루베리잼..
-                                    </p>
-                                    <p>
-                                        <span>2% </span><span>4,180</span>원
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                  </div> -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+
+                <div class="bott-btn-wrap">
+                    <img src="./img/btn3.png">
+                </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
 
+        </section>
 
-        <div class="bott-btn-wrap">
-            <img src="./img/btn3.png">
-        </div>
-    </div>
-
-  </section>
-
-  <section id="footer-wrap">
-    <img src="./img/footer.png">
-  </section>
+        <section id="footer-wrap">
+            <img src="./img/footer.png">
+        </section>
+    </section>
 </body>
 
 
