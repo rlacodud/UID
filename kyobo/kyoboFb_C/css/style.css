@@ -30,7 +30,7 @@ header .right .user {display: inline-block; width: calc(100vw*124/1920); height:
 #section1 .number.two {background-image: url('../img/slide2_number.png');}
 
 #section1 .slide-container .slide:nth-child(1) {background-image: url('../img/section1_slide1.png');}
-#section1 .slide-container .slide:nth-child(2) {background-image: url('../img/section1_slide1.png');}
+#section1 .slide-container .slide:nth-child(2) {background-image: url('../img/section1_slide2.png');}
 #section1 .prev {position: absolute; z-index: 100; top: 50%; left: calc(100vw*40/1920); transform: translateY(-50%); width: calc(100vw*60/1920); height: calc(100vw*40/1920); background-image: url('../img/prev_arrow.png'); cursor: pointer;}
 #section1 .next {position: absolute; z-index: 100; top: 50%; right: calc(100vw*40/1920); transform: translateY(-50%); width: calc(100vw*60/1920); height: calc(100vw*40/1920); background-image: url('../img/next_arrow.png'); cursor: pointer;}
 #section1 .prev.off,
