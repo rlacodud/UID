@@ -10,16 +10,18 @@ body::-webkit-scrollbar {
 .center{width: 1920px;  margin: 0 auto; overflow: hidden;}
 .grayBack {display: none; z-index: 80000; position: absolute; left: 50%; transform: translateX(-50%); width: 1920px; height: 16693px; background-color: black; opacity: 0.5;}
 
-.rightFix {position: fixed; width:  80px; bottom: 0; right:  40px; z-index: 1;}
+.rightFix {position: fixed; width:  80px; bottom: 250px; right:  40px; z-index: 1;}
 
 #section1 {position: relative; width: 100%; height: 1080px;}
+#section1 .banner-btn-add{position: absolute;top: 48%;left: 12.6%;z-index: 9;}
 #section1 .navBtn {position: absolute; top: 95px; left: 80px; width: 30px; cursor: pointer;z-index: 900000;}
 #section1 .navBtn .navBtn1 {width: 30px;}
 #section1 .navBtn .navBtn2 {width: 30px; display: none;}
 #section1 .nav {position: absolute; top: 0; left: 0; z-index: 900000; top: 165px; left: 80px; display: none;}
 #section1 .header {width: 932px; position: absolute; left: 908px;}
 #section1 .menu {width: 1001px; position: absolute; top:  230px; left: 240px;}
-#section1 .sec1Search {width:  359px; position: absolute; top:  228px; left: 1321px;} 
+#section1 .search-wrap {width:  359px; position: absolute; top:  228px; left: 1321px;} 
+#section1 .sec1Search2 {position: absolute;right: 3%;width: 7.5%;} 
 #section1 .sec1RankDiv {width: 359px; position: absolute; top:  278px; left: 1321px;}
 #section1 .sec1RankDiv .sec1RankBtn {position: relative; left: 107px;}
 #section1 .sec1RankDiv .sec1Rank {display: none; position: relative; top: -42px; z-index: 100;}
@@ -55,12 +57,15 @@ body::-webkit-scrollbar {
 #section3 .sec3Text {position: absolute; right: 109.7px;}
 #section3 .sec3List {position: absolute; top: 910.6px; left: 50%; transform: translateX(-50%);}
 #section3 .sec3ListText1 {position: absolute; top: 444.6px; left: 160px;}
-#section3 .sec3ListImg {position: absolute; transition: .5s; opacity: 0;}
+#section3 .sec3ListImg {position: absolute; transition: 0.5s; opacity: 0;}
 #section3 .sec3ListImg1 {position: absolute; top: 59px; left: 461.5px; transition: .5s; opacity: 1;}
-#section3 .sec3ListImg2 {position: absolute; transform: scale(3); top: 400px; left: 861.5px; transition: .5s;}
-#section3 .sec3ListImg3 {position: absolute; transform: scale(2.5); top: 400px; left: 861.5px; transition: .5s;}
-#section3 .sec3ListImg4 {position: absolute; transform: scale(2.5); top: 400px; left: 861.5px; transition: .5s;}
-#section3 .sec3ListImg5 {position: absolute; transform: scale(3); top: 400px; left: 861.5px; transition: .5s;}
+#section3 .sec3ListImg2 {position: absolute; transform: scale(3); top: 400px; left: 861.5px; transition: 0.5s;}
+#section3 .sec3ListImg3 {position: absolute; transform: scale(2.5); top: 400px; left: 861.5px; transition: 0.5s;}
+#section3 .sec3ListImg4 {position: absolute; transform: scale(2.5); top: 400px; left: 861.5px; transition: 0.5s;}
+#section3 .sec3ListImg5 {position: absolute; transform: scale(3); top: 400px; left: 861.5px; transition: 0.5s;}
+
+#section3 .sec3ListText1 {position: absolute; transform: translateY(-50%); top:37%; transition: 0.5s; opacity: 1;}
+#section3 .sec3ListText2 {position: absolute; transform: translateY(-50%); top:37%;left: 8.3%; transition: 0.5s; opacity: 0;}
 #section3 .sec3ImgDiv {
     /* border: 1px solid red; */
     position: relative;
@@ -68,7 +73,7 @@ body::-webkit-scrollbar {
     width: 1156.55px;
     height: 1099.38px;
     animation-name: sec3ImgDiv; 
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     /* animation-direction: reverse; */
     animation-timing-function: ease-in-out;
@@ -87,7 +92,7 @@ body::-webkit-scrollbar {
         width: 1156.55px;
     height: 1099.38px;
     animation-name: sec3Img; 
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     /* animation-direction: reverse; */
     animation-timing-function: ease-in-out;
@@ -103,7 +108,8 @@ body::-webkit-scrollbar {
     }
 }
 
-
+.slick-next.active{background-image: url(../img/NEXT.png); height: 26px;background-repeat: no-repeat; margin-top: -5px;}
+.slick-prev.active{background-image: url(../img/PREV.png); height: 26px;background-repeat: no-repeat; margin-top: -5px; background-position: 100% 100%;}
 
 #section4 { position: relative; width: 100%;height:  1463px;}
 #section4 .sec4Text{width:  1440px; position: relative; left: 50%; transform: translateX(-50%); margin-bottom: 80px ;}
@@ -161,19 +167,25 @@ body::-webkit-scrollbar {
 
 
 .event {width: 100%;}
-.event2 {width: 100%;}
+.event2 {width: 100%;background: #f9f9f9;}
 
-#section7 {position: relative; width: 100%; height:  1333px;}
-#section7 .sec7Container{border: 1px solid yellow; position: absolute; width: 100%; height: 448px; top:  474px; left: 50%; transform: translateX(-50%); border: solid 1px red;}
-#section7 .sec7Container .sec7Slide{margin: 0 10px; position: relative; width:  277px; border: 1px solid green;}
+#section7 {position: relative; width: 100%; height:  1333px;    margin-top: -0.1%;}
+#section7 .sec7Container{position: absolute; width: 100%; height: 448px; top:  474px; left: 50%; transform: translateX(-50%);}
+#section7 .sec7Container .sec7Slide{margin: 0 10px; position: relative; width:  277px;margin-top: 1%;}
 #section7 .sec7Container .sec7Slide img{position: relative; left: 50%; transform: translateX(-50%);}
+#section7 .sec7SlidetextWrap{position: absolute;bottom: 16%;left: 50%;transform: translateX(-50%);}
+#section7 .slick-current.slick-active{height: 15vw;}
+#section7 .slick-current.slick-active img{height: 100%;margin-top: -8%;}
+#section7 .slick-arrow{display: none !important;}
 
-#section8 {position: relative; width: 100%; height:  1200px;}
+#section8 {position: relative; width: 100%; height:  1200px; padding-top: 250px;}
 #section8 .sec8Container{ vertical-align: bottom; position: relative; width: 100%; left: 50%; transform: translateX(-50%); height: 930px ;}
 #section8 .sec8Container .sec8Slide{height:  930px; margin: 0  25px; width:  359px;position: relative;}
 /* #section8 .sec8Container .sec8Slide img{vertical-align: bottom;margin: 0  25px; width:  359px; border: 1px solid blue; display: inline-block;} */
 #section8 .sec8Container .sec8Slide.sec8Slide1{width:  620px !important;}
 #section8 .sec8Container .sec8Slide img{width: 100%; position: absolute; bottom: 0;}
 #section8 .sec8Container .sec8Slide .sec8Hover{display: none;}
+#section8 .bg-img img{position: absolute;right: 0;top: 9%;width: 40.8%;z-index: 1;}
 
 .footerImg {width: 100%;}
+footer {padding-top: 110px !important;}
