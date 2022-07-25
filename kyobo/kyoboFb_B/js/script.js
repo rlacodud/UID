@@ -237,3 +237,30 @@ $('.slick-arrow').hover(function(){
 }, function(){
     $(this).removeClass('active')
 })
+
+
+
+//MO
+$('.sec3Container').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    slidesToShow: 1.5,
+});
+$('.sec5Container').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    slidesToShow: 1.6,
+});
+$('.sec9Container').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    slidesToShow: 1
+    ,
+});
+$(".img-bot-li").click(function(){
+    $(".img-bot + img").removeClass("active");
+    $(this).find(".img-bot + img").addClass("active");
+})
