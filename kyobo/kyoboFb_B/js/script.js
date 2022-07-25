@@ -53,12 +53,14 @@ $('.sec2Slide').on('mouseenter',function(){
     $(this).find('.sec2Hover').css({
         'display':'block'
     })
+    $(this).find(".sec2Hover_sub").addClass("active");
 })
 $('.sec2Slide').on('mouseleave',function(){
     console.log('안녕')
     $(this).find('.sec2Hover').css({
         'display':'none'
     })
+    $(this).find(".sec2Hover_sub").removeClass("active");
 })
 
 $('.sec5Items').hover(function(){
@@ -144,11 +146,12 @@ $('.sec6Img').on('mouseleave',function(){
         ]
     });
     $('.sec8Container').slick({
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
-        centerMode: true,
+        centerMode: false,
         centerPadding: 'calc(100vw*10 /1920)',
         slidesToShow: 4,
+        
     });
 
 
@@ -247,7 +250,7 @@ $('.sec3Container').slick({
     centerMode: true,
     slidesToShow: 1.5,
 });
-$('.sec5Container').slick({
+$('.sec10Container').slick({
     autoplay: true,
     autoplaySpeed: 3000,
     centerMode: true,
