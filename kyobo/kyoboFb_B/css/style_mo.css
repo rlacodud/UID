@@ -27,7 +27,7 @@ img{width: 100%;}
 }
 #section1 {padding-bottom: 41vw;max-height: 1164px;box-sizing: border-box; position: relative;}
 #section1 .banner-wrap{position: relative;height: 56vw;margin-top: 8%;padding-top: 18%; max-height: 724px;}
-#section1 .top-menu{position: absolute;top: 4%;z-index: 1;width: 95%;padding-left: 5%;}
+#section1 .top-menu{position: absolute;top: 6%;z-index: 1;width: 95%;padding-left: 5%;}
 #section1 .slick-slider{padding: 0 0 0 4%;}
 #section1 .progress-wrap{position: absolute;bottom: 11%;left: 4%;width: 31vw;max-width: 225px;}
 #section1 .slick-arrow{display: none !important;}
@@ -39,7 +39,7 @@ img{width: 100%;}
 #section2 .slick-arrow{display: none !important;}
 
 #section3 .sec3ListImgMo{width: 200px;}
-#section3 {position: relative; width: 100%; overflow: hidden; max-height: 900px;min-height: 923px;     padding-bottom: 20vw;}
+#section3 {position: relative; width: 100%; overflow: hidden;padding-bottom: 20vw;}
 #section3 .sec3Text {float: right;padding-left: 18%;display: inline-block;width: 100%;box-sizing: border-box;;}
 #section3 .sec3List {position: absolute; top: 684.6px; left: 50%; transform: translateX(-50%);}
 #section3 .sec3ListText1 {position: absolute; top: 444.6px; left: 160px;}
@@ -113,7 +113,7 @@ img{width: 100%;}
 #section3 .sec3ListImgMo_list3{
     width: 100px; height: auto;top: 30%;left:46%;
 }
-#section3 .more{position: absolute;bottom: 6%;left: 50%;transform: translateX(-50%);}
+#section3 .more{position: absolute;bottom: 5%;left: 50%;transform: translateX(-50%);}
 #section3 .slick-slide{margin-left: 10px;}
 #section3 .slick-slider{margin-top: 5%;}
 
