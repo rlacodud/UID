@@ -7,7 +7,7 @@ img{width: 100%;}
 .top{padding-top: 25px;padding-left:15px;padding-bottom:10px;}
 #section2{margin-top:60px;padding-left:15px;}
 #section3,#section6,#section7{margin-top:60px;}
-#section3 .scrolling_txt {position: relative; width: 100%; height: 30px; border-top: 1px solid #000;border-bottom: 1px solid #000; overflow: visible;}
+#section3 .scrolling_txt {overflow: hidden;position: relative; width: 100%; height: 30px; border-top: 1px solid #000;border-bottom: 1px solid #000; overflow: visible;}
 #section3 .scrolling_txt h2 {position: absolute; width: 100%; height: 100%; margin: 0; padding: 0; text-align: center; white-space:nowrap; text-transform:uppercase; transform: translateX(100%); animation: scrolling_txt 20s linear infinite;}
 @keyframes scrolling_txt {
   0% {
