@@ -185,7 +185,7 @@ let count = 1;
 
 const timeoutId = setInterval(() => {
   console.log(count) // 1 2 3 4 5
-  if (count === 6) {
+  if (count === 4) {
     // clearInterval(timeoutId)
     count = 1;
   }
@@ -193,39 +193,23 @@ const timeoutId = setInterval(() => {
     $('.sec3ListImg1, .sec3ListText1').css({
         'opacity':'0'
     })
-    $('.sec3ListImg2, .sec3ListText2').css({
+    $('.sec3ListImg4, .sec3ListText2').css({
         'opacity':'1'
     })
   }
   if (count == 2) {
-    $('.sec3ListImg2, .sec3ListText2').css({
+    $('.sec3ListImg4, .sec3ListText2').css({
         'opacity':'0'
     })
-    $('.sec3ListImg3, .sec3ListText1').css({
+    $('.sec3ListImg5, .sec3ListText2').css({
         'opacity':'1'
     })
   }
   if (count == 3) {
-    $('.sec3ListImg3, .sec3ListText1').css({
+    $('.sec3ListImg5, .sec3ListText2').css({
         'opacity':'0'
     })
-    $('.sec3ListImg4, .sec3ListText2').css({
-        'opacity':'1'
-    })
-  }
-  if (count == 4) {
-    $('.sec3ListImg4, .sec3ListText2').css({
-        'opacity':'0'
-    })
-    $('.sec3ListImg5, .sec3ListText1').css({
-        'opacity':'1'
-    })
-  }
-  if (count == 5) {
-    $('.sec3ListImg5, .sec3ListText1').css({
-        'opacity':'0'
-    })
-    $('.sec3ListImg1, .sec3ListText2').css({
+    $('.sec3ListImg1, .sec3ListText1').css({
         'opacity':'1'
     })
   }
