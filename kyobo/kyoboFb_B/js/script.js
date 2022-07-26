@@ -241,12 +241,18 @@ $('.sec10Container').slick({
     slidesToShow: 1.6,
 });
 $('.sec9Container').slick({
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     centerMode: true,
     slidesToShow: 1
     ,
 });
+$('.sec9Container').on('afterChange', function(event, slick, currentSlide){     
+    // console.log(currentSlide);  
+    $('#section9 img').removeClass('active'); 
+    $('#section9 .slick-current img').addClass('active'); 
+});
+
 $(".img-bot-li").click(function(){
     $(".img-bot + img").removeClass("active");
     $(this).find(".img-bot + img").addClass("active");
