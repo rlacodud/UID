@@ -63,8 +63,8 @@ body::-webkit-scrollbar {
 #section3 .sec3ListImg1 {position: absolute; top: 59px; left: 461.5px; transition: .5s; opacity: 1;}
 #section3 .sec3ListImg2 {position: absolute; transform: scale(3); top: 400px; left: 861.5px; transition: 0.5s;}
 #section3 .sec3ListImg3 {position: absolute; transform: scale(2.5); top: 400px; left: 861.5px; transition: 0.5s;}
-#section3 .sec3ListImg4 {position: absolute; transform: scale(2.5); top: 400px; left: 861.5px; transition: 0.5s;}
-#section3 .sec3ListImg5 {position: absolute; transform: scale(3); top: 400px; left: 861.5px; transition: 0.5s;}
+#section3 .sec3ListImg4 {position: absolute; transform: scale(1); top: 220px; left: 500px; transition: 0.5s;}
+#section3 .sec3ListImg5 {position: absolute; transform: scale(1); top: 160px; left: 570px; transition: 0.5s;}
 
 #section3 .sec3ListText1 {position: absolute; transform: translateY(-50%); top:37%; transition: 0.5s; opacity: 1;}
 #section3 .sec3ListText2 {position: absolute; transform: translateY(-50%); top:37%;left: 8.3%; transition: 0.5s; opacity: 0;}
