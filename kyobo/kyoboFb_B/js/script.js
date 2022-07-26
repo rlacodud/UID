@@ -241,7 +241,7 @@ $('.sec10Container').slick({
     slidesToShow: 1.6,
 });
 $('.sec9Container').slick({
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     centerMode: true,
     slidesToShow: 1
