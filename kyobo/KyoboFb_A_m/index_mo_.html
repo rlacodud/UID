@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kyoboFb_A_mobile</title>
+
+    <!-- / CSS / -->
+    <!-- <link href="./css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="./css/reset.css">
+
+    <style>
+
+        body { max-width: 720px; margin: 0 auto !important; }
+        html,body { position: relative; height: 100%; background-color: #fff !important; }
+        img  { width: 100%; vertical-align: middle; }
+
+        .swiper  { width: 100%; height: 100%; margin-left: auto; margin-right: auto; }
+        .swiper-slide  {	text-align: center; font-size: 18px; background: #fff; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;}
+        .body-wrap  { background-color: #fff !important; max-width: 720px; margin: 0 auto; }
+        .s-effect  { opacity: 0; }
+        .font  { font-family: Gotham; }
+        .notice  { width: 26%; height: 20px; overflow: hidden; position: absolute; right: 45.7%; top: 8.5%; }
+        .rolling  { position: relative; width: 100%; height: auto; }
+        .rolling li  { width: 85%; height: 23px; line-height: 25px; }
+        .rolling li img  { width: 100%; }
+        .rolling_stop  { display: block; width: 100px; height: 20px; background-color: #000; color: #fff; text-align: center; }
+        .rolling_start  { display: block; width: 100px; height: 20px; background-color: #000; color: #0f0; text-align: center; }
+        .float_menu  { width: 61px; position: fixed; right: 8%; bottom: 17%; z-index: 9999; cursor: pointer; }
+        
+        #section04  { background: #fff; position: relative; overflow: hidden; }
+        #section04 .recommend  { position: relative; }
+        #section04 .recommend_text  { position: absolute; left: 50%; transform: translateX(-50%); }
+        #section04 .swiper-pagination  { text-align: center; width: 100%; }
+        #section04 .swiper-pagination-bullet  { transition: .3s; margin: 0 3px; }
+        #section04 .swiper-pagination-bullet-active  { width: 20px; border-radius: 5px; background: #ff0102; }
+        #section04 .swiper-container  { width: 100%; margin-top: -87px; padding-bottom: 170px; }
+        #section04 .swiper-slide  { width: 200px; position: relative; text-align: center; background-color: transparent; height: 350px; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; transform: scale(0.8); transition: .5s; opacity: 0.8; align-content: center; flex-direction: column; align-items: center; justify-content: space-evenly; }
+        #section04 .swiper-slide shadow  { box-shadow: 0 8px 20px 0 red; border-radius: 30px; }
+        #section04 .swiper-slide-active  { transform: scale(1.2); opacity: 1; z-index: 1; margin: 0; }
+        #section04 .swiper-slide-next  { transform: scale(0.8) translateX(-20%); }
+        #section04 .swiper-slide-prev  { transform: scale(0.8) translateX(20%); }
+        #section04 .swiper-slide span  { display: block; position: absolute; top: 0; left: 50%; transform: translateX(-50%); margin-top: 50px; }
+        .section04_info_txt { padding-top: 50px; }
+        #section04 .more_btn  { margin-top: 100px; }
+       
+        #section6 .swiper  { width: 100%; height: 100%; margin-left: auto; margin-right: auto; overflow: initial; }
+        #section6 .swiper-slide{text-align:center;font-size:18px;background-color:#f8f9fa;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}
+        #section6 .swiper-button-prev, #section6 .swiper-button-next  { color: #ccc; }
+        #section6 .swiper-button-prev:after,
+        #section6 .swiper-button-next:after  { font-size: 1.56vw; }
+        #section6 .swiper-button-prev  { left: -7.5%; }
+        #section6 .swiper-button-next  { right: -7.5%; }
+        #section6 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal  { position: absolute; top: -18%; height: 5%; }
+        #section6 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets span  { float: left; width: 76px; border-radius: 0; height: 21px; opacity: 0; margin-left: 13px; }
+        #section6 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets span+span  { float: left; width: 61px; border-radius: 0; height: 21px; opacity: 0; margin-left: 29px; }
+        .swiper-slide img, #section6 .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+        #topNav{display:none;width:100%;height:170px;background-color:red}
+        #topNav.active{display:block;background-color:rgb(59, 6, 6);position:fixed;z-index:999}
+    </style>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="topNav">
+            
+        </div>
+
+        <div id="header">
+            <nav class="">
+                <div class="nav_box">
+                    <img src="./img/nav.png">
+                    <!-- <div class="notice">
+                        <ul class="rolling" style="top: -46px;">
+                            <li>
+                                <img src="./img/sil1.png">
+                            </li>
+                            <li>
+                                <img src="./img/sil2.png">
+                            </li>
+                            <li>
+                                <img src="./img/sil3.png">
+                            </li>
+                            <li>
+                                <img src="./img/sil1.png">
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </nav>
+            <div class="container"></div>
+        </div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <section class="body_wrap">
+            <div class="float_menu">
+                <img src="./img/QUICK.png">
+            </div>
+            <section id="section1">
+                <div class="kv-wrap">
+                    <div class="swiper mySwiper main_visual_wrap ">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide main_visual">
+                                <img src="./img/main_visual_01.png">
+                            </div>
+                            <div class="swiper-slide main_visual">
+                                <img src="./img/main_visual_02.png">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section id="section2">
+                <div class="today">
+                    <img src="./img/today.png">
+                </div>
+            </section>
+            <section id="section3">
+                <div class="best">
+                    <img src="./img/best.png">
+                </div>
+            </section>
+            <section id="section04">
+                <div class="recommend">
+                    <img src="./img/recommend_bak.png">
+                </div>
+                <!-- Swiper -->
+                <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                    <ul class="swiper-wrapper" id="swiper-wrapper-516dbd0f876cf995" aria-live="polite"
+                        style="transition-duration: 0ms; transform: translate3d(-107%, 0px, 0px);">
+
+                        <li class="swiper-slide slide01" data-swiper-slide-index="0" role="group" aria-label="1 / 3">
+                            <div class="shadow">
+                                <img src="./img/recommend_01.png">
+                            </div>
+                            <div class="section04_info_txt">
+                                <img src="./img/recommend_01_text.png">
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide02 swiper-slide-active" data-swiper-slide-index="1" role="group"
+                            aria-label="2 / 3">
+                            <div class="shadow">
+                                <img src="./img/recommend_02.png">
+                            </div>
+                            <div class="section04_info_txt">
+                                <img src="./img/recommend_02_text.png">
+                            </div>
+                        </li>
+                        <li class="swiper-slide slide03" data-swiper-slide-index="2" role="group" aria-label="3 / 3">
+                            <div class="shadow">
+                                <img src="./img/recommend_03.png">
+                            </div>
+                            <div class="section04_info_txt">
+                                <img src="./img/recommend_03_text.png">
+                            </div>
+                        </li>
+                    </ul>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+
+                <div class="recommend_text">
+                    <img src="./img/recommend_02_text.png">
+                </div>
+            </section>
+            <section id="section5">
+                <div class="product">
+                    <img src="./img/product.png">
+                </div>
+            </section>
+            <section id="section6">
+                <div class="plan">
+                    <img src="./img/plan_00.png">
+                    <div
+                        class="swiper mySwiper swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden">
+                        <div class="swiper-wrapper" id="swiper-wrapper-19e5d5b5d5acc6fe" aria-live="polite"
+                            style="transition-duration: 0ms;">
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev swiper-slide-duplicate-next"
+                                data-swiper-slide-index="1" role="group" aria-label="2 / 2"
+                                style="width: 720px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                                <img src="./img/plan_01.png">
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible swiper-slide-active"
+                                data-swiper-slide-index="0" role="group" aria-label="1 / 2"
+                                style="width: 720px; opacity: 1; transform: translate3d(-720px, 0px, 0px); transition-duration: 0ms;">
+                                <img src="./img/plan_02.png">
+                            </div>
+                            <div class="swiper-slide swiper-slide-next swiper-slide-duplicate-prev"
+                                data-swiper-slide-index="1" role="group" aria-label="2 / 2"
+                                style="width: 720px; opacity: 0; transform: translate3d(-2400px, 0px, 0px); transition-duration: 0ms;">
+                                <img src="./img/plan_01.png">
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                data-swiper-slide-index="0" role="group" aria-label="1 / 2"
+                                style="width: 720px; opacity: 0; transform: translate3d(-3600px, 0px, 0px); transition-duration: 0ms;">
+                                <img src="./img/plan_02.png">
+                            </div>
+                        </div>
+                        <div
+                            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                role="button" aria-label="Go to slide 1" aria-current="true"></span><span
+                                class="swiper-pagination-bullet" tabindex="0" role="button"
+                                aria-label="Go to slide 2"></span></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="section7">
+                <div class="themezone">
+                    <img src="./img/themezone.png">
+                </div>
+            </section>
+        </section>
+        <div id="footer">
+            <img src="./img/footer.png">
+        </div>
+    </div>
+
+    <!-- / script / -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        
+        // 공지 순위
+        $(document).ready(function () {
+            var height = $(".notice").height();
+            var num = $(".rolling li").length;
+            var max = height * num;
+            var move = 0;
+
+            function noticeRolling() {
+                move += height;
+                $(".rolling").animate({
+                    "top": -move
+                }, 600, function () {
+                    if (move >= max) {
+                        $(this).css("top", 0);
+                        move = 0;
+                    };
+                });
+            };
+            noticeRollingOff = setInterval(noticeRolling, 2000);
+            $(".rolling").append($(".rolling li").first().clone());
+
+            $(".rolling_stop").click(function () {
+                clearInterval(noticeRollingOff);
+            });
+            $(".rolling_start").click(function () {
+                noticeRollingOff = setInterval(noticeRolling, 2000);
+            });
+        });
+
+        // 메인 스와이퍼
+        var swiper = new Swiper(".mySwiper.main_visual_wrap", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            effect: 'fade', // 페이드 효과 사용
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+        // FP몰 기획전
+        var swiper = new Swiper("#section6 .mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            effect: "fade",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+        // #section04 슬라이드바
+        var swiper = new Swiper('#section04 .swiper-container', {
+            slidesPerView: '1.6',
+            spaceBetween: 0, // 슬라이드간 간격
+            loop: true, // 무한 반복
+            centeredSlides: true,
+            pagination: {
+                el: '#section04 .swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+    
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+      if (document.documentElement.scrollTop > 1415) {
+        $("#topNav").addClass("active");
+      } else {
+        $("#topNav").removeClass("active");
+      }
+    }
+    </script>
+
+    <script>
+    $(function(){
+        var FirstScroll = 0;    
+        var prevScrollTop = $(window).scrollTop(),
+            tp = $(window).scrollTop();
+        $(window).scroll(function(e){
+            tp = $(this).scrollTop();
+
+            if ( tp > prevScrollTop ){
+                console.log('down');
+            } else if( tp < prevScrollTop ) {
+                console.log('up');
+            }
+
+            prevScrollTop = tp;
+        });
+    });
+    </script>
+</body>
+
+</html>
