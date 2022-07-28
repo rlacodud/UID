@@ -242,7 +242,7 @@ header nav ul li .navCircle.activeY {background: var(--main-coY);}
 #section5 .reasonContainer #reason li:last-child h2 {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color:#fff; line-height: var(--line-height); font-size: calc(100vw * 20 / 1920);}
 
 /* SECTION6 */
-#section6 .cursorGif {position: absolute; top: 50%; left: 60%; transform: translate(-50%, -50%); z-index: 1000000;}
+#section6 .cursorGif {position: absolute; top: 50%; left: 72%; transform: translate(-50%, -50%); z-index: 1000000;}
 #section6 .cursorGif.off {display: none;}
 #section6 .circle {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100vw * 70 / 1920); height: calc(100vw * 70 / 1920); border-radius: 50%; background: var(--main-coY); transition: all 0.5s linear; cursor: pointer;}
 #section6 .circle.on {width: calc(100vw * 4000 / 1920); height: calc(100vw * 4000 / 1920);}
