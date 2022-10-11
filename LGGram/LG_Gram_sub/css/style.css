@@ -20,8 +20,7 @@ header .center p {font-size: 30px; font-weight: bold;}
 .main-container .content .title-container .left {text-align: left;}
 .main-container .content .title-container .left p {font-size: 28px; font-weight: bold; line-height: 40px;}
 .main-container .content .title-container .right {text-align: right;}
-.main-container .content .title-container .right #option {display: none; vertical-align: middle; margin-right: 20px; font-size: 24px; color: #FA3B53; font-weight: bold;}
-.main-container .content .title-container .right #option.on {display: inline-block;}
+.main-container .content .title-container .right #option {display: inline-block; vertical-align: middle; margin-right: 20px; font-size: 24px; color: #FA3B53; font-weight: bold;}
 .main-container .content .title-container .right .up {display: inline-block; transform: rotateX(0deg); margin: 10px 0; vertical-align: middle; text-align: right; display: inline-block; width: 29px; height: 16px; background-image: url('../img/up.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 .main-container .content .title-container .right .up.on {transform: rotateX(180deg);} 
 
@@ -32,9 +31,9 @@ header .center p {font-size: 30px; font-weight: bold;}
 .model-list .model-opt .title {display: inline-block; text-align: center; font-size: 40px; color: #AAAAAA; margin-bottom: 5px; font-weight: bold;}
 .model-list .model-opt .sub {font-size: 25px; color: #AAAAAA; font-weight: 400;}
 
-#display .model-list .model-opt.active {background: #B0EE17; border: 3px solid #000;}
-#display .model-list .model-opt.active .title,
-#display .model-list .model-opt.active .sub {color: #000;}
+#display .model-opt.active {background: #B0EE17; border: 3px solid #000;}
+#display .model-opt.active .title,
+#display .model-opt.active .sub {color: #000;}
 
 #os .icon {background-position: center; transition: all ease-in-out 0.3s; background-repeat: no-repeat; background-size: cover; object-fit: cover; text-align: center; margin: 0 auto;}
 #window10 .icon,
@@ -200,4 +199,3 @@ section {position: relative; height: auto; width: 100%; margin-top: 35px;}
 .review-area.on {display: block;}
 .products-area {display: none;}
 .products-area.on {display: block;}
-
