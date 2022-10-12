@@ -6,10 +6,10 @@ body::-webkit-scrollbar {display: none;}
 .line {margin-top: 100px; border-bottom: 1px solid #E2E2E2;width: 720px; }
 
 .btn { position: absolute; top: 800px; left: 657px; width: 48px; height: 103px; background-image: url('../img/btn.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
-.arrow { position: absolute; top: 50px; left: 635px; width: 65px; height: 65px; background-image: url('../img/arrow.png'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.arrow { position: absolute; top: 50px; left: 635px; width: 65px; height: 65px; background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
 
 
-.popup { position: absolute; top: 36px; width: 720px; height: 1560px; background-image: url('../img/popupimg.svg'); background-position: center; background-repeat: no-repeat; background-size: cover; object-fit: cover;}
+.popup {width: 720px; height: 1560px;}
 
 
 /* Layout */
